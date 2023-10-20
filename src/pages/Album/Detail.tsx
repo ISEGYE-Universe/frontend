@@ -1,38 +1,35 @@
 /*
-* 23.10.17
-* Heo0
-* Album Detail Page
-*/
+ * 23.10.17
+ * Heo0
+ * Album Detail Page
+ */
 import EmblaCarousel from './EmblaCarousel'
 import { css } from '@emotion/react'
+import Album from './Albums'
 
 const albumDiv = css`
-    width: 1620px;
-    margin-left: 140px;
-    border: 1px solid black;
-`
-const temp = css`
-    background-color: gray;
-    height: 700px;
+  width: 1620px;
+  margin-left: 140px;
 `
 
 const Detail = () => {
-    return (
-        <div className="album-detail-div" css = {albumDiv}>
-            <EmblaCarousel
-                slides={[
-                    <div css={temp}>1</div>,
-                    <div css={temp}>2</div>,
-                    <div css={temp}>3</div>
-                ]}
-                options={{
-                    align: "start",
-                    loop: true,
-                    skipSnaps: false,
-                }}
-            />
-        </div>
-    )
+  return (
+    <div className="album-detail-div" css={albumDiv}>
+      <EmblaCarousel
+        slides={[
+          <Album ident="REWIND" />,
+          <Album ident="KIDDING" />,
+          <Album ident="AnotherWorld" />,
+        ]}
+        options={{
+          align: 'start',
+          loop: true,
+          skipSnaps: false,
+        }}
+        default={0}
+      />
+    </div>
+  )
 }
 
 export default Detail

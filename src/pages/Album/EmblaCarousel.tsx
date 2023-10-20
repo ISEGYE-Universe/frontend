@@ -3,11 +3,8 @@
  * Heo0
  * EmblaCarousel Library
  */
-import React, { ReactNode, useCallback, useEffect, useState } from 'react'
-import useEmblaCarousel, {
-  EmblaCarouselType,
-  EmblaOptionsType,
-} from 'embla-carousel-react'
+import { ReactNode, useCallback, useEffect, useState } from 'react'
+import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react'
 import ClassNames from 'embla-carousel-class-names'
 import { DotButton } from './EmblaCarouselArrowsDots'
 import { css } from '@emotion/react'
@@ -15,6 +12,7 @@ import { css } from '@emotion/react'
 type PropType = {
   slides: ReactNode[]
   options?: EmblaOptionsType
+  default: number
 }
 
 //* css
@@ -57,7 +55,7 @@ export const EmblaCarousel = (props: PropType) => {
   const { options, slides } = props //* props options and slides
   const [emblaRef, embla] = useEmblaCarousel(options, [ClassNames()])
   //* zustand로 변환 필요
-  const [selectedIndex, setSelectedindex] = useState(0) //* Showing Index
+  const [selectedIndex, setSelectedindex] = useState(1) //* Showing Index
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]) //* Scroll snap Point
 
   const ScrollTo = useCallback(
@@ -76,6 +74,9 @@ export const EmblaCarousel = (props: PropType) => {
     onSelect()
     setScrollSnaps(embla.scrollSnapList())
     embla.on('select', onSelect)
+    //* 23.10.21
+    //* sub-menu에서 index 받아와 설정
+    ScrollTo(props.default)
   }, [embla, setScrollSnaps, onSelect])
 
   return (
