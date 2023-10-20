@@ -1,3 +1,4 @@
+import { NewsHeaderButtonList } from './NewsHeaderButtonList'
 import { color } from './color'
 
 export const NewsHeader = () => {
@@ -14,7 +15,7 @@ export const NewsHeader = () => {
     >
       <span>IMG1</span>
       <span>IMG2</span>
-      <span>Link button list</span>
+      <NewsHeaderButtonList />
     </div>
   )
 }
