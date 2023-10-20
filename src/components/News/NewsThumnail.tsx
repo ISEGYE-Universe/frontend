@@ -12,7 +12,7 @@ export const NewsThumnail = ({ children }: NewsThumnailProps) => {
         height: 500,
         borderRadius: 20,
         backgroundColor: color.ElementBackgroundGrey,
-        flexShrink: 0,
+        flex: '0 0 auto',
       }}
     >
       {children}
