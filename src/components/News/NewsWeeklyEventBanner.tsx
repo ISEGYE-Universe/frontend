@@ -2,9 +2,13 @@ import { color } from './color'
 
 type NewsThumnailProps = {
   children: JSX.Element
+  href: string
 }
 
-export const NewsWeeklyEventBanner = ({ children }: NewsThumnailProps) => {
+export const NewsWeeklyEventBanner = ({
+  children,
+  href,
+}: NewsThumnailProps) => {
   return (
     <div
       css={{
