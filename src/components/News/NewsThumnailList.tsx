@@ -21,7 +21,7 @@ export const NewsThumnailList = () => {
       css={{
         display: 'flex',
         gap: 10,
-        overflowX: 'scroll',
+        overflowX: 'scroll', // temporary
       }}
     >
       {DUMMY_THUMNAIL_LIST.map((thumnail) => (
