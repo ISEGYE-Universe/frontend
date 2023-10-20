@@ -1,4 +1,5 @@
 import { NewsHeader } from './NewsHeader'
+import { NewsThumnailList } from './NewsThumnailList'
 
 export const News = () => {
   return (
@@ -13,7 +14,7 @@ export const News = () => {
         }}
       >
         <NewsHeader />
-        <span>News Thumnail List</span>
+        <NewsThumnailList />
         <span>News Focus List</span>
       </div>
     </div>
