@@ -1,7 +1,20 @@
+import { color } from './color'
+
 export const NewsHeader = () => {
   return (
-    <div>
-      <span>News Header</span>
+    <div
+      css={{
+        height: 140,
+        backgroundColor: color.ElementBackgroundGrey,
+        borderRadius: 20,
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+      }}
+    >
+      <span>IMG1</span>
+      <span>IMG2</span>
+      <span>Link button list</span>
     </div>
   )
 }
