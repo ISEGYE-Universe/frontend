@@ -15,7 +15,7 @@ export const ArtistMainScreen = () => {
       <div
         css={{
           position: 'absolute',
-          marginTop: 20,
+          marginTop: 20, 
           marginLeft: 20,
           width: 900,
           height: 500,
