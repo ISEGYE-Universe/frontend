@@ -18,9 +18,13 @@ const BannerDescription = () => {
         <span>마법소녀 이세계 아이돌 ost</span>
       </div>
       <div >
-        <YouTubeIcon />
+        <a href="/">
+          <YouTubeIcon />
+        </a>
         <span css={{width: "30px", display: "inline-block"}} />
-        <CafeIcon />
+        <a href="/">
+          <CafeIcon />
+        </a>
       </div>
     </div>
   )
