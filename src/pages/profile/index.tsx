@@ -1,17 +1,18 @@
 import ProfileMainBg from '@/components/Profile/ProfileMainBg'
+import ProfileMainMemberSection from '@/components/Profile/ProfileMainMemberSection'
 import ProfileStore from '@/store/Profile/ProfileStore'
 import { css } from '@emotion/react'
 
-const bgStyle = css`
-  width: 100%;
-  height: 100vh;
-`
-
 const Profile = () => {
-  const { setHoverDefault, setHoverJururu } = ProfileStore()
   return (
     // temp wrapper
-    <div css={bgStyle}>
+    <div
+      css={css`
+        width: 100%;
+        height: 100vh;
+        overflow-y: hidden;
+      `}
+    >
       <ProfileMainBg />
       <div
         css={css`
@@ -21,44 +22,12 @@ const Profile = () => {
           position: absolute;
         `}
       >
-        <div
-          css={css`
-            width: 16.7%;
-          `}
-          onMouseEnter={() => {
-            setHoverJururu(true)
-            setHoverDefault(false)
-          }}
-          onMouseLeave={() => {
-            setHoverJururu(false)
-            setHoverDefault(true)
-          }}
-        ></div>
-        <div
-          css={css`
-            width: 16.7%;
-          `}
-        ></div>
-        <div
-          css={css`
-            width: 16.7%;
-          `}
-        ></div>
-        <div
-          css={css`
-            width: 16.7%;
-          `}
-        ></div>
-        <div
-          css={css`
-            width: 16.7%;
-          `}
-        ></div>
-        <div
-          css={css`
-            width: 16.7%;
-          `}
-        ></div>
+        <ProfileMainMemberSection memberIndex={0} />
+        <ProfileMainMemberSection memberIndex={1} />
+        <ProfileMainMemberSection memberIndex={2} />
+        <ProfileMainMemberSection memberIndex={3} />
+        <ProfileMainMemberSection memberIndex={4} />
+        <ProfileMainMemberSection memberIndex={5} />
       </div>
     </div>
   )
