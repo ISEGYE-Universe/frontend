@@ -40,14 +40,18 @@ export const ArtistMainScreenToggleButtonList = () => {
       css={{
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-between',
+        gap: 24,
+        marginTop: 20,
       }}
     >
-      <ArtistMainScreenToggleButton
-        id="Lilpa"
-        twitchNickname="릴파_ (lilpaaaaaa)"
-        isBangOn={true}
-      />
+      {DUMMY_ISD_TWITCH_INFO_LIST.map((isedol) => (
+        <ArtistMainScreenToggleButton
+          key={isedol.id}
+          id={isedol.id}
+          twitchNickname={isedol.twitchNickname}
+          isBangOn={isedol.isBangOn}
+        />
+      ))}
     </div>
   )
 }
