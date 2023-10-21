@@ -6,9 +6,14 @@ const style = css`
   }
 
   html,
-  body {
+  body,
+  ul {
     margin: 0;
     padding: 0;
+  }
+
+  li {
+    list-style: none;
   }
 `
 
