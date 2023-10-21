@@ -8,8 +8,7 @@ interface ProfileMainMemberSectionProps {
 const ProfileMainMemberSection = ({
   memberIndex,
 }: ProfileMainMemberSectionProps) => {
-  const { setHoverDefault, setSwitchHoverMember: setHoverMember } =
-    ProfileStore()
+  const { setHoverDefault, setSwitchHoverMember } = ProfileStore()
 
   return (
     <div
@@ -18,11 +17,11 @@ const ProfileMainMemberSection = ({
         cursor: pointer;
       `}
       onMouseEnter={() => {
-        setHoverMember(memberIndex, true)
+        setSwitchHoverMember(memberIndex, true)
         setHoverDefault(false)
       }}
       onMouseLeave={() => {
-        setHoverMember(memberIndex, false)
+        setSwitchHoverMember(memberIndex, false)
         setHoverDefault(true)
       }}
     ></div>
