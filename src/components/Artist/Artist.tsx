@@ -1,3 +1,6 @@
+import { ArtistMainScreen } from './ArtistMainScreen'
+import { ArtistMainScreenToggleButtonList } from './ArtistMainScreenToggleButtonList'
+
 export const Artist = () => {
   return (
     <div>
@@ -9,8 +12,8 @@ export const Artist = () => {
           width: 1300, // temporary
         }}
       >
-        <span>MainScreen</span>
-        <span>MainScreenToggleButtonList</span>
+        <ArtistMainScreen />
+        <ArtistMainScreenToggleButtonList />
       </div>
     </div>
   )
