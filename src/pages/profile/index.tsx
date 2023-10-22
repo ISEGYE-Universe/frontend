@@ -1,11 +1,19 @@
+import ProfileIntroductionBox from '@/components/Profile/ProfileIntroductionBox'
 import ProfileMainBg from '@/components/Profile/ProfileMainBg'
-import ProfileMainDescription from '@/components/Profile/ProfileMainDescription'
 
 const Profile = () => {
   return (
     <>
       <ProfileMainBg />
-      <ProfileMainDescription />
+      <ProfileIntroductionBox
+        mainTitle="이세계아이돌"
+        description={[
+          { title: '데뷔일', desc: '2021년 11월 17일' },
+          { title: '음원', desc: '[싱글 1집] RE : WIND' },
+          { title: '', desc: '[싱글 2집] 겨울봄' },
+          { title: '소속사', desc: 'WAK ENTERTAINMENT' },
+        ]}
+      ></ProfileIntroductionBox>{' '}
     </>
   )
 }
