@@ -3,9 +3,9 @@
  * Heo0
  * Album Detail Page
  */
-import EmblaCarousel from './EmblaCarousel'
+import EmblaCarousel from '../../components/Albums/EmblaCarousel'
 import { css } from '@emotion/react'
-import Album from './Albums'
+import Album from './albums'
 
 const albumDiv = css`
   width: 1620px;
