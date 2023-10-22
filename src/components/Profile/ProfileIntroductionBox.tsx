@@ -11,6 +11,7 @@ interface ProfileIntroductionBoxProps {
   ytLink?: string
   igLink?: string
   twLink?: string
+  margin?: string
 }
 
 const snsAnchorStyle = css`
@@ -34,12 +35,14 @@ const iconStyle = css`
  * @author 민타이
  */
 const ProfileIntroductionBox = (props: ProfileIntroductionBoxProps) => {
-  const { mainTitle, isShowSns, ytLink, igLink, twLink, description } = props
+  const { mainTitle, isShowSns, ytLink, igLink, twLink, description, margin } =
+    props
 
   return (
     <section
       css={css`
-        margin: 0 0 83px 178px;
+        ${margin ? 'margin: ' + margin + ';' : 'margin: 0 0 83px 178px;'};
+
         position: absolute;
         left: 0;
         bottom: 0;
