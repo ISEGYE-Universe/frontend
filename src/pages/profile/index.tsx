@@ -13,7 +13,7 @@ const Profile = () => {
           { title: '', desc: '[싱글 2집] 겨울봄' },
           { title: '소속사', desc: 'WAK ENTERTAINMENT' },
         ]}
-      ></ProfileIntroductionBox>{' '}
+      ></ProfileIntroductionBox>
     </>
   )
 }
