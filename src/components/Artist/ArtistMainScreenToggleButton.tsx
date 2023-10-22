@@ -1,33 +1,60 @@
+import Image from 'next/image'
 import { color } from '../News/color'
 import { IsedolTwitchInfoType } from './store/ArtistType'
+
+const TOGGLE_MAP = {
+  Ine: {
+    imgSrc: require('./assets/맴버프로필=INE.png'),
+    color: color.IneViolet,
+  },
+  Jingburger: {
+    imgSrc: require('./assets/맴버프로필=JINGBURGER.png'),
+    color: color.JingburgerYellow,
+  },
+  Lilpa: {
+    imgSrc: require('./assets/맴버프로필=LILPA.png'),
+    color: color.LilpaNavy,
+  },
+  Jururu: {
+    imgSrc: require('./assets/맴버프로필=JURURU.png'),
+    color: color.JururuPink,
+  },
+  Gosegu: {
+    imgSrc: require('./assets/맴버프로필=GOSEGU.png'),
+    color: color.GoseguSky,
+  },
+  VIichan: {
+    imgSrc: require('./assets/맴버프로필=VIICHAN.png'),
+    color: color.VIichanGreen,
+  },
+}
 
 export const ArtistMainScreenToggleButton = ({
   id,
   twitchNickname,
   isBangOn,
 }: IsedolTwitchInfoType) => {
-  const personalColor =
-    id === 'Ine'
-      ? color.IneViolet
-      : id === 'Jingburger'
-      ? color.JingburgerYellow
-      : id === 'Lilpa'
-      ? color.LilpaNavy
-      : id === 'Jururu'
-      ? color.JururuPink
-      : id === 'Gosegu'
-      ? color.GoseguSky
-      : color.VIichanGreen
-
   return (
     <div css={{ display: 'flex', flexDirection: 'row-reverse', gap: 20 }}>
       <div // later using ISD profile common component
         css={{
+          position: 'relative',
           width: 50,
           height: 50,
-          backgroundColor: color.ElementBackgroundGrey,
+          borderRadius: 75,
+          border: '1px solid',
+          borderColor: isBangOn
+            ? TOGGLE_MAP[id as keyof typeof TOGGLE_MAP].color
+            : 'white',
         }}
-      />
+      >
+        <Image
+          css={{ filter: isBangOn ? 'grayscale(0)' : 'grayscale(1)' }}
+          src={TOGGLE_MAP[id as keyof typeof TOGGLE_MAP].imgSrc}
+          alt="Icon"
+          fill={true}
+        />
+      </div>
       <div
         css={{
           display: 'flex',
@@ -45,7 +72,9 @@ export const ArtistMainScreenToggleButton = ({
         </span>
         <span
           css={{
-            color: isBangOn ? personalColor : '#909090',
+            color: isBangOn
+              ? TOGGLE_MAP[id as keyof typeof TOGGLE_MAP].color
+              : '#909090',
           }}
         >
           {id}
