@@ -3,7 +3,10 @@ const nextConfig = {
   output: 'export',
   distDir: 'build',
   reactStrictMode: true,
-  poweredByHeader: false
+  poweredByHeader: false,
+  images: {
+    unoptimized: true,
+  },
 }
 
 module.exports = nextConfig

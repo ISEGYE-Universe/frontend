@@ -5,7 +5,7 @@
  */
 import EmblaCarousel from '../../components/Albums/EmblaCarousel'
 import { css } from '@emotion/react'
-import Album from './albums'
+import Album from './album'
 
 const albumDiv = css`
   width: 1620px;

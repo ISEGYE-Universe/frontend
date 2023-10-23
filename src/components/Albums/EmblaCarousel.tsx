@@ -75,7 +75,7 @@ export const EmblaCarousel = (props: PropType) => {
     setScrollSnaps(embla.scrollSnapList())
     embla.on('select', onSelect)
     //* 23.10.21
-    //* sub-menu에서 index 받아와 설정
+    //* sub-menu에서 index 받아온 값으로 default scroll
     ScrollTo(props.default)
   }, [embla, setScrollSnaps, onSelect])
 
