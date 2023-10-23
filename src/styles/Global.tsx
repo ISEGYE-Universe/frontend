@@ -57,6 +57,12 @@ const style = css`
     font-style: normal;
     src: url('/fonts/NotoSansCJKkr-Black.otf') format('opentype');
   }
+
+  button {
+    padding: 0;
+    border: none;
+    background: none;
+  }
 `
 
 const GlobalStyle = () => <Global styles={style} />
