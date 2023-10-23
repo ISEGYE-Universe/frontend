@@ -1,0 +1,122 @@
+{
+  "image": {
+    "mainDefault": "https://lh3.google.com/u/0/d/19LaG6YPvGS8bF8br9-Mf8-HfgGwTp3Mu=w1920-h955-iv1",
+    "mainJrrHover": "https://lh3.google.com/u/0/d/1U-i-5Q3zi_qYZT8YgepbrJ0CVh1VVEEU=w1920-h955-iv1",
+    "mainJbgHover": "https://lh3.google.com/u/0/d/1UmEwNBqBMsTxZtfuQ9_fuuK4NuuIfvy2=w1920-h955-iv1",
+    "mainViiHover": "https://lh3.google.com/u/0/d/1ZCbSRYOKeYrp_jPna4UFBdFas5RQJxjR=w1920-h955-iv1",
+    "mainGsgHover": "https://lh3.google.com/u/0/d/13MzDB_v9H54fBEGhSn513EXDayanZQmN=w1920-h955-iv1",
+    "mainLpaHover": "https://lh3.google.com/u/0/d/1uFIJHL48o_cQZrIhKX9hRdExa1naWmbC=w1920-h955-iv1",
+    "mainIneHover": "https://lh3.google.com/u/0/d/1eoLBqY3x72aBi6iyp_sGdKQoK7tdurDi=w1920-h955-iv1"
+  },
+  "mainIntroduction": {
+    "mainTitle": "이세계아이돌",
+    "description": [
+      { "title": "데뷔일", "desc": "2021년 11월 17일" },
+      { "title": "음원", "desc": "[싱글 1집] RE : WIND" },
+      { "title": "", "desc": "[싱글 2집] 겨울봄" },
+      { "title": "소속사", "desc": "WAK ENTERTAINMENT" }
+    ]
+  },
+  "ineIntroduction": {
+    "mainTitle": "아이네(INE)",
+    "description": [
+      { "title": "출생", "desc": "1994년" },
+      { "title": "신체", "desc": "158cm Ι B형" },
+      {
+        "title": "소속사",
+        "desc": "PARABLE ENTERTAINMENT, WAK ENTERTAINMENT"
+      },
+      { "title": "데뷔", "desc": "2021년 이세계아이돌 싱글1집 RE : WIND" }
+    ],
+    "socialLink": {
+      "ytLink": "https://www.youtube.com/@INE_",
+      "igLink": "https://www.instagram.com/ine_hamine/?hl=ko",
+      "twLink": "https://www.twitch.tv/vo_ine"
+    }
+  },
+  "jingburgerIntroduction": {
+    "mainTitle": "징버거(JINGBURGER)",
+    "description": [
+      { "title": "출생", "desc": "1995년 10월 08일" },
+      { "title": "신체", "desc": "161.9cm Ι B형" },
+      {
+        "title": "소속사",
+        "desc": "PARABLE ENTERTAINMENT, WAK ENTERTAINMENT"
+      },
+      { "title": "데뷔", "desc": "2021년 이세계아이돌 싱글1집 RE : WIND" }
+    ],
+    "socialLink": {
+      "ytLink": "https://www.youtube.com/@jingburger",
+      "igLink": "https://www.instagram.com/jing_burger/?hl=ko",
+      "twLink": "https://www.twitch.tv/jingburger"
+    }
+  },
+  "lilpaIntroduction": {
+    "mainTitle": "릴파(LILPA)",
+    "description": [
+      { "title": "출생", "desc": "1996년 03월 09일" },
+      { "title": "신체", "desc": "164cm Ι O형" },
+      {
+        "title": "소속사",
+        "desc": "PARABLE ENTERTAINMENT, WAK ENTERTAINMENT"
+      },
+      { "title": "데뷔", "desc": "2021년 이세계아이돌 싱글1집 RE : WIND" }
+    ],
+    "socialLink": {
+      "ytLink": "https://www.youtube.com/@lilpa",
+      "igLink": "https://www.instagram.com/lilpaaaaaa_/?hl=ko",
+      "twLink": "https://www.twitch.tv/lilpaaaaaa"
+    }
+  },
+  "jururuIntroduction": {
+    "mainTitle": "주르르(JURURU)",
+    "description": [
+      { "title": "출생", "desc": "1997년 06월 10일" },
+      { "title": "신체", "desc": "161.9cm Ι O형" },
+      {
+        "title": "소속사",
+        "desc": "PARABLE ENTERTAINMENT, WAK ENTERTAINMENT"
+      },
+      { "title": "데뷔", "desc": "2021년 이세계아이돌 싱글1집 RE : WIND" }
+    ],
+    "socialLink": {
+      "ytLink": "https://www.youtube.com/@JU_RURU",
+      "igLink": "https://www.instagram.com/ju_ruru_/",
+      "twLink": "https://www.twitch.tv/cotton__123"
+    }
+  },
+  "goseguIntroduction": {
+    "mainTitle": "고세구(GOSEGU)",
+    "description": [
+      { "title": "출생", "desc": "1998년" },
+      { "title": "신체", "desc": "300m Ι B형" },
+      {
+        "title": "소속사",
+        "desc": "PARABLE ENTERTAINMENT, WAK ENTERTAINMENT"
+      },
+      { "title": "데뷔", "desc": "2021년 이세계아이돌 싱글1집 RE : WIND" }
+    ],
+    "socialLink": {
+      "ytLink": "https://www.youtube.com/@gosegu",
+      "igLink": "https://www.instagram.com/gosegu_official/",
+      "twLink": "https://www.twitch.tv/gosegugosegu"
+    }
+  },
+  "viichanIntroduction": {
+    "mainTitle": "비챤(VIICHAN)",
+    "description": [
+      { "title": "출생", "desc": "2000년 01월 16일" },
+      { "title": "신체", "desc": "160cm Ι B형" },
+      {
+        "title": "소속사",
+        "desc": "PARABLE ENTERTAINMENT, WAK ENTERTAINMENT"
+      },
+      { "title": "데뷔", "desc": "2021년 이세계아이돌 싱글1집 RE : WIND" }
+    ],
+    "socialLink": {
+      "ytLink": "https://www.youtube.com/@viichan116",
+      "igLink": "https://www.instagram.com/viichan6/",
+      "twLink": "https://www.twitch.tv/viichan6"
+    }
+  }
+}
