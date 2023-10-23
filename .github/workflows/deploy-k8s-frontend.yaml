@@ -1,0 +1,45 @@
+name: Deploy Frontend to k8s
+on:
+  workflow_dispatch:
+  workflow_call:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./frontend
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+      - name: Configure Variables
+        id: vars
+        run: |
+          echo "tag=$(date +%m%d%H%M)-$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+
+      - name: Login to Github Container Registry
+        env:
+          GHCR_PAT: ${{ secrets.GIT_PAT }}
+        run: echo $GHCR_PAT | docker login ghcr.io -u isegye-universe --password-stdin
+
+      - name: Build Frontend Docker Image
+        run: |
+          docker build -t ghcr.io/isegye-universe/frontend:${{ steps.vars.outputs.tag }} .
+          docker push ghcr.io/isegye-universe/frontend:${{ steps.vars.outputs.tag }}
+    outputs:
+      tag: ${{ steps.vars.outputs.tag }}
+  deploy:
+    needs: [ build ]
+    runs-on: ubuntu-latest
+    env:
+      APPLICATION_NAME: frontend
+    steps:
+      - name: Report deployment to internal api
+        run: |
+          curl --location 'http://${{ secrets.DEPLOYMENT_API_HOST }}/v1/deployment' \
+            --header 'Content-Type: application/json' \
+            --data '{
+              "application": "${{ env.APPLICATION_NAME }}",
+              "imageTag": "${{ needs.build.outputs.tag }}",
+              "token": "${{ secrets.DEPLOYMENT_API_TOKEN }}",
+              "doer": "${{ github.actor }}"
+            }'
