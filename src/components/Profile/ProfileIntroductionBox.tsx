@@ -135,7 +135,7 @@ const ProfileIntroductionBox = (props: ProfileIntroductionBoxProps) => {
               `}
             >
               {description.map((d) => (
-                <li>
+                <li key={`intro-desc-${d.title}`}>
                   <div
                     css={[
                       TitleSmRegular,
@@ -153,7 +153,7 @@ const ProfileIntroductionBox = (props: ProfileIntroductionBoxProps) => {
                       `}
                     >
                       {d.title.split('').map((char) => (
-                        <span>{char}</span>
+                        <span key={`title-${char}`}>{char}</span>
                       ))}
                     </div>
                     <div>
