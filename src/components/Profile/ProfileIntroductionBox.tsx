@@ -1,13 +1,9 @@
 import { TitleMdBold, TitleSmRegular } from '@/styles/Font'
 import { css } from '@emotion/react'
 
-interface introductionDescriptionType {
-  title: string
-  desc: string
-}
 interface ProfileIntroductionBoxProps {
   mainTitle: string
-  description: introductionDescriptionType[]
+  description: Profile.IntroductionDescription[]
   isShowSns?: boolean
   ytLink?: string
   igLink?: string
