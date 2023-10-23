@@ -7,6 +7,7 @@ interface ProfileMainMemberSectionProps {
   y: number
   width: number
   height: number
+  url: string
 }
 
 /**
@@ -24,27 +25,30 @@ const ProfileMainMemberSection = ({
   y,
   width,
   height,
+  url,
 }: ProfileMainMemberSectionProps) => {
   const { setHoverDefault, setSwitchHoverMember } = ProfileStore()
 
   return (
-    <rect
-      fill="#fff"
-      opacity="0"
-      cursor="pointer"
-      x={x}
-      y={y}
-      width={width}
-      height={height}
-      onMouseEnter={() => {
-        setSwitchHoverMember(memberIndex, true)
-        setHoverDefault(false)
-      }}
-      onMouseLeave={() => {
-        setSwitchHoverMember(memberIndex, false)
-        setHoverDefault(true)
-      }}
-    ></rect>
+    <a href={url}>
+      <rect
+        fill="#fff"
+        opacity="0"
+        cursor="pointer"
+        x={x}
+        y={y}
+        width={width}
+        height={height}
+        onMouseEnter={() => {
+          setSwitchHoverMember(memberIndex, true)
+          setHoverDefault(false)
+        }}
+        onMouseLeave={() => {
+          setSwitchHoverMember(memberIndex, false)
+          setHoverDefault(true)
+        }}
+      ></rect>
+    </a>
   )
 }
 

@@ -103,6 +103,7 @@ const ProfileMainBg = () => {
             y={40}
             width={215}
             height={875}
+            url="/profile/jururu"
           />
           <ProfileMainMemberSection
             memberIndex={1}
@@ -110,6 +111,7 @@ const ProfileMainBg = () => {
             y={35}
             width={285}
             height={880}
+            url="/profile/jingburger"
           />
           <ProfileMainMemberSection
             memberIndex={2}
@@ -117,6 +119,7 @@ const ProfileMainBg = () => {
             y={70}
             width={250}
             height={845}
+            url="/profile/viichan"
           />
           <ProfileMainMemberSection
             memberIndex={3}
@@ -124,6 +127,7 @@ const ProfileMainBg = () => {
             y={110}
             width={245}
             height={810}
+            url="/profile/gosegu"
           />
           <ProfileMainMemberSection
             memberIndex={4}
@@ -131,6 +135,7 @@ const ProfileMainBg = () => {
             y={20}
             width={287}
             height={895}
+            url="/profile/lilpa"
           />
           <ProfileMainMemberSection
             memberIndex={5}
@@ -138,6 +143,7 @@ const ProfileMainBg = () => {
             y={35}
             width={220}
             height={880}
+            url="/profile/ine"
           />
         </svg>
       </div>
