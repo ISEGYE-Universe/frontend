@@ -4,27 +4,27 @@ import { IsedolTwitchInfoType } from './store/ArtistType'
 
 const TOGGLE_MAP = {
   Ine: {
-    imgSrc: require('./assets/맴버프로필=INE.png'),
+    imgSrc: require('assets/main-artist/맴버프로필=INE.png'),
     color: color.IneViolet,
   },
   Jingburger: {
-    imgSrc: require('./assets/맴버프로필=JINGBURGER.png'),
+    imgSrc: require('assets/main-artist/맴버프로필=JINGBURGER.png'),
     color: color.JingburgerYellow,
   },
   Lilpa: {
-    imgSrc: require('./assets/맴버프로필=LILPA.png'),
+    imgSrc: require('assets/main-artist/맴버프로필=LILPA.png'),
     color: color.LilpaNavy,
   },
   Jururu: {
-    imgSrc: require('./assets/맴버프로필=JURURU.png'),
+    imgSrc: require('assets/main-artist/맴버프로필=JURURU.png'),
     color: color.JururuPink,
   },
   Gosegu: {
-    imgSrc: require('./assets/맴버프로필=GOSEGU.png'),
+    imgSrc: require('assets/main-artist/맴버프로필=GOSEGU.png'),
     color: color.GoseguSky,
   },
   VIichan: {
-    imgSrc: require('./assets/맴버프로필=VIICHAN.png'),
+    imgSrc: require('assets/main-artist/맴버프로필=VIICHAN.png'),
     color: color.VIichanGreen,
   },
 }
