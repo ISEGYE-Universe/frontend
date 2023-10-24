@@ -21,6 +21,11 @@ const slideImageStyle = css`
   position: absolute;
   transition: opacity 0.3s ease;
 `
+
+const iconStyle = css`
+  padding: 10px 20px;
+`
+
 const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
   const [pageIndex, setPageIndex] = useState<number>(0)
   const galleryLen = profileData.jingburgerIntroduction.galleryImageURL.length
@@ -55,24 +60,26 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
       ))}
 
       {/* background */}
-      <img
-        src={profileData.image.memberGalleryBg}
-        alt=""
-        css={css`
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          position: absolute;
-          opacity: 0.9;
-        `}
-      />
+      <a href="/profile">
+        <img
+          src={profileData.image.memberGalleryBg}
+          alt=""
+          css={css`
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            opacity: 0.9;
+          `}
+        />
+      </a>
 
       {/* 좌우 버튼 */}
       <button
         css={[
           navButtonStyle,
           css`
-            left: 150px;
+            left: 130px;
           `,
         ]}
         onClick={() => {
@@ -83,13 +90,13 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
           }
         }}
       >
-        <img src="/image/icon/left-chevron.svg"></img>
+        <img src="/image/icon/left-chevron.svg" css={iconStyle}></img>
       </button>
       <button
         css={[
           navButtonStyle,
           css`
-            right: 150px;
+            right: 130px;
           `,
         ]}
         onClick={() => {
@@ -100,7 +107,7 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
           }
         }}
       >
-        <img src="/image/icon/right-chevron.svg"></img>
+        <img src="/image/icon/right-chevron.svg" css={iconStyle}></img>
       </button>
 
       {/* 소개 */}
