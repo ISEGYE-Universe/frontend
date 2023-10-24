@@ -23,7 +23,6 @@ const ProfileMainBg = () => {
     opacity: ${hoverDefault ? 1 : 0};
     // transition: opacity 0.15s ease-in-out;
   `
-  // 멤버 별 hover 이미지 작업 중, 임시로 퍼스널 컬러 대체
   const jrrBgStyle = css`
     opacity: ${switchHoverMember[0] ? 1 : 0};
   `
@@ -93,7 +92,7 @@ const ProfileMainBg = () => {
           width="100%"
           height="100%"
         >
-          <img src={profileData.image.mainDefault} css={[defaultBgStyle]}></img>
+          <image href={profileData.image.mainDefault} css={[defaultBgStyle]} />
           <ProfileMainMemberSection
             memberIndex={0}
             x={50}
