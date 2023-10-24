@@ -12,7 +12,7 @@ export const Artist = () => {
           width: 1300, // temporary
         }}
       >
-        <ArtistMainScreen />
+        <ArtistMainScreen highlightedMember="Ine" />
         <ArtistMainScreenToggleButtonList />
       </div>
     </div>

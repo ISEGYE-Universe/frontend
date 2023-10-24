@@ -1,12 +1,30 @@
-import { color } from '../News/color'
+import Image from 'next/image'
 
 const SCREEN_MAP = {
-  Ine: require('assets/main-artist/이네땅_바탕화면_1.png'),
-  Jingburger: require('assets/main-artist/버거땅_바탕화면_1.png'),
-  Lilpa: require('assets/main-artist/릴파땅_바탕화면_1.png'),
-  Jururu: require('assets/main-artist/르르땅_바탕화면_1.png'),
-  Gosegu: require('assets/main-artist/세구땅_바탕화면_1.png'),
-  VIichan: require('assets/main-artist/챠니_바탕화면_1.png'),
+  Ine: {
+    imgSrc: require('assets/main-artist/이네땅_바탕화면_1.png'),
+    color: '#8A2BE2',
+  },
+  Jingburger: {
+    imgSrc: require('assets/main-artist/버거땅_바탕화면_1.png'),
+    color: '#F0A957',
+  },
+  Lilpa: {
+    imgSrc: require('assets/main-artist/릴파땅_바탕화면_1.png'),
+    color: '#443965',
+  },
+  Jururu: {
+    imgSrc: require('assets/main-artist/르르땅_바탕화면_1.png'),
+    color: '#FF008C',
+  },
+  Gosegu: {
+    imgSrc: require('assets/main-artist/세구땅_바탕화면_1.png'),
+    color: '#467EC6',
+  },
+  VIichan: {
+    imgSrc: require('assets/main-artist/챠니_바탕화면_1.png'),
+    color: '#95C100',
+  },
 }
 
 type ArtistMainScreenProps = {
@@ -23,7 +41,8 @@ export const ArtistMainScreen = ({
           position: 'absolute',
           width: 400,
           height: 400,
-          backgroundColor: 'white',
+          backgroundColor:
+            SCREEN_MAP[highlightedMember as keyof typeof SCREEN_MAP].color,
           borderRadius: 20,
         }}
       />
@@ -32,13 +51,17 @@ export const ArtistMainScreen = ({
           position: 'absolute',
           marginTop: 20,
           marginLeft: 20,
-          width: 900,
-          height: 500,
-          backgroundColor: color.ElementBackgroundGrey,
-          borderRadius: 20,
         }}
       >
-        <span>Inner Screen Image</span>
+        <Image
+          css={{
+            borderRadius: 20,
+          }}
+          src={SCREEN_MAP[highlightedMember as keyof typeof SCREEN_MAP].imgSrc}
+          alt="main screen image"
+          width={900}
+          height={500}
+        />
       </div>
     </div>
   )
