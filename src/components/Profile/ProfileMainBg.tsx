@@ -93,17 +93,13 @@ const ProfileMainBg = () => {
           width="100%"
           height="100%"
         >
-          <image
-            href={profileData.image.mainDefault}
-            css={[defaultBgStyle]}
-          ></image>
+          <img src={profileData.image.mainDefault} css={[defaultBgStyle]}></img>
           <ProfileMainMemberSection
             memberIndex={0}
             x={50}
             y={60}
             width={215}
             height={890}
-            url="/profile/jururu"
           />
           <ProfileMainMemberSection
             memberIndex={1}
@@ -111,7 +107,6 @@ const ProfileMainBg = () => {
             y={45}
             width={285}
             height={905}
-            url="/profile/jingburger"
           />
           <ProfileMainMemberSection
             memberIndex={2}
@@ -119,7 +114,6 @@ const ProfileMainBg = () => {
             y={80}
             width={250}
             height={870}
-            url="/profile/viichan"
           />
           <ProfileMainMemberSection
             memberIndex={3}
@@ -127,7 +121,6 @@ const ProfileMainBg = () => {
             y={120}
             width={245}
             height={835}
-            url="/profile/gosegu"
           />
           <ProfileMainMemberSection
             memberIndex={4}
@@ -135,7 +128,6 @@ const ProfileMainBg = () => {
             y={35}
             width={287}
             height={910}
-            url="/profile/lilpa"
           />
           <ProfileMainMemberSection
             memberIndex={5}
@@ -143,7 +135,6 @@ const ProfileMainBg = () => {
             y={60}
             width={220}
             height={890}
-            url="/profile/ine"
           />
         </svg>
       </div>

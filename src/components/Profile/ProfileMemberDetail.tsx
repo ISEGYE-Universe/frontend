@@ -2,6 +2,7 @@ import ProfileIntroductionBox from '@/components/Profile/ProfileIntroductionBox'
 import { css } from '@emotion/react'
 import { useState } from 'react'
 import profileData from '@/data/profile.json'
+import ProfileStore from '@/store/Profile/ProfileStore'
 
 interface MemberIntroduction {
   mainTitle: string
@@ -27,6 +28,7 @@ const iconStyle = css`
 `
 
 const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
+  const { setCurrentMember } = ProfileStore()
   const [pageIndex, setPageIndex] = useState<number>(0)
   const galleryLen = profileData.jingburgerIntroduction.galleryImageURL.length
   const navButtonStyle = css`
@@ -60,19 +62,22 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
       ))}
 
       {/* background */}
-      <a href="/profile">
-        <img
-          src={profileData.image.memberGalleryBg}
-          alt=""
-          css={css`
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-            opacity: 0.9;
-          `}
-        />
-      </a>
+
+      <img
+        src={profileData.image.memberGalleryBg}
+        alt=""
+        css={css`
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          opacity: 0.9;
+          cursor: pointer;
+        `}
+        onMouseDown={() => {
+          window.location.hash = ''
+        }}
+      />
 
       {/* 좌우 버튼 */}
       <button
@@ -90,7 +95,7 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
           }
         }}
       >
-        <img src="/image/icon/left-chevron.svg" css={iconStyle}></img>
+        <img src="/images/icon/left-chevron.svg" css={iconStyle}></img>
       </button>
       <button
         css={[
@@ -107,7 +112,7 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
           }
         }}
       >
-        <img src="/image/icon/right-chevron.svg" css={iconStyle}></img>
+        <img src="/images/icon/right-chevron.svg" css={iconStyle}></img>
       </button>
 
       {/* 소개 */}

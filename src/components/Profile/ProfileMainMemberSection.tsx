@@ -1,5 +1,4 @@
 import ProfileStore from '@/store/Profile/ProfileStore'
-import { css } from '@emotion/react'
 
 interface ProfileMainMemberSectionProps {
   memberIndex: number
@@ -7,7 +6,6 @@ interface ProfileMainMemberSectionProps {
   y: number
   width: number
   height: number
-  url: string
 }
 
 /**
@@ -25,30 +23,56 @@ const ProfileMainMemberSection = ({
   y,
   width,
   height,
-  url,
 }: ProfileMainMemberSectionProps) => {
-  const { setHoverDefault, setSwitchHoverMember } = ProfileStore()
+  const { setHoverDefault, setSwitchHoverMember, setCurrentMember } =
+    ProfileStore()
 
   return (
-    <a href={url}>
-      <rect
-        fill="#fff"
-        opacity="0"
-        cursor="pointer"
-        x={x}
-        y={y}
-        width={width}
-        height={height}
-        onMouseEnter={() => {
-          setSwitchHoverMember(memberIndex, true)
-          setHoverDefault(false)
-        }}
-        onMouseLeave={() => {
-          setSwitchHoverMember(memberIndex, false)
-          setHoverDefault(true)
-        }}
-      ></rect>
-    </a>
+    <rect
+      fill="#fff"
+      opacity="0"
+      cursor="pointer"
+      x={x}
+      y={y}
+      width={width}
+      height={height}
+      onMouseEnter={() => {
+        setSwitchHoverMember(memberIndex, true)
+        setHoverDefault(false)
+      }}
+      onMouseLeave={() => {
+        setSwitchHoverMember(memberIndex, false)
+        setHoverDefault(true)
+      }}
+      onMouseDown={() => {
+        switch (memberIndex) {
+          case 0:
+            // setCurrentMember('jururu')
+            window.location.hash = 'jururu'
+            break
+          case 1:
+            // setCurrentMember('jingburger')
+            window.location.hash = 'jingburger'
+            break
+          case 2:
+            // setCurrentMember('viichan')
+            window.location.hash = 'viichan'
+            break
+          case 3:
+            // setCurrentMember('gosegu')
+            window.location.hash = 'gosegu'
+            break
+          case 4:
+            // setCurrentMember('lilpa')
+            window.location.hash = 'lilpa'
+            break
+          case 5:
+            // setCurrentMember('ine')
+            window.location.hash = 'ine'
+            break
+        }
+      }}
+    ></rect>
   )
 }
 

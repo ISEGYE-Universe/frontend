@@ -9,4 +9,14 @@ declare namespace Profile {
     igLink: string
     twLink: string
   }
+
+  type CurrentMember =
+    | 'default'
+    | 'ine'
+    | 'jingburger'
+    | 'lilpa'
+    | 'jururu'
+    | 'gosegu'
+    | 'viichan'
+    | undefined
 }
