@@ -1,13 +1,13 @@
 {
   "image": {
-    "mainDefault": "https://lh3.google.com/u/0/d/19LaG6YPvGS8bF8br9-Mf8-HfgGwTp3Mu=w1920-h955-iv1",
-    "mainJrrHover": "https://lh3.google.com/u/0/d/1U-i-5Q3zi_qYZT8YgepbrJ0CVh1VVEEU=w1920-h955-iv1",
-    "mainJbgHover": "https://lh3.google.com/u/0/d/1UmEwNBqBMsTxZtfuQ9_fuuK4NuuIfvy2=w1920-h955-iv1",
-    "mainViiHover": "https://lh3.google.com/u/0/d/1ZCbSRYOKeYrp_jPna4UFBdFas5RQJxjR=w1920-h955-iv1",
-    "mainGsgHover": "https://lh3.google.com/u/0/d/13MzDB_v9H54fBEGhSn513EXDayanZQmN=w1920-h955-iv1",
-    "mainLpaHover": "https://lh3.google.com/u/0/d/1uFIJHL48o_cQZrIhKX9hRdExa1naWmbC=w1920-h955-iv1",
-    "mainIneHover": "https://lh3.google.com/u/0/d/1eoLBqY3x72aBi6iyp_sGdKQoK7tdurDi=w1920-h955-iv1",
-    "memberGalleryBg": "https://s3-alpha-sig.figma.com/img/d9c6/1aea/ad8c401874bff6a85c45a75b40bc4fda?Expires=1698624000&Signature=JEDQ39CJPlejvJ6ZfEbARg-JDHplX2vVB-uIzck4Cq2U0XmOSXzgvbgMvtOpa87tD0AXD0k98D69VSeoDrzsVgJCvwhTRcmxLYqnRJoXzQ5fzb65nRPqzE0Qt-JnJtlJNek43do1-F64QZ0XBp1eotjm-eDXX7jy9zsnNG9Vr5TYcyPOwMxPKjR3KRxK6A2z4x~fTppMz-hCMsjI1R4jo~bI~TjzJf6aqP6XHx23nneQ2j0HX1AwyC2ifIC95MgQq32P-ikT0k0M~uA51JWRnr~BUQVc2-3VGd5Lile1qNaB7UXLLrNNLljP4PCt6mk28~-CG6MVFHJRhRN330tC9g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+    "mainDefault": "/image/profile/main-bg.jpg",
+    "mainJrrHover": "/image/profile/jrr-bg-hover.jpg",
+    "mainJbgHover": "/image/profile/jbg-bg-hover.jpg",
+    "mainViiHover": "/image/profile/vii-bg-hover.jpg",
+    "mainGsgHover": "/image/profile/gsg-bg-hover.jpg",
+    "mainLpaHover": "/image/profile/lil-bg-hover.jpg",
+    "mainIneHover": "/image/profile/ine-bg-hover.jpg",
+    "memberGalleryBg": "/image/profile/member-gallery/member-bg-overlay.png"
   },
   "mainIntroduction": {
     "mainTitle": "이세계아이돌",
