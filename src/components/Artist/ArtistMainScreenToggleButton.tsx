@@ -32,7 +32,7 @@ const TOGGLE_MAP = {
 export const ArtistMainScreenToggleButton = ({
   id,
   twitchNickname,
-  isBangOn,
+  isHighlighted,
 }: IsedolTwitchInfoType) => {
   return (
     <div css={{ display: 'flex', flexDirection: 'row-reverse', gap: 20 }}>
@@ -43,13 +43,13 @@ export const ArtistMainScreenToggleButton = ({
           height: 50,
           borderRadius: 75,
           border: '1px solid',
-          borderColor: isBangOn
+          borderColor: isHighlighted
             ? TOGGLE_MAP[id as keyof typeof TOGGLE_MAP].color
             : 'white',
         }}
       >
         <Image
-          css={{ filter: isBangOn ? 'grayscale(0)' : 'grayscale(1)' }}
+          css={{ filter: isHighlighted ? 'grayscale(0)' : 'grayscale(1)' }}
           src={TOGGLE_MAP[id as keyof typeof TOGGLE_MAP].imgSrc}
           alt="Icon"
           fill={true}
@@ -65,14 +65,14 @@ export const ArtistMainScreenToggleButton = ({
       >
         <span
           css={{
-            color: isBangOn ? '#151515' : '#909090',
+            color: isHighlighted ? '#151515' : '#909090',
           }}
         >
           {twitchNickname}
         </span>
         <span
           css={{
-            color: isBangOn
+            color: isHighlighted
               ? TOGGLE_MAP[id as keyof typeof TOGGLE_MAP].color
               : '#909090',
           }}

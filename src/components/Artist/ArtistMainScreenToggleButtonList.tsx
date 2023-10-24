@@ -5,32 +5,32 @@ const DUMMY_ISD_TWITCH_INFO_LIST: IsedolTwitchInfoType[] = [
   {
     id: 'Ine',
     twitchNickname: '아이네_ (vo_ine)',
-    isBangOn: true,
+    isHighlighted: true,
   },
   {
     id: 'Jingburger',
     twitchNickname: '징버거 (jingburger)',
-    isBangOn: false,
+    isHighlighted: false,
   },
   {
     id: 'Lilpa',
     twitchNickname: '릴파_ (lilpaaaaaa)',
-    isBangOn: true,
+    isHighlighted: false,
   },
   {
     id: 'Jururu',
     twitchNickname: '주르르 (cotton__123)',
-    isBangOn: false,
+    isHighlighted: false,
   },
   {
     id: 'Gosegu',
     twitchNickname: '고세구___ (gosegugosegu)',
-    isBangOn: true,
+    isHighlighted: false,
   },
   {
     id: 'VIichan',
     twitchNickname: '비챤_ (viichan6)',
-    isBangOn: false,
+    isHighlighted: false,
   },
 ]
 
@@ -49,7 +49,7 @@ export const ArtistMainScreenToggleButtonList = () => {
           key={isedol.id}
           id={isedol.id}
           twitchNickname={isedol.twitchNickname}
-          isBangOn={isedol.isBangOn}
+          isHighlighted={isedol.isHighlighted}
         />
       ))}
     </div>
