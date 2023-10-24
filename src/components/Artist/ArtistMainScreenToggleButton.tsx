@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { IsedolTwitchInfoType } from './store/ArtistType'
+import { Dispatch, SetStateAction } from 'react'
 
 const TOGGLE_MAP = {
   Ine: {
@@ -28,13 +28,28 @@ const TOGGLE_MAP = {
   },
 }
 
+type ArtistMainScreenToggleButtonProps = {
+  id: string
+  twitchNickname: string
+  isHighlighted: boolean
+  onClick: Dispatch<SetStateAction<string>>
+}
+
 export const ArtistMainScreenToggleButton = ({
   id,
   twitchNickname,
   isHighlighted,
-}: IsedolTwitchInfoType) => {
+  onClick,
+}: ArtistMainScreenToggleButtonProps) => {
   return (
-    <div css={{ display: 'flex', flexDirection: 'row-reverse', gap: 20 }}>
+    <button // REQUIRE button default style set to false in global css
+      css={{
+        display: 'flex',
+        flexDirection: 'row-reverse',
+        gap: 20,
+      }}
+      onClick={() => onClick(id)}
+    >
       <div // later using ISD profile common component
         css={{
           position: 'relative',
@@ -79,6 +94,6 @@ export const ArtistMainScreenToggleButton = ({
           {id}
         </span>
       </div>
-    </div>
+    </button>
   )
 }

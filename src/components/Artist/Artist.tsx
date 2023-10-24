@@ -1,7 +1,9 @@
+import { useState } from 'react'
 import { ArtistMainScreen } from './ArtistMainScreen'
 import { ArtistMainScreenToggleButtonList } from './ArtistMainScreenToggleButtonList'
 
 export const Artist = () => {
+  const [highlightedMember, setHighlightedMember] = useState('Ine')
   return (
     <div>
       <span>TITLE</span>
@@ -12,8 +14,11 @@ export const Artist = () => {
           width: 1300, // temporary
         }}
       >
-        <ArtistMainScreen highlightedMember="Ine" />
-        <ArtistMainScreenToggleButtonList />
+        <ArtistMainScreen highlightedMember={highlightedMember} />
+        <ArtistMainScreenToggleButtonList
+          onClickButton={setHighlightedMember}
+          highlightedMember={highlightedMember}
+        />
       </div>
     </div>
   )
