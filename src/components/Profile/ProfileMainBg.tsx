@@ -5,7 +5,7 @@ import ProfileMainMemberSection from './ProfileMainMemberSection'
 import profileData from '@/data/profile.json'
 
 const bgImageStyle = css`
-  transition: opacity 0.15s ease-in-out;
+  // transition: opacity 0.15s ease-in-out;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -21,7 +21,7 @@ const ProfileMainBg = () => {
 
   const defaultBgStyle = css`
     opacity: ${hoverDefault ? 1 : 0};
-    transition: opacity 0.15s ease-in-out;
+    // transition: opacity 0.15s ease-in-out;
   `
   // 멤버 별 hover 이미지 작업 중, 임시로 퍼스널 컬러 대체
   const jrrBgStyle = css`
