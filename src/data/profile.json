@@ -7,7 +7,7 @@
     "mainGsgHover": "/images/profile/main/bg-hover-gsg.png",
     "mainLpaHover": "/images/profile/main/bg-hover-lil.png",
     "mainIneHover": "/images/profile/main/bg-hover-ine.png",
-    "memberGalleryBg": "/images/profilemember-gallery/member-bg-overlay.png"
+    "memberGalleryBg": "/images/profile/member-gallery/member-bg-overlay.png"
   },
   "mainIntroduction": {
     "mainTitle": "이세계아이돌",
