@@ -1,13 +1,13 @@
 {
   "image": {
-    "mainDefault": "/image/profile/main-bg.jpg",
-    "mainJrrHover": "/image/profile/jrr-bg-hover.jpg",
-    "mainJbgHover": "/image/profile/jbg-bg-hover.jpg",
-    "mainViiHover": "/image/profile/vii-bg-hover.jpg",
-    "mainGsgHover": "/image/profile/gsg-bg-hover.jpg",
-    "mainLpaHover": "/image/profile/lil-bg-hover.jpg",
-    "mainIneHover": "/image/profile/ine-bg-hover.jpg",
-    "memberGalleryBg": "/image/profile/member-gallery/member-bg-overlay.png"
+    "mainDefault": "/images/profile/main-bg.jpg",
+    "mainJrrHover": "/images/profile/jrr-bg-hover.jpg",
+    "mainJbgHover": "/images/profile/jbg-bg-hover.jpg",
+    "mainViiHover": "/images/profile/vii-bg-hover.jpg",
+    "mainGsgHover": "/images/profile/gsg-bg-hover.jpg",
+    "mainLpaHover": "/images/profile/lil-bg-hover.jpg",
+    "mainIneHover": "/images/profile/ine-bg-hover.jpg",
+    "memberGalleryBg": "/images/profile/member-gallery/member-bg-overlay.png"
   },
   "mainIntroduction": {
     "mainTitle": "이세계아이돌",
@@ -35,9 +35,9 @@
       "twLink": "https://www.twitch.tv/vo_ine"
     },
     "galleryImageURL": [
-      "/image/profile/member-gallery/ine1.png",
-      "/image/profile/member-gallery/ine2.png",
-      "/image/profile/member-gallery/ine3.png"
+      "/images/profile/member-gallery/ine1.png",
+      "/images/profile/member-gallery/ine2.png",
+      "/images/profile/member-gallery/ine3.png"
     ]
   },
   "jingburgerIntroduction": {
@@ -57,9 +57,9 @@
       "twLink": "https://www.twitch.tv/jingburger"
     },
     "galleryImageURL": [
-      "/image/profile/member-gallery/jingburger1.png",
-      "/image/profile/member-gallery/jingburger2.png",
-      "/image/profile/member-gallery/jingburger3.png"
+      "/images/profile/member-gallery/jingburger1.png",
+      "/images/profile/member-gallery/jingburger2.png",
+      "/images/profile/member-gallery/jingburger3.png"
     ]
   },
   "lilpaIntroduction": {
@@ -79,9 +79,9 @@
       "twLink": "https://www.twitch.tv/lilpaaaaaa"
     },
     "galleryImageURL": [
-      "/image/profile/member-gallery/lilpa1.png",
-      "/image/profile/member-gallery/lilpa2.png",
-      "/image/profile/member-gallery/lilpa3.png"
+      "/images/profile/member-gallery/lilpa1.png",
+      "/images/profile/member-gallery/lilpa2.png",
+      "/images/profile/member-gallery/lilpa3.png"
     ]
   },
   "jururuIntroduction": {
@@ -101,9 +101,9 @@
       "twLink": "https://www.twitch.tv/cotton__123"
     },
     "galleryImageURL": [
-      "/image/profile/member-gallery/jururu1.png",
-      "/image/profile/member-gallery/jururu2.png",
-      "/image/profile/member-gallery/jururu3.png"
+      "/images/profile/member-gallery/jururu1.png",
+      "/images/profile/member-gallery/jururu2.png",
+      "/images/profile/member-gallery/jururu3.png"
     ]
   },
   "goseguIntroduction": {
@@ -123,9 +123,9 @@
       "twLink": "https://www.twitch.tv/gosegugosegu"
     },
     "galleryImageURL": [
-      "/image/profile/member-gallery/gosegu1.png",
-      "/image/profile/member-gallery/gosegu2.png",
-      "/image/profile/member-gallery/gosegu3.png"
+      "/images/profile/member-gallery/gosegu1.png",
+      "/images/profile/member-gallery/gosegu2.png",
+      "/images/profile/member-gallery/gosegu3.png"
     ]
   },
   "viichanIntroduction": {
@@ -145,9 +145,9 @@
       "twLink": "https://www.twitch.tv/viichan6"
     },
     "galleryImageURL": [
-      "/image/profile/member-gallery/viichan1.png",
-      "/image/profile/member-gallery/viichan2.png",
-      "/image/profile/member-gallery/viichan3.png"
+      "/images/profile/member-gallery/viichan1.png",
+      "/images/profile/member-gallery/viichan2.png",
+      "/images/profile/member-gallery/viichan3.png"
     ]
   }
 }

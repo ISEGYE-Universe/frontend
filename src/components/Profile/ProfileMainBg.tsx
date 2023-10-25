@@ -1,6 +1,5 @@
 import ProfileStore from '@/store/Profile/ProfileStore'
 import { css } from '@emotion/react'
-import { useState } from 'react'
 import ProfileMainMemberSection from './ProfileMainMemberSection'
 import profileData from '@/data/profile.json'
 

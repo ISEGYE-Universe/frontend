@@ -90,7 +90,7 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
           }
         }}
       >
-        <img src="/image/icon/left-chevron.svg" css={iconStyle}></img>
+        <img src="/images/icon/left-chevron.svg" css={iconStyle}></img>
       </button>
       <button
         css={[
@@ -107,7 +107,7 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
           }
         }}
       >
-        <img src="/image/icon/right-chevron.svg" css={iconStyle}></img>
+        <img src="/images/icon/right-chevron.svg" css={iconStyle}></img>
       </button>
 
       {/* 소개 */}
