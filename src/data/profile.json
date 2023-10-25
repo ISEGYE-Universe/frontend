@@ -1,13 +1,13 @@
 {
   "image": {
-    "mainDefault": "/images/profile/main-bg.jpg",
-    "mainJrrHover": "/images/profile/jrr-bg-hover.jpg",
-    "mainJbgHover": "/images/profile/jbg-bg-hover.jpg",
-    "mainViiHover": "/images/profile/vii-bg-hover.jpg",
-    "mainGsgHover": "/images/profile/gsg-bg-hover.jpg",
-    "mainLpaHover": "/images/profile/lil-bg-hover.jpg",
-    "mainIneHover": "/images/profile/ine-bg-hover.jpg",
-    "memberGalleryBg": "/images/profile/member-gallery/member-bg-overlay.png"
+    "mainDefault": "/images/profile/main/bg-main.jpg",
+    "mainJrrHover": "/images/profile/main/bg-hover-jrr.png",
+    "mainJbgHover": "/images/profile/main/bg-hover-jbg.png",
+    "mainViiHover": "/images/profile/main/bg-hover-vii.png",
+    "mainGsgHover": "/images/profile/main/bg-hover-gsg.png",
+    "mainLpaHover": "/images/profile/main/bg-hover-lil.png",
+    "mainIneHover": "/images/profile/main/bg-hover-ine.png",
+    "memberGalleryBg": "/images/profilemember-gallery/member-bg-overlay.png"
   },
   "mainIntroduction": {
     "mainTitle": "이세계아이돌",

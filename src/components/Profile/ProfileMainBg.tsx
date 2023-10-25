@@ -4,7 +4,7 @@ import ProfileMainMemberSection from './ProfileMainMemberSection'
 import profileData from '@/data/profile.json'
 
 const bgImageStyle = css`
-  // transition: opacity 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -18,11 +18,7 @@ const bgImageStyle = css`
 const ProfileMainBg = () => {
   const { hoverDefault, switchHoverMember } = ProfileStore()
 
-  const defaultBgStyle = css`
-    opacity: ${hoverDefault ? 1 : 0};
-    // transition: opacity 0.15s ease-in-out;
-  `
-  // 멤버 별 hover 이미지 작업 중, 임시로 퍼스널 컬러 대체
+  // 멤버 별 hover 이미지 스타일
   const jrrBgStyle = css`
     opacity: ${switchHoverMember[0] ? 1 : 0};
   `
@@ -44,6 +40,11 @@ const ProfileMainBg = () => {
 
   return (
     <>
+      <img
+        src={profileData.image.mainDefault}
+        alt="no-hover"
+        css={[bgImageStyle]}
+      />
       {/* 멤버 별 hover시 겹쳐질 이미지 */}
       <img
         src={profileData.image.mainJrrHover}
@@ -94,7 +95,9 @@ const ProfileMainBg = () => {
         >
           <image
             href={profileData.image.mainDefault}
-            css={[defaultBgStyle]}
+            css={css`
+              opacity: 0;
+            `}
           ></image>
           <ProfileMainMemberSection
             memberIndex={0}
