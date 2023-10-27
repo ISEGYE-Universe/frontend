@@ -6,7 +6,7 @@ import profileData from '@/data/profile.json'
 const bgImageStyle = css`
   transition: opacity 0.15s ease-in-out;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 120px);
   position: absolute;
   object-fit: cover;
 `
@@ -16,7 +16,7 @@ const bgImageStyle = css`
  * @author 민타이
  */
 const ProfileMainBg = () => {
-  const { hoverDefault, switchHoverMember } = ProfileStore()
+  const { switchHoverMember } = ProfileStore()
 
   // 멤버 별 hover 이미지 스타일
   const jrrBgStyle = css`
@@ -80,15 +80,18 @@ const ProfileMainBg = () => {
       <div
         css={css`
           width: 100%;
-          height: 100%;
+          height: calc(100% - 120px);
           position: absolute;
           overflow-y: hidden;
+          // 마우스 오버 섹션이 소개글 박스에 가리는 문제
+          z-index: 1;
         `}
       >
+        {/* svg 이용하여 마우스 오버 섹션 반응형 구현 */}
         <svg
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 -0.5 1920 1000"
+          viewBox="0 -0.5 1920 880"
           preserveAspectRatio="xMidYMid slice"
           width="100%"
           height="100%"

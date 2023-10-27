@@ -34,7 +34,7 @@ const TransitionLayout = ({ children, duration }: TransitionLayoutProps) => {
         }}
         css={css`
           width: 100%;
-          height: 100vh;
+          height: 100%;
         `}
       >
         {children}

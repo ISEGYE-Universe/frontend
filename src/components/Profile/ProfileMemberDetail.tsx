@@ -17,7 +17,7 @@ interface ProfileMemberDetailProps {
 
 const slideImageStyle = css`
   width: 100%;
-  height: 100%;
+  height: calc(100% - 120px);
   object-fit: cover;
   position: absolute;
   transition: opacity 0.3s ease;
@@ -32,7 +32,7 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
   const galleryLen = profileData.jingburgerIntroduction.galleryImageURL.length
   const navButtonStyle = css`
     position: absolute;
-    top: 41%;
+    top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
   `
@@ -42,7 +42,7 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
       <div
         css={css`
           width: 100%;
-          height: 100vh;
+          height: calc(100% - 120px);
           overflow-y: hidden;
         `}
       >
@@ -68,7 +68,7 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
             alt=""
             css={css`
               width: 100%;
-              height: 100%;
+              height: calc(100% - 120px);
               object-fit: cover;
               position: absolute;
               opacity: 0.9;
@@ -120,7 +120,7 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
           igLink={data.socialLink.igLink}
           twLink={data.socialLink.twLink}
           description={data.description}
-          margin={'0 0 168px 150px'}
+          margin={'0 0 80px 150px'}
         ></ProfileIntroductionBox>
       </div>
     </TransitionLayout>
