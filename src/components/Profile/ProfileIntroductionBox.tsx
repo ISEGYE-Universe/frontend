@@ -1,4 +1,4 @@
-import { TitleMdBold, TitleSmRegular } from '@/styles/Font'
+import { TitleMdBold, TitleSmLight } from '@/styles/Font'
 import { css } from '@emotion/react'
 
 interface ProfileIntroductionBoxProps {
@@ -61,7 +61,16 @@ const ProfileIntroductionBox = (props: ProfileIntroductionBoxProps) => {
             gap: 24px;
           `}
         >
-          <span css={TitleMdBold}>{mainTitle}</span>
+          <span
+            css={[
+              TitleMdBold,
+              css`
+                letter-spacing: -1.08px;
+              `,
+            ]}
+          >
+            {mainTitle}
+          </span>
           {/* S: sns links */}
           {isShowSns && (
             <div
@@ -134,7 +143,7 @@ const ProfileIntroductionBox = (props: ProfileIntroductionBoxProps) => {
                 <li key={`intro-desc-${d.title}`}>
                   <div
                     css={[
-                      TitleSmRegular,
+                      TitleSmLight,
                       css`
                         display: flex;
                         gap: 35px;
