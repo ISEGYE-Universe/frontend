@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { color } from './color'
 
 type NewsHeaderButtonProps = {
@@ -24,6 +25,7 @@ export const NewsHeaderButton = ({
     >
       <div
         css={{
+          position: 'relative',
           marginLeft: 20,
           marginRight: 20,
           width: 20,
@@ -31,11 +33,21 @@ export const NewsHeaderButton = ({
           backgroundColor: 'black',
         }}
       >
-        <span css={{ color: 'white', fontSize: 10 }}>{iconSrc}</span>
+        <Image src={iconSrc} alt="icon" fill={true} />
       </div>
       <span css={{ color: color.NewsHeaderButtonText, fontSize: 14 }}>
         {buttonName}
       </span>
+      <Image
+        css={{
+          marginLeft: 'auto',
+          marginRight: 20,
+        }}
+        src="/images/icon/NewsHeaderButtonArrow.svg"
+        alt="arrow"
+        width={7}
+        height={12}
+      />
     </div>
   )
 }

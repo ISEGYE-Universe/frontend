@@ -4,7 +4,7 @@ import { NewsWeeklyEventBannerList } from './NewsWeeklyEventBannerList'
 
 export const News = () => {
   return (
-    <div>
+    <section>
       <span>TITLE</span>
       <div
         css={{
@@ -18,6 +18,6 @@ export const News = () => {
         <NewsThumnailList />
         <NewsWeeklyEventBannerList />
       </div>
-    </div>
+    </section>
   )
 }
