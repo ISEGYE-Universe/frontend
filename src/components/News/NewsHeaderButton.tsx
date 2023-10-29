@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { color } from './color'
+import Link from 'next/link'
 
 type NewsHeaderButtonProps = {
   iconSrc: string // later change to NodeRequire
@@ -13,7 +14,7 @@ export const NewsHeaderButton = ({
   href,
 }: NewsHeaderButtonProps) => {
   return (
-    <div
+    <Link
       css={{
         width: 220,
         height: 40,
@@ -22,6 +23,9 @@ export const NewsHeaderButton = ({
         display: 'flex',
         alignItems: 'center',
       }}
+      href={href}
+      target="_blank"
+      rel="noreferrer"
     >
       <div
         css={{
@@ -48,6 +52,6 @@ export const NewsHeaderButton = ({
         width={7}
         height={12}
       />
-    </div>
+    </Link>
   )
 }
