@@ -1,5 +1,6 @@
 import ProfileStore from '@/store/Profile/ProfileStore'
 import { css } from '@emotion/react'
+import Link from 'next/link'
 
 interface ProfileMainMemberSectionProps {
   memberIndex: number
@@ -30,7 +31,7 @@ const ProfileMainMemberSection = ({
   const { setHoverDefault, setSwitchHoverMember } = ProfileStore()
 
   return (
-    <a href={url}>
+    <Link href={url}>
       <rect
         fill="#fff"
         opacity="0"
@@ -48,7 +49,7 @@ const ProfileMainMemberSection = ({
           setHoverDefault(true)
         }}
       ></rect>
-    </a>
+    </Link>
   )
 }
 

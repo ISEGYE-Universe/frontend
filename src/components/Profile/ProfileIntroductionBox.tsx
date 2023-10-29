@@ -1,5 +1,7 @@
 import { TitleMdBold, TitleSmLight } from '@/styles/Font'
 import { css } from '@emotion/react'
+import Image from 'next/image'
+import Link from 'next/link'
 
 interface ProfileIntroductionBoxProps {
   mainTitle: string
@@ -17,6 +19,7 @@ const snsAnchorStyle = css`
 
 const iconStyle = css`
   width: 40px;
+  height: auto;
   // anchor 태그와 크기 맞춰주기 위함
   vertical-align: bottom;
 `
@@ -81,31 +84,37 @@ const ProfileIntroductionBox = (props: ProfileIntroductionBoxProps) => {
               `}
             >
               {ytLink && (
-                <a href={ytLink} css={snsAnchorStyle} target="_blank">
-                  <img
+                <Link href={ytLink} css={snsAnchorStyle} target="_blank">
+                  <Image
                     src="https://s3-alpha-sig.figma.com/img/a0b7/ccd8/679be705335041aa532715f8f3edb87e?Expires=1698624000&Signature=kpJVLJJUIVQhZse45nUIvWGR7Tge7TKYCuWy3PWxXLgCB4QsSG7ZA0OzgqO09~NZRAfqD3iqWFlNN72yfNLhKNtU55DJuvWuDC~ogbuBGUdjwxaMBiOlIkMHXt1mrnCvZhjezQyRxma2qrreiNkqtx3yape~8jaI8uWtmZ3oR~JvEo1s~d1V2YVfsbNAGghUM5ykFlHDSNf933QF3wKP9hKo74tJ3xc682BcH4xp-b8S~mGhIUeyuiV0adYcxx7QltaiaGd-hqxytOnPATveT6P~KPr6pPV58yLuuTVEX7lPX3yC0xkS7kRoYp0R0YTjY-KXmo-9w~2DevKXcnfSAg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                     alt="icon-yt"
                     css={iconStyle}
+                    width={0}
+                    height={0}
                   />
-                </a>
+                </Link>
               )}
               {igLink && (
-                <a href={igLink} css={snsAnchorStyle} target="_blank">
-                  <img
+                <Link href={igLink} css={snsAnchorStyle} target="_blank">
+                  <Image
                     src="https://s3-alpha-sig.figma.com/img/2869/9654/1a064bcf23c1d34dfd1495645fc9fb8f?Expires=1698624000&Signature=dWLvUXhEDanAeRjZUkswO8nHojI5jYQGzQr1dHYT76lvvJpXTKY88O70Ve8J4D9EusQnXTh6nz6A8N0WoR3ruH8gSKeE4Pw-Lxp3EBH2fKA1EK3VT0BMhrhM4RJkyLzL343-zRy0a8myd0jVAmbEq6aBVU6WIPbLbTlhoLA7xxHqBfMARzPlG648Qck3oZjpoyKTQLwLC6tsMBygOgpq4t5mkNcesQmD-vmXb~5Wsgy~q9x4H0syHMzTpfgfrB1MljlJtY6w-meb5bW0n0CQcaVQhyQgisGC78jFYoXger7hCfsEf67uqhb6ikO9-uRvKSLY6XkpNdbOjuOhAFI4MQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                     alt="icon-ig"
                     css={iconStyle}
+                    width={0}
+                    height={0}
                   />
-                </a>
+                </Link>
               )}
               {twLink && (
-                <a href={twLink} css={snsAnchorStyle} target="_blank">
-                  <img
+                <Link href={twLink} css={snsAnchorStyle} target="_blank">
+                  <Image
                     src="https://s3-alpha-sig.figma.com/img/5110/5706/d1b81cf92463a4b04dcfd3193ee11f17?Expires=1698624000&Signature=krGNqDVlwdmD5RhgPrtsxHgYIKDBQH5wmRW3ZhMD1XLnzrlPvrKNdzAtPT0fMzE9hnwOMTy6t0XtiLX80Ti3EgVbS6CwEi~Fmk51zHB5zhf0kaSLgaPqd6~uidgmQ7pCZpVNFd9y8wNvGXOI6sGKPAkVpqUfVrzhDGeXD2Iw5GdmulTZjRsK3b48gWjQ9yh12uEY58cHU9MKzbQtaKeSAiAAnCC-wRSis2W2tnD5H6gsRZpPTZyNkBhTUq2zCXBHXig6jQIwumBAX~s2T5pyR2nfHPVN52yTS9pfkyJp2ApkFdrH1JdvmaDbdUGudtyEGJSqx~tknr0TPWXaN6xLNA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                     alt="icon-tw"
                     css={iconStyle}
+                    width={0}
+                    height={0}
                   />
-                </a>
+                </Link>
               )}
             </div>
           )}

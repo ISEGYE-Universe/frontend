@@ -3,6 +3,8 @@ import { css } from '@emotion/react'
 import { useState } from 'react'
 import profileData from '@/data/profile.json'
 import TransitionLayout from '@/components/TransitionLayout/TransitionLayout'
+import Image from 'next/image'
+import Link from 'next/link'
 
 interface MemberIntroduction {
   mainTitle: string
@@ -24,6 +26,8 @@ const slideImageStyle = css`
 `
 
 const iconStyle = css`
+  width: auto;
+  height: auto;
   padding: 10px 20px;
 `
 
@@ -32,6 +36,8 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
   const galleryLen = profileData.jingburgerIntroduction.galleryImageURL.length
   const navButtonStyle = css`
     position: absolute;
+    width: 26px;
+    height: 46px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
@@ -48,10 +54,12 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
       >
         {/* 이미지 슬라이더 */}
         {data.galleryImageURL.map((img, i) => (
-          <img
+          <Image
             src={img}
             alt={`gallery-${i + 1}`}
             key={`gallery-${i}`}
+            width={0}
+            height={0}
             css={[
               slideImageStyle,
               css`
@@ -62,10 +70,12 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
         ))}
 
         {/* background */}
-        <a href="/profile">
-          <img
+        <Link href="/profile">
+          <Image
             src={profileData.image.memberGalleryBg}
-            alt=""
+            alt="Member Gallery Background"
+            width={0}
+            height={0}
             css={css`
               width: 100%;
               height: calc(100% - 120px);
@@ -74,7 +84,7 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
               opacity: 0.9;
             `}
           />
-        </a>
+        </Link>
 
         {/* 좌우 버튼 */}
         <button
@@ -92,7 +102,13 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
             }
           }}
         >
-          <img src="/images/icon/left-chevron.svg" css={iconStyle}></img>
+          <Image
+            src="/images/icon/left-chevron.svg"
+            width={0}
+            height={0}
+            css={iconStyle}
+            alt="left arrow icon"
+          ></Image>
         </button>
         <button
           css={[
@@ -109,7 +125,13 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
             }
           }}
         >
-          <img src="/images/icon/right-chevron.svg" css={iconStyle}></img>
+          <Image
+            src="/images/icon/right-chevron.svg"
+            width={26}
+            height={46}
+            css={iconStyle}
+            alt="right arrow icon"
+          ></Image>
         </button>
 
         {/* 소개 */}

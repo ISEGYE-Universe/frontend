@@ -2,6 +2,7 @@ import ProfileStore from '@/store/Profile/ProfileStore'
 import { css } from '@emotion/react'
 import ProfileMainMemberSection from './ProfileMainMemberSection'
 import profileData from '@/data/profile.json'
+import Image from 'next/image'
 
 const bgImageStyle = css`
   transition: opacity 0.15s ease-in-out;
@@ -40,39 +41,60 @@ const ProfileMainBg = () => {
 
   return (
     <>
-      <img
+      <Image
         src={profileData.image.mainDefault}
+        width={0}
+        height={0}
+        priority
         alt="no-hover"
         css={[bgImageStyle]}
       />
       {/* 멤버 별 hover시 겹쳐질 이미지 */}
-      <img
+      <Image
         src={profileData.image.mainJrrHover}
+        width={0}
+        height={0}
+        priority
         alt="jrr-hover"
         css={[jrrBgStyle, bgImageStyle]}
       />
-      <img
+      <Image
         src={profileData.image.mainJbgHover}
+        width={0}
+        height={0}
+        priority
         alt="jbg-hover"
         css={[jbgBgStyle, bgImageStyle]}
       />
-      <img
+      <Image
         src={profileData.image.mainViiHover}
+        width={0}
+        height={0}
+        priority
         alt="vii-hover"
         css={[viiBgStyle, bgImageStyle]}
       />
-      <img
+      <Image
         src={profileData.image.mainGsgHover}
+        width={0}
+        height={0}
+        priority
         alt="gsg-hover"
         css={[gsgBgStyle, bgImageStyle]}
       />
-      <img
+      <Image
         src={profileData.image.mainLpaHover}
+        width={0}
+        height={0}
+        priority
         alt="lpa-hover"
         css={[lpaBgStyle, bgImageStyle]}
       />
-      <img
+      <Image
         src={profileData.image.mainIneHover}
+        width={0}
+        height={0}
+        priority
         alt="ine-hover"
         css={[ineBgStyle, bgImageStyle]}
       />
@@ -91,7 +113,7 @@ const ProfileMainBg = () => {
         <svg
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 -0.5 1920 880"
+          viewBox="0 0 1920 803"
           preserveAspectRatio="xMidYMid slice"
           width="100%"
           height="100%"
@@ -104,50 +126,50 @@ const ProfileMainBg = () => {
           ></image>
           <ProfileMainMemberSection
             memberIndex={0}
-            x={50}
-            y={60}
-            width={215}
-            height={890}
+            x={75}
+            y={100}
+            width={155}
+            height={650}
             url="/profile/jururu"
           />
           <ProfileMainMemberSection
             memberIndex={1}
-            x={335}
-            y={45}
-            width={285}
-            height={905}
+            x={355}
+            y={90}
+            width={220}
+            height={660}
             url="/profile/jingburger"
           />
           <ProfileMainMemberSection
             memberIndex={2}
-            x={695}
-            y={80}
-            width={250}
-            height={870}
+            x={700}
+            y={120}
+            width={185}
+            height={630}
             url="/profile/viichan"
           />
           <ProfileMainMemberSection
             memberIndex={3}
-            x={1010}
-            y={120}
-            width={245}
-            height={835}
+            x={1040}
+            y={145}
+            width={180}
+            height={610}
             url="/profile/gosegu"
           />
           <ProfileMainMemberSection
             memberIndex={4}
-            x={1300}
-            y={35}
-            width={287}
-            height={910}
+            x={1350}
+            y={75}
+            width={220}
+            height={680}
             url="/profile/lilpa"
           />
           <ProfileMainMemberSection
             memberIndex={5}
-            x={1630}
-            y={60}
-            width={220}
-            height={890}
+            x={1700}
+            y={90}
+            width={165}
+            height={670}
             url="/profile/ine"
           />
         </svg>
