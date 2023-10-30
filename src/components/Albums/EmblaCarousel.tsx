@@ -26,13 +26,12 @@ const container = css`
   margin-left: calc(var(--slide-spacing) * -1);
 `
 const emblaCSS = css`
-  padding: 1.6rem;
   --slide-spacing: 1rem;
-  --slide-size: 70%;
+  --slide-size: 83%;
   --slide-height: 19rem;
-  --background-site: rgb(0, 0, 0);
-  --brand-primary: rgb(138, 180, 248);
-  --brand-secondary: rgb(193, 168, 226);
+  --background-site: rgb(237, 237, 237);
+  --brand-primary: rgb(217, 217, 217);
+  --brand-secondary: rgb(217, 217, 217);
 `
 const emblaDotDiv = css`
   z-index: 1;
