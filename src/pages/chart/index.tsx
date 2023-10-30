@@ -1,4 +1,5 @@
 import ArticleADBanner from '@/components/Chart/ArticleADBanner'
+import ChartLeftSection from '@/components/Chart/ChartLeftSection'
 import TempLayout from '@/components/TempLayout/TempLayout'
 import { css } from '@emotion/react'
 
@@ -6,6 +7,12 @@ const articleStyle = css`
   width: 1060px;
   margin: 0 auto;
   padding: 44px 0 141px 0;
+`
+
+const chartContainerStyle = css`
+  width: 285px;
+  margin-top: 44px;
+  margin-right: 29px;
 `
 
 const Chart = () => {
@@ -21,6 +28,9 @@ const Chart = () => {
           bgColor="#EA4476"
         ></ArticleADBanner>
         {/* 차트정보 */}
+        <div css={chartContainerStyle}>
+          <ChartLeftSection />
+        </div>
         {/* 역대기록 */}
       </article>
     </TempLayout>
