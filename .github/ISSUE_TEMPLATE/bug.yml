@@ -1,0 +1,48 @@
+name: Bug Report
+description: 버그 발생
+title: '[Bug 🐛] '
+labels: ['Bug 🐛']
+body:
+  - type: dropdown
+    id: error-type
+    attributes:
+      label: '버그 종류'
+      description: 무슨 버그인가요 ?
+      options:
+        - 컴파일 관련 에러
+        - 메모리 관련 이슈
+        - 라이브러리 관련 에러
+        - Data fetching || api 관련 에러
+        - 기타 에러
+    validations:
+      required: true
+
+  - type: textarea
+    id: to-recreate
+    attributes:
+      label: 'BUG PROCESS'
+      description: 버그를 발생시키는 과정을 재현할 수 있도록 작성해주세요
+      render: Markdown
+      placeholder: |
+        1.
+        2.
+        3.
+        ...
+
+  - type: textarea
+    id: related-code
+    attributes:
+      label: '관련 코드'
+      description: (Auto highlighting in TSX)
+      render: TSX
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: 'ERROR STATUS'
+      description: 에러의 현재 상태
+      options:
+        - 원인 발견됨
+        - 솔루션 발견됨
+        - 확인중
+      multiple: true
