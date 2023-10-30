@@ -1,20 +1,24 @@
 import ProfileIntroductionBox from '@/components/Profile/ProfileIntroductionBox'
 import ProfileMainBg from '@/components/Profile/ProfileMainBg'
-import TempGNB from '@/components/Profile/TempGNB'
+import TempLayout from '@/components/TempLayout/TempLayout'
 import profileData from '@/data/profile.json'
 import { css } from '@emotion/react'
 
+const profileContainerStyle = css`
+  height: calc(100vh - 120px);
+`
+
 const Profile = () => {
   return (
-    <>
-      {/* Temp: GNB 섹션 임시 대체 */}
-      <TempGNB />
-      <ProfileMainBg />
-      <ProfileIntroductionBox
-        mainTitle={profileData.mainIntroduction.mainTitle}
-        description={profileData.mainIntroduction.description}
-      ></ProfileIntroductionBox>
-    </>
+    <TempLayout>
+      <div css={profileContainerStyle}>
+        <ProfileMainBg />
+        <ProfileIntroductionBox
+          mainTitle={profileData.mainIntroduction.mainTitle}
+          description={profileData.mainIntroduction.description}
+        ></ProfileIntroductionBox>
+      </div>
+    </TempLayout>
   )
 }
 
