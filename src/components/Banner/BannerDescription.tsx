@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { YouTubeIcon, CafeIcon } from "./svg"
 
 const BannerDescription = () => {
@@ -18,13 +19,13 @@ const BannerDescription = () => {
         <span>마법소녀 이세계 아이돌 ost</span>
       </div>
       <div >
-        <a href="/">
+        <Link  href="https://www.youtube.com/watch?v=rDFUl2mHIW4">
           <YouTubeIcon />
-        </a>
+        </Link>
         <span css={{width: "30px", display: "inline-block"}} />
-        <a href="/">
+        <Link href="https://cafe.naver.com/steamindiegame">
           <CafeIcon />
-        </a>
+        </Link>
       </div>
     </div>
   )
