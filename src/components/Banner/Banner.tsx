@@ -7,14 +7,14 @@ const Banner = () => {
   return (
     <>
       <section css={{
-        width: "100%",
         height: "960px",
         display: "flex",
-        justifyContent: "center"
+        justifyContent: "center",
+        position: "relative"
       }}>
         <Image
           src={mock_banner}
-          alt="Picture of the author"
+          alt="banner Img"
           fill
         />
         <BannerTitle />
