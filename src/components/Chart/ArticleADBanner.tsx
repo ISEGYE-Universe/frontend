@@ -64,7 +64,7 @@ const ArticleADBanner = ({
           <div css={CTAContainerStyle}>
             <span css={TitleSmLight}>{CTAText}</span>
             <Image
-              src={'/images/icon/right-chevron.svg'}
+              src={'/images/icon/ad-right-chevron.svg'}
               alt="right icon"
               width={12}
               height={24}
