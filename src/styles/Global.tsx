@@ -6,11 +6,15 @@ const style = css`
   }
 
   html,
-  body {
+  body,
+  ul {
     margin: 0;
     padding: 0;
   }
 
+  li {
+    list-style: none;
+  }
   @font-face {
     font-family: 'NotoSansCJKkr';
     font-weight: 100;
@@ -52,6 +56,12 @@ const style = css`
     font-weight: 700;
     font-style: normal;
     src: url('/fonts/NotoSansCJKkr-Black.otf') format('opentype');
+  }
+
+  button {
+    padding: 0;
+    border: none;
+    background: none;
   }
 `
 
