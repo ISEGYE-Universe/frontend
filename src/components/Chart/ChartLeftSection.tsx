@@ -50,7 +50,7 @@ const ChartLeftSection = () => {
           ))}
         </ul>
       </section>
-      {/* 구분선 */}
+
       <HRLine />
 
       {/* 실시간 차트 */}
@@ -73,7 +73,6 @@ const ChartLeftSection = () => {
         </ul>
       </section>
 
-      {/* 구분선 */}
       <HRLine />
 
       {/* 음반 관련 소식 */}
