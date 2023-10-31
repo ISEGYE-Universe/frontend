@@ -1,0 +1,153 @@
+{
+  "image": {
+    "mainDefault": "/images/profile/main/bg-main.jpg",
+    "mainJrrHover": "/images/profile/main/bg-hover-jrr.png",
+    "mainJbgHover": "/images/profile/main/bg-hover-jbg.png",
+    "mainViiHover": "/images/profile/main/bg-hover-vii.png",
+    "mainGsgHover": "/images/profile/main/bg-hover-gsg.png",
+    "mainLpaHover": "/images/profile/main/bg-hover-lil.png",
+    "mainIneHover": "/images/profile/main/bg-hover-ine.png",
+    "memberGalleryBg": "/images/profile/member-gallery/member-bg-overlay.png"
+  },
+  "mainIntroduction": {
+    "mainTitle": "이세계아이돌",
+    "description": [
+      { "title": "데뷔일", "desc": "2021년 11월 17일" },
+      { "title": "음원", "desc": "[싱글 1집] RE : WIND" },
+      { "title": "", "desc": "[싱글 2집] 겨울봄" },
+      { "title": "소속사", "desc": "WAK ENTERTAINMENT" }
+    ]
+  },
+  "ineIntroduction": {
+    "mainTitle": "아이네(INE)",
+    "description": [
+      { "title": "출생", "desc": "1994년" },
+      { "title": "신체", "desc": "158cm Ι B형" },
+      {
+        "title": "소속사",
+        "desc": "PARABLE ENTERTAINMENT, WAK ENTERTAINMENT"
+      },
+      { "title": "데뷔", "desc": "2021년 이세계아이돌 싱글1집 RE : WIND" }
+    ],
+    "socialLink": {
+      "ytLink": "https://www.youtube.com/@INE_",
+      "igLink": "https://www.instagram.com/ine_hamine/?hl=ko",
+      "twLink": "https://www.twitch.tv/vo_ine"
+    },
+    "galleryImageURL": [
+      "/images/profile/member-gallery/ine1.png",
+      "/images/profile/member-gallery/ine2.png",
+      "/images/profile/member-gallery/ine3.png"
+    ]
+  },
+  "jingburgerIntroduction": {
+    "mainTitle": "징버거(JINGBURGER)",
+    "description": [
+      { "title": "출생", "desc": "1995년 10월 08일" },
+      { "title": "신체", "desc": "161.9cm Ι B형" },
+      {
+        "title": "소속사",
+        "desc": "PARABLE ENTERTAINMENT, WAK ENTERTAINMENT"
+      },
+      { "title": "데뷔", "desc": "2021년 이세계아이돌 싱글1집 RE : WIND" }
+    ],
+    "socialLink": {
+      "ytLink": "https://www.youtube.com/@jingburger",
+      "igLink": "https://www.instagram.com/jing_burger/?hl=ko",
+      "twLink": "https://www.twitch.tv/jingburger"
+    },
+    "galleryImageURL": [
+      "/images/profile/member-gallery/jingburger1.png",
+      "/images/profile/member-gallery/jingburger2.png",
+      "/images/profile/member-gallery/jingburger3.png"
+    ]
+  },
+  "lilpaIntroduction": {
+    "mainTitle": "릴파(LILPA)",
+    "description": [
+      { "title": "출생", "desc": "1996년 03월 09일" },
+      { "title": "신체", "desc": "164cm Ι O형" },
+      {
+        "title": "소속사",
+        "desc": "PARABLE ENTERTAINMENT, WAK ENTERTAINMENT"
+      },
+      { "title": "데뷔", "desc": "2021년 이세계아이돌 싱글1집 RE : WIND" }
+    ],
+    "socialLink": {
+      "ytLink": "https://www.youtube.com/@lilpa",
+      "igLink": "https://www.instagram.com/lilpaaaaaa_/?hl=ko",
+      "twLink": "https://www.twitch.tv/lilpaaaaaa"
+    },
+    "galleryImageURL": [
+      "/images/profile/member-gallery/lilpa1.png",
+      "/images/profile/member-gallery/lilpa2.png",
+      "/images/profile/member-gallery/lilpa3.png"
+    ]
+  },
+  "jururuIntroduction": {
+    "mainTitle": "주르르(JURURU)",
+    "description": [
+      { "title": "출생", "desc": "1997년 06월 10일" },
+      { "title": "신체", "desc": "161.9cm Ι O형" },
+      {
+        "title": "소속사",
+        "desc": "PARABLE ENTERTAINMENT, WAK ENTERTAINMENT"
+      },
+      { "title": "데뷔", "desc": "2021년 이세계아이돌 싱글1집 RE : WIND" }
+    ],
+    "socialLink": {
+      "ytLink": "https://www.youtube.com/@JU_RURU",
+      "igLink": "https://www.instagram.com/ju_ruru_/",
+      "twLink": "https://www.twitch.tv/cotton__123"
+    },
+    "galleryImageURL": [
+      "/images/profile/member-gallery/jururu1.png",
+      "/images/profile/member-gallery/jururu2.png",
+      "/images/profile/member-gallery/jururu3.png"
+    ]
+  },
+  "goseguIntroduction": {
+    "mainTitle": "고세구(GOSEGU)",
+    "description": [
+      { "title": "출생", "desc": "1998년" },
+      { "title": "신체", "desc": "300m Ι B형" },
+      {
+        "title": "소속사",
+        "desc": "PARABLE ENTERTAINMENT, WAK ENTERTAINMENT"
+      },
+      { "title": "데뷔", "desc": "2021년 이세계아이돌 싱글1집 RE : WIND" }
+    ],
+    "socialLink": {
+      "ytLink": "https://www.youtube.com/@gosegu",
+      "igLink": "https://www.instagram.com/gosegu_official/",
+      "twLink": "https://www.twitch.tv/gosegugosegu"
+    },
+    "galleryImageURL": [
+      "/images/profile/member-gallery/gosegu1.png",
+      "/images/profile/member-gallery/gosegu2.png",
+      "/images/profile/member-gallery/gosegu3.png"
+    ]
+  },
+  "viichanIntroduction": {
+    "mainTitle": "비챤(VIICHAN)",
+    "description": [
+      { "title": "출생", "desc": "2000년 01월 16일" },
+      { "title": "신체", "desc": "160cm Ι B형" },
+      {
+        "title": "소속사",
+        "desc": "PARABLE ENTERTAINMENT, WAK ENTERTAINMENT"
+      },
+      { "title": "데뷔", "desc": "2021년 이세계아이돌 싱글1집 RE : WIND" }
+    ],
+    "socialLink": {
+      "ytLink": "https://www.youtube.com/@viichan116",
+      "igLink": "https://www.instagram.com/viichan6/",
+      "twLink": "https://www.twitch.tv/viichan6"
+    },
+    "galleryImageURL": [
+      "/images/profile/member-gallery/viichan1.png",
+      "/images/profile/member-gallery/viichan2.png",
+      "/images/profile/member-gallery/viichan3.png"
+    ]
+  }
+}
