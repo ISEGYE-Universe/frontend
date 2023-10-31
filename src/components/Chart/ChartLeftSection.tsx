@@ -4,6 +4,7 @@ import Title from './Title'
 import chartData from '@/data/chart.json'
 import TimeBaseSubTitle from './TimeBaseSubTitle'
 import AlbumNewsCard from './AlbumNewsCard'
+import HRLine from './HRLine'
 
 const titleContainer = css`
   margin-bottom: 22px;
@@ -50,7 +51,7 @@ const ChartLeftSection = () => {
         </ul>
       </section>
       {/* 구분선 */}
-      <hr css={hrLineStyle} />
+      <HRLine />
 
       {/* 실시간 차트 */}
       <section>
@@ -73,7 +74,7 @@ const ChartLeftSection = () => {
       </section>
 
       {/* 구분선 */}
-      <hr css={hrLineStyle} />
+      <HRLine />
 
       {/* 음반 관련 소식 */}
       <section>
