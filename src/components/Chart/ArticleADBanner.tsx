@@ -50,16 +50,8 @@ const ArticleADBanner = ({
         <div css={contentsContainerStyle}>
           <div css={textContainerStyle}>
             <h1 css={TitleMdBold}>{title}</h1>
-            <h2
-              css={[
-                TextSmLight,
-                css`
-                  font-weight: 100;
-                `,
-              ]}
-            >
-              {desc}
-            </h2>
+            {/* Figma 내에 TextSmRegular로 명시되어 있으나 Light에 가까워 보임*/}
+            <h2 css={TextSmLight}>{desc}</h2>
           </div>
           <div css={CTAContainerStyle}>
             <span css={TitleSmLight}>{CTAText}</span>

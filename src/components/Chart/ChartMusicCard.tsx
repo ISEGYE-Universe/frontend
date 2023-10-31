@@ -39,7 +39,6 @@ const changeFontStyle = css`
   font-weight: 200;
 `
 const artistFontStyle = css`
-  font-weight: 100;
   color: #777;
 `
 
