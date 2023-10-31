@@ -3,6 +3,7 @@ import ChartMusicCard from './ChartMusicCard'
 import Title from './Title'
 import chartData from '@/data/chart.json'
 import TimeBaseSubTitle from './TimeBaseSubTitle'
+import AlbumNewsCard from './AlbumNewsCard'
 
 const titleContainer = css`
   margin-bottom: 22px;
@@ -75,6 +76,16 @@ const ChartLeftSection = () => {
       <hr css={hrLineStyle} />
 
       {/* 음반 관련 소식 */}
+      <section>
+        <div css={titleContainer}>
+          <Title>음반 관련 소식</Title>
+        </div>
+        <ul css={albumNewsContainer}>
+          {chartData.albumNewsList.map((e) => (
+            <AlbumNewsCard title={e.title}></AlbumNewsCard>
+          ))}
+        </ul>
+      </section>
     </>
   )
 }
