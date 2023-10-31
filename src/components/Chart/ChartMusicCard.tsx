@@ -25,11 +25,15 @@ const metadataContainer = css`
 const flexColContainer = css`
   display: flex;
   flex-direction: column;
-  align-items: center;
 `
 const flexRowContainer = css`
   display: flex;
+`
+const flexAlignCenter = css`
   align-items: center;
+`
+const flexAlignStart = css`
+  align-items: flex-start;
 `
 const changeFontStyle = css`
   font-weight: 200;
@@ -52,20 +56,21 @@ const ChartMusicCard = ({
   thumb,
 }: ChartMusicCardProps) => {
   return (
-    <div css={[mainContainer, flexRowContainer]}>
+    <li css={[mainContainer, flexRowContainer, flexAlignCenter]}>
       <Image
         src={thumb}
         alt={`${title} thumbnail`}
         width={70}
         height={70}
       ></Image>
-      <div css={[flexRowContainer, metadataContainer]}>
+      <div css={[flexRowContainer, flexAlignCenter, metadataContainer]}>
         {/* 순위, 제목 */}
         <div css={flexColContainer}>
           <h3 css={TextMdBold}>{position}</h3>
           <div
             css={[
               flexRowContainer,
+              flexAlignCenter,
               css`
                 gap: 3px;
               `,
@@ -102,12 +107,12 @@ const ChartMusicCard = ({
           </div>
         </div>
         {/* 등락, 아티스트 */}
-        <div css={flexColContainer}>
+        <div css={[flexColContainer, flexAlignStart]}>
           <h3 css={TextMdBold}>{title}</h3>
           <span css={[CaptionMdLight, artistFontStyle]}>{artist}</span>
         </div>
       </div>
-    </div>
+    </li>
   )
 }
 
