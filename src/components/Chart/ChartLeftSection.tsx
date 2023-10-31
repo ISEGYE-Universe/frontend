@@ -1,8 +1,8 @@
 import { css } from '@emotion/react'
 import ChartMusicCard from './ChartMusicCard'
-import SubTitle from './SubTitle'
 import Title from './Title'
 import chartData from '@/data/chart.json'
+import TimeBaseSubTitle from './TimeBaseSubTitle'
 
 const titleContainer = css`
   margin-bottom: 22px;
@@ -26,8 +26,7 @@ const ChartLeftSection = () => {
       {/* 멜론 HOT 100 */}
       <section>
         <div css={titleContainer}>
-          {/* 추후 컴포넌트화를 통해 기준 시간을 prop으로 리팩토링 할 예정 */}
-          <SubTitle>오늘 23:00 기준</SubTitle>
+          <TimeBaseSubTitle time="23:00" />
           <Title>멜론 HOT 100</Title>
         </div>
 
