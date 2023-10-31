@@ -1,5 +1,6 @@
 import ArticleADBanner from '@/components/Chart/ArticleADBanner'
 import ChartLeftSection from '@/components/Chart/ChartLeftSection'
+import ChartRightSection from '@/components/Chart/ChartRightSection'
 import TempLayout from '@/components/TempLayout/TempLayout'
 import { css } from '@emotion/react'
 
@@ -9,10 +10,18 @@ const articleStyle = css`
   padding: 44px 0 141px 0;
 `
 
-const chartContainerStyle = css`
-  width: 285px;
+const chartSectionContainerStyle = css`
   margin-top: 44px;
+`
+const LeftSectionContainerStyle = css`
+  display: inline-block;
+  width: 285px;
   margin-right: 29px;
+`
+const RightSectionContainerStyle = css`
+  display: inline-block;
+  width: 745px;
+  vertical-align: top;
 `
 
 const Chart = () => {
@@ -28,8 +37,13 @@ const Chart = () => {
           bgColor="#EA4476"
         ></ArticleADBanner>
         {/* 차트정보 */}
-        <div css={chartContainerStyle}>
-          <ChartLeftSection />
+        <div css={chartSectionContainerStyle}>
+          <div css={LeftSectionContainerStyle}>
+            <ChartLeftSection />
+          </div>
+          <div css={RightSectionContainerStyle}>
+            <ChartRightSection />
+          </div>
         </div>
         {/* 역대기록 */}
       </article>
