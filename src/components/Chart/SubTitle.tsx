@@ -1,4 +1,4 @@
-import { TextMdLight } from '@/styles/Font'
+import { LineHeight, TextMdLight } from '@/styles/Font'
 import { css } from '@emotion/react'
 
 interface SubTitleProps {
@@ -11,6 +11,7 @@ const SubTitle = ({ children, color }: SubTitleProps) => {
     <h2
       css={[
         TextMdLight,
+        LineHeight,
         css`
           color: ${color || '#777'};
         `,

@@ -1,4 +1,4 @@
-import { TitleSmRegular } from '@/styles/Font'
+import { LineHeight, TitleSmRegular } from '@/styles/Font'
 import { css } from '@emotion/react'
 
 interface TitleProps {
@@ -11,6 +11,7 @@ const Title = ({ children, color }: TitleProps) => {
     <h2
       css={[
         TitleSmRegular,
+        LineHeight,
         css`
           color: ${color || '#000'};
         `,

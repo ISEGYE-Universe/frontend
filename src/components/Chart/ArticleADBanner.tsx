@@ -1,4 +1,9 @@
-import { TextSmLight, TitleMdBold, TitleSmLight } from '@/styles/Font'
+import {
+  LineHeight,
+  TextSmLight,
+  TitleMdBold,
+  TitleSmLight,
+} from '@/styles/Font'
 import { css } from '@emotion/react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -49,12 +54,22 @@ const ArticleADBanner = ({
       <section css={mainContainerStyle}>
         <div css={contentsContainerStyle}>
           <div css={textContainerStyle}>
-            <h1 css={TitleMdBold}>{title}</h1>
+            <h1
+              css={[
+                TitleMdBold,
+                LineHeight,
+                css`
+                  margin-bottom: 8px;
+                `,
+              ]}
+            >
+              {title}
+            </h1>
             {/* Figma 내에 TextSmRegular로 명시되어 있으나 Light에 가까워 보임*/}
-            <h2 css={TextSmLight}>{desc}</h2>
+            <h2 css={[TextSmLight, LineHeight]}>{desc}</h2>
           </div>
           <div css={CTAContainerStyle}>
-            <span css={TitleSmLight}>{CTAText}</span>
+            <span css={[TitleSmLight, LineHeight]}>{CTAText}</span>
             <Image
               src={'/images/icon/ad-right-chevron.svg'}
               alt="right icon"

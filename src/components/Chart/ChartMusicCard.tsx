@@ -1,4 +1,9 @@
-import { CaptionMdLight, CaptionMdRegular, TextMdBold } from '@/styles/Font'
+import {
+  CaptionMdLight,
+  CaptionMdRegular,
+  LineHeight,
+  TextMdBold,
+} from '@/styles/Font'
 import { css } from '@emotion/react'
 import Image from 'next/image'
 
@@ -47,6 +52,10 @@ const chartIconStyle = css`
   height: auto;
 `
 
+const metaDataMarginBottom = css`
+  margin-bottom: 6px;
+`
+
 const ChartMusicCard = ({
   title,
   position,
@@ -65,7 +74,9 @@ const ChartMusicCard = ({
       <div css={[flexRowContainer, flexAlignCenter, metadataContainer]}>
         {/* 순위, 제목 */}
         <div css={flexColContainer}>
-          <h3 css={TextMdBold}>{position}</h3>
+          <h3 css={[TextMdBold, LineHeight, metaDataMarginBottom]}>
+            {position}
+          </h3>
           <div
             css={[
               flexRowContainer,
@@ -92,6 +103,7 @@ const ChartMusicCard = ({
               css={[
                 CaptionMdRegular,
                 changeFontStyle,
+                LineHeight,
                 css`
                   color: ${change > 0
                     ? '#ea4476'
@@ -107,8 +119,10 @@ const ChartMusicCard = ({
         </div>
         {/* 등락, 아티스트 */}
         <div css={[flexColContainer, flexAlignStart]}>
-          <h3 css={TextMdBold}>{title}</h3>
-          <span css={[CaptionMdLight, artistFontStyle]}>{artist}</span>
+          <h3 css={[TextMdBold, LineHeight, metaDataMarginBottom]}>{title}</h3>
+          <span css={[CaptionMdLight, artistFontStyle, LineHeight]}>
+            {artist}
+          </span>
         </div>
       </div>
     </li>
