@@ -2,9 +2,11 @@ import AlbumNewsCard from '@/components/Chart/AlbumNewsCard'
 import ArticleADBanner from '@/components/Chart/ArticleADBanner'
 import ChartMusicCard from '@/components/Chart/ChartMusicCard'
 import HRLine from '@/components/Chart/HRLine'
+import SubTitle from '@/components/Chart/SubTitle'
 import TimeBaseSubTitle from '@/components/Chart/TimeBaseSubTitle'
 import Title from '@/components/Chart/Title'
 import Top100Chart from '@/components/Chart/Top100Chart'
+import WeeklyAward from '@/components/Chart/WeeklyAward'
 import TempLayout from '@/components/TempLayout/TempLayout'
 import chartData from '@/data/chart.json'
 import { css } from '@emotion/react'
@@ -41,6 +43,16 @@ const albumNewsContainer = css`
   flex-direction: column;
   gap: 10px;
 `
+const weeklyAwardMainContainer = css`
+  width: 315px;
+`
+const weeklyAwardTitleContainer = css`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+`
+
 const Chart = () => {
   return (
     <TempLayout>
@@ -126,7 +138,18 @@ const Chart = () => {
 
             <div>
               {/* 멜론 주간인기상 */}
-              <section></section>
+              <section css={weeklyAwardMainContainer}>
+                <div css={weeklyAwardTitleContainer}>
+                  <Title>멜론 주간 인기상</Title>
+                  <SubTitle>10월 1주차</SubTitle>
+                </div>
+                <WeeklyAward
+                  position={3}
+                  voteNum={24673}
+                  voteRatio={14.33}
+                  endDate={new Date('2024.01.01 00:00:00')}
+                />
+              </section>
               {/* 곡 멜론 정보 */}
               <section></section>
             </div>
