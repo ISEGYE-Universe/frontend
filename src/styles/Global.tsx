@@ -6,7 +6,8 @@ const style = css`
   }
 
   html,
-  body {
+  body,
+  ul {
     margin: 0;
     padding: 0;
   }
@@ -18,6 +19,10 @@ const style = css`
   h5, 
   h6{
     margin: 0;
+  }
+
+  li {
+    list-style: none;
   }
 
   @font-face {
@@ -61,6 +66,12 @@ const style = css`
     font-weight: 700;
     font-style: normal;
     src: url('/fonts/NotoSansCJKkr-Black.otf') format('opentype');
+  }
+
+  button {
+    padding: 0;
+    border: none;
+    background: none;
   }
 `
 
