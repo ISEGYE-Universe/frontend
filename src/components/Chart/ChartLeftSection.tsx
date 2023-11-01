@@ -20,13 +20,6 @@ const albumNewsContainer = css`
   gap: 10px;
 `
 
-const hrLineStyle = css`
-  margin: 30px 0;
-  border: 0;
-  height: 1px;
-  background-color: #d9d9d9;
-`
-
 const ChartLeftSection = () => {
   return (
     <>
