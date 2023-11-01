@@ -31,7 +31,7 @@ const RoundedLinkButton = ({
   customCss,
 }: RoundedLinkButtonProps) => {
   return (
-    <Link href={href} target={target || '_self'}>
+    <Link href={href} target={target || '_blank'}>
       <div
         css={[
           css`
