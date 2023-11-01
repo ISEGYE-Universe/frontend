@@ -52,7 +52,9 @@ const fontSizeCaptionMd = css`
 const fontSizeCaptionSm = css`
   font-size: 8px;
 `
-
+const lineHeight = css`
+  line-height: 110%;
+`
 // main_title
 export const MainTitleLight = css`
   ${fontFamily}
@@ -180,4 +182,7 @@ export const CaptionSmBold = css`
   ${fontFamily}
   ${fontWeightRegular}
   ${fontSizeCaptionSm}
+`
+export const LineHeight = css`
+  ${lineHeight}
 `
