@@ -3,16 +3,18 @@ import { css } from '@emotion/react'
 
 interface TitleProps {
   children: React.ReactNode
+  mb?: string
   color?: string
 }
 
-const Title = ({ children, color }: TitleProps) => {
+const Title = ({ children, mb, color }: TitleProps) => {
   return (
     <h2
       css={[
         TitleSmRegular,
         LineHeight,
         css`
+          ${mb && `margin-bottom: ${mb};`}
           color: ${color || '#000'};
         `,
       ]}
