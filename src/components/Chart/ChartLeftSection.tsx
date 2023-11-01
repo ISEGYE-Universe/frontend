@@ -74,8 +74,11 @@ const ChartLeftSection = () => {
           <Title>음반 관련 소식</Title>
         </div>
         <ul css={albumNewsContainer}>
-          {chartData.albumNewsList.map((e) => (
-            <AlbumNewsCard title={e.title}></AlbumNewsCard>
+          {chartData.albumNewsList.map((e, i) => (
+            <AlbumNewsCard
+              key={`album-news-${i}`}
+              title={e.title}
+            ></AlbumNewsCard>
           ))}
         </ul>
       </section>
