@@ -1,7 +1,12 @@
+import AlbumNewsCard from '@/components/Chart/AlbumNewsCard'
 import ArticleADBanner from '@/components/Chart/ArticleADBanner'
-import ChartLeftSection from '@/components/Chart/ChartLeftSection'
-import ChartRightSection from '@/components/Chart/ChartRightSection'
+import ChartMusicCard from '@/components/Chart/ChartMusicCard'
+import HRLine from '@/components/Chart/HRLine'
+import TimeBaseSubTitle from '@/components/Chart/TimeBaseSubTitle'
+import Title from '@/components/Chart/Title'
+import Top100Chart from '@/components/Chart/Top100Chart'
 import TempLayout from '@/components/TempLayout/TempLayout'
+import chartData from '@/data/chart.json'
 import { css } from '@emotion/react'
 
 const articleStyle = css`
@@ -23,7 +28,19 @@ const RightSectionContainerStyle = css`
   width: 745px;
   vertical-align: top;
 `
-
+const titleContainer = css`
+  margin-bottom: 22px;
+`
+const musicChartContainer = css`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`
+const albumNewsContainer = css`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`
 const Chart = () => {
   return (
     <TempLayout>
@@ -39,12 +56,87 @@ const Chart = () => {
         {/* 차트정보 */}
         <div css={chartSectionContainerStyle}>
           <div css={LeftSectionContainerStyle}>
-            <ChartLeftSection />
+            {/* 멜론 HOT 100 */}
+            <section>
+              <div css={titleContainer}>
+                <TimeBaseSubTitle time="23:00" mb="6px" />
+                <Title>멜론 HOT 100</Title>
+              </div>
+
+              <ul css={musicChartContainer}>
+                {chartData.hot100List.map((m) => (
+                  <ChartMusicCard
+                    key={`hot100-card-${m.title}`}
+                    title={m.title}
+                    position={m.position}
+                    change={m.change}
+                    artist={m.artist}
+                    thumb={m.thumb}
+                  ></ChartMusicCard>
+                ))}
+              </ul>
+            </section>
+            <HRLine />
+            {/* 실시간 차트 */}
+            <section>
+              <div css={titleContainer}>
+                <TimeBaseSubTitle time="23:00" mb="6px" />
+                <Title>가이섬 실시간 차트</Title>
+              </div>
+              <ul css={musicChartContainer}>
+                {chartData.realTimeChartList.map((m) => (
+                  <ChartMusicCard
+                    key={`realtime-chart-card-${m.title}`}
+                    title={m.title}
+                    position={m.position}
+                    change={m.change}
+                    artist={m.artist}
+                    thumb={m.thumb}
+                  ></ChartMusicCard>
+                ))}
+              </ul>
+            </section>
+            <HRLine />
+            {/* 음반 관련 소식 */}
+            <section>
+              <div css={titleContainer}>
+                <Title>음반 관련 소식</Title>
+              </div>
+              <ul css={albumNewsContainer}>
+                {chartData.albumNewsList.map((e, i) => (
+                  <AlbumNewsCard
+                    key={`album-news-${i}`}
+                    title={e.title}
+                  ></AlbumNewsCard>
+                ))}
+              </ul>
+            </section>
           </div>
           <div css={RightSectionContainerStyle}>
-            <ChartRightSection />
+            {/* 멜론 TOP 100 */}
+            <section>
+              <div css={titleContainer}>
+                <Title mb="6px">현재 멜론 TOP 100 순위는?</Title>
+                <TimeBaseSubTitle time="23:00"></TimeBaseSubTitle>
+              </div>
+              <Top100Chart />
+            </section>
+
+            <HRLine margin="35px 0 17px 0" />
+
+            <div>
+              {/* 멜론 주간인기상 */}
+              <section></section>
+              {/* 곡 멜론 정보 */}
+              <section></section>
+            </div>
+
+            {/* 최근 명예의 전당 */}
+            <section></section>
           </div>
         </div>
+
+        <HRLine margin="40px 0 60px 0" />
         {/* 역대기록 */}
       </article>
     </TempLayout>
