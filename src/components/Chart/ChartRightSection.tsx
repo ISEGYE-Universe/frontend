@@ -14,7 +14,7 @@ const ChartRightSection = () => {
       {/* 멜론 TOP 100 */}
       <section>
         <div css={titleContainer}>
-          <Title>현재 멜론 TOP 100 순위는?</Title>
+          <Title mb="6px">현재 멜론 TOP 100 순위는?</Title>
           <TimeBaseSubTitle time="23:00"></TimeBaseSubTitle>
         </div>
         <Top100Chart />
