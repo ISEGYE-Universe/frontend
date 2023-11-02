@@ -21,6 +21,13 @@ interface MelonInfoProps {
   dailyChartPosition: number
 }
 
+/**
+ * 멜론 정보 컴포넌트
+ * @param musicTitle `string` 곡명
+ * @param dailyListenerNum `number` 일간 감상자 수
+ * @param dailyChartPosition `number` 곡명
+ * @author 민타이
+ */
 const MelonInfo = ({
   musicTitle,
   dailyListenerNum,
@@ -40,6 +47,7 @@ const MelonInfo = ({
         >
           <h3 css={[TextMdRegular, LineHeight]}>일간 감상자</h3>
           <span css={[TitleMdRegular, LineHeight]}>
+            {/* comma 처리를 위해 toLocaleString() 이용 */}
             {dailyListenerNum.toLocaleString()}명
           </span>
         </div>
