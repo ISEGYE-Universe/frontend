@@ -33,7 +33,7 @@ const iconStyle = css`
 
 const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
   const [pageIndex, setPageIndex] = useState<number>(0)
-  const galleryLen = profileData.jingburgerIntroduction.galleryImageURL.length
+  const galleryLen = data.galleryImageURL.length
   const navButtonStyle = css`
     position: absolute;
     width: 26px;
