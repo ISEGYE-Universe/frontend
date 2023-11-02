@@ -2,6 +2,7 @@ import AlbumNewsCard from '@/components/Chart/AlbumNewsCard'
 import ArticleADBanner from '@/components/Chart/ArticleADBanner'
 import ChartMusicCard from '@/components/Chart/ChartMusicCard'
 import HRLine from '@/components/Chart/HRLine'
+import MelonInfo from '@/components/Chart/MelonInfo'
 import SubTitle from '@/components/Chart/SubTitle'
 import TimeBaseSubTitle from '@/components/Chart/TimeBaseSubTitle'
 import Title from '@/components/Chart/Title'
@@ -44,7 +45,9 @@ const albumNewsContainer = css`
   gap: 10px;
 `
 const weeklyAwardMainContainer = css`
+  display: inline-block;
   width: 315px;
+  margin-right: 13px;
 `
 const weeklyAwardTitleContainer = css`
   display: flex;
@@ -52,7 +55,11 @@ const weeklyAwardTitleContainer = css`
   gap: 10px;
   margin-bottom: 15px;
 `
-
+const melonInfoMainContainer = css`
+  display: inline-block;
+  width: 417px;
+  vertical-align: top;
+`
 const Chart = () => {
   return (
     <TempLayout>
@@ -151,7 +158,13 @@ const Chart = () => {
                 />
               </section>
               {/* 곡 멜론 정보 */}
-              <section></section>
+              <section css={melonInfoMainContainer}>
+                <MelonInfo
+                  musicTitle="OVER"
+                  dailyListenerNum={22798}
+                  dailyChartPosition={308}
+                />
+              </section>
             </div>
 
             {/* 최근 명예의 전당 */}
