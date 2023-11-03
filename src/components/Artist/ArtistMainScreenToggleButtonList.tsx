@@ -20,7 +20,7 @@ const DUMMY_ISD_TWITCH_INFO_LIST = [
   },
   {
     id: 'Gosegu',
-    twitchNickname: '고세구___ (gosegugosegu)',
+    twitchNickname: '고세구___ (gosegu...',
   },
   {
     id: 'VIichan',
