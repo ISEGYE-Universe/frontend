@@ -1,6 +1,9 @@
 import Image from 'next/image'
 import { color } from './color'
 import Link from 'next/link'
+import { css } from '@emotion/react'
+
+import { TextSmRegular } from '@/styles/Font'
 
 type NewsHeaderButtonProps = {
   iconSrc: string // later change to NodeRequire
@@ -39,7 +42,14 @@ export const NewsHeaderButton = ({
       >
         <Image src={iconSrc} alt="icon" fill={true} />
       </div>
-      <span css={{ color: color.NewsHeaderButtonText, fontSize: 14 }}>
+      <span
+        css={[
+          TextSmRegular,
+          css`
+            color: ${color.NewsHeaderButtonText};
+          `,
+        ]}
+      >
         {buttonName}
       </span>
       <Image
