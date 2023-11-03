@@ -1,6 +1,9 @@
 import Image from 'next/image'
 import { Dispatch, SetStateAction } from 'react'
 
+import { css } from '@emotion/react'
+import { TitleSmRegular, TextMdRegular } from '@/styles/Font'
+
 const TOGGLE_MAP = {
   Ine: {
     imgSrc: 'images/main-artist/맴버프로필=INE.png',
@@ -78,18 +81,26 @@ export const ArtistMainScreenToggleButton = ({
         }}
       >
         <span
-          css={{
-            color: isHighlighted ? '#151515' : '#909090',
-          }}
+          css={[
+            TitleSmRegular,
+            css`
+              line-height: 1;
+              color: ${isHighlighted ? '#151515' : '#909090'};
+            `,
+          ]}
         >
           {twitchNickname}
         </span>
         <span
-          css={{
-            color: isHighlighted
-              ? TOGGLE_MAP[id as keyof typeof TOGGLE_MAP].color
-              : '#909090',
-          }}
+          css={[
+            TextMdRegular,
+            css`
+              line-height: 1;
+              color: ${isHighlighted
+                ? TOGGLE_MAP[id as keyof typeof TOGGLE_MAP].color
+                : '#909090'};
+            `,
+          ]}
         >
           {id}
         </span>
