@@ -12,6 +12,7 @@ export const News = () => {
           flexDirection: 'column',
           gap: 10,
           width: 1300, // temporary
+          overflow: 'hidden',
         }}
       >
         <NewsHeader />

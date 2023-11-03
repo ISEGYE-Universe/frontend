@@ -19,16 +19,18 @@ const DUMMY_THUMNAIL_LIST = [
   },
 ]
 
+const dx = [-0.5, 0.5, 1]
+
 export const NewsThumnailList = () => {
-  const [listIndex, setListIndex] = useState(0)
+  const [listIndex, setListIndex] = useState(1)
 
   const handleLeftButtonClick = () => {
-    if (listIndex < 0) return
+    if (listIndex < 1) return
     setListIndex((prev) => --prev)
   }
 
   const handleRightButtonClick = () => {
-    if (listIndex > 0) return
+    if (listIndex > 1) return
     setListIndex((prev) => ++prev)
   }
 
@@ -48,6 +50,7 @@ export const NewsThumnailList = () => {
           alignItems: 'center',
           paddingLeft: 60,
           paddingRight: 60,
+          zIndex: 10,
         }}
       >
         <button
@@ -86,14 +89,11 @@ export const NewsThumnailList = () => {
       <div
         css={{
           display: 'flex',
+          width: 1530,
           gap: 10,
           overflowX: 'hidden',
-          justifyContent:
-            listIndex < 0
-              ? 'flex-start'
-              : listIndex == 0
-              ? 'center'
-              : 'flex-end',
+          transition: 'transform 0.3s ease-in-out',
+          transform: `translateX(-${dx[listIndex] * 220}px)`,
         }}
       >
         {DUMMY_THUMNAIL_LIST.map((thumnail) => (
