@@ -1,4 +1,7 @@
 import Image from 'next/image'
+
+import { useState } from 'react'
+
 import { NewsThumnail } from './NewsThumnail'
 
 const DUMMY_THUMNAIL_LIST = [
@@ -17,6 +20,18 @@ const DUMMY_THUMNAIL_LIST = [
 ]
 
 export const NewsThumnailList = () => {
+  const [listIndex, setListIndex] = useState(0)
+
+  const handleLeftButtonClick = () => {
+    if (listIndex < 0) return
+    setListIndex((prev) => --prev)
+  }
+
+  const handleRightButtonClick = () => {
+    if (listIndex > 0) return
+    setListIndex((prev) => ++prev)
+  }
+
   return (
     <div
       css={{
@@ -42,6 +57,7 @@ export const NewsThumnailList = () => {
             backgroundColor: '#252525',
             borderRadius: 50,
           }}
+          onClick={handleLeftButtonClick}
         >
           <Image
             src="images/icon/banner-button-left-arrow.svg"
@@ -57,6 +73,7 @@ export const NewsThumnailList = () => {
             backgroundColor: '#252525',
             borderRadius: 50,
           }}
+          onClick={handleRightButtonClick}
         >
           <Image
             src="images/icon/banner-button-right-arrow.svg"
@@ -71,10 +88,12 @@ export const NewsThumnailList = () => {
           display: 'flex',
           gap: 10,
           overflowX: 'hidden',
-          // animation with button
-          // justifyContent: 'flex-start',
-          // justifyContent: 'center',
-          // justifyContent: 'flex-end',
+          justifyContent:
+            listIndex < 0
+              ? 'flex-start'
+              : listIndex == 0
+              ? 'center'
+              : 'flex-end',
         }}
       >
         {DUMMY_THUMNAIL_LIST.map((thumnail) => (
