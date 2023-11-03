@@ -3,27 +3,27 @@ import { Dispatch, SetStateAction } from 'react'
 
 const TOGGLE_MAP = {
   Ine: {
-    imgSrc: require('assets/main-artist/맴버프로필=INE.png'),
+    imgSrc: 'images/main-artist/맴버프로필=INE.png',
     color: '#8A2BE2',
   },
   Jingburger: {
-    imgSrc: require('assets/main-artist/맴버프로필=JINGBURGER.png'),
+    imgSrc: 'images/main-artist/맴버프로필=JINGBURGER.png',
     color: '#F0A957',
   },
   Lilpa: {
-    imgSrc: require('assets/main-artist/맴버프로필=LILPA.png'),
+    imgSrc: 'images/main-artist/맴버프로필=LILPA.png',
     color: '#443965',
   },
   Jururu: {
-    imgSrc: require('assets/main-artist/맴버프로필=JURURU.png'),
+    imgSrc: 'images/main-artist/맴버프로필=JURURU.png',
     color: '#FF008C',
   },
   Gosegu: {
-    imgSrc: require('assets/main-artist/맴버프로필=GOSEGU.png'),
+    imgSrc: 'images/main-artist/맴버프로필=GOSEGU.png',
     color: '#467EC6',
   },
   VIichan: {
-    imgSrc: require('assets/main-artist/맴버프로필=VIICHAN.png'),
+    imgSrc: 'images/main-artist/맴버프로필=VIICHAN.png',
     color: '#95C100',
   },
 }
