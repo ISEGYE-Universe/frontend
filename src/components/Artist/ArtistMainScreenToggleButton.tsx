@@ -77,20 +77,29 @@ export const ArtistMainScreenToggleButton = ({
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'flex-end',
-          gap: 10,
         }}
       >
-        <span
-          css={[
-            TitleSmRegular,
-            css`
-              line-height: 1;
-              color: ${isHighlighted ? '#151515' : '#909090'};
-            `,
-          ]}
+        <div
+          css={{
+            maxWidth: 227,
+            height: 36,
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+          }}
         >
-          {twitchNickname}
-        </span>
+          <span
+            css={[
+              TitleSmRegular,
+              css`
+                line-height: 1;
+                color: ${isHighlighted ? '#151515' : '#909090'};
+              `,
+            ]}
+          >
+            {twitchNickname}
+          </span>
+        </div>
         <span
           css={[
             TextMdRegular,
