@@ -1,0 +1,9 @@
+name: 기능 추가
+description: 와! 할게 또 늘었다
+title: '[Feature ⭐] '
+labels: ['Feature ⭐']
+body:
+  - type: textarea
+    id: implementation
+    attributes:
+      label: 내용
