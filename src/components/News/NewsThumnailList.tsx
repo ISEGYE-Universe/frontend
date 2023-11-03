@@ -92,7 +92,7 @@ export const NewsThumnailList = () => {
           width: 1530,
           gap: 10,
           overflowX: 'hidden',
-          transition: 'transform 0.3s ease-in-out',
+          transition: 'transform 0.2s ease-in-out',
           transform: `translateX(-${dx[listIndex] * 220}px)`,
         }}
       >
