@@ -55,6 +55,10 @@ const fontSizeCaptionSm = css`
 const lineHeight = css`
   line-height: 110%;
 `
+const textAlignJustify = css`
+  text-align: justify;
+`
+
 // main_title
 export const MainTitleLight = css`
   ${fontFamily}
@@ -185,4 +189,7 @@ export const CaptionSmBold = css`
 `
 export const LineHeight = css`
   ${lineHeight}
+`
+export const AlignJustify = css`
+  ${textAlignJustify}
 `

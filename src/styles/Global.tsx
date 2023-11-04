@@ -29,6 +29,7 @@ const style = css`
   li {
     list-style: none;
   }
+
   @font-face {
     font-family: 'NotoSansCJKkr';
     font-weight: 100;
