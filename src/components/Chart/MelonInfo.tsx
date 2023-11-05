@@ -41,7 +41,7 @@ const MelonInfo = ({
           css={[
             melonInfoCard,
             css`
-              min-width: 190px;
+              min-width: 200px;
             `,
           ]}
         >
@@ -55,7 +55,7 @@ const MelonInfo = ({
           css={[
             melonInfoCard,
             css`
-              min-width: 190px;
+              min-width: 200px;
             `,
           ]}
         >
