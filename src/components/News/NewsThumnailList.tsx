@@ -1,8 +1,9 @@
 import Image from 'next/image'
 
-import { useState } from 'react'
+import useEmblaCarousel from 'embla-carousel-react'
 
 import { NewsThumnail } from './NewsThumnail'
+import { useCallback } from 'react'
 
 const DUMMY_THUMNAIL_LIST = [
   {
@@ -19,20 +20,16 @@ const DUMMY_THUMNAIL_LIST = [
   },
 ]
 
-const dx = [-0.5, 0.5, 1]
-
 export const NewsThumnailList = () => {
-  const [listIndex, setListIndex] = useState(1)
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, startIndex: 1 })
 
-  const handleLeftButtonClick = () => {
-    if (listIndex < 1) return
-    setListIndex((prev) => --prev)
-  }
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev()
+  }, [emblaApi])
 
-  const handleRightButtonClick = () => {
-    if (listIndex > 1) return
-    setListIndex((prev) => ++prev)
-  }
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext()
+  }, [emblaApi])
 
   return (
     <div
@@ -60,7 +57,7 @@ export const NewsThumnailList = () => {
             backgroundColor: '#252525',
             borderRadius: 50,
           }}
-          onClick={handleLeftButtonClick}
+          onClick={scrollPrev}
         >
           <Image
             src="images/icon/banner-button-left-arrow.svg"
@@ -76,7 +73,7 @@ export const NewsThumnailList = () => {
             backgroundColor: '#252525',
             borderRadius: 50,
           }}
-          onClick={handleRightButtonClick}
+          onClick={scrollNext}
         >
           <Image
             src="images/icon/banner-button-right-arrow.svg"
@@ -88,19 +85,21 @@ export const NewsThumnailList = () => {
       </div>
       <div
         css={{
-          display: 'flex',
-          width: 1530,
-          gap: 10,
-          overflowX: 'hidden',
-          transition: 'transform 0.2s ease-in-out',
-          transform: `translateX(-${dx[listIndex] * 220}px)`,
+          overflow: 'hidden',
         }}
+        ref={emblaRef}
       >
-        {DUMMY_THUMNAIL_LIST.map((thumnail) => (
-          <NewsThumnail key={thumnail.id}>
-            <span>{thumnail.dummyString}</span>
-          </NewsThumnail>
-        ))}
+        <div
+          css={{
+            display: 'flex',
+          }}
+        >
+          {DUMMY_THUMNAIL_LIST.map((thumnail) => (
+            <NewsThumnail key={thumnail.id}>
+              <span>{thumnail.dummyString}</span>
+            </NewsThumnail>
+          ))}
+        </div>
       </div>
     </div>
   )
