@@ -18,6 +18,18 @@ const DUMMY_THUMNAIL_LIST = [
     id: 3,
     dummyString: 'Thumnail Inner 3',
   },
+  {
+    id: 4,
+    dummyString: 'Thumnail Inner 1',
+  },
+  {
+    id: 5,
+    dummyString: 'Thumnail Inner 2',
+  },
+  {
+    id: 6,
+    dummyString: 'Thumnail Inner 3',
+  },
 ]
 
 export const NewsThumnailList = () => {
