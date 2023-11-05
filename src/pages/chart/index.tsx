@@ -2,6 +2,7 @@ import AlbumNewsCard from '@/components/Chart/AlbumNewsCard'
 import ArticleADBanner from '@/components/Chart/ArticleADBanner'
 import ChartMusicCard from '@/components/Chart/ChartMusicCard'
 import HRLine from '@/components/Chart/HRLine'
+import HallOfFame from '@/components/Chart/HallOfFame'
 import MelonInfo from '@/components/Chart/MelonInfo'
 import SubTitle from '@/components/Chart/SubTitle'
 import TimeBaseSubTitle from '@/components/Chart/TimeBaseSubTitle'
@@ -143,7 +144,7 @@ const Chart = () => {
 
             <HRLine margin="35px 0 17px 0" />
 
-            <div>
+            <div css={{ marginBottom: '27px' }}>
               {/* 멜론 주간인기상 */}
               <section css={weeklyAwardMainContainer}>
                 <div css={weeklyAwardTitleContainer}>
@@ -168,7 +169,15 @@ const Chart = () => {
             </div>
 
             {/* 최근 명예의 전당 */}
-            <section></section>
+            <section>
+              <Title mb="16px">최근 명예의 전당</Title>
+              {/* 명예의 전당 본문 */}
+              <HallOfFame
+                musicTitle="이세계 페스티벌"
+                artist="이세계아이돌"
+                releasedAt={new Date('2023-10-05 12:00')}
+              />
+            </section>
           </div>
         </div>
 
