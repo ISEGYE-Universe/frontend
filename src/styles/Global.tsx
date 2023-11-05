@@ -21,14 +21,10 @@ const style = css`
     margin: 0;
   }
 
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-
   li {
     list-style: none;
   }
+
   @font-face {
     font-family: 'NotoSansCJKkr';
     font-weight: 100;
