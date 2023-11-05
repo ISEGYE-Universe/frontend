@@ -18,18 +18,6 @@ const DUMMY_THUMNAIL_LIST = [
     id: 3,
     dummyString: 'Thumnail Inner 3',
   },
-  {
-    id: 4,
-    dummyString: 'Thumnail Inner 1',
-  },
-  {
-    id: 5,
-    dummyString: 'Thumnail Inner 2',
-  },
-  {
-    id: 6,
-    dummyString: 'Thumnail Inner 3',
-  },
 ]
 
 export const NewsThumnailList = () => {
@@ -108,6 +96,11 @@ export const NewsThumnailList = () => {
         >
           {DUMMY_THUMNAIL_LIST.map((thumnail) => (
             <NewsThumnail key={thumnail.id}>
+              <span>{thumnail.dummyString}</span>
+            </NewsThumnail>
+          ))}
+          {DUMMY_THUMNAIL_LIST.map((thumnail) => (
+            <NewsThumnail key={thumnail.id * 2}>
               <span>{thumnail.dummyString}</span>
             </NewsThumnail>
           ))}
