@@ -3,6 +3,7 @@ import ArticleADBanner from '@/components/Chart/ArticleADBanner'
 import ChartMusicCard from '@/components/Chart/ChartMusicCard'
 import HRLine from '@/components/Chart/HRLine'
 import HallOfFame from '@/components/Chart/HallOfFame'
+import HistoryCarousel from '@/components/Chart/HistoryCarousel'
 import MelonInfo from '@/components/Chart/MelonInfo'
 import SubTitle from '@/components/Chart/SubTitle'
 import TimeBaseSubTitle from '@/components/Chart/TimeBaseSubTitle'
@@ -183,6 +184,11 @@ const Chart = () => {
 
         <HRLine margin="40px 0 60px 0" />
         {/* 역대기록 */}
+        <section>
+          <Title mb="20px">역대 기록 한눈에 보기</Title>
+          {/* 캐러셀 구역 */}
+          <HistoryCarousel />
+        </section>
       </article>
     </TempLayout>
   )
