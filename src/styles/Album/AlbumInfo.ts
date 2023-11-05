@@ -67,6 +67,9 @@ const btnSize = css`
   background-color: transparent;
   cursor: pointer;
 `
+const positionRelative = css`
+  position: relative;
+`
 
 export const AlbumTitle = css`
   ${albumTitleSize}
@@ -104,4 +107,5 @@ export const AlbumBtnDiv = css`
 `
 export const AlbumBtnSize = css`
   ${btnSize}
+  ${positionRelative}
 `
