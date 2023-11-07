@@ -61,10 +61,6 @@ const style = css`
     background: none;
   }
 
-  a {
-    text-decoration: none;
-  }
-
   h1,
   h2,
   h3,
