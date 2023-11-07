@@ -1,0 +1,39 @@
+name: Deploy Frontend as Staging
+on:
+  push:
+    branches:
+      - develop
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Connect deploy key
+        uses: cloudtype-github-actions/connect@v1
+        with:
+          token: ${{ secrets.STAGING_K8S_TOKEN }}
+          ghtoken: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy
+        uses: cloudtype-github-actions/deploy@v1
+        with:
+          token: ${{ secrets.STAGING_K8S_TOKEN }}
+          project: kms0219kms/isegyeuniverse-frontend
+          stage: main
+          yaml: |
+            name: isegyeuniverse-frontend
+            app: node@18
+            options:
+              env:
+                - name: NODE_ENV
+                  value: production
+              ports: 3000
+              build: npm run build
+              install: npm install
+              strategy: rolling
+              start: npx --yes serve@latest build
+              healthz: /
+            context:
+              git:
+                url: git@github.com:${{ github.repository }}.git
+                ref: ${{ github.ref }}
