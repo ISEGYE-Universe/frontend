@@ -1,9 +1,8 @@
-
 interface props {
-  link: string;
+  link: string
 }
 
-const MovieContainer = ({link}: props) => {
+const MovieContainer = ({ link }: props) => {
   return (
     <div>
       <iframe

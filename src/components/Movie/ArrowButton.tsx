@@ -6,9 +6,8 @@ type ArrowButtonProps = {
 }
 
 const ArrowButton = ({ children, position }: ArrowButtonProps) => {
-  
   const buttonPosition = css`
-    ${position === "right" ? "right: 40px;" : "left: 40px;"}
+    ${position === 'right' ? 'right: 40px;' : 'left: 40px;'}
   `
 
   return (
