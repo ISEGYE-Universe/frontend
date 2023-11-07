@@ -77,4 +77,4 @@ const style = css`
 
 const GlobalStyle = () => <Global styles={style} />
 
-export default GlobalStyle 
+export default GlobalStyle
