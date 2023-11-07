@@ -73,6 +73,10 @@ const style = css`
     border: none;
     background: none;
   }
+
+  a {
+    text-decoration: none;
+  }
 `
 
 const GlobalStyle = () => <Global styles={style} />
