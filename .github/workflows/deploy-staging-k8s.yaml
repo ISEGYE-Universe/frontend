@@ -13,7 +13,7 @@ jobs:
         uses: cloudtype-github-actions/connect@v1
         with:
           token: ${{ secrets.STAGING_K8S_TOKEN }}
-          ghtoken: ${{ secrets.GITHUB_TOKEN }}
+          ghtoken: ${{ secrets.STAGING_GH_TOKEN }}
       - name: Deploy
         uses: cloudtype-github-actions/deploy@v1
         with:
