@@ -3,14 +3,14 @@ import { css } from '@emotion/react'
 import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react'
 import MovieContainer from './MovieContainer'
 import MovieTitle from './MovieTitle'
-import { MovieListType } from './type/types'
+import { MovieSliderProrps, MovieInfoType } from './type/types'
 import { RightArrow, LeftArrow } from './svg'
 
-interface prorps {
+/* interface MovieSliderProrps {
   movieList: MovieListType
-}
+} */
 
-const MovieSlider = ({ movieList }: prorps) => {
+const MovieSlider = ({ movieList }: MovieSliderProrps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, startIndex: 0 })
   const [current, setCurrent] = useState<number>(0)
 
@@ -30,7 +30,7 @@ const MovieSlider = ({ movieList }: prorps) => {
   const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
     setCurrent(emblaApi.selectedScrollSnap())
   }, [])
-  
+
   useEffect(() => {
     if (!emblaApi) return
     onSelect(emblaApi)
@@ -58,7 +58,7 @@ const MovieSlider = ({ movieList }: prorps) => {
               height: '720px',
             }}
           >
-            {movieList.map((list: any, idx: number) => (
+            {movieList.map((list: MovieInfoType, idx: number) => (
               <MovieContainer link={list.src} key={idx} />
             ))}
           </div>

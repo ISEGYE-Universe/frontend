@@ -1,11 +1,8 @@
 import { css } from '@emotion/react'
 import { TitleSmRegular } from '@/styles/Font'
+import { MovieTitleProps } from './type/types'
 
-interface MovieTitelProps {
-  title: string
-}
-
-const MovieTitle = ({ title }: MovieTitelProps) => {
+const MovieTitle = ({ title }: MovieTitleProps) => {
   return (
     <div
       css={css`

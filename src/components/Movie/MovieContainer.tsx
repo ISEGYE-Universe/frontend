@@ -1,8 +1,6 @@
-interface props {
-  link: string
-}
+import { MovieContainerProps } from './type/types'
 
-const MovieContainer = ({ link }: props) => {
+const MovieContainer = ({ link }: MovieContainerProps) => {
   return (
     <div>
       <iframe
