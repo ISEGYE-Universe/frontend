@@ -1,13 +1,12 @@
 import ProfileMemberDetail from '@/components/Profile/ProfileMemberDetail'
-import TempGNB from '@/components/Profile/TempGNB'
+import TempLayout from '@/components/TempLayout/TempLayout'
 import profileData from '@/data/profile.json'
 
 const JingBurgerProfileDetail = () => {
   return (
-    <>
-      <TempGNB />
+    <TempLayout>
       <ProfileMemberDetail data={profileData.lilpaIntroduction} />
-    </>
+    </TempLayout>
   )
 }
 
