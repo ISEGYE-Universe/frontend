@@ -30,7 +30,7 @@ const MovieSlider = ({ movieList }: prorps) => {
   const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
     setCurrent(emblaApi.selectedScrollSnap())
   }, [])
-  console.log(current)
+  
   useEffect(() => {
     if (!emblaApi) return
     onSelect(emblaApi)
