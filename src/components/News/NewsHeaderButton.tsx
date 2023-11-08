@@ -1,4 +1,9 @@
+import Image from 'next/image'
 import { color } from './color'
+import Link from 'next/link'
+import { css } from '@emotion/react'
+
+import { TextSmRegular } from '@/styles/Font'
 
 type NewsHeaderButtonProps = {
   iconSrc: string // later change to NodeRequire
@@ -12,7 +17,7 @@ export const NewsHeaderButton = ({
   href,
 }: NewsHeaderButtonProps) => {
   return (
-    <div
+    <Link
       css={{
         width: 220,
         height: 40,
@@ -21,9 +26,13 @@ export const NewsHeaderButton = ({
         display: 'flex',
         alignItems: 'center',
       }}
+      href={href}
+      target="_blank"
+      rel="noreferrer"
     >
       <div
         css={{
+          position: 'relative',
           marginLeft: 20,
           marginRight: 20,
           width: 20,
@@ -31,11 +40,28 @@ export const NewsHeaderButton = ({
           backgroundColor: 'black',
         }}
       >
-        <span css={{ color: 'white', fontSize: 10 }}>{iconSrc}</span>
+        <Image src={iconSrc} alt="icon" fill={true} />
       </div>
-      <span css={{ color: color.NewsHeaderButtonText, fontSize: 14 }}>
+      <span
+        css={[
+          TextSmRegular,
+          css`
+            color: ${color.NewsHeaderButtonText};
+          `,
+        ]}
+      >
         {buttonName}
       </span>
-    </div>
+      <Image
+        css={{
+          marginLeft: 'auto',
+          marginRight: 20,
+        }}
+        src="/images/icon/NewsHeaderButtonArrow.svg"
+        alt="arrow"
+        width={7}
+        height={12}
+      />
+    </Link>
   )
 }

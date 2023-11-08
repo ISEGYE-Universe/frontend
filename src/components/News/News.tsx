@@ -4,7 +4,7 @@ import { NewsWeeklyEventBannerList } from './NewsWeeklyEventBannerList'
 
 export const News = () => {
   return (
-    <div>
+    <section>
       <span>TITLE</span>
       <div
         css={{
@@ -12,12 +12,13 @@ export const News = () => {
           flexDirection: 'column',
           gap: 10,
           width: 1300, // temporary
+          overflow: 'hidden',
         }}
       >
         <NewsHeader />
         <NewsThumnailList />
         <NewsWeeklyEventBannerList />
       </div>
-    </div>
+    </section>
   )
 }
