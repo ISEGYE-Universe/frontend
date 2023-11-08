@@ -7,7 +7,10 @@
     "mainGsgHover": "/images/profile/main/bg-hover-gsg.png",
     "mainLpaHover": "/images/profile/main/bg-hover-lil.png",
     "mainIneHover": "/images/profile/main/bg-hover-ine.png",
-    "memberGalleryBg": "/images/profile/member-gallery/member-bg-overlay.png"
+    "memberGalleryBg": "/images/profile/member-gallery/member-bg-overlay.png",
+    "ytIcon": "/images/icon/icon-yt-white.png",
+    "igIcon": "/images/icon/icon-ig-white.png",
+    "twIcon": "/images/icon/icon-tw-white.png"
   },
   "mainIntroduction": {
     "mainTitle": "이세계아이돌",
@@ -145,9 +148,8 @@
       "twLink": "https://www.twitch.tv/viichan6"
     },
     "galleryImageURL": [
-      "/images/profile/member-gallery/viichan1.png",
-      "/images/profile/member-gallery/viichan2.png",
-      "/images/profile/member-gallery/viichan3.png"
+      "/images/profile/member-gallery/viichan1.jpg",
+      "/images/profile/member-gallery/viichan2.jpg"
     ]
   }
 }
