@@ -81,6 +81,10 @@ const style = css`
   li {
     list-style: none;
   }
+
+  a {
+    text-decoration: none;
+  }
 `
 
 const GlobalStyle = () => <Global styles={style} />
