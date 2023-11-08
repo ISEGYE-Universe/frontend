@@ -1,5 +1,6 @@
 import MovieSlider from './MovieSlider'
 import { MovieListType } from './type/types'
+import { MovieContainer } from './style/Movie.Style'
 
 /** 임시 데이터 */
 const MovieList: MovieListType = [
@@ -35,14 +36,7 @@ const MovieList: MovieListType = [
 
 const Movie = () => {
   return (
-    <section
-      css={{
-        margin: '0 auto',
-        width: '1280px',
-        textAlign: 'center',
-        position: 'relative',
-      }}
-    >
+    <section css={MovieContainer}>
       <MovieSlider movieList={MovieList} />
     </section>
   )

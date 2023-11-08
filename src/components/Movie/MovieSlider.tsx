@@ -5,10 +5,15 @@ import MovieContainer from './MovieContainer'
 import MovieTitle from './MovieTitle'
 import { MovieSliderProrps, MovieInfoType } from './type/types'
 import { RightArrow, LeftArrow } from './svg'
-
-/* interface MovieSliderProrps {
-  movieList: MovieListType
-} */
+import {
+  SliderDiv,
+  DotContainer,
+  CurrentDot,
+  Dot,
+  Flex,
+  LeftButton,
+  RightButton,
+} from './style/Movie.Style'
 
 const MovieSlider = ({ movieList }: MovieSliderProrps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, startIndex: 0 })
@@ -40,59 +45,35 @@ const MovieSlider = ({ movieList }: MovieSliderProrps) => {
 
   return (
     <>
-      <div className="embla">
-        <div
-          css={{
-            overflow: 'hidden',
-            width: '1280px',
-            height: '720px',
-            borderRadius: '20px',
-            marginBottom: '10px',
-          }}
-          ref={emblaRef}
-        >
+      <div>
+        <div css={SliderDiv} ref={emblaRef}>
           <div
-            css={{
-              display: 'flex',
-              width: '1280px',
-              height: '720px',
-            }}
+            css={Flex}
           >
             {movieList.map((list: MovieInfoType, idx: number) => (
               <MovieContainer link={list.src} key={idx} />
             ))}
           </div>
         </div>
-        <button
-          css={{ position: 'absolute', top: '335px', left: '40px' }}
-          onClick={scrollPrev}
-        >
+        <button css={LeftButton} onClick={scrollPrev}>
           <LeftArrow />
         </button>
-        <button
-          css={{ position: 'absolute', top: '335px', right: '40px' }}
-          onClick={scrollNext}
-        >
+        <button css={RightButton} onClick={scrollNext}>
           <RightArrow />
         </button>
         <MovieTitle title={movieList[current].title} />
         <div
-          css={{
-            display: 'flex',
-            gap: '14px',
-            justifyContent: 'center',
-          }}
+          css={css`
+            ${Flex}
+            ${DotContainer}
+          `}
         >
           {movieList.map((_, idx: number) => (
             <div
               key={idx}
               onClick={() => scrollTo(idx)}
               css={css`
-                ${current === idx
-                  ? 'background-color: #8D8D8D; width: 20px;'
-                  : 'background-color: #D1D1D1; width: 10px;'}
-                height: 10px;
-                border-radius: 5px;
+                ${current === idx ? CurrentDot : Dot}
               `}
             />
           ))}
