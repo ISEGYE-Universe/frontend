@@ -35,7 +35,7 @@ const VibePosition = css`
 `
 const BugsPosition = css`
   position: absolute;
-  top: 11px;
+  top: 12px;
   left: 6px;
 `
 

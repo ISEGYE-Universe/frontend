@@ -28,7 +28,8 @@ const DesSize = css`
 // Album Detail Description Div
 const DetailDiv = css`
   margin-top: 12px;
-  width: 365px;
+  width: 375px;
+  word-break: keep-all;
 `
 // Album Info(genre...)
 const InfoDiv = css`
