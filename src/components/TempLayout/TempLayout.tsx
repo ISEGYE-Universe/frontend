@@ -1,14 +1,10 @@
 import TempFooter from './TempFooter'
-import TempGNB from './TempGNB'
 
-interface TempLayoutProps {
+const TempLayout = ({ children }: {
   children: React.ReactNode
-}
-
-const TempLayout = ({ children }: TempLayoutProps) => {
+}) => {
   return (
     <>
-      <TempGNB />
       <main>{children}</main>
       <TempFooter />
     </>
