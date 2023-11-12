@@ -3,6 +3,7 @@ import { Global, css } from '@emotion/react'
 const style = css`
   * {
     box-sizing: border-box;
+    font-family: 'NotoSansCJKkr';
   }
 
   html,
@@ -11,6 +12,8 @@ const style = css`
     margin: 0;
     padding: 0;
   }
+
+  /* S: 추후 폰트 변경 시 변경 가능 */
 
   @font-face {
     font-family: 'NotoSansCJKkr';
@@ -62,6 +65,8 @@ const style = css`
     src: url('/fonts/NotoSansCJKkr-Black.otf') format('opentype');
     unicode-range: U+0-2025, U+2027-10FFFF;
   }
+
+  /* E: 추후 폰트 변경 시 변경 가능 */
 
   button {
     padding: 0;

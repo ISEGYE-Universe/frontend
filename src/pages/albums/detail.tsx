@@ -13,9 +13,9 @@ const Detail = () => {
       <EmblaCarousel
         slides={[
           <Album ident="REWIND" />,
-          <Album ident="WINTERSPRING" />,
+          <Album ident="WINTER_SPRING" />,
           <Album ident="LOCKDOWN" />,
-          <Album ident="AnotherWorld" />,
+          <Album ident="ANOTHER_WORLD" />,
           <Album ident="KIDDING" />,
         ]}
         options={{

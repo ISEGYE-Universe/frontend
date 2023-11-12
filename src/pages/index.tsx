@@ -4,8 +4,6 @@ import { Inter } from 'next/font/google'
 import Banner from '@/components/Banner/Banner'
 import { News } from '@/components/News/News'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export default function Home() {
   return (
     <>
