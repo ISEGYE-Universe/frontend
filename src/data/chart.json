@@ -7,38 +7,38 @@
   "hot100List": [
     {
       "title": "KIDDING",
-      "position": 18,
+      "position": 11,
       "change": 1,
       "artist": "이세계아이돌",
       "thumb": "/images/chart/album-art-kidding.jpg"
     },
     {
       "title": "OVER",
-      "position": 43,
-      "change": -6,
+      "position": 19,
+      "change": 1,
       "artist": "이세계아이돌",
       "thumb": "/images/chart/album-art-isegye-festival.jpg"
     },
     {
       "title": "Superhero",
-      "position": 46,
-      "change": 0,
+      "position": 20,
+      "change": 3,
       "artist": "이세계아이돌",
       "thumb": "/images/chart/album-art-isegye-festival.jpg"
     },
     {
-      "title": "Another World",
-      "position": 72,
-      "change": 1,
+      "title": "LOCKDOWN",
+      "position": 21,
+      "change": 5,
       "artist": "이세계아이돌",
-      "thumb": "/images/chart/album-art-another-world.jpg"
+      "thumb": "/images/chart/album-art-lockdown.jpg"
     },
     {
-      "title": "고속도로 로망스",
-      "position": 86,
-      "change": 1,
-      "artist": "숲튽훈, 주르르",
-      "thumb": "/images/chart/album-art-highway-romance.jpg"
+      "title": "Another World",
+      "position": 32,
+      "change": 5,
+      "artist": "이세계아이돌",
+      "thumb": "/images/chart/album-art-another-world.jpg"
     }
   ],
   "realTimeChartList": [
