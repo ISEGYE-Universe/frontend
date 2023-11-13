@@ -7,12 +7,12 @@ import AlbumNewsCard from './AlbumNewsCard'
 import HRLine from './HRLine'
 
 const titleContainer = css`
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 `
 const musicChartContainer = css`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 14px;
 `
 const albumNewsContainer = css`
   display: flex;
@@ -71,7 +71,7 @@ const ChartLeftSection = () => {
       {/* 음반 관련 소식 */}
       <section>
         <div css={titleContainer}>
-          <Title>음반 관련 소식</Title>
+          <Title>발매 관련 소식</Title>
         </div>
         <ul css={albumNewsContainer}>
           {chartData.albumNewsList.map((e, i) => (

@@ -1,5 +1,6 @@
 import { css } from '@emotion/react'
 import chartData from '@/data/chart.json'
+import { ChartColor } from '@/styles/ChartColor'
 
 const Top100Chart = () => {
   return (
@@ -15,7 +16,7 @@ const Top100Chart = () => {
           display: inline-block;
           width: 517px;
           height: 100%;
-          background-color: #f6f6f6;
+          background-color: ${ChartColor.bgWhiteGrey};
         `}
       ></div>
       {/* 곡 카드 영역 */}

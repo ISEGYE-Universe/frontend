@@ -2,7 +2,7 @@ import {
   LineHeight,
   TextSmRegular,
   TitleMdBold,
-  TitleSmLight,
+  TitleSmRegular,
 } from '@/styles/Font'
 import { css } from '@emotion/react'
 import Image from 'next/image'
@@ -42,7 +42,7 @@ const ArticleADBanner = ({
     width: 100%;
     border-radius: 10px;
     color: #fff;
-    padding: 20px 40px 26px;
+    padding: 18px 40px 19px;
     background:
       linear-gradient(90deg, ${bgColor} 37.85%, rgba(234, 68, 118, 0.5) 100%),
       url('${bgImage}'),
@@ -68,7 +68,7 @@ const ArticleADBanner = ({
             <h2 css={[TextSmRegular, LineHeight]}>{desc}</h2>
           </div>
           <div css={CTAContainerStyle}>
-            <span css={[TitleSmLight, LineHeight]}>{CTAText}</span>
+            <span css={[TitleSmRegular, LineHeight]}>{CTAText}</span>
             <Image
               src={'/images/icon/ad-right-chevron.svg'}
               alt="right icon"
