@@ -1,6 +1,6 @@
 import {
   LineHeight,
-  TextSmLight,
+  TextSmRegular,
   TitleMdBold,
   TitleSmLight,
 } from '@/styles/Font'
@@ -65,8 +65,7 @@ const ArticleADBanner = ({
             >
               {title}
             </h1>
-            {/* Figma 내에 TextSmRegular로 명시되어 있으나 Light에 가까워 보임*/}
-            <h2 css={[TextSmLight, LineHeight]}>{desc}</h2>
+            <h2 css={[TextSmRegular, LineHeight]}>{desc}</h2>
           </div>
           <div css={CTAContainerStyle}>
             <span css={[TitleSmLight, LineHeight]}>{CTAText}</span>
