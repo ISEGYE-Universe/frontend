@@ -26,8 +26,8 @@ const ChartLeftSection = () => {
       {/* 멜론 HOT 100 */}
       <section>
         <div css={titleContainer}>
-          <TimeBaseSubTitle time="23:00" mb="6px" />
-          <Title>멜론 HOT 100</Title>
+          <Title mb="10px">멜론 HOT 100</Title>
+          <TimeBaseSubTitle time="23:00" />
         </div>
 
         <ul css={musicChartContainer}>
@@ -49,8 +49,8 @@ const ChartLeftSection = () => {
       {/* 실시간 차트 */}
       <section>
         <div css={titleContainer}>
-          <TimeBaseSubTitle time="23:00" mb="6px" />
-          <Title>가이섬 실시간 차트</Title>
+          <Title mb="10px">가이섬 실시간 차트</Title>
+          <TimeBaseSubTitle time="23:00" />
         </div>
         <ul css={musicChartContainer}>
           {chartData.realTimeChartList.map((m) => (
