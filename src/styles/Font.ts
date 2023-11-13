@@ -3,7 +3,7 @@ import { css } from '@emotion/react'
 // Pre-defined font style
 // Font Family
 const fontFamily = css`
-  font-family: 'NotoSansCJKkr';
+  font-family: 'Noto Sans CJK KR';
 `
 // Font Weight
 const fontWeightThin = css`
@@ -22,10 +22,10 @@ const fontWeightMedium = css`
   font-weight: 500;
 `
 const fontWeightBold = css`
-  font-weight: 600;
+  font-weight: 700;
 `
 const fontWeightBlack = css`
-  font-weight: 700;
+  font-weight: 900;
 `
 // Font Size
 const fontSizeMainTitle = css`
