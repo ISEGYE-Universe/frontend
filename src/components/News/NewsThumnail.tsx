@@ -4,7 +4,7 @@ type NewsThumnailProps = {
   children: JSX.Element
 }
 
-export const NewsThumnail = ({ children }: NewsThumnailProps) => {
+export function NewsThumnail({ children }: NewsThumnailProps) {
   return (
     <div
       css={{

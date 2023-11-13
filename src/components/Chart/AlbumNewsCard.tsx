@@ -10,7 +10,7 @@ const albumCardContainer = css`
   padding: 20px 14px;
   background: #f6f6f6;
 `
-const AlbumNewsCard = ({ title }: AlbumNewsCardProps) => {
+function AlbumNewsCard({ title }: AlbumNewsCardProps) {
   return (
     <li css={albumCardContainer}>
       <h3 css={[TextMdRegular, LineHeight]}>{title}</h3>

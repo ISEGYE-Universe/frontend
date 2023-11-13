@@ -8,7 +8,7 @@ const profileContainerStyle = css`
   height: calc(100vh - 120px);
 `
 
-const Profile = () => {
+function Profile() {
   return (
     <TempLayout>
       <div css={profileContainerStyle}>
@@ -16,7 +16,7 @@ const Profile = () => {
         <ProfileIntroductionBox
           mainTitle={profileData.mainIntroduction.mainTitle}
           description={profileData.mainIntroduction.description}
-        ></ProfileIntroductionBox>
+        />
       </div>
     </TempLayout>
   )

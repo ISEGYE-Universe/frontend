@@ -3,7 +3,7 @@ import { css } from '@emotion/react'
 interface HRLineProps {
   margin?: string
 }
-const HRLine = ({ margin }: HRLineProps) => {
+function HRLine({ margin }: HRLineProps) {
   return (
     <hr
       css={css`

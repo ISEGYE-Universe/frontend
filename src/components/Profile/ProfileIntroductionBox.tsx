@@ -35,14 +35,14 @@ const iconStyle = css`
  * @param description 트위치 링크
  * @author 민타이
  */
-const ProfileIntroductionBox = (props: ProfileIntroductionBoxProps) => {
+function ProfileIntroductionBox(props: ProfileIntroductionBoxProps) {
   const { mainTitle, isShowSns, ytLink, igLink, twLink, description, margin } =
     props
 
   return (
     <section
       css={css`
-        ${margin ? 'margin: ' + margin + ';' : 'margin: 0 0 83px 178px;'};
+        ${margin ? `margin: ${margin};` : 'margin: 0 0 83px 178px;'};
 
         position: absolute;
         left: 0;
@@ -121,7 +121,7 @@ const ProfileIntroductionBox = (props: ProfileIntroductionBoxProps) => {
           )}
           {/* E: sns links */}
         </div>
-        {/*E: Heading + SNS Link */}
+        {/* E: Heading + SNS Link */}
 
         {/* S: Description */}
         {description && (
@@ -140,7 +140,7 @@ const ProfileIntroductionBox = (props: ProfileIntroductionBoxProps) => {
                 position: relative;
                 margin: 0 22px 0 6px;
               `}
-            ></div>
+            />
             {/* 소개글 */}
             <ul
               css={css`

@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
+import chartData from '@/data/chart.json'
 import ChartMusicCard from './ChartMusicCard'
 import Title from './Title'
-import chartData from '@/data/chart.json'
 import TimeBaseSubTitle from './TimeBaseSubTitle'
 import AlbumNewsCard from './AlbumNewsCard'
 import HRLine from './HRLine'
@@ -20,7 +20,7 @@ const albumNewsContainer = css`
   gap: 10px;
 `
 
-const ChartLeftSection = () => {
+function ChartLeftSection() {
   return (
     <>
       {/* 멜론 HOT 100 */}
@@ -39,7 +39,7 @@ const ChartLeftSection = () => {
               change={m.change}
               artist={m.artist}
               thumb={m.thumb}
-            ></ChartMusicCard>
+            />
           ))}
         </ul>
       </section>
@@ -61,7 +61,7 @@ const ChartLeftSection = () => {
               change={m.change}
               artist={m.artist}
               thumb={m.thumb}
-            ></ChartMusicCard>
+            />
           ))}
         </ul>
       </section>
@@ -75,10 +75,7 @@ const ChartLeftSection = () => {
         </div>
         <ul css={albumNewsContainer}>
           {chartData.albumNewsList.map((e, i) => (
-            <AlbumNewsCard
-              key={`album-news-${i}`}
-              title={e.title}
-            ></AlbumNewsCard>
+            <AlbumNewsCard key={`album-news-${i}`} title={e.title} />
           ))}
         </ul>
       </section>

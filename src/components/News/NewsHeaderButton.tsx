@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import { color } from './color'
 import Link from 'next/link'
 import { css } from '@emotion/react'
 
 import { TextSmRegular } from '@/styles/Font'
+import { color } from './color'
 
 type NewsHeaderButtonProps = {
   iconSrc: string // later change to NodeRequire
@@ -11,11 +11,11 @@ type NewsHeaderButtonProps = {
   href: string
 }
 
-export const NewsHeaderButton = ({
+export function NewsHeaderButton({
   iconSrc,
   buttonName,
   href,
-}: NewsHeaderButtonProps) => {
+}: NewsHeaderButtonProps) {
   return (
     <Link
       css={{
@@ -40,7 +40,7 @@ export const NewsHeaderButton = ({
           backgroundColor: 'black',
         }}
       >
-        <Image src={iconSrc} alt="icon" fill={true} />
+        <Image src={iconSrc} alt="icon" fill />
       </div>
       <span
         css={[

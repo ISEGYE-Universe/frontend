@@ -6,8 +6,8 @@
 import { ReactNode, useCallback, useEffect, useState } from 'react'
 import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react'
 import ClassNames from 'embla-carousel-class-names'
-import { DotButton } from './EmblaCarouselArrowsDots'
 import { css } from '@emotion/react'
+import { DotButton } from './EmblaCarouselArrowsDots'
 
 type PropType = {
   slides: ReactNode[]
@@ -50,7 +50,7 @@ const albums = css`
   position: relative;
 `
 
-export const EmblaCarousel = (props: PropType) => {
+export function EmblaCarousel(props: PropType) {
   const { options, slides } = props //* props options and slides
   const [emblaRef, embla] = useEmblaCarousel(options, [ClassNames()])
   //* zustand로 변환 필요

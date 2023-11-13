@@ -56,21 +56,16 @@ const metaDataMarginBottom = css`
   margin-bottom: 6px;
 `
 
-const ChartMusicCard = ({
+function ChartMusicCard({
   title,
   position,
   change,
   artist,
   thumb,
-}: ChartMusicCardProps) => {
+}: ChartMusicCardProps) {
   return (
     <li css={[mainContainer, flexRowContainer, flexAlignCenter]}>
-      <Image
-        src={thumb}
-        alt={`${title} thumbnail`}
-        width={70}
-        height={70}
-      ></Image>
+      <Image src={thumb} alt={`${title} thumbnail`} width={70} height={70} />
       <div css={[flexRowContainer, flexAlignCenter, metadataContainer]}>
         {/* 순위, 제목 */}
         <div css={flexColContainer}>
@@ -98,7 +93,7 @@ const ChartMusicCard = ({
               width={0}
               height={0}
               css={chartIconStyle}
-            ></Image>
+            />
             <span
               css={[
                 CaptionMdRegular,

@@ -20,14 +20,14 @@ interface ProfileMainMemberSectionProps {
  * @param height 마우스 액션 구역의 height
  * @author 민타이
  */
-const ProfileMainMemberSection = ({
+function ProfileMainMemberSection({
   memberIndex,
   x,
   y,
   width,
   height,
   url,
-}: ProfileMainMemberSectionProps) => {
+}: ProfileMainMemberSectionProps) {
   const { setHoverDefault, setSwitchHoverMember } = ProfileStore()
 
   return (
@@ -48,7 +48,7 @@ const ProfileMainMemberSection = ({
           setSwitchHoverMember(memberIndex, false)
           setHoverDefault(true)
         }}
-      ></rect>
+      />
     </Link>
   )
 }

@@ -3,11 +3,11 @@
  * Heo0
  * Album Detail Page
  */
+import { DivMargin } from '@/styles/Album/AlbumInfo'
 import EmblaCarousel from '../../components/Albums/EmblaCarousel'
 import Album from '../../components/Albums/AlbumInfo'
-import { DivMargin } from '@/styles/Album/AlbumInfo'
 
-const Detail = () => {
+function Detail() {
   return (
     <main className="album-detail-div" css={DivMargin}>
       <EmblaCarousel

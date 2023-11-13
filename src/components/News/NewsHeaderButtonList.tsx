@@ -1,6 +1,6 @@
 import { NewsHeaderButton } from './NewsHeaderButton'
 
-export const NewsHeaderButtonList = () => {
+export function NewsHeaderButtonList() {
   return (
     <div
       css={{ margin: 20, display: 'flex', flexDirection: 'column', gap: 20 }}

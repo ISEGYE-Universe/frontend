@@ -11,10 +11,10 @@ const gradientStyle = css`
   height: 60px;
   background: linear-gradient(90deg, #f03c6b 0%, #fbaa9f 100%);
 `
-const TempGNB = () => {
+function TempGNB() {
   return (
     <header css={GNBContainerStyle}>
-      <nav css={gradientStyle}></nav>
+      <nav css={gradientStyle} />
     </header>
   )
 }

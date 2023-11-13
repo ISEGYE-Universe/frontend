@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 
-const Top100Chart = () => {
+function Top100Chart() {
   return (
     <div
       css={css`
@@ -16,7 +16,7 @@ const Top100Chart = () => {
           height: 100%;
           background-color: #f6f6f6;
         `}
-      ></div>
+      />
       {/* 곡 카드 영역 */}
       <div
         css={css`
@@ -38,7 +38,7 @@ const Top100Chart = () => {
             backdrop-filter: blur(3px);
             background: rgba(21, 21, 21, 0.7);
           `}
-        ></div>
+        />
       </div>
     </div>
   )

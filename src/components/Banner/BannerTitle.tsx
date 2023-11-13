@@ -1,18 +1,20 @@
 import { css } from '@emotion/react'
-import { MainTitleLight, TextMdRegular } from "@/styles/Font"
+import { MainTitleLight, TextMdRegular } from '@/styles/Font'
 
-interface props{
+interface props {
   title: string
   desc: string
 }
 
-const BannerTitle = ({title, desc} :props) => {
+function BannerTitle({ title, desc }: props) {
   return (
-    <div css={{
-      position: "absolute",
-      bottom: "200px",
-      textAlign: "center",
-    }}>
+    <div
+      css={{
+        position: 'absolute',
+        bottom: '200px',
+        textAlign: 'center',
+      }}
+    >
       <h2 css={MainTitleLight}>{title}</h2>
       <div css={TextMdRegular}>{desc}</div>
     </div>

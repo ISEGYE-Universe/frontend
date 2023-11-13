@@ -7,7 +7,7 @@ interface TitleProps {
   color?: string
 }
 
-const Title = ({ children, mb, color }: TitleProps) => {
+function Title({ children, mb, color }: TitleProps) {
   return (
     <h2
       css={[

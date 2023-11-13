@@ -31,13 +31,13 @@ const CTAContainerStyle = css`
   gap: 11px;
 `
 
-const ArticleADBanner = ({
+function ArticleADBanner({
   title,
   desc,
   CTAText,
   bgImage,
   bgColor,
-}: ArticleADBannerProps) => {
+}: ArticleADBannerProps) {
   const mainContainerStyle = css`
     width: 100%;
     border-radius: 10px;
@@ -65,17 +65,17 @@ const ArticleADBanner = ({
             >
               {title}
             </h1>
-            {/* Figma 내에 TextSmRegular로 명시되어 있으나 Light에 가까워 보임*/}
+            {/* Figma 내에 TextSmRegular로 명시되어 있으나 Light에 가까워 보임 */}
             <h2 css={[TextSmLight, LineHeight]}>{desc}</h2>
           </div>
           <div css={CTAContainerStyle}>
             <span css={[TitleSmLight, LineHeight]}>{CTAText}</span>
             <Image
-              src={'/images/icon/ad-right-chevron.svg'}
+              src="/images/icon/ad-right-chevron.svg"
               alt="right icon"
               width={12}
               height={24}
-            ></Image>
+            />
           </div>
         </div>
       </section>

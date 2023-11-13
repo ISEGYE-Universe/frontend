@@ -2,8 +2,8 @@ import Image from 'next/image'
 
 import useEmblaCarousel from 'embla-carousel-react'
 
-import { NewsThumnail } from './NewsThumnail'
 import { useCallback } from 'react'
+import { NewsThumnail } from './NewsThumnail'
 
 const DUMMY_THUMNAIL_LIST = [
   {
@@ -20,7 +20,7 @@ const DUMMY_THUMNAIL_LIST = [
   },
 ]
 
-export const NewsThumnailList = () => {
+export function NewsThumnailList() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, startIndex: 1 })
 
   const scrollPrev = useCallback(() => {

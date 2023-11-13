@@ -5,8 +5,8 @@ const footerStyle = css`
   height: 380px;
   background-color: #252525;
 `
-const TempFooter = () => {
-  return <footer css={footerStyle}></footer>
+function TempFooter() {
+  return <footer css={footerStyle} />
 }
 
 export default TempFooter

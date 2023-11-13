@@ -1,8 +1,8 @@
 import ProfileStore from '@/store/Profile/ProfileStore'
 import { css } from '@emotion/react'
-import ProfileMainMemberSection from './ProfileMainMemberSection'
 import profileData from '@/data/profile.json'
 import Image from 'next/image'
+import ProfileMainMemberSection from './ProfileMainMemberSection'
 
 const bgImageStyle = css`
   transition: opacity 0.15s ease-in-out;
@@ -16,7 +16,7 @@ const bgImageStyle = css`
  * @멤버소개 메인 페이지 뒷배경
  * @author 민타이
  */
-const ProfileMainBg = () => {
+function ProfileMainBg() {
   const { switchHoverMember } = ProfileStore()
 
   // 멤버 별 hover 이미지 스타일
@@ -123,7 +123,7 @@ const ProfileMainBg = () => {
             css={css`
               opacity: 0;
             `}
-          ></image>
+          />
           <ProfileMainMemberSection
             memberIndex={0}
             x={165}

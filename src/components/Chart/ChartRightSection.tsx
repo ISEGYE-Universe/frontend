@@ -8,14 +8,14 @@ const titleContainer = css`
   margin-bottom: 22px;
 `
 
-const ChartRightSection = () => {
+function ChartRightSection() {
   return (
     <>
       {/* 멜론 TOP 100 */}
       <section>
         <div css={titleContainer}>
           <Title mb="6px">현재 멜론 TOP 100 순위는?</Title>
-          <TimeBaseSubTitle time="23:00"></TimeBaseSubTitle>
+          <TimeBaseSubTitle time="23:00" />
         </div>
         <Top100Chart />
       </section>
@@ -24,13 +24,13 @@ const ChartRightSection = () => {
 
       <div>
         {/* 멜론 주간인기상 */}
-        <section></section>
+        <section />
         {/* 곡 멜론 정보 */}
-        <section></section>
+        <section />
       </div>
 
       {/* 최근 명예의 전당 */}
-      <section></section>
+      <section />
     </>
   )
 }
