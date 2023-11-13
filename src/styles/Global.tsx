@@ -1,5 +1,9 @@
 import { Global, css } from '@emotion/react'
 
+const fontStyle = css`
+  @import url('https://cdn.jsdelivr.net/gh/ayaan-fonts/NotoSans-IsegyeUniverse/fonts/webfonts/NotoSansCJKkr-dynamic-subset.css');
+`
+
 const resetStyle = css`
   * {
     box-sizing: border-box;
@@ -36,15 +40,6 @@ const resetStyle = css`
   }
 `
 
-const GlobalStyle = () => (
-  <>
-    {/* Font CDN */}
-    <link
-      href="https://cdn.jsdelivr.net/gh/ayaan-fonts/NotoSans-IsegyeUniverse/fonts/webfonts/NotoSansCJKkr-dynamic-subset.css"
-      rel="stylesheet"
-    />
-    <Global styles={resetStyle} />
-  </>
-)
+const GlobalStyle = () => <Global styles={[fontStyle, resetStyle]} />
 
 export default GlobalStyle
