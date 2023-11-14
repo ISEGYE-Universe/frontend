@@ -1,3 +1,4 @@
+import { ChartColor } from '@/styles/ChartColor'
 import {
   CaptionMdLight,
   LineHeight,
@@ -9,7 +10,9 @@ import { css } from '@emotion/react'
 
 const weeklyAwardContainer = css`
   border-radius: 14px;
-  background: #f6f6f6;
+  background: ${ChartColor.bgGrey};
+  border: 1px solid ${ChartColor.borderGrey};
+  border-radius: 14px;
   width: 100%;
   padding: 20px;
 `
