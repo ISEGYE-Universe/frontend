@@ -1,10 +1,10 @@
 import { css } from '@emotion/react'
 import Image from 'next/image'
 import Title from './Title'
-import SubTitle from './SubTitle'
 import RoundedLinkButton from './RoundedLinkButton'
 import chartData from '@/data/chart.json'
 import { ChartColor } from '@/styles/ChartColor'
+import { LineHeight, TextSmLight } from '@/styles/Font'
 
 const Top100Chart = () => {
   return (
@@ -59,8 +59,8 @@ const Top100Chart = () => {
           {/* 썸네일 */}
           <Image
             src={chartData.image.top100Thumb}
-            width={160}
-            height={160}
+            width={159}
+            height={159}
             alt="top100 thumbnail"
             css={css`
               margin-bottom: 18px;
@@ -78,7 +78,17 @@ const Top100Chart = () => {
             <Title color="#fff" mb="6px">
               KIDDING
             </Title>
-            <SubTitle color="#b9b9b9">이세계아이돌</SubTitle>
+            <h4
+              css={[
+                TextSmLight,
+                LineHeight,
+                css`
+                  color: #b9b9b9;
+                `,
+              ]}
+            >
+              이세계아이돌
+            </h4>
           </div>
 
           {/* 버튼 */}

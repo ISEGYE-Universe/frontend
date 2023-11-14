@@ -1,4 +1,4 @@
-import { CaptionMdLight } from '@/styles/Font'
+import { CaptionMdBold, CaptionMdLight, LineHeight } from '@/styles/Font'
 import { Interpolation, Theme, css } from '@emotion/react'
 import Link from 'next/link'
 
@@ -42,7 +42,8 @@ const RoundedLinkButton = ({
             border-radius: 30px;
             text-align: center;
           `,
-          fontStyle || CaptionMdLight,
+          fontStyle || CaptionMdBold,
+          LineHeight,
           customCss,
         ]}
       >
