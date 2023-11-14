@@ -25,6 +25,18 @@ const resetStyle = css`
     list-style: none;
   }
 
+  button {
+    padding: 0;
+    border: none;
+    background: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+`
+
+const fontFace = css`
   @font-face {
     font-family: 'NotoSansCJKkr';
     font-weight: 100;
