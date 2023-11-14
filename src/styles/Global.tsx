@@ -90,29 +90,6 @@ const fontFace = css`
     unicode-range: U+0-2025, U+2027-10FFFF;
   }
   /* E: 추후 폰트 변경 시 변경 가능 */
-
-  button {
-    padding: 0;
-    border: none;
-    background: none;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 0;
-  }
-
-  li {
-    list-style: none;
-  }
-
-  a {
-    text-decoration: none;
-  }
 `
 
 const GlobalStyle = () => <Global styles={[resetStyle, fontFace]} />
