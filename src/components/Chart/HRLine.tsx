@@ -1,3 +1,4 @@
+import { ChartColor } from '@/styles/ChartColor'
 import { css } from '@emotion/react'
 
 interface HRLineProps {
@@ -7,10 +8,10 @@ const HRLine = ({ margin }: HRLineProps) => {
   return (
     <hr
       css={css`
-        margin: ${margin || '30px 0'};
+        margin: ${margin || '30px 0 20px 0'};
         border: 0;
         height: 1px;
-        background-color: #d9d9d9;
+        background-color: ${ChartColor.bgLightGrey};
       `}
     />
   )
