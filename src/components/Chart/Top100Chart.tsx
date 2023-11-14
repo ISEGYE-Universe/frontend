@@ -94,14 +94,15 @@ const Top100Chart = () => {
           {/* 버튼 */}
           <RoundedLinkButton
             href="#"
-            bgColor="#5CCA52"
+            bgColor="#36BF29"
             customCss={css`
               margin-bottom: 9px;
             `}
+            shadow
           >
             멜론에서 듣기
           </RoundedLinkButton>
-          <RoundedLinkButton href="#" bgColor="#5CCA52">
+          <RoundedLinkButton href="#" bgColor="#36BF29" shadow>
             종합 스트리밍 가이드
           </RoundedLinkButton>
         </div>
