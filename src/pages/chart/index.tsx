@@ -50,7 +50,10 @@ const weeklyAwardTitleContainer = css`
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
+`
+const top100SectionContainer = css`
+  margin-bottom: 30px;
 `
 
 const Chart = () => {
@@ -130,7 +133,7 @@ const Chart = () => {
           </div>
           <div css={RightSectionContainerStyle}>
             {/* 멜론 TOP 100 */}
-            <section>
+            <section css={top100SectionContainer}>
               <div css={titleContainer}>
                 <Title mb="10px">현재 타이틀곡의 멜론 TOP 100 순위는?</Title>
                 <TimeBaseSubTitle time="23:00"></TimeBaseSubTitle>
