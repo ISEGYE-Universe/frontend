@@ -30,7 +30,7 @@ const Top100Chart = () => {
           display: inline-block;
           width: 233px;
           height: 100%;
-          background: url('${chartData.image.top100CardBackground}');
+          background: url('${chartData.image.top100Thumb}');
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center;
@@ -58,7 +58,7 @@ const Top100Chart = () => {
         >
           {/* 썸네일 */}
           <Image
-            src="https://s3-alpha-sig.figma.com/img/11cf/1bba/400a79b31a645001a270e66d4bd85bcf?Expires=1699833600&Signature=XHq4UyJ3caQ6BRLtJKwmBoeAEhFak8Jnnj0nDZ6tDq3uoyxVxf8nR84fJ41TT2poUxbeTgyLClPbpNHVPAk5WNFy3cvZZSfbf0EO66BeZ2wkpyJPM5wts1QUrHTlu-Xm9kbFyif6froCe3FkMLCtWVrI6tW~SrL2Zhpkk4i5ZXe8Tau2h1n5iIjo5r1ID8fbZ-DJkyZ8pYlR0EkA6aMDDGSrXgaOtdVYdBsV1ZtPwyArGsGG5XU3VLeBHpEXmul-7r5DOnKObMHveSej7V4D3wmfsh1ZAfbYzGVq6gWLY3~cbI7ecrDy-1clL-NW7z2LkJ2bJ9u9~UESkKkmYc6ayg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            src={chartData.image.top100Thumb}
             width={160}
             height={160}
             alt="top100 thumbnail"
