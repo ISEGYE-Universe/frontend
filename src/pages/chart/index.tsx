@@ -1,9 +1,13 @@
 import ArticleADBanner from '@/components/Chart/ArticleADBanner'
-import ChartLeftSection from '@/components/Chart/ChartLeftSection'
-import ChartRightSection from '@/components/Chart/ChartRightSection'
 import TempLayout from '@/components/TempLayout/TempLayout'
 import { css } from '@emotion/react'
 import chartData from '@/data/chart.json'
+import Title from '@/components/Chart/Title'
+import TimeBaseSubTitle from '@/components/Chart/TimeBaseSubTitle'
+import Top100Chart from '@/components/Chart/Top100Chart'
+import HRLine from '@/components/Chart/HRLine'
+import ChartMusicCard from '@/components/Chart/ChartMusicCard'
+import AlbumNewsCard from '@/components/Chart/AlbumNewsCard'
 
 const articleStyle = css`
   width: 1060px;
@@ -24,7 +28,19 @@ const RightSectionContainerStyle = css`
   width: 745px;
   vertical-align: top;
 `
-
+const titleContainer = css`
+  margin-bottom: 20px;
+`
+const musicChartContainer = css`
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+`
+const albumNewsContainer = css`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`
 const Chart = () => {
   return (
     <TempLayout>
@@ -40,10 +56,85 @@ const Chart = () => {
         {/* 차트정보 */}
         <div css={chartSectionContainerStyle}>
           <div css={LeftSectionContainerStyle}>
-            <ChartLeftSection />
+            {/* 멜론 HOT 100 */}
+            <section>
+              <div css={titleContainer}>
+                <Title mb="10px">멜론 HOT 100</Title>
+                <TimeBaseSubTitle time="23:00" />
+              </div>
+
+              <ul css={musicChartContainer}>
+                {chartData.hot100List.map((m) => (
+                  <ChartMusicCard
+                    key={`hot100-card-${m.title}`}
+                    title={m.title}
+                    position={m.position}
+                    change={m.change}
+                    artist={m.artist}
+                    thumb={m.thumb}
+                  ></ChartMusicCard>
+                ))}
+              </ul>
+            </section>
+
+            <HRLine />
+
+            {/* 실시간 차트 */}
+            <section>
+              <div css={titleContainer}>
+                <Title mb="10px">가이섬 실시간 차트</Title>
+                <TimeBaseSubTitle time="23:00" />
+              </div>
+              <ul css={musicChartContainer}>
+                {chartData.realTimeChartList.map((m) => (
+                  <ChartMusicCard
+                    key={`realtime-chart-card-${m.title}`}
+                    title={m.title}
+                    position={m.position}
+                    change={m.change}
+                    artist={m.artist}
+                    thumb={m.thumb}
+                  ></ChartMusicCard>
+                ))}
+              </ul>
+            </section>
+
+            <HRLine />
+
+            {/* 음반 관련 소식 */}
+            <section>
+              <div css={titleContainer}>
+                <Title>발매 관련 소식</Title>
+              </div>
+              <ul css={albumNewsContainer}>
+                {chartData.albumNewsList.map((e, i) => (
+                  <AlbumNewsCard
+                    key={`album-news-${i}`}
+                    title={e.title}
+                  ></AlbumNewsCard>
+                ))}
+              </ul>
+            </section>
           </div>
           <div css={RightSectionContainerStyle}>
-            <ChartRightSection />
+            {/* 멜론 TOP 100 */}
+            <section>
+              <div css={titleContainer}>
+                <Title mb="10px">현재 타이틀곡의 멜론 TOP 100 순위는?</Title>
+                <TimeBaseSubTitle time="23:00"></TimeBaseSubTitle>
+              </div>
+              <Top100Chart />
+            </section>
+
+            <div>
+              {/* 멜론 주간인기상 */}
+              <section></section>
+              {/* 곡 멜론 정보 */}
+              <section></section>
+            </div>
+
+            {/* 최근 명예의 전당 */}
+            <section></section>
           </div>
         </div>
         {/* 역대기록 */}
