@@ -38,7 +38,7 @@ const RoundedLinkButton = ({
             width: ${width || '100%'};
             background-color: ${bgColor || '#777'};
             color: ${fontColor || '#fff'};
-            padding: 6px 15px;
+            padding: 6px 0 7px 0;
             border-radius: 30px;
             text-align: center;
           `,

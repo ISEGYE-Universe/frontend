@@ -51,7 +51,7 @@ const Top100Chart = () => {
         {/* 내용 */}
         <div
           css={css`
-            padding: 23px 37px 52px;
+            padding: 34px 35px 34px 36px;
             height: 100%;
             position: relative;
           `}
@@ -63,7 +63,7 @@ const Top100Chart = () => {
             height={160}
             alt="top100 thumbnail"
             css={css`
-              margin-bottom: 25px;
+              margin-bottom: 18px;
             `}
           ></Image>
           {/* 제목, 아티스트 */}
@@ -72,10 +72,12 @@ const Top100Chart = () => {
               display: flex;
               flex-direction: column;
               align-items: center;
-              margin-bottom: 14px;
+              margin-bottom: 23px;
             `}
           >
-            <Title color="#fff">KIDDING</Title>
+            <Title color="#fff" mb="6px">
+              KIDDING
+            </Title>
             <SubTitle color="#b9b9b9">이세계아이돌</SubTitle>
           </div>
 
