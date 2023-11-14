@@ -1,6 +1,6 @@
 import { Global, css } from '@emotion/react'
 
-const style = css`
+const resetStyle = css`
   * {
     box-sizing: border-box;
     font-family: 'NotoSansCJKkr';
@@ -13,8 +13,32 @@ const style = css`
     padding: 0;
   }
 
-  /* S: 추후 폰트 변경 시 변경 가능 */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
 
+  li {
+    list-style: none;
+  }
+
+  button {
+    padding: 0;
+    border: none;
+    background: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+`
+
+const fontFace = css`
+  /* S: 추후 폰트 변경 시 변경 가능 */
   @font-face {
     font-family: 'NotoSansCJKkr';
     font-weight: 100;
@@ -65,7 +89,6 @@ const style = css`
     src: url('/fonts/NotoSansCJKkr-Black.otf') format('opentype');
     unicode-range: U+0-2025, U+2027-10FFFF;
   }
-
   /* E: 추후 폰트 변경 시 변경 가능 */
 
   button {
@@ -92,8 +115,6 @@ const style = css`
   }
 `
 
-function GlobalStyle() {
-  return <Global styles={style} />
-}
+const GlobalStyle = () => <Global styles={[resetStyle, fontFace]} />
 
 export default GlobalStyle
