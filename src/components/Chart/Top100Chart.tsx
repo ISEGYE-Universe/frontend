@@ -75,7 +75,7 @@ const Top100Chart = () => {
               margin-bottom: 23px;
             `}
           >
-            <Title color="#fff" mb="6px">
+            <Title color={ChartColor.textWhite} mb="6px">
               KIDDING
             </Title>
             <h4
@@ -83,7 +83,7 @@ const Top100Chart = () => {
                 TextSmLight,
                 LineHeight,
                 css`
-                  color: #b9b9b9;
+                  color: ${ChartColor.textLightGrey};
                 `,
               ]}
             >
@@ -94,7 +94,7 @@ const Top100Chart = () => {
           {/* 버튼 */}
           <RoundedLinkButton
             href="#"
-            bgColor="#36BF29"
+            bgColor={ChartColor.bgMelonGreen}
             customCss={css`
               margin-bottom: 9px;
             `}
@@ -102,7 +102,7 @@ const Top100Chart = () => {
           >
             멜론에서 듣기
           </RoundedLinkButton>
-          <RoundedLinkButton href="#" bgColor="#36BF29" shadow>
+          <RoundedLinkButton href="#" bgColor={ChartColor.bgMelonGreen} shadow>
             종합 스트리밍 가이드
           </RoundedLinkButton>
         </div>

@@ -1,3 +1,4 @@
+import { ChartColor } from '@/styles/ChartColor'
 import {
   LineHeight,
   TextSmRegular,
@@ -41,7 +42,7 @@ const ArticleADBanner = ({
   const mainContainerStyle = css`
     width: 100%;
     border-radius: 10px;
-    color: #fff;
+    color: ${ChartColor.textWhite};
     padding: 18px 40px 19px;
     background:
       linear-gradient(90deg, ${bgColor} 37.85%, rgba(234, 68, 118, 0.5) 100%),

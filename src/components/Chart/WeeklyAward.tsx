@@ -32,8 +32,8 @@ const spaceBetween = css`
 `
 const leftTimeStyle = css`
   border-radius: 30px;
-  background: #777;
-  color: #fdfdfd;
+  background: ${ChartColor.bgDarkGrey};
+  color: ${ChartColor.textWhiteGrey};
   padding: 6px 12px 7px 13px;
 `
 const voteBarStyle = css`

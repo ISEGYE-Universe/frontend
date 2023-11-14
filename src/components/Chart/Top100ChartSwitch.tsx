@@ -1,4 +1,5 @@
 import ChartStore from '@/store/Chart/ChartStore'
+import { ChartColor } from '@/styles/ChartColor'
 import { TextMdBold } from '@/styles/Font'
 import { css } from '@emotion/react'
 
@@ -7,7 +8,7 @@ const chartSwitchContainer = css`
   width: 105px;
   height: 30px;
   border-radius: 30px;
-  background: #d9d9d9;
+  background: ${ChartColor.bgDisabledGrey};
   margin: 0 auto;
 `
 
@@ -20,7 +21,7 @@ const Top100ChartSwitch = () => {
       width: 55px;
       height: 100%;
       border-radius: 30px;
-      color: #fff;
+      color: ${ChartColor.textWhite};
       cursor: pointer;
     `,
     TextMdBold,
@@ -32,7 +33,10 @@ const Top100ChartSwitch = () => {
         css={[
           chartSwitchButtonStyle,
           {
-            background: currentTop100ChartType === 'daily' ? '#ea4476' : 'none',
+            background:
+              currentTop100ChartType === 'daily'
+                ? ChartColor.isedolPink
+                : 'none',
             left: 0,
           },
         ]}
@@ -47,7 +51,9 @@ const Top100ChartSwitch = () => {
           chartSwitchButtonStyle,
           {
             background:
-              currentTop100ChartType === 'weekly' ? '#ea4476' : 'none',
+              currentTop100ChartType === 'weekly'
+                ? ChartColor.isedolPink
+                : 'none',
             right: 0,
           },
         ]}

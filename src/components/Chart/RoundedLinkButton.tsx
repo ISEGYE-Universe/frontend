@@ -1,3 +1,4 @@
+import { ChartColor } from '@/styles/ChartColor'
 import { CaptionMdBold, CaptionMdLight, LineHeight } from '@/styles/Font'
 import { Interpolation, Theme, css } from '@emotion/react'
 import Link from 'next/link'
@@ -39,8 +40,8 @@ const RoundedLinkButton = ({
         css={[
           css`
             width: ${width || '100%'};
-            background-color: ${bgColor || '#777'};
-            color: ${fontColor || '#fff'};
+            background-color: ${bgColor || ChartColor.bgDarkGrey};
+            color: ${fontColor || ChartColor.textWhite};
             padding: 6px 0 7px 0;
             border-radius: 30px;
             text-align: center;
