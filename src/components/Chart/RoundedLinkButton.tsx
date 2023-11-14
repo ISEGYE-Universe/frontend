@@ -19,6 +19,7 @@ interface RoundedLinkButtonProps {
  * @param fontStyle `Font.ts`에 정의된 폰트 스타일
  * @param target `anchor`태그 내 `target` 속성. 기본값 - `'_blank'`
  * @param customCss emotion css
+ * @param shadow boolean
  * @author 민타이
  */
 const RoundedLinkButton = ({
