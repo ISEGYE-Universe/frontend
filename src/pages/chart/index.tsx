@@ -49,7 +49,7 @@ const weeklyAwardMainContainer = css`
 const weeklyAwardTitleContainer = css`
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   margin-bottom: 16px;
 `
 const top100SectionContainer = css`

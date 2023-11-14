@@ -11,8 +11,7 @@ const weeklyAwardContainer = css`
   border-radius: 14px;
   background: #f6f6f6;
   width: 100%;
-  height: 134px;
-  padding: 20px 12px 24px;
+  padding: 20px;
 `
 const flexRow = css`
   display: flex;
@@ -30,10 +29,9 @@ const spaceBetween = css`
 `
 const leftTimeStyle = css`
   border-radius: 30px;
-  height: 22px;
   background: #777;
   color: #fdfdfd;
-  padding: 4px 10px;
+  padding: 6px 12px 7px 13px;
 `
 const voteBarStyle = css`
   width: 100%;
@@ -64,7 +62,7 @@ const WeeklyAward = ({
           spaceBetween,
           alignCenter,
           css`
-            margin-bottom: 12px;
+            margin-bottom: 10px;
           `,
         ]}
       >
@@ -82,7 +80,7 @@ const WeeklyAward = ({
           alignCenter,
           css`
             gap: 8px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
           `,
         ]}
       >
