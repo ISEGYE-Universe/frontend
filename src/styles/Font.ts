@@ -134,7 +134,7 @@ export const TitleSmBold = css`
 // text_md
 export const TextMdLight = css`
   ${fontFamily}
-  ${fontWeightLight}
+  ${fontWeightThin}
   ${fontSizeTextMd}
 `
 export const TextMdRegular = css`
@@ -150,7 +150,7 @@ export const TextMdBold = css`
 // text_sm
 export const TextSmLight = css`
   ${fontFamily}
-  ${fontWeightLight}
+  ${fontWeightThin}
   ${fontSizeTextSm}
 `
 export const TextSmRegular = css`
@@ -166,17 +166,17 @@ export const TextSmBold = css`
 // caption_md
 export const CaptionMdLight = css`
   ${fontFamily}
-  ${fontWeightLight}
+  ${fontWeightThin}
   ${fontSizeCaptionMd}
 `
 export const CaptionMdRegular = css`
   ${fontFamily}
-  ${fontWeightDemiLight}
+  ${fontWeightRegular}
   ${fontSizeCaptionMd}
 `
 export const CaptionMdBold = css`
   ${fontFamily}
-  ${fontWeightRegular}
+  ${fontWeightMedium}
   ${fontSizeCaptionMd}
 `
 // caption_sm
