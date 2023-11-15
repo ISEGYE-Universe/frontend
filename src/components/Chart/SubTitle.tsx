@@ -1,3 +1,4 @@
+import { ChartColor } from '@/styles/ChartColor'
 import { LineHeight, TextMdLight } from '@/styles/Font'
 import { css } from '@emotion/react'
 
@@ -15,7 +16,7 @@ function SubTitle({ children, mb, color }: SubTitleProps) {
         LineHeight,
         css`
           ${mb && `margin-bottom: ${mb};`}
-          color: ${color || '#777'};
+          color: ${color || ChartColor.textGrey};
         `,
       ]}
     >

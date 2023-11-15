@@ -1,3 +1,4 @@
+import { ChartColor } from '@/styles/ChartColor'
 import { LineHeight, TextMdRegular } from '@/styles/Font'
 import { css } from '@emotion/react'
 
@@ -7,8 +8,9 @@ interface AlbumNewsCardProps {
 
 const albumCardContainer = css`
   border-radius: 14px;
-  padding: 20px 14px;
-  background: #f6f6f6;
+  padding: 14px 20px;
+  background: ${ChartColor.bgGrey};
+  border: 1px solid ${ChartColor.borderGrey};
 `
 function AlbumNewsCard({ title }: AlbumNewsCardProps) {
   return (
