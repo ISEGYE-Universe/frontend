@@ -30,31 +30,43 @@ const fontWeightBlack = css`
 // Font Size
 const fontSizeMainTitle = css`
   font-size: 72px;
+  letter-spacing: -2.16px;
 `
 const fontSizeTitleLg = css`
   font-size: 48px;
+  letter-spacing: -1.44px;
 `
 const fontSizeTitleMd = css`
   font-size: 36px;
+  letter-spacing: -1.08px;
 `
 const fontSizeTitleSm = css`
   font-size: 24px;
+  letter-spacing: -0.72px;
 `
 const fontSizeTextMd = css`
   font-size: 16px;
+  letter-spacing: -0.48px;
 `
 const fontSizeTextSm = css`
   font-size: 14px;
+  letter-spacing: -0.42px;
 `
 const fontSizeCaptionMd = css`
   font-size: 12px;
+  letter-spacing: -0.36px;
 `
 const fontSizeCaptionSm = css`
   font-size: 8px;
+  letter-spacing: -0.24px;
 `
 const lineHeight = css`
   line-height: 110%;
 `
+const textAlignJustify = css`
+  text-align: justify;
+`
+
 // main_title
 export const MainTitleLight = css`
   ${fontFamily}
@@ -185,4 +197,7 @@ export const CaptionSmBold = css`
 `
 export const LineHeight = css`
   ${lineHeight}
+`
+export const AlignJustify = css`
+  ${textAlignJustify}
 `

@@ -126,50 +126,50 @@ const ProfileMainBg = () => {
           ></image>
           <ProfileMainMemberSection
             memberIndex={0}
-            x={75}
-            y={100}
-            width={155}
-            height={650}
+            x={165}
+            y={160}
+            width={145}
+            height={585}
             url="/profile/jururu"
           />
           <ProfileMainMemberSection
             memberIndex={1}
-            x={355}
-            y={90}
-            width={220}
-            height={660}
+            x={415}
+            y={150}
+            width={205}
+            height={595}
             url="/profile/jingburger"
           />
           <ProfileMainMemberSection
             memberIndex={2}
-            x={700}
-            y={120}
-            width={185}
-            height={630}
+            x={720}
+            y={170}
+            width={180}
+            height={570}
             url="/profile/viichan"
           />
           <ProfileMainMemberSection
             memberIndex={3}
-            x={1040}
-            y={145}
-            width={180}
-            height={610}
+            x={1030}
+            y={195}
+            width={170}
+            height={550}
             url="/profile/gosegu"
           />
           <ProfileMainMemberSection
             memberIndex={4}
-            x={1350}
-            y={75}
-            width={220}
-            height={680}
+            x={1310}
+            y={140}
+            width={200}
+            height={600}
             url="/profile/lilpa"
           />
           <ProfileMainMemberSection
             memberIndex={5}
-            x={1700}
-            y={90}
+            x={1615}
+            y={150}
             width={165}
-            height={670}
+            height={595}
             url="/profile/ine"
           />
         </svg>

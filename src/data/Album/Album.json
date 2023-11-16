@@ -1,0 +1,52 @@
+{
+  "REWIND": {
+    "title": "RE : WIND",
+    "description": "데뷔곡 RE:WIND는 화려하고 리얼한 밴드 사운드 위에 이세계 아이돌 6명의 다채로운 음색이 돋보이는 곡이다.",
+    "release": "2021.12.17",
+    "genre": "댄스",
+    "publisher": "(주)리웨이뮤직앤미디어",
+    "agency": "J Major",
+    "Lyrics": "우왁굳",
+    "composition": "Young_Vibe"
+  },
+  "WINTERSPRING": {
+    "title": "겨울봄",
+    "description": "이세계 아이돌의 2번째 디지털 싱글 '겨울봄'은 사랑하는 사람을 다시는 볼 수 없을 것 같다는 불안 속에서도 희망을 잃지 않는다는 내용의 K-POP 발라드이다.",
+    "release": "2022.03.11",
+    "genre": "발라드",
+    "publisher": "(주)리웨이뮤직앤미디어",
+    "agency": "J Major",
+    "Lyrics": "우왁굳",
+    "composition": "문킴, 서지은"
+  },
+  "LOCKDOWN": {
+    "title": "LOCKDOWN",
+    "description": "이세계아이돌의 카카오페이지 & 카카오웹툰 '마법소녀 이세계아이돌'의 삽입곡으로 발매하였다.",
+    "release": "2023.06.22",
+    "genre": "댄스",
+    "publisher": "(주)리웨이뮤직앤미디어",
+    "agency": "WAK ENT.",
+    "Lyrics": "EGON, Godan",
+    "composition": "EGON, Godan"
+  },
+  "AnotherWorld": {
+    "title": "Another World",
+    "description": "이세계아이돌의 카카오페이지 & 카카오웹툰 '차원을 넘어 이세계아이돌'의 삽입곡으로 발매하였다.",
+    "release": "2023.07.21",
+    "genre": "댄스",
+    "publisher": "(주)리웨이뮤직앤미디어",
+    "agency": "WAK ENT.",
+    "Lyrics": "이태훈",
+    "composition": "이태훈, REBIRTH"
+  },
+  "KIDDING": {
+    "title": "KIDDING",
+    "description": "세번째 디지털 싱글로 매 번 새로운 도전을 하는 이세계 아이돌이 이번에는 KPOP 걸그룹 노래에 도전한다",
+    "release": "2023.08.18",
+    "genre": "댄스",
+    "publisher": "(주)리웨이뮤직앤미디어",
+    "agency": "J Major",
+    "Lyrics": "우왁굳, 9june9, prerrie, 이태훈",
+    "composition": "9june9, Perrie, 이태훈"
+  }
+}
