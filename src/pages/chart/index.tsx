@@ -23,12 +23,12 @@ const chartSectionContainerStyle = css`
 `
 const LeftSectionContainerStyle = css`
   display: inline-block;
-  width: 285px;
-  margin-right: 29px;
+  width: 284px;
+  margin-right: 28px;
 `
 const RightSectionContainerStyle = css`
   display: inline-block;
-  width: 745px;
+  width: 748px;
   vertical-align: top;
 `
 const titleContainer = css`
@@ -46,8 +46,8 @@ const albumNewsContainer = css`
 `
 const weeklyAwardMainContainer = css`
   display: inline-block;
-  width: 315px;
-  margin-right: 13px;
+  width: 314px;
+  margin-right: 20px;
 `
 const weeklyAwardTitleContainer = css`
   display: flex;
@@ -60,7 +60,7 @@ const top100SectionContainer = css`
 `
 const melonInfoMainContainer = css`
   display: inline-block;
-  width: 417px;
+  width: 414px;
   vertical-align: top;
 `
 const Chart = () => {
