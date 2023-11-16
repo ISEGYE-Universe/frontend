@@ -11,11 +11,11 @@ type NewsHeaderButtonProps = {
   href: string
 }
 
-export function NewsHeaderButton({
+export const NewsHeaderButton = ({
   iconSrc,
   buttonName,
   href,
-}: NewsHeaderButtonProps) {
+}: NewsHeaderButtonProps) => {
   return (
     <Link
       css={{

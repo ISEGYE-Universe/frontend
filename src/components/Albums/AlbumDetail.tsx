@@ -30,7 +30,7 @@ type Type = {
   }
 }
 
-function AlbumDetail({ album }: { album: string }) {
+const AlbumDetail = ({ album }: { album: string }) => {
   const info: Type = Album
   return (
     <div css={DivMarginSize}>

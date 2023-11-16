@@ -32,7 +32,7 @@ const SubNavLink = css`
   cursor: pointer;
 `
 
-function SubNav(props: IProps) {
+const SubNav = (props: IProps) => {
   if (props.page == 'null') return <></>
   if (!(props.page in SubNavData))
     throw new Error(`${props.page} is invalid page name`)

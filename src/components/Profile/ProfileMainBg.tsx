@@ -16,7 +16,7 @@ const bgImageStyle = css`
  * @멤버소개 메인 페이지 뒷배경
  * @author 민타이
  */
-function ProfileMainBg() {
+const ProfileMainBg = () => {
   const { switchHoverMember } = ProfileStore()
 
   // 멤버 별 hover 이미지 스타일

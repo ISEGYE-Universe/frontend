@@ -5,7 +5,10 @@ type NewsThumnailProps = {
   href: string
 }
 
-export function NewsWeeklyEventBanner({ children, href }: NewsThumnailProps) {
+export const NewsWeeklyEventBanner = ({
+  children,
+  href,
+}: NewsThumnailProps) => {
   return (
     <div
       css={{

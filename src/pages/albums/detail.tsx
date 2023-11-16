@@ -7,7 +7,7 @@ import { DivMargin } from '@/styles/Album/AlbumInfo'
 import EmblaCarousel from '../../components/Albums/EmblaCarousel'
 import Album from '../../components/Albums/AlbumInfo'
 
-function Detail() {
+const Detail = () => {
   return (
     <main className="album-detail-div" css={DivMargin}>
       <EmblaCarousel

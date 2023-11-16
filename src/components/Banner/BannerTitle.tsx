@@ -6,7 +6,7 @@ interface props {
   desc: string
 }
 
-function BannerTitle({ title, desc }: props) {
+const BannerTitle = ({ title, desc }: props) => {
   return (
     <div
       css={{

@@ -28,7 +28,7 @@ const DUMMY_EVENT_BANNER_LIST = [
   },
 ]
 
-export function NewsWeeklyEventBannerList() {
+export const NewsWeeklyEventBannerList = () => {
   return (
     <div
       css={{

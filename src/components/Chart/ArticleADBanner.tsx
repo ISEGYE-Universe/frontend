@@ -31,13 +31,13 @@ const CTAContainerStyle = css`
   gap: 11px;
 `
 
-function ArticleADBanner({
+const ArticleADBanner = ({
   title,
   desc,
   CTAText,
   bgImage,
   bgColor,
-}: ArticleADBannerProps) {
+}: ArticleADBannerProps) => {
   const mainContainerStyle = css`
     width: 100%;
     border-radius: 10px;

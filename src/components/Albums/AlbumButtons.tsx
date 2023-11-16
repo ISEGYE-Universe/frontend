@@ -1,7 +1,7 @@
 import { AlbumBtnDiv, AlbumBtnSize } from '@/styles/Album/AlbumInfo'
 import Image from 'next/image'
 
-function AlbumBtn({ album }: { album: string }) {
+const AlbumBtn = ({ album }: { album: string }) => {
   return (
     <div css={AlbumBtnDiv}>
       <button css={AlbumBtnSize} />

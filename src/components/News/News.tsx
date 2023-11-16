@@ -2,7 +2,7 @@ import { NewsHeader } from './NewsHeader'
 import { NewsThumnailList } from './NewsThumnailList'
 import { NewsWeeklyEventBannerList } from './NewsWeeklyEventBannerList'
 
-export function News() {
+export const News = () => {
   return (
     <section>
       <span>TITLE</span>

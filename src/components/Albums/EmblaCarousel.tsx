@@ -50,7 +50,7 @@ const albums = css`
   position: relative;
 `
 
-export function EmblaCarousel(props: PropType) {
+export const EmblaCarousel = (props: PropType) => {
   const { options, slides } = props //* props options and slides
   const [emblaRef, embla] = useEmblaCarousel(options, [ClassNames()])
   //* zustand로 변환 필요

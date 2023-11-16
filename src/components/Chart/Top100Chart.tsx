@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import chartData from '@/data/chart.json'
 import { ChartColor } from '@/styles/ChartColor'
 
-function Top100Chart() {
+const Top100Chart = () => {
   return (
     <div
       css={css`

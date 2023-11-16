@@ -8,7 +8,7 @@ interface SubTitleProps {
   color?: string
 }
 
-function SubTitle({ children, mb, color }: SubTitleProps) {
+const SubTitle = ({ children, mb, color }: SubTitleProps) => {
   return (
     <h2
       css={[

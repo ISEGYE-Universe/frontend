@@ -3,7 +3,7 @@ import BannerTitle from './BannerTitle'
 import BannerDescription from './BannerDescription'
 import mock_banner from './mock_up/mock_banner.png'
 
-function Banner() {
+const Banner = () => {
   return (
     <section
       css={{

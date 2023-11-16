@@ -3,7 +3,7 @@ import { DivFlexBox } from '@/styles/Album/AlbumInfo'
 import AlbumBtn from './AlbumButtons'
 import AlbumDetail from './AlbumDetail'
 
-function AlbumInfoLayout({ ident }: { ident: string }) {
+const AlbumInfoLayout = ({ ident }: { ident: string }) => {
   return (
     <div css={DivFlexBox}>
       <div>

@@ -20,7 +20,7 @@ const DUMMY_THUMNAIL_LIST = [
   },
 ]
 
-export function NewsThumnailList() {
+export const NewsThumnailList = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, startIndex: 1 })
 
   const scrollPrev = useCallback(() => {

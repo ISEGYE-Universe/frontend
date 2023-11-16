@@ -137,7 +137,7 @@ const GNBUserProfileIcon = css`
   margin-left: 150px;
 `
 
-function Navbar() {
+const Navbar = () => {
   const [isSubNavActive, setIsSubNavActive] = useState<boolean>(false)
   const [isSubNavActiveByClick, setIsSubNavActiveByClick] =
     useState<boolean>(false)

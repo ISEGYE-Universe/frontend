@@ -9,7 +9,7 @@ interface props {
   cafe: string
 }
 
-function BannerDescription({ title, desc, youtube, cafe }: props) {
+const BannerDescription = ({ title, desc, youtube, cafe }: props) => {
   return (
     <div
       css={{

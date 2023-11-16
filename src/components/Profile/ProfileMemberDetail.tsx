@@ -31,7 +31,7 @@ const iconStyle = css`
   padding: 10px 20px;
 `
 
-function ProfileMemberDetail({ data }: ProfileMemberDetailProps) {
+const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
   const [pageIndex, setPageIndex] = useState<number>(0)
   const galleryLen = data.galleryImageURL.length
   const navButtonStyle = css`

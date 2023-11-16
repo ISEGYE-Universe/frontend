@@ -44,42 +44,38 @@ const MovieSlider = ({ movieList }: MovieSliderProrps) => {
   }, [emblaApi, onSelect])
 
   return (
-    <>
-      <div>
-        <div css={SliderDiv} ref={emblaRef}>
-          <div
-            css={Flex}
-          >
-            {movieList.map((list: MovieInfoType, idx: number) => (
-              <MovieContainer link={list.src} key={idx} />
-            ))}
-          </div>
-        </div>
-        <button css={LeftButton} onClick={scrollPrev}>
-          <LeftArrow />
-        </button>
-        <button css={RightButton} onClick={scrollNext}>
-          <RightArrow />
-        </button>
-        <MovieTitle title={movieList[current].title} />
-        <div
-          css={css`
-            ${Flex}
-            ${DotContainer}
-          `}
-        >
-          {movieList.map((_, idx: number) => (
-            <div
-              key={idx}
-              onClick={() => scrollTo(idx)}
-              css={css`
-                ${current === idx ? CurrentDot : Dot}
-              `}
-            />
+    <div>
+      <div css={SliderDiv} ref={emblaRef}>
+        <div css={Flex}>
+          {movieList.map((list: MovieInfoType, idx: number) => (
+            <MovieContainer link={list.src} key={idx} />
           ))}
         </div>
       </div>
-    </>
+      <button css={LeftButton} onClick={scrollPrev}>
+        <LeftArrow />
+      </button>
+      <button css={RightButton} onClick={scrollNext}>
+        <RightArrow />
+      </button>
+      <MovieTitle title={movieList[current].title} />
+      <div
+        css={css`
+          ${Flex}
+          ${DotContainer}
+        `}
+      >
+        {movieList.map((_, idx: number) => (
+          <div
+            key={idx}
+            onClick={() => scrollTo(idx)}
+            css={css`
+              ${current === idx ? CurrentDot : Dot}
+            `}
+          />
+        ))}
+      </div>
+    </div>
   )
 }
 

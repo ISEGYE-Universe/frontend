@@ -8,7 +8,7 @@ const profileContainerStyle = css`
   height: calc(100vh - 120px);
 `
 
-function Profile() {
+const Profile = () => {
   return (
     <TempLayout>
       <div css={profileContainerStyle}>

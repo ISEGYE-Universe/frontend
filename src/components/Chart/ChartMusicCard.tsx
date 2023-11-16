@@ -58,13 +58,13 @@ const chartThumb = css`
   border-radius: 10px;
 `
 
-function ChartMusicCard({
+const ChartMusicCard = ({
   title,
   position,
   change,
   artist,
   thumb,
-}: ChartMusicCardProps) {
+}: ChartMusicCardProps) => {
   return (
     <li css={[mainContainer, flexRowContainer, flexAlignCenter]}>
       <Image
@@ -73,7 +73,7 @@ function ChartMusicCard({
         alt={`${title} thumbnail`}
         width={70}
         height={70}
-      ></Image>
+      />
       <div css={[flexRowContainer, flexAlignCenter, metadataContainer]}>
         {/* 순위, 등락 */}
         <div css={flexColContainer}>
