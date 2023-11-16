@@ -14,11 +14,7 @@ const mainBg = css`
   background: #f6f6f6;
 `
 const musicInfoBox = css`
-  padding: 43px 39px 25px 32px;
-`
-const chartBox = css`
-  height: 270px;
-  padding: 25px 32px 29px 0;
+  padding: 30px 40px;
 `
 const flexRow = css`
   display: flex;
@@ -26,6 +22,9 @@ const flexRow = css`
 const flexCol = css`
   display: flex;
   flex-direction: column;
+`
+const spaceBetween = css`
+  justify-content: space-between;
 `
 const fullWidth = css`
   width: 100%;
@@ -80,25 +79,24 @@ const HallOfFame = ({ musicTitle, artist, releasedAt }: HallOfFameProps) => {
           height={200}
           alt="최근 명예의 전당 음악 썸네일"
         />
-        <div css={fullWidth}>
-          {/* metadata */}
-          <h2 css={[TitleSmRegular, LineHeight, { marginBottom: '13px' }]}>
-            {musicTitle}
-          </h2>
-          <h3 css={[TextMdBold, LineHeight, { color: '#777' }]}>{artist}</h3>
-          <span
-            css={[
-              TextSmRegular,
-              LineHeight,
-              {
-                color: '#b0b0b0',
-                display: 'inline-block',
-                marginBottom: '15px',
-              },
-            ]}
-          >
-            {formattedDate}시 발매
-          </span>
+        <div css={[fullWidth, flexCol, spaceBetween]}>
+          <div css={[flexCol, { gap: '10px' }]}>
+            {/* metadata */}
+            <h2 css={[TitleSmRegular, LineHeight]}>{musicTitle}</h2>
+            <h3 css={[TextMdBold, LineHeight, { color: '#777' }]}>{artist}</h3>
+            <span
+              css={[
+                TextSmRegular,
+                LineHeight,
+                {
+                  color: '#b0b0b0',
+                  display: 'inline-block',
+                },
+              ]}
+            >
+              {formattedDate}시 발매
+            </span>
+          </div>
           {/* 하이라이트 메시지 list */}
           {/* 텍스트는 백엔드 소통 이후 변경 예정 */}
           <ul css={[flexCol, highlightMessageBox]}>
@@ -112,8 +110,6 @@ const HallOfFame = ({ musicTitle, artist, releasedAt }: HallOfFameProps) => {
           </ul>
         </div>
       </div>
-      {/* 막대차트 영역 */}
-      <div css={chartBox}></div>
     </div>
   )
 }

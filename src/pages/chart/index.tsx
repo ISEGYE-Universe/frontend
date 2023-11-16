@@ -173,9 +173,11 @@ const Chart = () => {
               </section>
             </div>
 
+            <HRLine />
+
             {/* 최근 명예의 전당 */}
             <section>
-              <Title mb="16px">최근 명예의 전당</Title>
+              <Title mb="20px">최근 명예의 전당</Title>
               {/* 명예의 전당 본문 */}
               <HallOfFame
                 musicTitle="이세계 페스티벌"
