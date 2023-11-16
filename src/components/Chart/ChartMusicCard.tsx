@@ -109,7 +109,7 @@ const ChartMusicCard = ({
                 LineHeight,
                 css`
                   color: ${change > 0
-                    ? ChartColor.textRed
+                    ? ChartColor.isedolPink
                     : change < 0
                     ? ChartColor.textBlue
                     : ChartColor.textGrey};
