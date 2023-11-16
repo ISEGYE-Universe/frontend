@@ -1,8 +1,9 @@
+import { ChartColor } from '@/styles/ChartColor'
 import {
   CaptionMdLight,
-  CaptionMdRegular,
   LineHeight,
   TextMdBold,
+  TextMdRegular,
 } from '@/styles/Font'
 import { css } from '@emotion/react'
 import Image from 'next/image'
@@ -16,12 +17,13 @@ interface ChartMusicCardProps {
 }
 
 const mainContainer = css`
-  gap: 22px;
+  height: 90px;
+  gap: 20px;
   padding: 10px;
   border-radius: 14px;
-  background: #f6f6f6;
+  background: ${ChartColor.bgGrey};
+  border: 1px solid ${ChartColor.borderGrey};
 `
-
 const metadataContainer = css`
   display: flex;
   align-items: center;
@@ -44,16 +46,17 @@ const changeFontStyle = css`
   font-weight: 200;
 `
 const artistFontStyle = css`
-  color: #777;
+  color: ${ChartColor.textGrey};
 `
-
 const chartIconStyle = css`
   width: 100%;
   height: auto;
 `
-
 const metaDataMarginBottom = css`
-  margin-bottom: 6px;
+  margin-bottom: 7px;
+`
+const chartThumb = css`
+  border-radius: 10px;
 `
 
 const ChartMusicCard = ({
@@ -66,15 +69,16 @@ const ChartMusicCard = ({
   return (
     <li css={[mainContainer, flexRowContainer, flexAlignCenter]}>
       <Image
+        css={chartThumb}
         src={thumb}
         alt={`${title} thumbnail`}
         width={70}
         height={70}
       ></Image>
       <div css={[flexRowContainer, flexAlignCenter, metadataContainer]}>
-        {/* 순위, 제목 */}
+        {/* 순위, 등락 */}
         <div css={flexColContainer}>
-          <h3 css={[TextMdBold, LineHeight, metaDataMarginBottom]}>
+          <h3 css={[TextMdRegular, LineHeight, metaDataMarginBottom]}>
             {position}
           </h3>
           <div
@@ -101,15 +105,15 @@ const ChartMusicCard = ({
             ></Image>
             <span
               css={[
-                CaptionMdRegular,
+                CaptionMdLight,
                 changeFontStyle,
                 LineHeight,
                 css`
                   color: ${change > 0
-                    ? '#ea4476'
+                    ? ChartColor.isedolPink
                     : change < 0
-                    ? '#69A1F8'
-                    : '#777'};
+                    ? ChartColor.textBlue
+                    : ChartColor.textGrey};
                 `,
               ]}
             >
@@ -117,7 +121,7 @@ const ChartMusicCard = ({
             </span>
           </div>
         </div>
-        {/* 등락, 아티스트 */}
+        {/* 제목, 아티스트 */}
         <div css={[flexColContainer, flexAlignStart]}>
           <h3 css={[TextMdBold, LineHeight, metaDataMarginBottom]}>{title}</h3>
           <span css={[CaptionMdLight, artistFontStyle, LineHeight]}>

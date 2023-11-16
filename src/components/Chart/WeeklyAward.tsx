@@ -1,3 +1,4 @@
+import { ChartColor } from '@/styles/ChartColor'
 import {
   CaptionMdLight,
   LineHeight,
@@ -9,10 +10,12 @@ import { css } from '@emotion/react'
 
 const weeklyAwardContainer = css`
   border-radius: 14px;
-  background: #f6f6f6;
+  background: ${ChartColor.bgGrey};
+  border: 1px solid ${ChartColor.borderGrey};
+  border-radius: 14px;
   width: 100%;
-  height: 134px;
-  padding: 20px 12px 24px;
+  height: 124px;
+  padding: 20px;
 `
 const flexRow = css`
   display: flex;
@@ -30,10 +33,9 @@ const spaceBetween = css`
 `
 const leftTimeStyle = css`
   border-radius: 30px;
-  height: 22px;
-  background: #777;
-  color: #fdfdfd;
-  padding: 4px 10px;
+  background: ${ChartColor.bgDarkGrey};
+  color: ${ChartColor.textWhiteGrey};
+  padding: 6px 12px 7px 13px;
 `
 const voteBarStyle = css`
   width: 100%;
@@ -64,7 +66,7 @@ const WeeklyAward = ({
           spaceBetween,
           alignCenter,
           css`
-            margin-bottom: 12px;
+            margin-bottom: 10px;
           `,
         ]}
       >
@@ -82,7 +84,7 @@ const WeeklyAward = ({
           alignCenter,
           css`
             gap: 8px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
           `,
         ]}
       >

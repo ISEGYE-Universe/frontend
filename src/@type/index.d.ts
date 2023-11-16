@@ -10,3 +10,6 @@ declare namespace Profile {
     twLink: string
   }
 }
+declare namespace Chart {
+  type Top100ChartType = 'daily' | 'weekly'
+}

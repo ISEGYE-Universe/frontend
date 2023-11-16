@@ -33,7 +33,7 @@ const iconStyle = css`
 
 const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
   const [pageIndex, setPageIndex] = useState<number>(0)
-  const galleryLen = profileData.jingburgerIntroduction.galleryImageURL.length
+  const galleryLen = data.galleryImageURL.length
   const navButtonStyle = css`
     position: absolute;
     width: 26px;
@@ -48,8 +48,7 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
       <div
         css={css`
           width: 100%;
-          height: calc(100% - 120px);
-          overflow-y: hidden;
+          height: calc(100vh - 120px);
         `}
       >
         {/* 이미지 슬라이더 */}
