@@ -106,7 +106,7 @@ const WeeklyAward = ({
               #f5f5f5 100%
             );
           `}
-        ></div>
+        />
       </div>
     </div>
   )
