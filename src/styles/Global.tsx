@@ -1,7 +1,7 @@
 import { Global, css } from '@emotion/react'
 
 const fontStyle = css`
-  @import url('https://cdn.jsdelivr.net/gh/ayaan-fonts/NotoSans-IsegyeUniverse/fonts/webfonts/NotoSansCJKkr-dynamic-subset.css');
+  @import url('https://cdn.jsdelivr.net/gh/ayaan-fonts/NotoSans-IsegyeUniverse@latest/fonts/webfonts/NotoSansCJKkr-dynamic-subset.css');
 `
 
 const resetStyle = css`
