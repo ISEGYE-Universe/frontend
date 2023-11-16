@@ -1,8 +1,7 @@
 {
   "image": {
     "adBanner": "/images/chart/banner-kidding.jpg",
-    "top100CardBackground": "/images/chart/album-art-kidding.jpg",
-    "top100CardAlbumArt": "/images/chart/album-art-kidding.jpg"
+    "top100Thumb": "/images/chart/album-art-kidding.jpg"
   },
   "hot100List": [
     {

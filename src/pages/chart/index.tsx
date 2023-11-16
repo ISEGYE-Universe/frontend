@@ -1,3 +1,4 @@
+import AlbumNewsCard from '@/components/Chart/AlbumNewsCard'
 import ArticleADBanner from '@/components/Chart/ArticleADBanner'
 import TempLayout from '@/components/TempLayout/TempLayout'
 import { css } from '@emotion/react'
@@ -7,7 +8,8 @@ import TimeBaseSubTitle from '@/components/Chart/TimeBaseSubTitle'
 import Top100Chart from '@/components/Chart/Top100Chart'
 import HRLine from '@/components/Chart/HRLine'
 import ChartMusicCard from '@/components/Chart/ChartMusicCard'
-import AlbumNewsCard from '@/components/Chart/AlbumNewsCard'
+import SubTitle from '@/components/Chart/SubTitle'
+import WeeklyAward from '@/components/Chart/WeeklyAward'
 
 const articleStyle = css`
   width: 1060px;
@@ -41,6 +43,19 @@ const albumNewsContainer = css`
   flex-direction: column;
   gap: 10px;
 `
+const weeklyAwardMainContainer = css`
+  width: 315px;
+`
+const weeklyAwardTitleContainer = css`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+`
+const top100SectionContainer = css`
+  margin-bottom: 30px;
+`
+
 const Chart = () => {
   return (
     <TempLayout>
@@ -115,7 +130,7 @@ const Chart = () => {
           </div>
           <div css={RightSectionContainerStyle}>
             {/* 멜론 TOP 100 */}
-            <section>
+            <section css={top100SectionContainer}>
               <div css={titleContainer}>
                 <Title mb="10px">현재 타이틀곡의 멜론 TOP 100 순위는?</Title>
                 <TimeBaseSubTitle time="23:00" />
@@ -125,7 +140,18 @@ const Chart = () => {
 
             <div>
               {/* 멜론 주간인기상 */}
-              <section />
+              <section css={weeklyAwardMainContainer}>
+                <div css={weeklyAwardTitleContainer}>
+                  <Title>멜론 주간 인기상</Title>
+                  <SubTitle>10월 1주차</SubTitle>
+                </div>
+                <WeeklyAward
+                  position={3}
+                  voteNum={24673}
+                  voteRatio={14.33}
+                  endDate={new Date('2024.01.01 00:00:00')}
+                />
+              </section>
               {/* 곡 멜론 정보 */}
               <section />
             </div>
@@ -134,6 +160,8 @@ const Chart = () => {
             <section />
           </div>
         </div>
+
+        <HRLine margin="40px 0 60px 0" />
         {/* 역대기록 */}
       </article>
     </TempLayout>
