@@ -38,6 +38,7 @@ const highlightMessageBox = css`
 `
 const highlightMessage = css`
   width: 100%;
+  height: 40px;
   background: #000;
   border-radius: 15px;
   padding: 11px;

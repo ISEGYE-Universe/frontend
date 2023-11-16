@@ -14,6 +14,7 @@ const weeklyAwardContainer = css`
   border: 1px solid ${ChartColor.borderGrey};
   border-radius: 14px;
   width: 100%;
+  height: 124px;
   padding: 20px;
 `
 const flexRow = css`
