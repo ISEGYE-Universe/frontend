@@ -6,24 +6,42 @@ import { LeftButton, RightButton } from './EmblaHistoryButton'
 
 const dummyData = [
   {
-    thumbnail:
-      'https://s3-alpha-sig.figma.com/img/925a/41b7/10ed984efee532bda66c68d8a201b0c0?Expires=1699833600&Signature=MkvP1In2hlZjc5FNVg-betXqkzQ6PtyX9SLgyHBW9NoA3tFgCZ5OaVNkM6iG1RXlcjTwF0Jg3nXppfZC8NOEfhMNkoyydQAod0WuOfwhTTzyiTGCfphpjzdYdJ642mIi7fIxyD70Ux5TQfHC-oqGXlcMJMMdgwtAK9A0Rt8zupOoyal5GLUhRYwaGGD-8SVhr7hCh5z6KfZrthML749RTQlSpalu80GwpuEQ7CGJi9cKPjR24vwPgIhng-~68~E3iYcqu1ovxACW-cWBEW02Tf7kuhsLxYCeAMr~8rrfU1ZkOW54nH4nzSH9OkMlVKawflnLewtCQIzN5KF~8P6UUA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+    thumbnail: '/images/chart/history-lockdown.jpg',
     category: '멜론 명예의 전당',
     title: 'LOCKDOWN',
     desc: '1,156,500 Streams',
     date: new Date('2023-06-22'),
   },
   {
-    thumbnail:
-      'https://s3-alpha-sig.figma.com/img/676a/b97f/2b9a0172dd0c636c3a84a9a5ca48d9b8?Expires=1699833600&Signature=RRuzkcpkjPvTEZz45wNZgNR2w-uqLil86wZh7gl2CIKEGLj0ArNnTedK9kA5p-w6fywRauW-ijAT4ldSE-4Me9Cm~m0u4Fcs1BcHLZwM1AqDjc-0M5XdSfQXtXfgHzzQHaztPngqfGHnJbVFFd6AnEy8aTef6m44CYZRqh7f9lFyhf2BVjgOWlkJ~ieMifnuQ~pF3SyS-tIhVU0P58wfBM8MEly9xVNxId4DDGaQgb-lqUnTeNcYDr73ocFM4njl5DnvlnnjnZdjBnbcBHT~lxsUF~S7gYVlUbPF1pPlV4zyLduPyXDAI5CARoCA3MF2unV9G4hPr4ijMK~aCIIPKA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+    thumbnail: '/images/chart/history-another-world.jpg',
     category: '멜론 명예의 전당',
     title: 'Another World',
     desc: '1,335,900 Streams',
     date: new Date('2023-07-21'),
   },
   {
-    thumbnail:
-      'https://s3-alpha-sig.figma.com/img/37de/77c9/9bbbd4f02b074f2d4a470e922fb7c776?Expires=1699833600&Signature=U3A2oLDDYq8PjZzTrktFBM-o17~HvRhBvACJa~somnKCn8bzGe7vYRcFc7G9MggDhVbPwszYw2x5lCdrITvzTKHH7~EshPY04YWIObCyDgxa~U-jyhrOaavNPTt6oSrhcTstFxfK0QGb~SnF~~zGqp3a5Lh3qnW35TO2730rIEU7NLUmg~utdvP5jHvfYpj6bSKK2CN7tcR-XE4swGxI571g1ek2bw61-bk8O~0CFdzT6QSZ7flKElLhC-exDzomMdll6KVCQQNt3oEhNNIHBHT7Ka6z8Knt9XgpdwMGzYbYAahbCHsqYD2qmmQ9ICq32fCkQApdEqHn3UB0ocjogA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+    thumbnail: '/images/chart/history-kidding.jpg',
+    category: '멜론 명예의 전당',
+    title: 'KIDDING',
+    desc: '2,109,700 Streams',
+    date: new Date('2023-08-18'),
+  },
+  {
+    thumbnail: '/images/chart/history-lockdown.jpg',
+    category: '멜론 명예의 전당',
+    title: 'LOCKDOWN',
+    desc: '1,156,500 Streams',
+    date: new Date('2023-06-22'),
+  },
+  {
+    thumbnail: '/images/chart/history-another-world.jpg',
+    category: '멜론 명예의 전당',
+    title: 'Another World',
+    desc: '1,335,900 Streams',
+    date: new Date('2023-07-21'),
+  },
+  {
+    thumbnail: '/images/chart/history-kidding.jpg',
     category: '멜론 명예의 전당',
     title: 'KIDDING',
     desc: '2,109,700 Streams',
@@ -35,14 +53,14 @@ const emblaCss = css`
   &.embla {
     position: relative;
     border-radius: 14px;
-    background: #f6f6f6;
-    padding: 40px 42px 48px;
     overflow: hidden;
     .embla__container {
       display: flex;
+      justify-content: space-between;
       .embla__slide {
-        flex: 0 0 35%;
+        flex: 0 0 330px;
         min-width: 0;
+        margin-right: 35px;
       }
     }
   }
@@ -72,6 +90,7 @@ const HistoryCarousel = () => {
     // 중간 index부터 시작
     startIndex: Math.round((dummyData.length - 1) / 2),
     containScroll: false,
+    loop: true,
   })
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true)
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true)
