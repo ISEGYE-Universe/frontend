@@ -1,6 +1,7 @@
-import { LineHeight, TextMdRegular, TitleMdRegular } from '@/styles/Font'
+import { LineHeight, TextMdRegular, TitleSmRegular } from '@/styles/Font'
 import { css } from '@emotion/react'
 import Title from './Title'
+import { ChartColor } from '@/styles/ChartColor'
 
 const melonInfoCardContainer = css`
   display: flex;
@@ -11,8 +12,9 @@ const melonInfoCard = css`
   flex-direction: column;
   gap: 10px;
   border-radius: 14px;
-  background: #f6f6f6;
-  padding: 33px 20px;
+  background: ${ChartColor.bgGrey};
+  padding: 35px 20px;
+  border: 1px solid ${ChartColor.borderGrey};
 `
 
 interface MelonInfoProps {
@@ -41,12 +43,12 @@ const MelonInfo = ({
           css={[
             melonInfoCard,
             css`
-              min-width: 190px;
+              min-width: 200px;
             `,
           ]}
         >
           <h3 css={[TextMdRegular, LineHeight]}>일간 감상자</h3>
-          <span css={[TitleMdRegular, LineHeight]}>
+          <span css={[TitleSmRegular, LineHeight]}>
             {/* comma 처리를 위해 toLocaleString() 이용 */}
             {dailyListenerNum.toLocaleString()}명
           </span>
@@ -55,12 +57,12 @@ const MelonInfo = ({
           css={[
             melonInfoCard,
             css`
-              min-width: 190px;
+              min-width: 200px;
             `,
           ]}
         >
           <h3 css={[TextMdRegular, LineHeight]}>일간 차트</h3>
-          <span css={[TitleMdRegular, LineHeight]}>
+          <span css={[TitleSmRegular, LineHeight]}>
             {dailyChartPosition.toLocaleString()}위
           </span>
         </div>

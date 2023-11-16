@@ -1,3 +1,4 @@
+import { ChartColor } from '@/styles/ChartColor'
 import { LineHeight, TitleSmRegular } from '@/styles/Font'
 import { css } from '@emotion/react'
 
@@ -15,7 +16,7 @@ const Title = ({ children, mb, color }: TitleProps) => {
         LineHeight,
         css`
           ${mb && `margin-bottom: ${mb};`}
-          color: ${color || '#000'};
+          color: ${color || ChartColor.textBlack};
         `,
       ]}
     >

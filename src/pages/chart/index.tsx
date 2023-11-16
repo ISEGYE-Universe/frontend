@@ -1,17 +1,17 @@
 import AlbumNewsCard from '@/components/Chart/AlbumNewsCard'
 import ArticleADBanner from '@/components/Chart/ArticleADBanner'
-import ChartMusicCard from '@/components/Chart/ChartMusicCard'
-import HRLine from '@/components/Chart/HRLine'
-import HallOfFame from '@/components/Chart/HallOfFame'
-import MelonInfo from '@/components/Chart/MelonInfo'
-import SubTitle from '@/components/Chart/SubTitle'
-import TimeBaseSubTitle from '@/components/Chart/TimeBaseSubTitle'
-import Title from '@/components/Chart/Title'
-import Top100Chart from '@/components/Chart/Top100Chart'
-import WeeklyAward from '@/components/Chart/WeeklyAward'
 import TempLayout from '@/components/TempLayout/TempLayout'
-import chartData from '@/data/chart.json'
 import { css } from '@emotion/react'
+import chartData from '@/data/chart.json'
+import Title from '@/components/Chart/Title'
+import TimeBaseSubTitle from '@/components/Chart/TimeBaseSubTitle'
+import Top100Chart from '@/components/Chart/Top100Chart'
+import HRLine from '@/components/Chart/HRLine'
+import ChartMusicCard from '@/components/Chart/ChartMusicCard'
+import SubTitle from '@/components/Chart/SubTitle'
+import WeeklyAward from '@/components/Chart/WeeklyAward'
+import MelonInfo from '@/components/Chart/MelonInfo'
+import HallOfFame from '@/components/Chart/HallOfFame'
 
 const articleStyle = css`
   width: 1060px;
@@ -24,21 +24,21 @@ const chartSectionContainerStyle = css`
 `
 const LeftSectionContainerStyle = css`
   display: inline-block;
-  width: 285px;
-  margin-right: 29px;
+  width: 284px;
+  margin-right: 28px;
 `
 const RightSectionContainerStyle = css`
   display: inline-block;
-  width: 745px;
+  width: 748px;
   vertical-align: top;
 `
 const titleContainer = css`
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 `
 const musicChartContainer = css`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 14px;
 `
 const albumNewsContainer = css`
   display: flex;
@@ -47,18 +47,21 @@ const albumNewsContainer = css`
 `
 const weeklyAwardMainContainer = css`
   display: inline-block;
-  width: 315px;
-  margin-right: 13px;
+  width: 314px;
+  margin-right: 20px;
 `
 const weeklyAwardTitleContainer = css`
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 15px;
+  gap: 8px;
+  margin-bottom: 16px;
+`
+const top100SectionContainer = css`
+  margin-bottom: 30px;
 `
 const melonInfoMainContainer = css`
   display: inline-block;
-  width: 417px;
+  width: 414px;
   vertical-align: top;
 `
 const Chart = () => {
@@ -67,10 +70,10 @@ const Chart = () => {
       <article css={articleStyle}>
         {/* 배너 */}
         <ArticleADBanner
-          title="멜론 2022 MMA 내돌내상 2023"
+          title="멜론 MMA 내돌내상 2023"
           desc="시상수 TOP 10 달성시 실물 상패가 수여되고 MMA 메인페이지에 소개됩니다."
           CTAText="참여하러 가기"
-          bgImage="https://s3-alpha-sig.figma.com/img/8d82/37bd/d28c3ce5c72d6035ef3cdf9c9d136691?Expires=1699833600&Signature=HqpNmXXiQt4pleTGrBknaB~RtS5TeuwpQzinF-FbQlGanVxTDsWn2eQ2yJLN~o~2a8k7cIF5lNDdmFH49sqj7J6L0R79x2TvIoNlM1xPowW-09Lznvvl8Xs1Zafh8h3-qaM4L3CB-caWPKMrHPHfTrKNEIca~jh8jg85LdidO4s2G~Uy6qSObLb~kj97vWRhgRtMguHMNPFijSJ1cvcwLp3MuCXUhvj~7rfEkLyuVzdttLxy2SlOTe0ZNi9GHEewyFVGPL0Qd0j3bWVi5skrbofVRQepxcnmca5wrEtHAT6GNgSrU~rUL9tk7gKau0fqzYopHFTncZ79vVd-AJ2pjQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+          bgImage={chartData.image.adBanner}
           bgColor="#EA4476"
         ></ArticleADBanner>
         {/* 차트정보 */}
@@ -79,8 +82,8 @@ const Chart = () => {
             {/* 멜론 HOT 100 */}
             <section>
               <div css={titleContainer}>
-                <TimeBaseSubTitle time="23:00" mb="6px" />
-                <Title>멜론 HOT 100</Title>
+                <Title mb="10px">멜론 HOT 100</Title>
+                <TimeBaseSubTitle time="23:00" />
               </div>
 
               <ul css={musicChartContainer}>
@@ -96,12 +99,14 @@ const Chart = () => {
                 ))}
               </ul>
             </section>
+
             <HRLine />
+
             {/* 실시간 차트 */}
             <section>
               <div css={titleContainer}>
-                <TimeBaseSubTitle time="23:00" mb="6px" />
-                <Title>가이섬 실시간 차트</Title>
+                <Title mb="10px">가이섬 실시간 차트</Title>
+                <TimeBaseSubTitle time="23:00" />
               </div>
               <ul css={musicChartContainer}>
                 {chartData.realTimeChartList.map((m) => (
@@ -116,11 +121,13 @@ const Chart = () => {
                 ))}
               </ul>
             </section>
+
             <HRLine />
+
             {/* 음반 관련 소식 */}
             <section>
               <div css={titleContainer}>
-                <Title>음반 관련 소식</Title>
+                <Title>발매 관련 소식</Title>
               </div>
               <ul css={albumNewsContainer}>
                 {chartData.albumNewsList.map((e, i) => (
@@ -134,17 +141,15 @@ const Chart = () => {
           </div>
           <div css={RightSectionContainerStyle}>
             {/* 멜론 TOP 100 */}
-            <section>
+            <section css={top100SectionContainer}>
               <div css={titleContainer}>
-                <Title mb="6px">현재 멜론 TOP 100 순위는?</Title>
+                <Title mb="10px">현재 타이틀곡의 멜론 TOP 100 순위는?</Title>
                 <TimeBaseSubTitle time="23:00"></TimeBaseSubTitle>
               </div>
               <Top100Chart />
             </section>
 
-            <HRLine margin="35px 0 17px 0" />
-
-            <div css={{ marginBottom: '27px' }}>
+            <div>
               {/* 멜론 주간인기상 */}
               <section css={weeklyAwardMainContainer}>
                 <div css={weeklyAwardTitleContainer}>

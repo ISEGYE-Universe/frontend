@@ -1,8 +1,10 @@
 import { css } from '@emotion/react'
 import Image from 'next/image'
 import Title from './Title'
-import SubTitle from './SubTitle'
 import RoundedLinkButton from './RoundedLinkButton'
+import chartData from '@/data/chart.json'
+import { ChartColor } from '@/styles/ChartColor'
+import { LineHeight, TextSmLight } from '@/styles/Font'
 
 const Top100Chart = () => {
   return (
@@ -19,7 +21,7 @@ const Top100Chart = () => {
           display: inline-block;
           width: 517px;
           height: 100%;
-          background-color: #f6f6f6;
+          background-color: ${ChartColor.bgWhiteGrey};
         `}
       ></div>
       {/* 곡 카드 영역 */}
@@ -28,7 +30,7 @@ const Top100Chart = () => {
           display: inline-block;
           width: 233px;
           height: 100%;
-          background: url('https://s3-alpha-sig.figma.com/img/11cf/1bba/400a79b31a645001a270e66d4bd85bcf?Expires=1699833600&Signature=XHq4UyJ3caQ6BRLtJKwmBoeAEhFak8Jnnj0nDZ6tDq3uoyxVxf8nR84fJ41TT2poUxbeTgyLClPbpNHVPAk5WNFy3cvZZSfbf0EO66BeZ2wkpyJPM5wts1QUrHTlu-Xm9kbFyif6froCe3FkMLCtWVrI6tW~SrL2Zhpkk4i5ZXe8Tau2h1n5iIjo5r1ID8fbZ-DJkyZ8pYlR0EkA6aMDDGSrXgaOtdVYdBsV1ZtPwyArGsGG5XU3VLeBHpEXmul-7r5DOnKObMHveSej7V4D3wmfsh1ZAfbYzGVq6gWLY3~cbI7ecrDy-1clL-NW7z2LkJ2bJ9u9~UESkKkmYc6ayg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+          background: url('${chartData.image.top100Thumb}');
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center;
@@ -49,19 +51,19 @@ const Top100Chart = () => {
         {/* 내용 */}
         <div
           css={css`
-            padding: 23px 37px 52px;
+            padding: 34px 35px 34px 36px;
             height: 100%;
             position: relative;
           `}
         >
           {/* 썸네일 */}
           <Image
-            src="https://s3-alpha-sig.figma.com/img/11cf/1bba/400a79b31a645001a270e66d4bd85bcf?Expires=1699833600&Signature=XHq4UyJ3caQ6BRLtJKwmBoeAEhFak8Jnnj0nDZ6tDq3uoyxVxf8nR84fJ41TT2poUxbeTgyLClPbpNHVPAk5WNFy3cvZZSfbf0EO66BeZ2wkpyJPM5wts1QUrHTlu-Xm9kbFyif6froCe3FkMLCtWVrI6tW~SrL2Zhpkk4i5ZXe8Tau2h1n5iIjo5r1ID8fbZ-DJkyZ8pYlR0EkA6aMDDGSrXgaOtdVYdBsV1ZtPwyArGsGG5XU3VLeBHpEXmul-7r5DOnKObMHveSej7V4D3wmfsh1ZAfbYzGVq6gWLY3~cbI7ecrDy-1clL-NW7z2LkJ2bJ9u9~UESkKkmYc6ayg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-            width={160}
-            height={160}
+            src={chartData.image.top100Thumb}
+            width={159}
+            height={159}
             alt="top100 thumbnail"
             css={css`
-              margin-bottom: 25px;
+              margin-bottom: 18px;
             `}
           ></Image>
           {/* 제목, 아티스트 */}
@@ -70,24 +72,37 @@ const Top100Chart = () => {
               display: flex;
               flex-direction: column;
               align-items: center;
-              margin-bottom: 14px;
+              margin-bottom: 23px;
             `}
           >
-            <Title color="#fff">KIDDING</Title>
-            <SubTitle color="#b9b9b9">이세계아이돌</SubTitle>
+            <Title color={ChartColor.textWhite} mb="6px">
+              KIDDING
+            </Title>
+            <h4
+              css={[
+                TextSmLight,
+                LineHeight,
+                css`
+                  color: ${ChartColor.textLightGrey};
+                `,
+              ]}
+            >
+              이세계아이돌
+            </h4>
           </div>
 
           {/* 버튼 */}
           <RoundedLinkButton
             href="#"
-            bgColor="#5CCA52"
+            bgColor={ChartColor.bgMelonGreen}
             customCss={css`
               margin-bottom: 9px;
             `}
+            shadow
           >
             멜론에서 듣기
           </RoundedLinkButton>
-          <RoundedLinkButton href="#" bgColor="#5CCA52">
+          <RoundedLinkButton href="#" bgColor={ChartColor.bgMelonGreen} shadow>
             종합 스트리밍 가이드
           </RoundedLinkButton>
         </div>
