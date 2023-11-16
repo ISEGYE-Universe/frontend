@@ -1,5 +1,9 @@
 import { Global, css } from '@emotion/react'
 
+const fontStyle = css`
+  @import url('https://cdn.jsdelivr.net/gh/ayaan-fonts/NotoSans-IsegyeUniverse/fonts/webfonts/NotoSansCJKkr-dynamic-subset.css');
+`
+
 const resetStyle = css`
   * {
     box-sizing: border-box;
@@ -36,59 +40,6 @@ const resetStyle = css`
   }
 `
 
-const fontFace = css`
-  @font-face {
-    font-family: 'NotoSansCJKkr';
-    font-weight: 100;
-    font-style: normal;
-    src: url('/fonts/NotoSansCJKkr-Thin.otf') format('opentype');
-    // exclude ellipsis (…, U+2026)
-    unicode-range: U+0-2025, U+2027-10FFFF;
-  }
-  @font-face {
-    font-family: 'NotoSansCJKkr';
-    font-weight: 200;
-    font-style: normal;
-    src: url('/fonts/NotoSansCJKkr-Light.otf') format('opentype');
-    unicode-range: U+0-2025, U+2027-10FFFF;
-  }
-  @font-face {
-    font-family: 'NotoSansCJKkr';
-    font-weight: 300;
-    font-style: normal;
-    src: url('/fonts/NotoSansCJKkr-DemiLight.otf') format('opentype');
-    unicode-range: U+0-2025, U+2027-10FFFF;
-  }
-  @font-face {
-    font-family: 'NotoSansCJKkr';
-    font-weight: 400;
-    font-style: normal;
-    src: url('/fonts/NotoSansCJKkr-Regular.otf') format('opentype');
-    unicode-range: U+0-2025, U+2027-10FFFF;
-  }
-  @font-face {
-    font-family: 'NotoSansCJKkr';
-    font-weight: 500;
-    font-style: normal;
-    src: url('/fonts/NotoSansCJKkr-Medium.otf') format('opentype');
-    unicode-range: U+0-2025, U+2027-10FFFF;
-  }
-  @font-face {
-    font-family: 'NotoSansCJKkr';
-    font-weight: 600;
-    font-style: normal;
-    src: url('/fonts/NotoSansCJKkr-Bold.otf') format('opentype');
-    unicode-range: U+0-2025, U+2027-10FFFF;
-  }
-  @font-face {
-    font-family: 'NotoSansCJKkr';
-    font-weight: 700;
-    font-style: normal;
-    src: url('/fonts/NotoSansCJKkr-Black.otf') format('opentype');
-    unicode-range: U+0-2025, U+2027-10FFFF;
-  }
-`
-
-const GlobalStyle = () => <Global styles={[resetStyle, fontFace]} />
+const GlobalStyle = () => <Global styles={[fontStyle, resetStyle]} />
 
 export default GlobalStyle

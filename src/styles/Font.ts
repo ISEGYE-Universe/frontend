@@ -3,7 +3,7 @@ import { css } from '@emotion/react'
 // Pre-defined font style
 // Font Family
 const fontFamily = css`
-  font-family: 'NotoSansCJKkr';
+  font-family: 'Noto Sans CJK KR';
 `
 // Font Weight
 const fontWeightThin = css`
@@ -22,10 +22,10 @@ const fontWeightMedium = css`
   font-weight: 500;
 `
 const fontWeightBold = css`
-  font-weight: 600;
+  font-weight: 700;
 `
 const fontWeightBlack = css`
-  font-weight: 700;
+  font-weight: 900;
 `
 // Font Size
 const fontSizeMainTitle = css`
@@ -134,7 +134,7 @@ export const TitleSmBold = css`
 // text_md
 export const TextMdLight = css`
   ${fontFamily}
-  ${fontWeightLight}
+  ${fontWeightThin}
   ${fontSizeTextMd}
 `
 export const TextMdRegular = css`
@@ -150,7 +150,7 @@ export const TextMdBold = css`
 // text_sm
 export const TextSmLight = css`
   ${fontFamily}
-  ${fontWeightLight}
+  ${fontWeightThin}
   ${fontSizeTextSm}
 `
 export const TextSmRegular = css`
@@ -166,17 +166,17 @@ export const TextSmBold = css`
 // caption_md
 export const CaptionMdLight = css`
   ${fontFamily}
-  ${fontWeightLight}
+  ${fontWeightThin}
   ${fontSizeCaptionMd}
 `
 export const CaptionMdRegular = css`
   ${fontFamily}
-  ${fontWeightDemiLight}
+  ${fontWeightRegular}
   ${fontSizeCaptionMd}
 `
 export const CaptionMdBold = css`
   ${fontFamily}
-  ${fontWeightRegular}
+  ${fontWeightMedium}
   ${fontSizeCaptionMd}
 `
 // caption_sm
