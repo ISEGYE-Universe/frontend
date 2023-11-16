@@ -17,6 +17,7 @@ interface ChartMusicCardProps {
 }
 
 const mainContainer = css`
+  height: 90px;
   gap: 20px;
   padding: 10px;
   border-radius: 14px;
