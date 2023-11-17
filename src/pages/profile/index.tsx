@@ -16,7 +16,7 @@ const Profile = () => {
         <ProfileIntroductionBox
           mainTitle={profileData.mainIntroduction.mainTitle}
           description={profileData.mainIntroduction.description}
-        ></ProfileIntroductionBox>
+        />
       </div>
     </TempLayout>
   )

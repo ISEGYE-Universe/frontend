@@ -3,6 +3,7 @@ import { Global, css } from '@emotion/react'
 const resetStyle = css`
   * {
     box-sizing: border-box;
+    font-family: 'NotoSansCJKkr';
   }
 
   html,
@@ -37,6 +38,7 @@ const resetStyle = css`
 `
 
 const fontFace = css`
+  /* S: 추후 폰트 변경 시 변경 가능 */
   @font-face {
     font-family: 'NotoSansCJKkr';
     font-weight: 100;
@@ -87,6 +89,7 @@ const fontFace = css`
     src: url('/fonts/NotoSansCJKkr-Black.otf') format('opentype');
     unicode-range: U+0-2025, U+2027-10FFFF;
   }
+  /* E: 추후 폰트 변경 시 변경 가능 */
 `
 
 const GlobalStyle = () => <Global styles={[resetStyle, fontFace]} />

@@ -1,7 +1,7 @@
 import Image from 'next/image'
+import { DivFlexBox } from '@/styles/Album/AlbumInfo'
 import AlbumBtn from './AlbumBtnSection'
 import AlbumDetail from './AlbumDetail'
-import { DivFlexBox } from '@/styles/Album/AlbumInfo'
 
 const AlbumInfoLayout = ({ ident }: { ident: string }) => {
   return (
@@ -12,7 +12,7 @@ const AlbumInfoLayout = ({ ident }: { ident: string }) => {
           alt="Image Load Fail"
           width={764.8}
           height={600}
-          priority={true}
+          priority
         />
         <AlbumBtn album={ident} />
       </div>

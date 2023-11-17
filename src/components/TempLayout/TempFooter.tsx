@@ -6,7 +6,7 @@ const footerStyle = css`
   background-color: #252525;
 `
 const TempFooter = () => {
-  return <footer css={footerStyle}></footer>
+  return <footer css={footerStyle} />
 }
 
 export default TempFooter
