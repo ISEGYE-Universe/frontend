@@ -17,22 +17,18 @@ jobs:
       - name: Deploy
         uses: cloudtype-github-actions/deploy@v1
         with:
-          token: ${{ secrets.STAGING_K8S_TOKEN }}
-          project: kms0219kms/isegyeuniverse-frontend
+          token: ${{ secrets.CLOUDTYPE_TOKEN }}
+          project: kms0219kms/isegyeuniverse-staging
           stage: main
           yaml: |
             name: isegyeuniverse-frontend
-            app: node@18
+            app: dockerfile
             options:
-              env:
-                - name: NODE_ENV
-                  value: production
-              ports: 3000
-              build: npm run build
-              install: npm install
-              strategy: rolling
-              start: npx --yes serve@latest build
+              ports: "80"
+              dockerfile: Dockerfile
               healthz: /
+              strategy: rolling
+              shell: /bin/bash
             context:
               git:
                 url: git@github.com:${{ github.repository }}.git
