@@ -1,11 +1,12 @@
 FROM node:18 as build
 WORKDIR /usr/src/app
 
-COPY package*.json ./
-RUN npm ci
+COPY package.json ./
+COPY yarn.lock ./
+RUN yarn install --frozen-lockfile
 
 COPY . .
-RUN npm run build --profile
+RUN yarn build --profile
 
 FROM nginx:1.25
 COPY nginx.conf /etc/nginx/nginx.conf
