@@ -6,8 +6,8 @@
 import { ReactNode, useCallback, useEffect, useState } from 'react'
 import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react'
 import ClassNames from 'embla-carousel-class-names'
-import { DotButton } from './EmblaCarouselArrowsDots'
 import { css } from '@emotion/react'
+import { DotButton } from './EmblaCarouselArrowsDots'
 
 type PropType = {
   slides: ReactNode[]

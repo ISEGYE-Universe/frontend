@@ -1,8 +1,8 @@
 import ProfileStore from '@/store/Profile/ProfileStore'
 import { css } from '@emotion/react'
-import ProfileMainMemberSection from './ProfileMainMemberSection'
 import profileData from '@/data/profile.json'
 import Image from 'next/image'
+import ProfileMainMemberSection from './ProfileMainMemberSection'
 
 const bgImageStyle = css`
   transition: opacity 0.15s ease-in-out;
@@ -123,7 +123,7 @@ const ProfileMainBg = () => {
             css={css`
               opacity: 0;
             `}
-          ></image>
+          />
           <ProfileMainMemberSection
             memberIndex={0}
             x={165}

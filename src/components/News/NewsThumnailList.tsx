@@ -2,8 +2,8 @@ import Image from 'next/image'
 
 import useEmblaCarousel from 'embla-carousel-react'
 
-import { NewsThumnail } from './NewsThumnail'
 import { useCallback } from 'react'
+import { NewsThumnail } from './NewsThumnail'
 
 const DUMMY_THUMNAIL_LIST = [
   {

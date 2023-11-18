@@ -73,7 +73,7 @@ const ChartMusicCard = ({
         alt={`${title} thumbnail`}
         width={70}
         height={70}
-      ></Image>
+      />
       <div css={[flexRowContainer, flexAlignCenter, metadataContainer]}>
         {/* 순위, 등락 */}
         <div css={flexColContainer}>
@@ -101,7 +101,7 @@ const ChartMusicCard = ({
               width={0}
               height={0}
               css={chartIconStyle}
-            ></Image>
+            />
             <span
               css={[
                 CaptionMdLight,
