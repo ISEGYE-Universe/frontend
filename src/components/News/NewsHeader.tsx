@@ -1,5 +1,5 @@
 import { NewsHeaderButtonList } from './NewsHeaderButtonList'
-import { color } from './color'
+import color from './color'
 
 export const NewsHeader = () => {
   return (
