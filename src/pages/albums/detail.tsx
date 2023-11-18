@@ -3,9 +3,9 @@
  * Heo0
  * Album Detail Page
  */
+import { DivMargin } from '@/styles/Album/AlbumInfo'
 import EmblaCarousel from '../../components/Albums/EmblaCarousel'
 import Album from '../../components/Albums/AlbumInfo'
-import { DivMargin } from '@/styles/Album/AlbumInfo'
 
 const Detail = () => {
   return (
@@ -13,9 +13,9 @@ const Detail = () => {
       <EmblaCarousel
         slides={[
           <Album ident="REWIND" />,
-          <Album ident="WINTERSPRING" />,
+          <Album ident="WINTER_SPRING" />,
           <Album ident="LOCKDOWN" />,
-          <Album ident="AnotherWorld" />,
+          <Album ident="ANOTHER_WORLD" />,
           <Album ident="KIDDING" />,
         ]}
         options={{

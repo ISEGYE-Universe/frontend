@@ -71,11 +71,11 @@ const ArticleADBanner = ({
           <div css={CTAContainerStyle}>
             <span css={[TitleSmRegular, LineHeight]}>{CTAText}</span>
             <Image
-              src={'/images/icon/ad-right-chevron.svg'}
+              src="/images/icon/ad-right-chevron.svg"
               alt="right icon"
               width={12}
               height={24}
-            ></Image>
+            />
           </div>
         </div>
       </section>

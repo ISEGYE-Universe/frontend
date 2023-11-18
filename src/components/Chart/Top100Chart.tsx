@@ -1,10 +1,10 @@
 import { css } from '@emotion/react'
 import Image from 'next/image'
-import Title from './Title'
-import RoundedLinkButton from './RoundedLinkButton'
 import chartData from '@/data/chart.json'
 import { ChartColor } from '@/styles/ChartColor'
 import { LineHeight, TextSmLight } from '@/styles/Font'
+import RoundedLinkButton from './RoundedLinkButton'
+import Title from './Title'
 
 const Top100Chart = () => {
   return (
@@ -23,7 +23,7 @@ const Top100Chart = () => {
           height: 100%;
           background-color: ${ChartColor.bgWhiteGrey};
         `}
-      ></div>
+      />
       {/* 곡 카드 영역 */}
       <div
         css={css`
@@ -47,7 +47,7 @@ const Top100Chart = () => {
             background: rgba(21, 21, 21, 0.7);
             position: absolute;
           `}
-        ></div>
+        />
         {/* 내용 */}
         <div
           css={css`
@@ -65,7 +65,7 @@ const Top100Chart = () => {
             css={css`
               margin-bottom: 18px;
             `}
-          ></Image>
+          />
           {/* 제목, 아티스트 */}
           <div
             css={css`

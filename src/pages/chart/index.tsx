@@ -74,7 +74,7 @@ const Chart = () => {
           CTAText="참여하러 가기"
           bgImage={chartData.image.adBanner}
           bgColor="#EA4476"
-        ></ArticleADBanner>
+        />
         {/* 차트정보 */}
         <div css={chartSectionContainerStyle}>
           <div css={LeftSectionContainerStyle}>
@@ -94,7 +94,7 @@ const Chart = () => {
                     change={m.change}
                     artist={m.artist}
                     thumb={m.thumb}
-                  ></ChartMusicCard>
+                  />
                 ))}
               </ul>
             </section>
@@ -116,7 +116,7 @@ const Chart = () => {
                     change={m.change}
                     artist={m.artist}
                     thumb={m.thumb}
-                  ></ChartMusicCard>
+                  />
                 ))}
               </ul>
             </section>
@@ -130,10 +130,7 @@ const Chart = () => {
               </div>
               <ul css={albumNewsContainer}>
                 {chartData.albumNewsList.map((e, i) => (
-                  <AlbumNewsCard
-                    key={`album-news-${i}`}
-                    title={e.title}
-                  ></AlbumNewsCard>
+                  <AlbumNewsCard key={`album-news-${i}`} title={e.title} />
                 ))}
               </ul>
             </section>
@@ -143,7 +140,7 @@ const Chart = () => {
             <section css={top100SectionContainer}>
               <div css={titleContainer}>
                 <Title mb="10px">현재 타이틀곡의 멜론 TOP 100 순위는?</Title>
-                <TimeBaseSubTitle time="23:00"></TimeBaseSubTitle>
+                <TimeBaseSubTitle time="23:00" />
               </div>
               <Top100Chart />
             </section>
@@ -173,7 +170,7 @@ const Chart = () => {
             </div>
 
             {/* 최근 명예의 전당 */}
-            <section></section>
+            <section />
           </div>
         </div>
 

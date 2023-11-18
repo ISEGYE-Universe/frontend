@@ -5,8 +5,6 @@ import Banner from '@/components/Banner/Banner'
 import { News } from '@/components/News/News'
 import Movie from '@/components/Movie/Movie'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export default function Home() {
   return (
     <>
