@@ -48,7 +48,7 @@ const ProfileMainMemberSection = ({
           setSwitchHoverMember(memberIndex, false)
           setHoverDefault(true)
         }}
-      ></rect>
+      />
     </Link>
   )
 }
