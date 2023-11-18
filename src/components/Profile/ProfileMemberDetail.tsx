@@ -107,7 +107,7 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
             height={0}
             css={iconStyle}
             alt="left arrow icon"
-          ></Image>
+          />
         </button>
         <button
           css={[
@@ -130,7 +130,7 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
             height={46}
             css={iconStyle}
             alt="right arrow icon"
-          ></Image>
+          />
         </button>
 
         {/* 소개 */}
@@ -141,8 +141,8 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
           igLink={data.socialLink.igLink}
           twLink={data.socialLink.twLink}
           description={data.description}
-          margin={'0 0 80px 150px'}
-        ></ProfileIntroductionBox>
+          margin="0 0 80px 150px"
+        />
       </div>
     </TransitionLayout>
   )

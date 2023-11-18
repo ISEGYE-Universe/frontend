@@ -28,7 +28,8 @@ const DesSize = css`
 // Album Detail Description Div
 const DetailDiv = css`
   margin-top: 12px;
-  width: 365px;
+  width: 375px;
+  word-break: keep-all;
 `
 // Album Info(genre...)
 const InfoDiv = css`
@@ -67,6 +68,9 @@ const btnSize = css`
   background-color: transparent;
   cursor: pointer;
 `
+const positionRelative = css`
+  position: relative;
+`
 
 export const AlbumTitle = css`
   ${albumTitleSize}
@@ -104,4 +108,5 @@ export const AlbumBtnDiv = css`
 `
 export const AlbumBtnSize = css`
   ${btnSize}
+  ${positionRelative}
 `

@@ -3,8 +3,7 @@ import { Inter } from 'next/font/google'
 import { Artist } from '@/components/Artist/Artist'
 import Banner from '@/components/Banner/Banner'
 import { News } from '@/components/News/News'
-
-const inter = Inter({ subsets: ['latin'] })
+import Movie from '@/components/Movie/Movie'
 
 export default function Home() {
   return (
@@ -19,6 +18,7 @@ export default function Home() {
         <Banner />
         <News />
         <Artist />
+        <Movie />
       </main>
     </>
   )

@@ -14,7 +14,7 @@ const gradientStyle = css`
 const TempGNB = () => {
   return (
     <header css={GNBContainerStyle}>
-      <nav css={gradientStyle}></nav>
+      <nav css={gradientStyle} />
     </header>
   )
 }

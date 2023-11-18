@@ -69,7 +69,7 @@ export const ArtistMainScreenToggleButton = ({
           css={{ filter: isHighlighted ? 'grayscale(0)' : 'grayscale(1)' }}
           src={TOGGLE_MAP[id as keyof typeof TOGGLE_MAP].imgSrc}
           alt="Icon"
-          fill={true}
+          fill
         />
       </div>
       <div

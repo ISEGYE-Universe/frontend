@@ -1,23 +1,23 @@
 import Image from 'next/image'
-import AlbumBtn from './AlbumButtons'
-import AlbumDetail from './AlbumDetail'
 import { DivFlexBox } from '@/styles/Album/AlbumInfo'
+import AlbumBtn from './AlbumBtnSection'
+import AlbumDetail from './AlbumDetail'
 
 const AlbumInfoLayout = ({ ident }: { ident: string }) => {
   return (
-    <div css={DivFlexBox}>
+    <section css={DivFlexBox}>
       <div>
         <Image
           src={`/images/album/AlbumCover/${ident}.png`}
           alt="Image Load Fail"
           width={764.8}
           height={600}
-          priority={true}
+          priority
         />
         <AlbumBtn album={ident} />
       </div>
       <AlbumDetail album={ident} />
-    </div>
+    </section>
   )
 }
 
