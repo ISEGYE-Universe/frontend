@@ -6,6 +6,7 @@ import { LeftButton, RightButton } from './EmblaHistoryButton'
 
 const dummyData = [
   {
+    id: 1,
     thumbnail: '/images/chart/history-lockdown.jpg',
     category: '멜론 명예의 전당',
     title: 'LOCKDOWN',
@@ -13,6 +14,7 @@ const dummyData = [
     date: new Date('2023-06-22'),
   },
   {
+    id: 2,
     thumbnail: '/images/chart/history-another-world.jpg',
     category: '멜론 명예의 전당',
     title: 'Another World',
@@ -20,27 +22,7 @@ const dummyData = [
     date: new Date('2023-07-21'),
   },
   {
-    thumbnail: '/images/chart/history-kidding.jpg',
-    category: '멜론 명예의 전당',
-    title: 'KIDDING',
-    desc: '2,109,700 Streams',
-    date: new Date('2023-08-18'),
-  },
-  {
-    thumbnail: '/images/chart/history-lockdown.jpg',
-    category: '멜론 명예의 전당',
-    title: 'LOCKDOWN',
-    desc: '1,156,500 Streams',
-    date: new Date('2023-06-22'),
-  },
-  {
-    thumbnail: '/images/chart/history-another-world.jpg',
-    category: '멜론 명예의 전당',
-    title: 'Another World',
-    desc: '1,335,900 Streams',
-    date: new Date('2023-07-21'),
-  },
-  {
+    id: 3,
     thumbnail: '/images/chart/history-kidding.jpg',
     category: '멜론 명예의 전당',
     title: 'KIDDING',
@@ -133,8 +115,9 @@ const HistoryCarousel = () => {
     <div css={{ position: 'relative' }}>
       <div className="embla" css={emblaCss} ref={emblaRef}>
         <div className="embla__container">
-          {dummyData.map((data, i) => (
-            <div className="embla__slide" key={`history-${i}`}>
+          {/* loop 발동을 위해 리스트 2배로 복사 */}
+          {[...dummyData, ...dummyData].map((data) => (
+            <div className="embla__slide" key={`history-${data.id}`}>
               <HistoryCard
                 thumbnail={data.thumbnail}
                 category={data.category}
