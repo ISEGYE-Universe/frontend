@@ -1,7 +1,7 @@
 import { LineHeight, TextMdRegular, TitleSmRegular } from '@/styles/Font'
 import { css } from '@emotion/react'
-import Title from './Title'
 import { ChartColor } from '@/styles/ChartColor'
+import Title from './Title'
 
 const melonInfoCardContainer = css`
   display: flex;
