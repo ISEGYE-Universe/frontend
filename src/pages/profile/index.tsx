@@ -5,7 +5,8 @@ import profileData from '@/data/profile.json'
 import { css } from '@emotion/react'
 
 const profileContainerStyle = css`
-  height: calc(100vh - 120px);
+  position: relative;
+  height: 100vh;
 `
 
 const Profile = () => {

@@ -3,7 +3,7 @@ import TempFooter from './TempFooter'
 const TempLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <main>{children}</main>
+      {children}
       <TempFooter />
     </>
   )
