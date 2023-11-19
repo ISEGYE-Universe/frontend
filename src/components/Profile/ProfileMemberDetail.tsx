@@ -10,7 +10,7 @@ interface MemberIntroduction {
   mainTitle: string
   description: Profile.IntroductionDescription[]
   socialLink: Profile.SocialLink
-  galleryImageURL: string[]
+  galleryImageURL: Profile.GalleryImage[]
 }
 
 interface ProfileMemberDetailProps {
@@ -19,7 +19,7 @@ interface ProfileMemberDetailProps {
 
 const slideImageStyle = css`
   width: 100%;
-  height: calc(100% - 120px);
+  height: 100%;
   object-fit: cover;
   position: absolute;
   transition: opacity 0.3s ease;
@@ -54,9 +54,9 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
         {/* 이미지 슬라이더 */}
         {data.galleryImageURL.map((img, i) => (
           <Image
-            src={img}
+            src={img.url}
             alt={`gallery-${i + 1}`}
-            key={`gallery-${i}`}
+            key={`gallery-${img.id}`}
             width={0}
             height={0}
             css={[
@@ -77,7 +77,7 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
             height={0}
             css={css`
               width: 100%;
-              height: calc(100% - 120px);
+              height: 100%;
               object-fit: cover;
               position: absolute;
               opacity: 0.9;

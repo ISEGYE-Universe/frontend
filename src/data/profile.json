@@ -38,9 +38,9 @@
       "twLink": "https://www.twitch.tv/vo_ine"
     },
     "galleryImageURL": [
-      "/images/profile/member-gallery/ine1.png",
-      "/images/profile/member-gallery/ine2.png",
-      "/images/profile/member-gallery/ine3.png"
+      { "id": 1, "url": "/images/profile/member-gallery/ine1.png" },
+      { "id": 2, "url": "/images/profile/member-gallery/ine2.png" },
+      { "id": 3, "url": "/images/profile/member-gallery/ine3.png" }
     ]
   },
   "jingburgerIntroduction": {
@@ -60,9 +60,9 @@
       "twLink": "https://www.twitch.tv/jingburger"
     },
     "galleryImageURL": [
-      "/images/profile/member-gallery/jingburger1.png",
-      "/images/profile/member-gallery/jingburger2.png",
-      "/images/profile/member-gallery/jingburger3.png"
+      { "id": 1, "url": "/images/profile/member-gallery/jingburger1.png" },
+      { "id": 2, "url": "/images/profile/member-gallery/jingburger2.png" },
+      { "id": 3, "url": "/images/profile/member-gallery/jingburger3.png" }
     ]
   },
   "lilpaIntroduction": {
@@ -82,9 +82,9 @@
       "twLink": "https://www.twitch.tv/lilpaaaaaa"
     },
     "galleryImageURL": [
-      "/images/profile/member-gallery/lilpa1.png",
-      "/images/profile/member-gallery/lilpa2.png",
-      "/images/profile/member-gallery/lilpa3.png"
+      { "id": 1, "url": "/images/profile/member-gallery/lilpa1.png" },
+      { "id": 2, "url": "/images/profile/member-gallery/lilpa2.png" },
+      { "id": 3, "url": "/images/profile/member-gallery/lilpa3.png" }
     ]
   },
   "jururuIntroduction": {
@@ -104,9 +104,9 @@
       "twLink": "https://www.twitch.tv/cotton__123"
     },
     "galleryImageURL": [
-      "/images/profile/member-gallery/jururu1.png",
-      "/images/profile/member-gallery/jururu2.png",
-      "/images/profile/member-gallery/jururu3.png"
+      { "id": 1, "url": "/images/profile/member-gallery/jururu1.png" },
+      { "id": 2, "url": "/images/profile/member-gallery/jururu2.png" },
+      { "id": 3, "url": "/images/profile/member-gallery/jururu3.png" }
     ]
   },
   "goseguIntroduction": {
@@ -126,9 +126,9 @@
       "twLink": "https://www.twitch.tv/gosegugosegu"
     },
     "galleryImageURL": [
-      "/images/profile/member-gallery/gosegu1.png",
-      "/images/profile/member-gallery/gosegu2.png",
-      "/images/profile/member-gallery/gosegu3.png"
+      { "id": 1, "url": "/images/profile/member-gallery/gosegu1.png" },
+      { "id": 2, "url": "/images/profile/member-gallery/gosegu2.png" },
+      { "id": 3, "url": "/images/profile/member-gallery/gosegu3.png" }
     ]
   },
   "viichanIntroduction": {
@@ -148,8 +148,8 @@
       "twLink": "https://www.twitch.tv/viichan6"
     },
     "galleryImageURL": [
-      "/images/profile/member-gallery/viichan1.jpg",
-      "/images/profile/member-gallery/viichan2.jpg"
+      { "id": 1, "url": "/images/profile/member-gallery/viichan1.png" },
+      { "id": 2, "url": "/images/profile/member-gallery/viichan2.png" }
     ]
   }
 }
