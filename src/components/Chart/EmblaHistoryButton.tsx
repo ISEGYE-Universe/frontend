@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { PropsWithChildren } from 'react'
 
 type PropType = PropsWithChildren<
