@@ -10,6 +10,7 @@ import HRLine from '@/components/Chart/HRLine'
 import ChartMusicCard from '@/components/Chart/ChartMusicCard'
 import SubTitle from '@/components/Chart/SubTitle'
 import WeeklyAward from '@/components/Chart/WeeklyAward'
+import MelonInfo from '@/components/Chart/MelonInfo'
 
 const articleStyle = css`
   width: 1060px;
@@ -22,12 +23,12 @@ const chartSectionContainerStyle = css`
 `
 const LeftSectionContainerStyle = css`
   display: inline-block;
-  width: 285px;
-  margin-right: 29px;
+  width: 284px;
+  margin-right: 28px;
 `
 const RightSectionContainerStyle = css`
   display: inline-block;
-  width: 745px;
+  width: 748px;
   vertical-align: top;
 `
 const titleContainer = css`
@@ -44,7 +45,9 @@ const albumNewsContainer = css`
   gap: 10px;
 `
 const weeklyAwardMainContainer = css`
-  width: 315px;
+  display: inline-block;
+  width: 314px;
+  margin-right: 20px;
 `
 const weeklyAwardTitleContainer = css`
   display: flex;
@@ -55,7 +58,11 @@ const weeklyAwardTitleContainer = css`
 const top100SectionContainer = css`
   margin-bottom: 30px;
 `
-
+const melonInfoMainContainer = css`
+  display: inline-block;
+  width: 414px;
+  vertical-align: top;
+`
 const Chart = () => {
   return (
     <TempLayout>
@@ -153,7 +160,13 @@ const Chart = () => {
                 />
               </section>
               {/* 곡 멜론 정보 */}
-              <section />
+              <section css={melonInfoMainContainer}>
+                <MelonInfo
+                  musicTitle="OVER"
+                  dailyListenerNum={22798}
+                  dailyChartPosition={308}
+                />
+              </section>
             </div>
 
             {/* 최근 명예의 전당 */}
