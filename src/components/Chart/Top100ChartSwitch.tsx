@@ -30,6 +30,7 @@ const Top100ChartSwitch = () => {
   return (
     <div css={chartSwitchContainer}>
       <button
+        type="button"
         css={[
           chartSwitchButtonStyle,
           {
@@ -47,6 +48,7 @@ const Top100ChartSwitch = () => {
         일간
       </button>
       <button
+        type="button"
         css={[
           chartSwitchButtonStyle,
           {
