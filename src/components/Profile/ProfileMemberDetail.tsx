@@ -38,7 +38,7 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
     position: absolute;
     width: 26px;
     height: 46px;
-    top: 50%;
+    top: 44%;
     transform: translateY(-50%);
     cursor: pointer;
   `
