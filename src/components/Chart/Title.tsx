@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import { ChartColor } from '@/styles/ChartColor'
 import { LineHeight, TitleSmRegular } from '@/styles/Font'
 import { css } from '@emotion/react'

@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import SubTitle from './SubTitle'
 
 interface TimeBaseSubTitleProps {
