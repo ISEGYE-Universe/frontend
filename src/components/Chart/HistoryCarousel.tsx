@@ -94,8 +94,8 @@ const HistoryCarousel = () => {
   })
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true)
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true)
-  const [selectedIndex, setSelectedIndex] = useState(0)
-  const [scrollSnaps, setScrollSnaps] = useState<number[]>([])
+  // const [selectedIndex, setSelectedIndex] = useState(0)
+  // const [scrollSnaps, setScrollSnaps] = useState<number[]>([])
 
   const scrollPrev = useCallback(
     () => emblaApi && emblaApi.scrollPrev(),
@@ -105,25 +105,29 @@ const HistoryCarousel = () => {
     () => emblaApi && emblaApi.scrollNext(),
     [emblaApi],
   )
-  const onInit = useCallback((emblaApi: EmblaCarouselType) => {
-    setScrollSnaps(emblaApi.scrollSnapList())
-  }, [])
+  // const onInit = useCallback((emblaApiProp: EmblaCarouselType) => {
+  //   // setScrollSnaps(emblaApiProp.scrollSnapList())
+  // }, [])
 
-  const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
-    setSelectedIndex(emblaApi.selectedScrollSnap())
-    setPrevBtnDisabled(!emblaApi.canScrollPrev())
-    setNextBtnDisabled(!emblaApi.canScrollNext())
+  const onSelect = useCallback((emblaApiProp: EmblaCarouselType) => {
+    // setSelectedIndex(emblaApiProp.selectedScrollSnap())
+    setPrevBtnDisabled(!emblaApiProp.canScrollPrev())
+    setNextBtnDisabled(!emblaApiProp.canScrollNext())
   }, [])
 
   useEffect(() => {
     if (!emblaApi) return
 
-    onInit(emblaApi)
+    // onInit(emblaApi)
     onSelect(emblaApi)
-    emblaApi.on('reInit', onInit)
+    // emblaApi.on('reInit', onInit)
     emblaApi.on('reInit', onSelect)
     emblaApi.on('select', onSelect)
-  }, [emblaApi, onInit, onSelect])
+  }, [
+    emblaApi,
+    // onInit,
+    onSelect,
+  ])
 
   return (
     <div css={{ position: 'relative' }}>
@@ -137,7 +141,7 @@ const HistoryCarousel = () => {
                 title={data.title}
                 desc={data.desc}
                 date={data.date}
-              ></HistoryCard>
+              />
             </div>
           ))}
         </div>
