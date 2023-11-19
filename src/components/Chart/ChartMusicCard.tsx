@@ -1,4 +1,4 @@
-import { ChartColor } from '@/styles/ChartColor'
+import ChartColor from '@/styles/ChartColor'
 import {
   CaptionMdLight,
   LineHeight,

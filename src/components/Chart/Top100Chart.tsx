@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import Image from 'next/image'
 import chartData from '@/data/chart.json'
-import { ChartColor } from '@/styles/ChartColor'
+import ChartColor from '@/styles/ChartColor'
 import { LineHeight, TextSmLight } from '@/styles/Font'
 import RoundedLinkButton from './RoundedLinkButton'
 import Title from './Title'

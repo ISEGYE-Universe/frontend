@@ -1,4 +1,4 @@
-import { ChartColor } from '@/styles/ChartColor'
+import ChartColor from '@/styles/ChartColor'
 import { LineHeight, TextMdRegular } from '@/styles/Font'
 import { css } from '@emotion/react'
 

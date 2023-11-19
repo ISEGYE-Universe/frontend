@@ -1,5 +1,5 @@
 /* eslint-disable react/require-default-props */
-import { ChartColor } from '@/styles/ChartColor'
+import ChartColor from '@/styles/ChartColor'
 import { LineHeight, TextMdLight } from '@/styles/Font'
 import { css } from '@emotion/react'
 

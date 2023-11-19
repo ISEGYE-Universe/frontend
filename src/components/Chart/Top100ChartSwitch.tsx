@@ -1,5 +1,5 @@
 import ChartStore from '@/store/Chart/ChartStore'
-import { ChartColor } from '@/styles/ChartColor'
+import ChartColor from '@/styles/ChartColor'
 import { TextMdBold } from '@/styles/Font'
 import { css } from '@emotion/react'
 

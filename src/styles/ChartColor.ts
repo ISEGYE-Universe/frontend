@@ -1,4 +1,4 @@
-export const ChartColor = {
+const ChartColor = {
   bgGrey: '#f6f6f6',
   bgWhiteGrey: '#fdfdfd',
   bgLightGrey: '#ececec',
@@ -14,3 +14,5 @@ export const ChartColor = {
   isedolPink: '#ea4476',
   textBlue: '#69A1F8',
 }
+
+export default ChartColor
