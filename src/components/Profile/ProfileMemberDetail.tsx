@@ -87,6 +87,7 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
 
         {/* 좌우 버튼 */}
         <button
+          type="button"
           css={[
             navButtonStyle,
             css`
@@ -110,6 +111,7 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
           />
         </button>
         <button
+          type="button"
           css={[
             navButtonStyle,
             css`
