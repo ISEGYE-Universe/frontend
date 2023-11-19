@@ -12,11 +12,12 @@ import SubTitle from '@/components/Chart/SubTitle'
 import WeeklyAward from '@/components/Chart/WeeklyAward'
 import MelonInfo from '@/components/Chart/MelonInfo'
 import HallOfFame from '@/components/Chart/HallOfFame'
+import HistoryCarousel from '@/components/Chart/HistoryCarousel'
 
 const articleStyle = css`
   width: 1060px;
   margin: 0 auto;
-  padding: 44px 0 141px 0;
+  padding: 44px 0 106px 0;
 `
 
 const chartSectionContainerStyle = css`
@@ -185,8 +186,13 @@ const Chart = () => {
           </div>
         </div>
 
-        <HRLine margin="40px 0 60px 0" />
+        <HRLine margin="38px 0 30px 0" />
         {/* 역대기록 */}
+        <section>
+          <Title mb="20px">역대 기록 한눈에 보기</Title>
+          {/* 캐러셀 구역 */}
+          <HistoryCarousel />
+        </section>
       </article>
     </TempLayout>
   )
