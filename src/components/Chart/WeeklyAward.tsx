@@ -7,6 +7,7 @@ import {
   TitleSmRegular,
 } from '@/styles/Font'
 import { css } from '@emotion/react'
+import { useEffect, useState } from 'react'
 
 const weeklyAwardContainer = css`
   border-radius: 14px;
@@ -32,6 +33,8 @@ const spaceBetween = css`
   justify-content: space-between;
 `
 const leftTimeStyle = css`
+  min-width: 110px;
+  min-height: 26px;
   border-radius: 30px;
   background: ${ChartColor.bgDarkGrey};
   color: ${ChartColor.textWhiteGrey};
@@ -56,7 +59,28 @@ const WeeklyAward = ({
   voteRatio,
   endDate,
 }: WeeklyAwardProps) => {
-  // 남은 시간 계산
+  const [timeLeftResult, setTimeLeftResult] =
+    useState<string>('00일 00:00:00 남음')
+  useEffect(() => {
+    // 남은 시간 계산
+    const now = new Date().getTime()
+    const futureDate = new Date(endDate).getTime()
+
+    const timeleft = futureDate - now
+
+    const days = Math.floor(timeleft / (1000 * 60 * 60 * 24))
+    const hours = Math.floor(
+      (timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+    )
+    const minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60))
+    const seconds = Math.floor((timeleft % (1000 * 60)) / 1000)
+
+    setTimeLeftResult(
+      `${days}일 ${hours < 10 ? `0${hours}` : hours}:${
+        minutes < 10 ? `0${minutes}` : minutes
+      }:${seconds < 10 ? `0${seconds}` : seconds} 남음`,
+    )
+  }, [])
 
   return (
     <div css={[weeklyAwardContainer, flexCol]}>
@@ -74,7 +98,7 @@ const WeeklyAward = ({
         <h3 css={[TitleSmRegular, LineHeight]}>투표 {position}위</h3>
         <div css={[leftTimeStyle, CaptionMdLight, LineHeight]}>
           {/* 남은 시간 계산 로직으로 대체할 예정 */}
-          3일 11:54:17 남음
+          {timeLeftResult}
         </div>
       </div>
       {/* 득표수, 비율 */}
