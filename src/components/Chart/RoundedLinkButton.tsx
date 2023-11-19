@@ -1,5 +1,5 @@
 import { ChartColor } from '@/styles/ChartColor'
-import { CaptionMdBold, CaptionMdLight, LineHeight } from '@/styles/Font'
+import { CaptionMdBold, LineHeight } from '@/styles/Font'
 import { Interpolation, Theme, css } from '@emotion/react'
 import Link from 'next/link'
 
