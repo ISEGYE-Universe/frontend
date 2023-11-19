@@ -75,7 +75,6 @@ const Chart = () => {
           desc="시상수 TOP 10 달성시 실물 상패가 수여되고 MMA 메인페이지에 소개됩니다."
           CTAText="참여하러 가기"
           bgImage={chartData.image.adBanner}
-          bgColor="#EA4476"
         />
         {/* 차트정보 */}
         <div css={chartSectionContainerStyle}>
