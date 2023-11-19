@@ -1,5 +1,4 @@
 import ProfileStore from '@/store/Profile/ProfileStore'
-import { css } from '@emotion/react'
 import Link from 'next/link'
 
 interface ProfileMainMemberSectionProps {
