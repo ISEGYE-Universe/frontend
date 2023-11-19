@@ -66,7 +66,6 @@ const lineHeight = css`
 const textAlignJustify = css`
   text-align: justify;
 `
-
 // main_title
 export const MainTitleLight = css`
   ${fontFamily}

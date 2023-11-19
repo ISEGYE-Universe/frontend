@@ -15,6 +15,7 @@ const melonInfoCard = css`
   background: ${ChartColor.bgGrey};
   padding: 35px 20px;
   border: 1px solid ${ChartColor.borderGrey};
+  height: 124px;
 `
 
 interface MelonInfoProps {

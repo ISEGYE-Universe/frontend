@@ -11,6 +11,7 @@ import ChartMusicCard from '@/components/Chart/ChartMusicCard'
 import SubTitle from '@/components/Chart/SubTitle'
 import WeeklyAward from '@/components/Chart/WeeklyAward'
 import MelonInfo from '@/components/Chart/MelonInfo'
+import HallOfFame from '@/components/Chart/HallOfFame'
 
 const articleStyle = css`
   width: 1060px;
@@ -169,8 +170,18 @@ const Chart = () => {
               </section>
             </div>
 
+            <HRLine />
+
             {/* 최근 명예의 전당 */}
-            <section />
+            <section>
+              <Title mb="20px">최근 명예의 전당</Title>
+              {/* 명예의 전당 본문 */}
+              <HallOfFame
+                musicTitle="이세계 페스티벌"
+                artist="이세계아이돌"
+                releasedAt={new Date('2023-10-05 12:00')}
+              />
+            </section>
           </div>
         </div>
 
