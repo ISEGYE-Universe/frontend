@@ -131,8 +131,8 @@ const Chart = () => {
                 <Title>발매 관련 소식</Title>
               </div>
               <ul css={albumNewsContainer}>
-                {chartData.albumNewsList.map((e, i) => (
-                  <AlbumNewsCard key={`album-news-${i}`} title={e.title} />
+                {chartData.albumNewsList.map((e) => (
+                  <AlbumNewsCard key={`album-news-${e.id}`} title={e.title} />
                 ))}
               </ul>
             </section>
