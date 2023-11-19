@@ -7,7 +7,7 @@ import ProfileMainMemberSection from './ProfileMainMemberSection'
 const bgImageStyle = css`
   transition: opacity 0.15s ease-in-out;
   width: 100%;
-  height: calc(100% - 120px);
+  height: 100%;
   position: absolute;
   object-fit: cover;
 `
@@ -102,7 +102,7 @@ const ProfileMainBg = () => {
       <div
         css={css`
           width: 100%;
-          height: calc(100% - 120px);
+          height: 100%;
           position: absolute;
           overflow-y: hidden;
           // 마우스 오버 섹션이 소개글 박스에 가리는 문제
