@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import { TitleMdBold, TitleSmLight } from '@/styles/Font'
 import { css } from '@emotion/react'
 import Image from 'next/image'
