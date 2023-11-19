@@ -2,7 +2,6 @@ import { ChartColor } from '@/styles/ChartColor'
 import {
   LineHeight,
   TextMdLight,
-  TextSmBold,
   TextSmLight,
   TextSmRegular,
   TitleSmRegular,
