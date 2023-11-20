@@ -7,10 +7,8 @@ interface TransitionLayoutProps {
   duration?: number
 }
 
-export const TransitionLayout = ({
-  children,
-  duration,
-}: TransitionLayoutProps) => {
+export const TransitionLayout = (prop: TransitionLayoutProps) => {
+  const { children, duration } = prop
   const router = useRouter()
 
   return (
