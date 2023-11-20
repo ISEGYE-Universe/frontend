@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { DivFlexBox } from '@/styles/Album/AlbumInfo'
-import AlbumBtn from './AlbumBtnSection'
+import { AlbumBtn } from './AlbumBtnSection'
 import AlbumDetail from './AlbumDetail'
 
 const AlbumInfoLayout = ({ ident }: { ident: string }) => {

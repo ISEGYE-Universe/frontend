@@ -35,154 +35,161 @@ type JSONType = {
   }
 }
 
-export const SpotButton = (props: PropType) => {
+export const SpotButton = (prop: PropType) => {
+  const { player, width, height, album } = prop
   const json: JSONType = BtnLink
   return (
-    <Link css={AlbumBtnSize} href={json[props.album].Spotify} target="_blank">
+    <Link css={AlbumBtnSize} href={json[album].Spotify} target="_blank">
       <Image
-        src={`/images/album/btnImg/${props.player}_black.png`}
-        alt={`${props.player} Black Img`}
-        width={props.width}
-        height={props.height}
+        src={`/images/album/btnImg/${player}_black.png`}
+        alt={`${player} Black Img`}
+        width={width}
+        height={height}
         css={BlackImg}
       />
       <Image
-        src={`/images/album/btnImg/${props.player}_Color.png`}
-        alt={`${props.player} Color Img`}
-        width={props.width}
-        height={props.height}
+        src={`/images/album/btnImg/${player}_Color.png`}
+        alt={`${player} Color Img`}
+        width={width}
+        height={height}
         css={ColorImg}
       />
     </Link>
   )
 }
 
-export const GOButton = (props: PropType) => {
+export const GOButton = (prop: PropType) => {
+  const { player, width, height, album } = prop
   const json: JSONType = BtnLink
   return (
-    <Link css={AlbumBtnSize} href={json[props.album].Gaon} target="_blank">
+    <Link css={AlbumBtnSize} href={json[album].Gaon} target="_blank">
       <Image
-        src={`/images/album/btnImg/${props.player}_black.png`}
-        alt={`${props.player} Black Img`}
-        width={props.width}
-        height={props.height}
+        src={`/images/album/btnImg/${player}_black.png`}
+        alt={`${player} Black Img`}
+        width={width}
+        height={height}
         css={BlackTextImg}
       />
       <Image
-        src={`/images/album/btnImg/${props.player}_Color.png`}
-        alt={`${props.player} Color Img`}
-        width={props.width}
-        height={props.height}
+        src={`/images/album/btnImg/${player}_Color.png`}
+        alt={`${player} Color Img`}
+        width={width}
+        height={height}
         css={ColorTextImg}
       />
     </Link>
   )
 }
 
-export const YTButton = (props: PropType) => {
+export const YTButton = (prop: PropType) => {
+  const { player, width, height, album } = prop
   const json: JSONType = BtnLink
   return (
-    <Link css={AlbumBtnSize} href={json[props.album].Youtube} target="_blank">
+    <Link css={AlbumBtnSize} href={json[album].Youtube} target="_blank">
       <Image
-        src={`/images/album/btnImg/${props.player}_black.png`}
-        alt={`${props.player} Black Img`}
-        width={props.width}
-        height={props.height}
+        src={`/images/album/btnImg/${player}_black.png`}
+        alt={`${player} Black Img`}
+        width={width}
+        height={height}
         css={BlackYoutube}
       />
       <Image
-        src={`/images/album/btnImg/${props.player}_Color.png`}
-        alt={`${props.player} Color Img`}
-        width={props.width}
-        height={props.height}
+        src={`/images/album/btnImg/${player}_Color.png`}
+        alt={`${player} Color Img`}
+        width={width}
+        height={height}
         css={ColorYoutube}
       />
     </Link>
   )
 }
 
-export const VBButton = (props: PropType) => {
+export const VBButton = (prop: PropType) => {
+  const { player, width, height, album } = prop
   const json: JSONType = BtnLink
   return (
-    <Link css={AlbumBtnSize} href={json[props.album].Vibe} target="_blank">
+    <Link css={AlbumBtnSize} href={json[album].Vibe} target="_blank">
       <Image
-        src={`/images/album/btnImg/${props.player}_black.png`}
-        alt={`${props.player} Black Img`}
-        width={props.width}
-        height={props.height}
+        src={`/images/album/btnImg/${player}_black.png`}
+        alt={`${player} Black Img`}
+        width={width}
+        height={height}
         css={BlackVibe}
       />
       <Image
-        src={`/images/album/btnImg/${props.player}_Color.png`}
-        alt={`${props.player} Color Img`}
-        width={props.width}
-        height={props.height}
+        src={`/images/album/btnImg/${player}_Color.png`}
+        alt={`${player} Color Img`}
+        width={width}
+        height={height}
         css={ColorVibe}
       />
     </Link>
   )
 }
 
-export const MLButton = (props: PropType) => {
+export const MLButton = (prop: PropType) => {
+  const { player, width, height, album } = prop
   const json: JSONType = BtnLink
   return (
-    <Link css={AlbumBtnSize} href={json[props.album].Melon} target="_blank">
+    <Link css={AlbumBtnSize} href={json[album].Melon} target="_blank">
       <Image
-        src={`/images/album/btnImg/${props.player}_black.png`}
-        alt={`${props.player} Black Img`}
-        width={props.width}
-        height={props.height}
+        src={`/images/album/btnImg/${player}_black.png`}
+        alt={`${player} Black Img`}
+        width={width}
+        height={height}
         css={BlackVibe}
       />
       <Image
-        src={`/images/album/btnImg/${props.player}_Color.png`}
-        alt={`${props.player} Color Img`}
-        width={props.width}
-        height={props.height}
+        src={`/images/album/btnImg/${player}_Color.png`}
+        alt={`${player} Color Img`}
+        width={width}
+        height={height}
         css={ColorVibe}
       />
     </Link>
   )
 }
 
-export const GNButton = (props: PropType) => {
+export const GNButton = (prop: PropType) => {
+  const { player, width, height, album } = prop
   const json: JSONType = BtnLink
   return (
-    <Link css={AlbumBtnSize} href={json[props.album].Genie} target="_blank">
+    <Link css={AlbumBtnSize} href={json[album].Genie} target="_blank">
       <Image
-        src={`/images/album/btnImg/${props.player}_black.png`}
-        alt={`${props.player} Black Img`}
-        width={props.width}
-        height={props.height}
+        src={`/images/album/btnImg/${player}_black.png`}
+        alt={`${player} Black Img`}
+        width={width}
+        height={height}
         css={BlackVibe}
       />
       <Image
-        src={`/images/album/btnImg/${props.player}_Color.png`}
-        alt={`${props.player} Color Img`}
-        width={props.width}
-        height={props.height}
+        src={`/images/album/btnImg/${player}_Color.png`}
+        alt={`${player} Color Img`}
+        width={width}
+        height={height}
         css={ColorVibe}
       />
     </Link>
   )
 }
 
-export const BGButton = (props: PropType) => {
+export const BGButton = (prop: PropType) => {
+  const { player, width, height, album } = prop
   const json: JSONType = BtnLink
   return (
-    <Link css={AlbumBtnSize} href={json[props.album].Bugs} target="_blank">
+    <Link css={AlbumBtnSize} href={json[album].Bugs} target="_blank">
       <Image
-        src={`/images/album/btnImg/${props.player}_black.png`}
-        alt={`${props.player} Black Img`}
-        width={props.width}
-        height={props.height}
+        src={`/images/album/btnImg/${player}_black.png`}
+        alt={`${player} Black Img`}
+        width={width}
+        height={height}
         css={BlackBugs}
       />
       <Image
-        src={`/images/album/btnImg/${props.player}_Color.png`}
-        alt={`${props.player} Color Img`}
-        width={props.width}
-        height={props.height}
+        src={`/images/album/btnImg/${player}_Color.png`}
+        alt={`${player} Color Img`}
+        width={width}
+        height={height}
         css={ColorBugs}
       />
     </Link>

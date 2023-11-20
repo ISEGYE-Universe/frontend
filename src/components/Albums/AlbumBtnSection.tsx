@@ -9,7 +9,7 @@ import {
   GNButton,
 } from './AlbumBtn'
 
-const AlbumBtn = ({ album }: { album: string }) => {
+export const AlbumBtn = ({ album }: { album: string }) => {
   return (
     <section css={AlbumBtnDiv}>
       <SpotButton player="Spotify" width={35} height={35} album={album} />
@@ -22,5 +22,3 @@ const AlbumBtn = ({ album }: { album: string }) => {
     </section>
   )
 }
-
-export default AlbumBtn
