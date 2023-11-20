@@ -1,4 +1,4 @@
-import ProfileIntroductionBox from '@/components/Profile/ProfileIntroductionBox'
+import { ProfileIntroductionBox } from '@/components/Profile/ProfileIntroductionBox'
 import { css } from '@emotion/react'
 import { useState } from 'react'
 import profileData from '@/data/profile.json'
@@ -31,7 +31,7 @@ const iconStyle = css`
   padding: 10px 20px;
 `
 
-const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
+export const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
   const [pageIndex, setPageIndex] = useState<number>(0)
   const galleryLen = data.galleryImageURL.length
   const navButtonStyle = css`
@@ -149,5 +149,3 @@ const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
     </TransitionLayout>
   )
 }
-
-export default ProfileMemberDetail

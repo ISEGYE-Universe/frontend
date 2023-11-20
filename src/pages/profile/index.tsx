@@ -1,5 +1,5 @@
-import ProfileIntroductionBox from '@/components/Profile/ProfileIntroductionBox'
-import ProfileMainBg from '@/components/Profile/ProfileMainBg'
+import { ProfileIntroductionBox } from '@/components/Profile/ProfileIntroductionBox'
+import { ProfileMainBg } from '@/components/Profile/ProfileMainBg'
 import TempLayout from '@/components/TempLayout/TempLayout'
 import profileData from '@/data/profile.json'
 import { css } from '@emotion/react'
@@ -9,7 +9,7 @@ const profileContainerStyle = css`
   height: calc(100vh - 120px);
 `
 
-const Profile = () => {
+export const Profile = () => {
   return (
     <TempLayout>
       <div css={profileContainerStyle}>
@@ -22,5 +22,3 @@ const Profile = () => {
     </TempLayout>
   )
 }
-
-export default Profile
