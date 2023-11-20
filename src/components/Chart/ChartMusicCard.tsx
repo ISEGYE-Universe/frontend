@@ -59,7 +59,7 @@ const chartThumb = css`
   border-radius: 10px;
 `
 
-const ChartMusicCard = ({
+export const ChartMusicCard = ({
   title,
   position,
   change,
@@ -136,5 +136,3 @@ const ChartMusicCard = ({
     </li>
   )
 }
-
-export default ChartMusicCard

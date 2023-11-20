@@ -35,7 +35,7 @@ interface HistoryCardProps {
   desc: string
   date: Date
 }
-const HistoryCard = ({
+export const HistoryCard = ({
   thumbnail,
   category,
   title,
@@ -82,5 +82,3 @@ const HistoryCard = ({
     </div>
   )
 }
-
-export default HistoryCard

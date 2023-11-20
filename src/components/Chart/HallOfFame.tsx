@@ -55,7 +55,11 @@ interface HallOfFameProps {
   releasedAt: Date
 }
 
-const HallOfFame = ({ musicTitle, artist, releasedAt }: HallOfFameProps) => {
+export const HallOfFame = ({
+  musicTitle,
+  artist,
+  releasedAt,
+}: HallOfFameProps) => {
   // 날짜 formatting
   const year = releasedAt.getFullYear()
   const month = releasedAt.getMonth() + 1
@@ -115,5 +119,3 @@ const HallOfFame = ({ musicTitle, artist, releasedAt }: HallOfFameProps) => {
     </div>
   )
 }
-
-export default HallOfFame

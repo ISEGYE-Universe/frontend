@@ -12,7 +12,7 @@ const chartSwitchContainer = css`
   margin: 0 auto;
 `
 
-const Top100ChartSwitch = () => {
+export const Top100ChartSwitch = () => {
   const { currentTop100ChartType, setCurrentTop100ChartType } = ChartStore()
 
   const chartSwitchButtonStyle = [
@@ -68,5 +68,3 @@ const Top100ChartSwitch = () => {
     </div>
   )
 }
-
-export default Top100ChartSwitch

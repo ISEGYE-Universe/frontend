@@ -8,7 +8,7 @@ interface TitleProps {
   color?: string
 }
 
-const Title = ({ children, mb, color }: TitleProps) => {
+export const Title = ({ children, mb, color }: TitleProps) => {
   return (
     <h2
       css={[
@@ -24,5 +24,3 @@ const Title = ({ children, mb, color }: TitleProps) => {
     </h2>
   )
 }
-
-export default Title

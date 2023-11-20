@@ -3,10 +3,10 @@ import Image from 'next/image'
 import chartData from '@/data/chart.json'
 import ChartColor from '@/styles/ChartColor'
 import { LineHeight, TextSmLight } from '@/styles/Font'
-import RoundedLinkButton from './RoundedLinkButton'
-import Title from './Title'
+import { RoundedLinkButton } from './RoundedLinkButton'
+import { Title } from './Title'
 
-const Top100Chart = () => {
+export const Top100Chart = () => {
   return (
     <div
       css={css`
@@ -110,5 +110,3 @@ const Top100Chart = () => {
     </div>
   )
 }
-
-export default Top100Chart

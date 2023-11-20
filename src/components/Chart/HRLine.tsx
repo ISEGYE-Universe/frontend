@@ -4,7 +4,7 @@ import { css } from '@emotion/react'
 interface HRLineProps {
   margin?: string
 }
-const HRLine: React.FC<HRLineProps> = ({ margin }: HRLineProps) => {
+export const HRLine: React.FC<HRLineProps> = ({ margin }: HRLineProps) => {
   return (
     <hr
       css={css`
@@ -16,5 +16,3 @@ const HRLine: React.FC<HRLineProps> = ({ margin }: HRLineProps) => {
     />
   )
 }
-
-export default HRLine

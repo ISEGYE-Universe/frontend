@@ -23,7 +23,7 @@ interface RoundedLinkButtonProps {
  * @param shadow boolean
  * @author 민타이
  */
-const RoundedLinkButton = ({
+export const RoundedLinkButton = ({
   href,
   width,
   bgColor,
@@ -57,5 +57,3 @@ const RoundedLinkButton = ({
     </Link>
   )
 }
-
-export default RoundedLinkButton

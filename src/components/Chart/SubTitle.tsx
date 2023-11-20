@@ -8,7 +8,7 @@ interface SubTitleProps {
   color?: string
 }
 
-const SubTitle = ({ children, mb, color }: SubTitleProps) => {
+export const SubTitle = ({ children, mb, color }: SubTitleProps) => {
   return (
     <h2
       css={[
@@ -24,5 +24,3 @@ const SubTitle = ({ children, mb, color }: SubTitleProps) => {
     </h2>
   )
 }
-
-export default SubTitle

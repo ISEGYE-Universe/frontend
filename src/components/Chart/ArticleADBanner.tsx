@@ -33,7 +33,7 @@ const CTAContainerStyle = css`
   gap: 11px;
 `
 
-const ArticleADBanner: React.FC<ArticleADBannerProps> = ({
+export const ArticleADBanner: React.FC<ArticleADBannerProps> = ({
   title,
   desc,
   CTAText,
@@ -96,5 +96,3 @@ ArticleADBanner.defaultProps = {
   bgImage: '',
   bgColor: ChartColor.isedolPink,
 }
-
-export default ArticleADBanner

@@ -1,7 +1,7 @@
 import { LineHeight, TextMdRegular, TitleSmRegular } from '@/styles/Font'
 import { css } from '@emotion/react'
 import ChartColor from '@/styles/ChartColor'
-import Title from './Title'
+import { Title } from './Title'
 
 const melonInfoCardContainer = css`
   display: flex;
@@ -31,7 +31,7 @@ interface MelonInfoProps {
  * @param dailyChartPosition `number` 곡명
  * @author 민타이
  */
-const MelonInfo = ({
+export const MelonInfo = ({
   musicTitle,
   dailyListenerNum,
   dailyChartPosition,
@@ -71,5 +71,3 @@ const MelonInfo = ({
     </>
   )
 }
-
-export default MelonInfo

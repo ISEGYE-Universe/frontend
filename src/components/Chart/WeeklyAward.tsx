@@ -53,7 +53,7 @@ interface WeeklyAwardProps {
   endDate: Date
 }
 
-const WeeklyAward = ({
+export const WeeklyAward = ({
   position,
   voteNum,
   voteRatio,
@@ -136,5 +136,3 @@ const WeeklyAward = ({
     </div>
   )
 }
-
-export default WeeklyAward
