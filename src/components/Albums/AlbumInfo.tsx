@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import { DivFlexBox } from '@/styles/Album/AlbumInfo'
 import { AlbumBtn } from './AlbumBtnSection'
-import AlbumDetail from './AlbumDetail'
+import { AlbumDetail } from './AlbumDetail'
 
-const AlbumInfoLayout = ({ ident }: { ident: string }) => {
+export const AlbumInfoLayout = ({ ident }: { ident: string }) => {
   return (
     <section css={DivFlexBox}>
       <div>
@@ -20,5 +20,3 @@ const AlbumInfoLayout = ({ ident }: { ident: string }) => {
     </section>
   )
 }
-
-export default AlbumInfoLayout
