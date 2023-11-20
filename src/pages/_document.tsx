@@ -2,7 +2,7 @@ import GlobalStyle from '@/styles/Global'
 
 import { Html, Head, Main, NextScript } from 'next/document'
 
-export default function Document() {
+export const Document = () => {
   return (
     <Html lang="en">
       <Head>
