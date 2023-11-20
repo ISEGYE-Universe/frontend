@@ -1,4 +1,3 @@
-/* eslint-disable react/require-default-props */
 import ChartColor from '@/styles/ChartColor'
 import { CaptionMdBold, LineHeight } from '@/styles/Font'
 import { Interpolation, Theme, css } from '@emotion/react'

@@ -1,4 +1,3 @@
-/* eslint-disable react/require-default-props */
 import ChartColor from '@/styles/ChartColor'
 import { css } from '@emotion/react'
 
