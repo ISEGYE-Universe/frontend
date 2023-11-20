@@ -47,6 +47,12 @@
       {
         "endOfLine": "auto"
       }
-    ]
+    ],
+
+    // prefer default export 옵션 off
+    "import/prefer-default-export": "off",
+
+    // default props 정의 관련 옵션 off
+    "react/require-default-props": "off"
   }
 }
