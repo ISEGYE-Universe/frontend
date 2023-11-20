@@ -12,7 +12,8 @@ const albumCardContainer = css`
   background: ${ChartColor.bgGrey};
   border: 1px solid ${ChartColor.borderGrey};
 `
-export const AlbumNewsCard = ({ title }: AlbumNewsCardProps) => {
+export const AlbumNewsCard = (prop: AlbumNewsCardProps) => {
+  const { title } = prop
   return (
     <li css={albumCardContainer}>
       <h3 css={[TextMdRegular, LineHeight]}>{title}</h3>

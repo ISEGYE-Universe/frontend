@@ -53,12 +53,8 @@ interface WeeklyAwardProps {
   endDate: Date
 }
 
-export const WeeklyAward = ({
-  position,
-  voteNum,
-  voteRatio,
-  endDate,
-}: WeeklyAwardProps) => {
+export const WeeklyAward = (prop: WeeklyAwardProps) => {
+  const { position, voteNum, voteRatio, endDate } = prop
   const [timeLeftResult, setTimeLeftResult] =
     useState<string>('00일 00:00:00 남음')
   useEffect(() => {

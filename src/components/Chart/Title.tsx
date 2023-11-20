@@ -8,7 +8,8 @@ interface TitleProps {
   color?: string
 }
 
-export const Title = ({ children, mb, color }: TitleProps) => {
+export const Title = (prop: TitleProps) => {
+  const { children, mb, color } = prop
   return (
     <h2
       css={[

@@ -35,13 +35,8 @@ interface HistoryCardProps {
   desc: string
   date: Date
 }
-export const HistoryCard = ({
-  thumbnail,
-  category,
-  title,
-  desc,
-  date,
-}: HistoryCardProps) => {
+export const HistoryCard = (prop: HistoryCardProps) => {
+  const { thumbnail, category, title, desc, date } = prop
   // 날짜 formatting
   const year = date.getFullYear()
   const month = date.getMonth() + 1

@@ -23,17 +23,18 @@ interface RoundedLinkButtonProps {
  * @param shadow boolean
  * @author 민타이
  */
-export const RoundedLinkButton = ({
-  href,
-  width,
-  bgColor,
-  fontColor,
-  fontStyle,
-  children,
-  target,
-  customCss,
-  shadow,
-}: RoundedLinkButtonProps) => {
+export const RoundedLinkButton = (prop: RoundedLinkButtonProps) => {
+  const {
+    href,
+    width,
+    bgColor,
+    fontColor,
+    fontStyle,
+    children,
+    target,
+    customCss,
+    shadow,
+  } = prop
   return (
     <Link href={href} target={target || '_blank'}>
       <div

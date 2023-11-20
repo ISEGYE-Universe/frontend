@@ -33,14 +33,10 @@ const CTAContainerStyle = css`
   gap: 11px;
 `
 
-export const ArticleADBanner: React.FC<ArticleADBannerProps> = ({
-  title,
-  desc,
-  CTAText,
-  CTALink,
-  bgImage,
-  bgColor,
-}: ArticleADBannerProps) => {
+export const ArticleADBanner: React.FC<ArticleADBannerProps> = (
+  prop: ArticleADBannerProps,
+) => {
+  const { title, desc, CTAText, CTALink, bgImage, bgColor } = prop
   const mainContainerStyle = css`
     width: 100%;
     border-radius: 10px;

@@ -4,6 +4,7 @@ interface TimeBaseSubTitleProps {
   time: string
   mb?: string
 }
-export const TimeBaseSubTitle = ({ time, mb }: TimeBaseSubTitleProps) => {
+export const TimeBaseSubTitle = (prop: TimeBaseSubTitleProps) => {
+  const { time, mb } = prop
   return <SubTitle mb={mb}>오늘 {time} 기준</SubTitle>
 }
