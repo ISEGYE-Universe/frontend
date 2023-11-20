@@ -1,19 +1,21 @@
-/* eslint-disable react/jsx-props-no-spreading */
-import React, { PropsWithChildren } from 'react'
+import { Interpolation, Theme } from '@emotion/react'
 
-type PropType = PropsWithChildren<
-  React.DetailedHTMLProps<
-    React.ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-  >
->
+interface ButtonProp {
+  customCss?: Interpolation<Theme>
+  onClick?: () => void
+  disabled?: boolean
+}
 
-export const LeftButton = ({ ...restProps }: PropType) => {
+export const LeftButton = (prop: ButtonProp) => {
+  const { onClick, disabled, customCss } = prop
   return (
     <button
+      css={customCss}
       className="embla__button embla__button--prev"
       type="button"
-      {...restProps}
+      onClick={onClick}
+      disabled={disabled || false}
+      aria-label="Left"
     >
       <svg
         width="50"
@@ -35,12 +37,17 @@ export const LeftButton = ({ ...restProps }: PropType) => {
   )
 }
 
-export const RightButton = ({ ...restProps }: PropType) => {
+export const RightButton = (prop: ButtonProp) => {
+  const { onClick, disabled, customCss } = prop
+
   return (
     <button
       className="embla__button embla__button--prev"
       type="button"
-      {...restProps}
+      css={customCss}
+      onClick={onClick}
+      disabled={disabled || false}
+      aria-label="Left"
     >
       <svg
         width="50"

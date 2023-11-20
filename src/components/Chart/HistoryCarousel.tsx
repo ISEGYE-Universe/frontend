@@ -67,7 +67,7 @@ const emblaButtonRightCss = css`
     opacity: 0.3;
   }
 `
-const HistoryCarousel = () => {
+export const HistoryCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     // 중간 index부터 시작
     startIndex: Math.round((dummyData.length - 1) / 2),
@@ -131,7 +131,7 @@ const HistoryCarousel = () => {
       </div>
       <div>
         <LeftButton
-          css={[
+          customCss={[
             emblaButtonLeftCss,
             {
               opacity: prevBtnDisabled ? '0.3' : '1.0',
@@ -143,7 +143,7 @@ const HistoryCarousel = () => {
           disabled={prevBtnDisabled}
         />
         <RightButton
-          css={[
+          customCss={[
             emblaButtonRightCss,
             {
               opacity: nextBtnDisabled ? '0.3' : '1.0',
@@ -158,5 +158,3 @@ const HistoryCarousel = () => {
     </div>
   )
 }
-
-export default HistoryCarousel
