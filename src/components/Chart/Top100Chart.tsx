@@ -5,6 +5,7 @@ import ChartColor from '@/styles/ChartColor'
 import { LineHeight, TextSmLight } from '@/styles/Font'
 import { RoundedLinkButton } from './RoundedLinkButton'
 import { Title } from './Title'
+import { Top100ChartSwitch } from './Top100ChartSwitch'
 
 export const Top100Chart = () => {
   return (
@@ -23,7 +24,15 @@ export const Top100Chart = () => {
           height: 100%;
           background-color: ${ChartColor.bgWhiteGrey};
         `}
-      />
+      >
+        <div
+          css={css`
+            padding: 18px 0 17px 0;
+          `}
+        >
+          <Top100ChartSwitch />
+        </div>
+      </div>
       {/* 곡 카드 영역 */}
       <div
         css={css`
