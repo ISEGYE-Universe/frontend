@@ -86,6 +86,56 @@ export const Top100Chart = () => {
             suggestedMax: 100,
           },
         },
+        // 툴팁 스타일
+        plugins: {
+          tooltip: {
+            // enabled: false,
+            position: 'average',
+            // style
+            backgroundColor: ChartColor.isedolPink,
+            // 폰트
+            titleFont: {
+              family: 'Noto Sans CJK KR',
+              weight: '400',
+              size: 14,
+            },
+            padding: {
+              top: 8,
+              bottom: 8,
+              left: 9,
+              right: 9,
+            },
+            titleAlign: 'center',
+            titleMarginBottom: 0,
+            callbacks: {
+              // beforeTitle: (context) => {
+              //   console.log(context)
+
+              //   return '현재 순위'
+              // },
+              title: (context) => {
+                // 툴팁 정보 안넘어오는 경우 제외
+                if (context.length !== 0) {
+                  const { parsed } = context[0]
+                  let result = `${parsed.y}`
+                  result += '위'
+                  return result
+                }
+                return ''
+              },
+              label: () => {
+                return ''
+              },
+            },
+            // 마지막 툴팁 필터링
+            filter: (context) => {
+              if (context.dataIndex === context.dataset.data.length - 1) {
+                return false
+              }
+              return true
+            },
+          },
+        },
       }}
     />
   )
