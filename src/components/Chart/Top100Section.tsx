@@ -6,6 +6,7 @@ import { LineHeight, TextSmLight } from '@/styles/Font'
 import { RoundedLinkButton } from './RoundedLinkButton'
 import { Title } from './Title'
 import { Top100ChartSwitch } from './Top100ChartSwitch'
+import { Top100Chart } from './Top100Chart'
 
 export const Top100Section = () => {
   return (
@@ -21,16 +22,16 @@ export const Top100Section = () => {
         css={css`
           display: inline-block;
           width: 517px;
-          height: 100%;
           background-color: ${ChartColor.bgWhiteGrey};
         `}
       >
         <div
           css={css`
-            padding: 18px 0 17px 0;
+            padding: 18px 19px 26px 0;
           `}
         >
           <Top100ChartSwitch />
+          <Top100Chart />
         </div>
       </div>
       {/* 곡 카드 영역 */}
