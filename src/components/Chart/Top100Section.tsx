@@ -7,7 +7,7 @@ import { RoundedLinkButton } from './RoundedLinkButton'
 import { Title } from './Title'
 import { Top100ChartSwitch } from './Top100ChartSwitch'
 
-export const Top100Chart = () => {
+export const Top100Section = () => {
   return (
     <div
       css={css`
