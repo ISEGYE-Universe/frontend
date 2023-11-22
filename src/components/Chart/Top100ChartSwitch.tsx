@@ -1,6 +1,6 @@
 import ChartStore from '@/store/Chart/ChartStore'
 import ChartColor from '@/styles/ChartColor'
-import { TextMdBold } from '@/styles/Font'
+import { TextSmBold } from '@/styles/Font'
 import { css } from '@emotion/react'
 
 const chartSwitchContainer = css`
@@ -24,7 +24,7 @@ export const Top100ChartSwitch = () => {
       color: ${ChartColor.textWhite};
       cursor: pointer;
     `,
-    TextMdBold,
+    TextSmBold,
   ]
 
   return (

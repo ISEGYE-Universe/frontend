@@ -4,7 +4,7 @@ import { css } from '@emotion/react'
 import chartData from '@/data/chart.json'
 import { Title } from '@/components/Chart/Title'
 import { TimeBaseSubTitle } from '@/components/Chart/TimeBaseSubTitle'
-import { Top100Chart } from '@/components/Chart/Top100Chart'
+import { Top100Section } from '@/components/Chart/Top100Section'
 import { HRLine } from '@/components/Chart/HRLine'
 import { ChartMusicCard } from '@/components/Chart/ChartMusicCard'
 import { SubTitle } from '@/components/Chart/SubTitle'
@@ -141,7 +141,7 @@ const Chart = () => {
               <Title mb="10px">현재 타이틀곡의 멜론 TOP 100 순위는?</Title>
               <TimeBaseSubTitle time="23:00" />
             </div>
-            <Top100Chart />
+            <Top100Section />
           </section>
 
           <div>
