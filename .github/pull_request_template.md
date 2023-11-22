@@ -10,10 +10,6 @@
 - [ ] New feature (not modifying existing features)
 - [ ] Changing feature (modifying existing feature or fixing bug)
 - [ ] Docs updated required
-
-- [ ] Bug fix
-- [ ] Add Feature
-- [ ] Change Feature
 - [ ] Chore
 
 # 상세 내용
