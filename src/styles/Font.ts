@@ -10,10 +10,10 @@ const fontWeightThin = css`
   font-weight: 100;
 `
 const fontWeightLight = css`
-  font-weight: 200;
+  font-weight: 300;
 `
 const fontWeightDemiLight = css`
-  font-weight: 300;
+  font-weight: 200;
 `
 const fontWeightRegular = css`
   font-weight: 400;
