@@ -20,6 +20,8 @@ ChartJS.register(
   Filler,
 )
 
+const fontFamily = 'Noto Sans CJK KR'
+
 export const Top100Chart = () => {
   return (
     <Chart
@@ -61,6 +63,8 @@ export const Top100Chart = () => {
             ticks: {
               color: ChartColor.chartFontGrey,
               font: {
+                family: fontFamily,
+                weight: '500',
                 size: 12,
               },
             },
@@ -95,7 +99,7 @@ export const Top100Chart = () => {
             backgroundColor: ChartColor.isedolPink,
             // 폰트
             titleFont: {
-              family: 'Noto Sans CJK KR',
+              family: fontFamily,
               weight: '400',
               size: 14,
             },
