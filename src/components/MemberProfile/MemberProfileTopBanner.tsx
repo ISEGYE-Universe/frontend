@@ -8,28 +8,6 @@ interface MemberProfileTopBannerProp {
   memberName: IsedolMember
 }
 
-const layoutContainer = css`
-  max-width: 1300px;
-  height: 100%;
-  margin: 0 auto;
-  position: relative;
-`
-const memberInformationContainer = css`
-  width: 100%;
-`
-const memberInformationProfileContainer = css`
-  gap: 20px;
-`
-const profileImageStyle = css`
-  border-radius: 80px;
-`
-const socialMediaContainer = css`
-  min-width: 152px;
-  min-height: 80px;
-  border-radius: 20px;
-  background: rgba(37, 37, 37, 0.3);
-  margin-right: 68px;
-`
 const flexRow = css`
   display: flex;
   flex-direction: row;
@@ -49,6 +27,41 @@ const alignFlexEnd = css`
 `
 const textWhite = css`
   color: ${MemberProfileColor.textWhite};
+`
+const layoutContainer = [
+  flexRow,
+  alignFlexEnd,
+  css`
+    max-width: 1300px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+  `,
+]
+const memberInformationContainer = [
+  justifySpaceBetween,
+  flexRow,
+  alignCenter,
+  css`
+    width: 100%;
+  `,
+]
+const memberInformationProfileContainer = [
+  flexRow,
+  alignCenter,
+  css`
+    gap: 20px;
+  `,
+]
+const profileImageStyle = css`
+  border-radius: 80px;
+`
+const socialMediaContainer = css`
+  min-width: 152px;
+  min-height: 80px;
+  border-radius: 20px;
+  background: rgba(37, 37, 37, 0.3);
+  margin-right: 68px;
 `
 const memberNameText = [
   TitleSmBold,
@@ -71,6 +84,7 @@ const birthDateText = [TextSmLight, LineHeight, textWhite]
 const MemberProfileTopBanner = (prop: MemberProfileTopBannerProp) => {
   const { memberName } = prop
 
+  const topBannerImage = memberProfileData[memberName]?.topBannerImage
   // Cannot destructure property as it is undefined 오류 방지를 위해 빈 객체 할당
   const memberInformation =
     memberProfileData[memberName]?.memberInformation || {}
@@ -78,6 +92,7 @@ const MemberProfileTopBanner = (prop: MemberProfileTopBannerProp) => {
     memberInformation
 
   const topBannerContainer = css`
+    background: url('${topBannerImage}');
     height: 388px;
     background-repeat: no-repeat;
     background-position: center top;
@@ -85,25 +100,11 @@ const MemberProfileTopBanner = (prop: MemberProfileTopBannerProp) => {
   `
 
   return (
-    <section
-      css={[
-        css`
-          background: url('${memberProfileData[memberName]?.topBannerImage}');
-        `,
-        topBannerContainer,
-      ]}
-    >
-      <div css={[layoutContainer, flexRow, alignFlexEnd]}>
+    <section css={topBannerContainer}>
+      <div css={layoutContainer}>
         {/* 멤버 기본 정보 영역 */}
-        <div
-          css={[
-            memberInformationContainer,
-            justifySpaceBetween,
-            flexRow,
-            alignCenter,
-          ]}
-        >
-          <div css={[memberInformationProfileContainer, flexRow, alignCenter]}>
+        <div css={memberInformationContainer}>
+          <div css={memberInformationProfileContainer}>
             <Image
               src={profileImage}
               css={profileImageStyle}
