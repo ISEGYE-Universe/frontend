@@ -12,8 +12,16 @@
       "enName": "JURURU",
       "groupName": "이세계아이돌",
       "birthDate": "1997 . 06 . 10",
-      "twLink": "https://www.twitch.tv/cotton__123",
-      "ytLink": "https://www.youtube.com/@JU_RURU"
+      "socialMedia": {
+        "twitter": {
+          "name": "주르르 JURURU",
+          "url": "https://www.twitch.tv/cotton__123"
+        },
+        "youtube": {
+          "name": "주르르 JURURU",
+          "url": "https://www.youtube.com/@JU_RURU"
+        }
+      }
     }
   },
   "jingburger": {
@@ -25,8 +33,16 @@
       "enName": "JURURU",
       "groupName": "이세계아이돌",
       "birthDate": "1997 . 06 . 10",
-      "twLink": "https://www.twitch.tv/cotton__123",
-      "ytLink": "https://www.youtube.com/@JU_RURU"
+      "socialMedia": {
+        "twitter": {
+          "name": "주르르 JURURU",
+          "url": "https://www.twitch.tv/cotton__123"
+        },
+        "youtube": {
+          "name": "주르르 JURURU",
+          "url": "https://www.youtube.com/@JU_RURU"
+        }
+      }
     }
   },
   "lilpa": {
@@ -38,8 +54,16 @@
       "enName": "JURURU",
       "groupName": "이세계아이돌",
       "birthDate": "1997 . 06 . 10",
-      "twLink": "https://www.twitch.tv/cotton__123",
-      "ytLink": "https://www.youtube.com/@JU_RURU"
+      "socialMedia": {
+        "twitter": {
+          "name": "주르르 JURURU",
+          "url": "https://www.twitch.tv/cotton__123"
+        },
+        "youtube": {
+          "name": "주르르 JURURU",
+          "url": "https://www.youtube.com/@JU_RURU"
+        }
+      }
     }
   },
   "jururu": {
@@ -50,8 +74,16 @@
       "enName": "JURURU",
       "groupName": "이세계아이돌",
       "birthDate": "1997 . 06 . 10",
-      "twLink": "https://www.twitch.tv/cotton__123",
-      "ytLink": "https://www.youtube.com/@JU_RURU"
+      "socialMedia": {
+        "twitter": {
+          "name": "주르르 JURURU",
+          "url": "https://www.twitch.tv/cotton__123"
+        },
+        "youtube": {
+          "name": "주르르 JURURU",
+          "url": "https://www.youtube.com/@JU_RURU"
+        }
+      }
     },
     "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png"
   },
@@ -64,8 +96,16 @@
       "enName": "JURURU",
       "groupName": "이세계아이돌",
       "birthDate": "1997 . 06 . 10",
-      "twLink": "https://www.twitch.tv/cotton__123",
-      "ytLink": "https://www.youtube.com/@JU_RURU"
+      "socialMedia": {
+        "twitter": {
+          "name": "주르르 JURURU",
+          "url": "https://www.twitch.tv/cotton__123"
+        },
+        "youtube": {
+          "name": "주르르 JURURU",
+          "url": "https://www.youtube.com/@JU_RURU"
+        }
+      }
     }
   },
   "viichan": {
@@ -77,8 +117,16 @@
       "enName": "JURURU",
       "groupName": "이세계아이돌",
       "birthDate": "1997 . 06 . 10",
-      "twLink": "https://www.twitch.tv/cotton__123",
-      "ytLink": "https://www.youtube.com/@JU_RURU"
+      "socialMedia": {
+        "twitter": {
+          "name": "주르르 JURURU",
+          "url": "https://www.twitch.tv/cotton__123"
+        },
+        "youtube": {
+          "name": "주르르 JURURU",
+          "url": "https://www.youtube.com/@JU_RURU"
+        }
+      }
     }
   }
 }
