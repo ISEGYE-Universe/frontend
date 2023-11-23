@@ -33,13 +33,13 @@ const MemberProfileSchedule = ({ memberName }: MemberProfileTopBannerProp) => {
   return (
     <section css={mainContainer}>
       {/* 제목 */}
-      <div css={titleContainer}></div>
+      <div css={titleContainer} />
       {/* 달력 */}
       <div css={calendarMainContainer}>
         {/* 오버레이 */}
-        <div css={overlay}></div>
+        <div css={overlay} />
         {/* 달력 본문 */}
-        <div css={calendarContentContainer}>test</div>
+        <div css={calendarContentContainer} />
       </div>
     </section>
   )
