@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { css } from '@emotion/react'
 import memberProfileData from '@/data/member-profile.json'
 import Image from 'next/image'
