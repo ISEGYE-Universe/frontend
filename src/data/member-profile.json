@@ -1,26 +1,84 @@
 {
+  "commonImage": {
+    "ytIcon": "/images/icon/icon-yt-white.png",
+    "twIcon": "/images/icon/icon-tw-white.png"
+  },
   "ine": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
-    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png"
+    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
+    "memberInformation": {
+      "profileImage": "/images/member-profile/jururu/profile.png",
+      "krName": "주르르",
+      "enName": "JURURU",
+      "groupName": "이세계아이돌",
+      "birthDate": "1997 . 06 . 10",
+      "twLink": "https://www.twitch.tv/cotton__123",
+      "ytLink": "https://www.youtube.com/@JU_RURU"
+    }
   },
   "jingburger": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
-    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png"
+    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
+    "memberInformation": {
+      "profileImage": "/images/member-profile/jururu/profile.png",
+      "krName": "주르르",
+      "enName": "JURURU",
+      "groupName": "이세계아이돌",
+      "birthDate": "1997 . 06 . 10",
+      "twLink": "https://www.twitch.tv/cotton__123",
+      "ytLink": "https://www.youtube.com/@JU_RURU"
+    }
   },
   "lilpa": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
-    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png"
+    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
+    "memberInformation": {
+      "profileImage": "/images/member-profile/jururu/profile.png",
+      "krName": "주르르",
+      "enName": "JURURU",
+      "groupName": "이세계아이돌",
+      "birthDate": "1997 . 06 . 10",
+      "twLink": "https://www.twitch.tv/cotton__123",
+      "ytLink": "https://www.youtube.com/@JU_RURU"
+    }
   },
   "jururu": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
+    "memberInformation": {
+      "profileImage": "/images/member-profile/jururu/profile.png",
+      "krName": "주르르",
+      "enName": "JURURU",
+      "groupName": "이세계아이돌",
+      "birthDate": "1997 . 06 . 10",
+      "twLink": "https://www.twitch.tv/cotton__123",
+      "ytLink": "https://www.youtube.com/@JU_RURU"
+    },
     "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png"
   },
   "gosegu": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
-    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png"
+    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
+    "memberInformation": {
+      "profileImage": "/images/member-profile/jururu/profile.png",
+      "krName": "주르르",
+      "enName": "JURURU",
+      "groupName": "이세계아이돌",
+      "birthDate": "1997 . 06 . 10",
+      "twLink": "https://www.twitch.tv/cotton__123",
+      "ytLink": "https://www.youtube.com/@JU_RURU"
+    }
   },
   "viichan": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
-    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png"
+    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
+    "memberInformation": {
+      "profileImage": "/images/member-profile/jururu/profile.png",
+      "krName": "주르르",
+      "enName": "JURURU",
+      "groupName": "이세계아이돌",
+      "birthDate": "1997 . 06 . 10",
+      "twLink": "https://www.twitch.tv/cotton__123",
+      "ytLink": "https://www.youtube.com/@JU_RURU"
+    }
   }
 }
