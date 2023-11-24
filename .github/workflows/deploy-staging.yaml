@@ -8,5 +8,5 @@ jobs:
     steps:
       - name: Report deployment to staging deployment api
         run: |
-          curl --location 'https://${{ secrets.STAGING_DEPLOYMENT_API }}?key=' \
+          curl --location 'https://${{ secrets.STAGING_DEPLOYMENT_API }}?key=${{ secrets.STAGING_DEPLOYMENT_API_KEY }}' \
             --header 'Content-Type: application/json'
