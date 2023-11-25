@@ -4,7 +4,7 @@ import Banner from '@/components/Banner/Banner'
 import { News } from '@/components/News/News'
 import Movie from '@/components/Movie/Movie'
 
-export const Home = () => {
+const Home = () => {
   return (
     <>
       <Head>
@@ -22,3 +22,5 @@ export const Home = () => {
     </>
   )
 }
+
+export default Home

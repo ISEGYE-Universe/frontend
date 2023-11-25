@@ -2,7 +2,7 @@ import GlobalStyle from '@/styles/Global'
 
 import { Html, Head, Main, NextScript } from 'next/document'
 
-export const Document = () => {
+const Document = () => {
   return (
     <Html lang="en">
       <Head>
@@ -15,3 +15,5 @@ export const Document = () => {
     </Html>
   )
 }
+
+export default Document
