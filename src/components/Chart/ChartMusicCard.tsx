@@ -59,8 +59,13 @@ const chartThumb = css`
   border-radius: 10px;
 `
 
-export const ChartMusicCard = (prop: ChartMusicCardProps) => {
-  const { title, position, change, artist, thumb } = prop
+export const ChartMusicCard = ({
+  title,
+  position,
+  change,
+  artist,
+  thumb,
+}: ChartMusicCardProps) => {
   // 등락 아이콘, 색상 정의부
   let upDownIcon = ''
   let upDownColor = ''

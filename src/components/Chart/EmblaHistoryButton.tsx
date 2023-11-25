@@ -6,8 +6,7 @@ interface ButtonProp {
   disabled?: boolean
 }
 
-export const LeftButton = (prop: ButtonProp) => {
-  const { onClick, disabled, customCss } = prop
+export const LeftButton = ({ onClick, disabled, customCss }: ButtonProp) => {
   return (
     <button
       css={customCss}

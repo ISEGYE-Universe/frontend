@@ -31,8 +31,11 @@ interface MelonInfoProps {
  * @param dailyChartPosition `number` 곡명
  * @author 민타이
  */
-export const MelonInfo = (prop: MelonInfoProps) => {
-  const { musicTitle, dailyListenerNum, dailyChartPosition } = prop
+export const MelonInfo = ({
+  musicTitle,
+  dailyListenerNum,
+  dailyChartPosition,
+}: MelonInfoProps) => {
   return (
     <>
       <Title mb="16px">{musicTitle} 멜론 정보</Title>

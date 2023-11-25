@@ -8,8 +8,7 @@ interface SubTitleProps {
   color?: string
 }
 
-export const SubTitle = (prop: SubTitleProps) => {
-  const { children, mb, color } = prop
+export const SubTitle = ({ children, mb, color }: SubTitleProps) => {
   return (
     <h2
       css={[
