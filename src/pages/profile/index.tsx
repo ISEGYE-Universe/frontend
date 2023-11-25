@@ -8,7 +8,7 @@ const profileContainerStyle = css`
   height: calc(100vh - 120px);
 `
 
-export const Profile = () => {
+const Profile = () => {
   return (
     <div css={profileContainerStyle}>
       <ProfileMainBg />
@@ -19,3 +19,5 @@ export const Profile = () => {
     </div>
   )
 }
+
+export default Profile
