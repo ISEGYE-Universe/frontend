@@ -35,10 +35,15 @@ const iconStyle = css`
  * @param description 트위치 링크
  * @author 민타이
  */
-export const ProfileIntroductionBox = (props: ProfileIntroductionBoxProps) => {
-  const { mainTitle, isShowSns, ytLink, igLink, twLink, description, margin } =
-    props
-
+export const ProfileIntroductionBox = ({
+  mainTitle,
+  isShowSns,
+  ytLink,
+  igLink,
+  twLink,
+  description,
+  margin,
+}: ProfileIntroductionBoxProps) => {
   return (
     <section
       css={css`
