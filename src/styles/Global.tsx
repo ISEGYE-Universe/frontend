@@ -31,9 +31,14 @@ const resetStyle = css`
   }
 
   button {
+    margin: 0;
     padding: 0;
     border: none;
     background: none;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
   }
 
   a {
