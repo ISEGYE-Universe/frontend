@@ -16,6 +16,7 @@ const resetStyle = css`
     padding: 0;
   }
 
+  p,
   h1,
   h2,
   h3,
