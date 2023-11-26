@@ -52,8 +52,7 @@ const albums = css`
   position: relative;
 `
 
-export const EmblaCarousel = (prop: PropType) => {
-  const { options, data, defaultIndex } = prop //* props options and slides
+export const EmblaCarousel = ({ options, data, defaultIndex }: PropType) => {
   const [emblaRef, embla] = useEmblaCarousel(options, [ClassNames()])
   //* zustand로 변환 필요
   const [selectedIndex, setSelectedindex] = useState(1) //* Showing Index

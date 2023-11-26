@@ -11,9 +11,11 @@ interface PropInterface
   className: string
 }
 
-export const DotButton: React.FC<PropInterface> = (props: PropInterface) => {
-  const { children, onClick, className } = props
-
+export const DotButton: React.FC<PropInterface> = ({
+  children,
+  onClick,
+  className,
+}: PropInterface) => {
   return (
     <button type="button" onClick={onClick} className={className}>
       {children}

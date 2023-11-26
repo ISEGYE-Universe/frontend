@@ -35,8 +35,7 @@ type JSONType = {
   }
 }
 
-export const SpotButton = (prop: PropType) => {
-  const { player, width, height, album } = prop
+export const SpotButton = ({ player, width, height, album }: PropType) => {
   const json: JSONType = BtnLink
   return (
     <Link css={AlbumBtnSize} href={json[album].Spotify} target="_blank">
@@ -58,8 +57,7 @@ export const SpotButton = (prop: PropType) => {
   )
 }
 
-export const GOButton = (prop: PropType) => {
-  const { player, width, height, album } = prop
+export const GOButton = ({ player, width, height, album }: PropType) => {
   const json: JSONType = BtnLink
   return (
     <Link css={AlbumBtnSize} href={json[album].Gaon} target="_blank">
@@ -81,8 +79,7 @@ export const GOButton = (prop: PropType) => {
   )
 }
 
-export const YTButton = (prop: PropType) => {
-  const { player, width, height, album } = prop
+export const YTButton = ({ player, width, height, album }: PropType) => {
   const json: JSONType = BtnLink
   return (
     <Link css={AlbumBtnSize} href={json[album].Youtube} target="_blank">
@@ -104,8 +101,7 @@ export const YTButton = (prop: PropType) => {
   )
 }
 
-export const VBButton = (prop: PropType) => {
-  const { player, width, height, album } = prop
+export const VBButton = ({ player, width, height, album }: PropType) => {
   const json: JSONType = BtnLink
   return (
     <Link css={AlbumBtnSize} href={json[album].Vibe} target="_blank">
@@ -127,8 +123,7 @@ export const VBButton = (prop: PropType) => {
   )
 }
 
-export const MLButton = (prop: PropType) => {
-  const { player, width, height, album } = prop
+export const MLButton = ({ player, width, height, album }: PropType) => {
   const json: JSONType = BtnLink
   return (
     <Link css={AlbumBtnSize} href={json[album].Melon} target="_blank">
@@ -150,8 +145,7 @@ export const MLButton = (prop: PropType) => {
   )
 }
 
-export const GNButton = (prop: PropType) => {
-  const { player, width, height, album } = prop
+export const GNButton = ({ player, width, height, album }: PropType) => {
   const json: JSONType = BtnLink
   return (
     <Link css={AlbumBtnSize} href={json[album].Genie} target="_blank">
@@ -173,8 +167,7 @@ export const GNButton = (prop: PropType) => {
   )
 }
 
-export const BGButton = (prop: PropType) => {
-  const { player, width, height, album } = prop
+export const BGButton = ({ player, width, height, album }: PropType) => {
   const json: JSONType = BtnLink
   return (
     <Link css={AlbumBtnSize} href={json[album].Bugs} target="_blank">
