@@ -51,6 +51,7 @@ export const NewsThumnailList = () => {
         }}
       >
         <button
+          type="button"
           css={{
             width: 50,
             height: 50,
@@ -67,6 +68,7 @@ export const NewsThumnailList = () => {
           />
         </button>
         <button
+          type="button"
           css={{
             width: 50,
             height: 50,
