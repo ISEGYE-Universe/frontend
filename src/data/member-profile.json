@@ -68,6 +68,7 @@
   },
   "jururu": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
+    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
     "memberInformation": {
       "profileImage": "/images/member-profile/jururu/profile.png",
       "krName": "주르르",
@@ -84,8 +85,7 @@
           "url": "https://www.youtube.com/@JU_RURU"
         }
       }
-    },
-    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png"
+    }
   },
   "gosegu": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
