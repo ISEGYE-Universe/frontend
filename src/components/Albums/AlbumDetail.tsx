@@ -30,7 +30,11 @@ type Type = {
   }
 }
 
-export const AlbumDetail = ({ album }: { album: string }) => {
+type PropType = {
+  album: string
+}
+
+export const AlbumDetail = ({ album }: PropType) => {
   const info: Type = Album
   return (
     <div css={DivMarginSize}>

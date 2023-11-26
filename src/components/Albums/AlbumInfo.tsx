@@ -3,7 +3,11 @@ import { DivFlexBox } from '@/styles/Album/AlbumInfo'
 import { AlbumBtn } from './AlbumBtnSection'
 import { AlbumDetail } from './AlbumDetail'
 
-export const AlbumInfoLayout = ({ ident }: { ident: string }) => {
+type PropType = {
+  ident: string
+}
+
+export const AlbumInfoLayout = ({ ident }: PropType) => {
   return (
     <section css={DivFlexBox}>
       <div>

@@ -9,7 +9,11 @@ import {
   GNButton,
 } from './AlbumBtn'
 
-export const AlbumBtn = ({ album }: { album: string }) => {
+type PropType = {
+  album: string
+}
+
+export const AlbumBtn = ({ album }: PropType) => {
   return (
     <section css={AlbumBtnDiv}>
       <SpotButton player="Spotify" width={35} height={35} album={album} />
