@@ -53,6 +53,19 @@
     "import/prefer-default-export": "off",
 
     // default props 정의 관련 옵션 off
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+
+    // prop spreading 옵션 설정 (예외 이외에는 금지)
+    // 불가피한 경우 exceptions에 태그 추가하기
+    // ref: https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
+    "react/jsx-props-no-spreading": [
+      2,
+      {
+        "html": "enforce",
+        "custom": "enforce",
+        // _app.tsx 내 Component만 예외 처리
+        "exceptions": ["Component"]
+      }
+    ]
   }
 }
