@@ -1,26 +1,74 @@
 {
   "ine": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
-    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png"
+    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
+    "recentCover": [
+      {
+        "title": "Darling(달링)",
+        "thumbUrl": "https://i.ytimg.com/vi/7sFIjj5BW3M/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAqY5LvWf9qzNIIIsuZ3sPttIHTAg",
+        "uploadDate": "2023.08.13",
+        "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
+      }
+    ]
   },
   "jingburger": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
-    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png"
+    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
+    "recentCover": [
+      {
+        "title": "Darling(달링)",
+        "thumbUrl": "https://i.ytimg.com/vi/7sFIjj5BW3M/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAqY5LvWf9qzNIIIsuZ3sPttIHTAg",
+        "uploadDate": "2023.08.13",
+        "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
+      }
+    ]
   },
   "lilpa": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
-    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png"
+    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
+    "recentCover": [
+      {
+        "title": "Darling(달링)",
+        "thumbUrl": "https://i.ytimg.com/vi/7sFIjj5BW3M/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAqY5LvWf9qzNIIIsuZ3sPttIHTAg",
+        "uploadDate": "2023.08.13",
+        "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
+      }
+    ]
   },
   "jururu": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
-    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png"
+    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
+    "recentCover": [
+      {
+        "title": "Darling(달링)",
+        "thumbUrl": "https://i.ytimg.com/vi/7sFIjj5BW3M/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAqY5LvWf9qzNIIIsuZ3sPttIHTAg",
+        "uploadDate": "2023.08.13",
+        "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
+      }
+    ]
   },
   "gosegu": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
-    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png"
+    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
+    "recentCover": [
+      {
+        "title": "Darling(달링)",
+        "thumbUrl": "https://i.ytimg.com/vi/7sFIjj5BW3M/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAqY5LvWf9qzNIIIsuZ3sPttIHTAg",
+        "uploadDate": "2023.08.13",
+        "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
+      }
+    ]
   },
   "viichan": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
-    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png"
+    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
+    "recentCover": [
+      {
+        "title": "Darling(달링)",
+        "thumbUrl": "https://i.ytimg.com/vi/7sFIjj5BW3M/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAqY5LvWf9qzNIIIsuZ3sPttIHTAg",
+        "uploadDate": "2023.08.13",
+        "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
+      }
+    ]
   }
 }
