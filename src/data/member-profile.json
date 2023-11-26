@@ -8,10 +8,10 @@
     "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
     "memberInformation": {
       "profileImage": "/images/member-profile/jururu/profile.png",
-      "krName": "주르르",
-      "enName": "JURURU",
+      "krName": "아이네",
+      "enName": "INE",
       "groupName": "이세계아이돌",
-      "birthDate": "1997 . 06 . 10",
+      "birthDate": "1994",
       "socialMedia": {
         "twitter": {
           "name": "주르르 JURURU",
@@ -22,17 +22,26 @@
           "url": "https://www.youtube.com/@JU_RURU"
         }
       }
-    }
+    },
+    "recentCover": [
+      {
+        "id": "1",
+        "title": "Darling(달링)",
+        "thumbUrl": "https://i.ytimg.com/vi/7sFIjj5BW3M/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAqY5LvWf9qzNIIIsuZ3sPttIHTAg",
+        "uploadDate": "2023.08.13",
+        "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
+      }
+    ]
   },
   "jingburger": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
     "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
     "memberInformation": {
       "profileImage": "/images/member-profile/jururu/profile.png",
-      "krName": "주르르",
-      "enName": "JURURU",
+      "krName": "징버거",
+      "enName": "JINGBURGER",
       "groupName": "이세계아이돌",
-      "birthDate": "1997 . 06 . 10",
+      "birthDate": "1995 . 10 . 08",
       "socialMedia": {
         "twitter": {
           "name": "주르르 JURURU",
@@ -43,17 +52,26 @@
           "url": "https://www.youtube.com/@JU_RURU"
         }
       }
-    }
+    },
+    "recentCover": [
+      {
+        "id": "1",
+        "title": "Darling(달링)",
+        "thumbUrl": "https://i.ytimg.com/vi/7sFIjj5BW3M/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAqY5LvWf9qzNIIIsuZ3sPttIHTAg",
+        "uploadDate": "2023.08.13",
+        "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
+      }
+    ]
   },
   "lilpa": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
     "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
     "memberInformation": {
       "profileImage": "/images/member-profile/jururu/profile.png",
-      "krName": "주르르",
-      "enName": "JURURU",
+      "krName": "릴파",
+      "enName": "LILPA",
       "groupName": "이세계아이돌",
-      "birthDate": "1997 . 06 . 10",
+      "birthDate": "1996 . 03 . 09",
       "socialMedia": {
         "twitter": {
           "name": "주르르 JURURU",
@@ -64,7 +82,16 @@
           "url": "https://www.youtube.com/@JU_RURU"
         }
       }
-    }
+    },
+    "recentCover": [
+      {
+        "id": "1",
+        "title": "Darling(달링)",
+        "thumbUrl": "https://i.ytimg.com/vi/7sFIjj5BW3M/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAqY5LvWf9qzNIIIsuZ3sPttIHTAg",
+        "uploadDate": "2023.08.13",
+        "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
+      }
+    ]
   },
   "jururu": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
@@ -85,17 +112,54 @@
           "url": "https://www.youtube.com/@JU_RURU"
         }
       }
-    }
+    },
+    "recentCover": [
+      {
+        "id": "1",
+        "title": "Darling(달링)",
+        "thumbUrl": "https://i.ytimg.com/vi/7sFIjj5BW3M/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAqY5LvWf9qzNIIIsuZ3sPttIHTAg",
+        "uploadDate": "2023.08.13",
+        "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
+      },
+      {
+        "id": "2",
+        "title": "고속도로 로망스 (Freeway Romance) (feat.숲튽훈)",
+        "thumbUrl": "https://i.ytimg.com/vi/7XFJ4s0j9z0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDhbU567DG5zSBDXt687yi9HBxlzg",
+        "uploadDate": "2023.07.19",
+        "link": "https://www.youtube.com/watch?v=7XFJ4s0j9z0&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=4&pp=iAQB8AUB"
+      },
+      {
+        "id": "3",
+        "title": "봄,사랑,벚꽃 말고",
+        "thumbUrl": "https://i.ytimg.com/vi/tc92ES3R6os/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDoza8uVzmxJwV6yOT5AjwtxCXRpA",
+        "uploadDate": "2023.06.01",
+        "link": "https://www.youtube.com/watch?v=tc92ES3R6os&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=6&pp=iAQB8AUB"
+      },
+      {
+        "id": "4",
+        "title": "아이돌 (최애의 아이 OP) (feat.비챤)",
+        "thumbUrl": "https://i.ytimg.com/vi/z6RSOiYOVuQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLApUoiueRCNgLsfER8oVwVwahldWg",
+        "uploadDate": "2023.05.17",
+        "link": "https://www.youtube.com/watch?v=z6RSOiYOVuQ&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=7&pp=iAQB8AUB"
+      },
+      {
+        "id": "5",
+        "title": "귀여워서 미안해 (한국어 Cover.)",
+        "thumbUrl": "https://i.ytimg.com/vi/-pczFfMtWrc/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCiLHtqGFRGxxhUUt8g-Huyf4YKOA",
+        "uploadDate": "2023.01.15",
+        "link": "https://www.youtube.com/watch?v=-pczFfMtWrc&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=8&pp=iAQB8AUB"
+      }
+    ]
   },
   "gosegu": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
     "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
     "memberInformation": {
       "profileImage": "/images/member-profile/jururu/profile.png",
-      "krName": "주르르",
-      "enName": "JURURU",
+      "krName": "고세구",
+      "enName": "GOSEGU",
       "groupName": "이세계아이돌",
-      "birthDate": "1997 . 06 . 10",
+      "birthDate": "1998",
       "socialMedia": {
         "twitter": {
           "name": "주르르 JURURU",
@@ -106,17 +170,26 @@
           "url": "https://www.youtube.com/@JU_RURU"
         }
       }
-    }
+    },
+    "recentCover": [
+      {
+        "id": "1",
+        "title": "Darling(달링)",
+        "thumbUrl": "https://i.ytimg.com/vi/7sFIjj5BW3M/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAqY5LvWf9qzNIIIsuZ3sPttIHTAg",
+        "uploadDate": "2023.08.13",
+        "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
+      }
+    ]
   },
   "viichan": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
     "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
     "memberInformation": {
       "profileImage": "/images/member-profile/jururu/profile.png",
-      "krName": "주르르",
-      "enName": "JURURU",
+      "krName": "비챤",
+      "enName": "VIICHAN",
       "groupName": "이세계아이돌",
-      "birthDate": "1997 . 06 . 10",
+      "birthDate": "2000 . 01 . 16",
       "socialMedia": {
         "twitter": {
           "name": "주르르 JURURU",
@@ -127,6 +200,15 @@
           "url": "https://www.youtube.com/@JU_RURU"
         }
       }
-    }
+    },
+    "recentCover": [
+      {
+        "id": "1",
+        "title": "Darling(달링)",
+        "thumbUrl": "https://i.ytimg.com/vi/7sFIjj5BW3M/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAqY5LvWf9qzNIIIsuZ3sPttIHTAg",
+        "uploadDate": "2023.08.13",
+        "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
+      }
+    ]
   }
 }
