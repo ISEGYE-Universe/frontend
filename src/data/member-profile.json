@@ -1,6 +1,7 @@
 {
   "commonImage": {
     "ytIcon": "/images/icon/icon-yt-white.png",
+    "ytIconBlack": "/images/icon/icon-yt-black.svg",
     "twIcon": "/images/icon/icon-tw-white.png"
   },
   "ine": {
@@ -31,7 +32,8 @@
         "uploadDate": "2023.08.13",
         "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
       }
-    ]
+    ],
+    "recentYoutubeVideo": []
   },
   "jingburger": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
@@ -61,7 +63,8 @@
         "uploadDate": "2023.08.13",
         "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
       }
-    ]
+    ],
+    "recentYoutubeVideo": []
   },
   "lilpa": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
@@ -91,7 +94,8 @@
         "uploadDate": "2023.08.13",
         "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
       }
-    ]
+    ],
+    "recentYoutubeVideo": []
   },
   "jururu": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
@@ -149,6 +153,32 @@
         "uploadDate": "2023.01.15",
         "link": "https://www.youtube.com/watch?v=-pczFfMtWrc&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=8&pp=iAQB8AUB"
       }
+    ],
+    "recentYoutubeVideo": [
+      {
+        "id": "1",
+        "title": "목소리만 듣고 맞추라고…?",
+        "thumbUrl": "https://i.ytimg.com/vi/zr2ICpRKN2w/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDqXIQbjrr2wubTaZRCS5lQ5jsjHA",
+        "link": "https://www.youtube.com/watch?v=zr2ICpRKN2w"
+      },
+      {
+        "id": "2",
+        "title": "르르땅... 함께 하기로 했잖아...",
+        "thumbUrl": "https://i.ytimg.com/vi/PcCt5xT6Cjo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBpRqggxguSXDaZ8DbwQElwyac6JQ",
+        "link": "https://www.youtube.com/watch?v=PcCt5xT6Cjo"
+      },
+      {
+        "id": "3",
+        "title": "유부남 인터뷰중 아내 등장..ㄷㄷ",
+        "thumbUrl": "https://i.ytimg.com/vi/BHfHeYin-tE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDEKmTqYlIfO81Ao3e3641IC77HMg",
+        "link": "https://www.youtube.com/watch?v=BHfHeYin-tE"
+      },
+      {
+        "id": "4",
+        "title": "누나 아기는 어떻게 생겨요?",
+        "thumbUrl": "https://i.ytimg.com/vi/OiHsWgfj1ZY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB1NTHAK7w29RTn22bO3OYlPoNOiQ",
+        "link": "https://www.youtube.com/watch?v=OiHsWgfj1ZY"
+      }
     ]
   },
   "gosegu": {
@@ -179,7 +209,8 @@
         "uploadDate": "2023.08.13",
         "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
       }
-    ]
+    ],
+    "recentYoutubeVideo": []
   },
   "viichan": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
@@ -209,6 +240,7 @@
         "uploadDate": "2023.08.13",
         "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
       }
-    ]
+    ],
+    "recentYoutubeVideo": []
   }
 }
