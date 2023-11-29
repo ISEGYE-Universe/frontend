@@ -78,7 +78,7 @@ const MovieSlider = ({ movieList }: MovieSliderProrps) => {
         {movieList.map((_, idx: number) => (
           <button
             type="button"
-            aria-label="movie-list"
+            aria-label={`movie-dot-button-${idx + 1}`}
             key={_.title}
             onClick={() => scrollTo(idx)}
             css={css`
