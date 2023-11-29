@@ -27,6 +27,7 @@ const titleContainer = css`
 const titleText = [
   css`
     margin-bottom: 12px;
+    color: ${MemberProfileColor.youtubeTitleTextGrey};
   `,
   TitleLgRegular,
   LineHeight,
@@ -40,6 +41,7 @@ const subTitleText = [
   LineHeight,
 ]
 const ytLinkAnchor = css`
+  color: ${MemberProfileColor.youtubeTitleTextGrey};
   align-self: flex-end;
   display: flex;
   align-items: center;
