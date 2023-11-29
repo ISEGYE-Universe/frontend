@@ -3,4 +3,5 @@ export const MemberProfileColor = {
   coverBorderGrey: '#e3e3e3',
   wakscordBackgroundGrey: '#313338',
   titleTextGrey: '#8D8D8D',
+  youtubeTitleTextGrey: '#252525',
 }
