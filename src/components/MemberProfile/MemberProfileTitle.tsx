@@ -23,6 +23,7 @@ const titleContainer = css`
   height: 200px;
   justify-content: center;
   align-items: center;
+  padding: 58px 0 10.5px;
 `
 const titleText = [
   css`
