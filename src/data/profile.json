@@ -39,8 +39,8 @@
     },
     "galleryImageURL": [
       { "id": 1, "url": "/images/profile/member-gallery/ine1.png" },
-      { "id": 2, "url": "/images/profile/member-gallery/ine2.png" },
-      { "id": 3, "url": "/images/profile/member-gallery/ine3.png" }
+      { "id": 2, "url": "/images/profile/member-gallery/ine2.jpg" },
+      { "id": 3, "url": "/images/profile/member-gallery/ine3.jpg" }
     ]
   },
   "jingburgerIntroduction": {
@@ -60,9 +60,9 @@
       "twLink": "https://www.twitch.tv/jingburger"
     },
     "galleryImageURL": [
-      { "id": 1, "url": "/images/profile/member-gallery/jingburger1.png" },
-      { "id": 2, "url": "/images/profile/member-gallery/jingburger2.png" },
-      { "id": 3, "url": "/images/profile/member-gallery/jingburger3.png" }
+      { "id": 1, "url": "/images/profile/member-gallery/jingburger1.jpg" },
+      { "id": 2, "url": "/images/profile/member-gallery/jingburger2.jpg" },
+      { "id": 3, "url": "/images/profile/member-gallery/jingburger3.jpg" }
     ]
   },
   "lilpaIntroduction": {
@@ -82,8 +82,8 @@
       "twLink": "https://www.twitch.tv/lilpaaaaaa"
     },
     "galleryImageURL": [
-      { "id": 1, "url": "/images/profile/member-gallery/lilpa1.png" },
-      { "id": 2, "url": "/images/profile/member-gallery/lilpa2.png" },
+      { "id": 1, "url": "/images/profile/member-gallery/lilpa1.jpg" },
+      { "id": 2, "url": "/images/profile/member-gallery/lilpa2.jpg" },
       { "id": 3, "url": "/images/profile/member-gallery/lilpa3.png" }
     ]
   },
@@ -126,9 +126,9 @@
       "twLink": "https://www.twitch.tv/gosegugosegu"
     },
     "galleryImageURL": [
-      { "id": 1, "url": "/images/profile/member-gallery/gosegu1.png" },
-      { "id": 2, "url": "/images/profile/member-gallery/gosegu2.png" },
-      { "id": 3, "url": "/images/profile/member-gallery/gosegu3.png" }
+      { "id": 1, "url": "/images/profile/member-gallery/gosegu1.jpg" },
+      { "id": 2, "url": "/images/profile/member-gallery/gosegu2.jpg" },
+      { "id": 3, "url": "/images/profile/member-gallery/gosegu3.jpg" }
     ]
   },
   "viichanIntroduction": {
@@ -148,8 +148,9 @@
       "twLink": "https://www.twitch.tv/viichan6"
     },
     "galleryImageURL": [
-      { "id": 1, "url": "/images/profile/member-gallery/viichan1.png" },
-      { "id": 2, "url": "/images/profile/member-gallery/viichan2.png" }
+      { "id": 1, "url": "/images/profile/member-gallery/viichan1.jpg" },
+      { "id": 2, "url": "/images/profile/member-gallery/viichan2.jpg" },
+      { "id": 3, "url": "/images/profile/member-gallery/viichan3.jpg" }
     ]
   }
 }
