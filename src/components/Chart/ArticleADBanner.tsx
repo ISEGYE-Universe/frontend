@@ -1,4 +1,4 @@
-import { ChartColor } from '@/styles/ChartColor'
+import ChartColor from '@/styles/ChartColor'
 import {
   LineHeight,
   TextSmRegular,
@@ -13,6 +13,7 @@ interface ArticleADBannerProps {
   title: string
   desc?: string
   CTAText?: string
+  CTALink?: string
   bgImage?: string
   bgColor?: string
 }
@@ -32,10 +33,11 @@ const CTAContainerStyle = css`
   gap: 11px;
 `
 
-const ArticleADBanner = ({
+export const ArticleADBanner: React.FC<ArticleADBannerProps> = ({
   title,
   desc,
   CTAText,
+  CTALink,
   bgImage,
   bgColor,
 }: ArticleADBannerProps) => {
@@ -49,10 +51,14 @@ const ArticleADBanner = ({
       url('${bgImage}'),
       lightgray 50% / cover no-repeat;
     background-position: center;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   `
   return (
-    <Link href="#">
-      <section css={mainContainerStyle}>
+    <Link href={CTALink || '#'}>
+      <section css={[mainContainerStyle]}>
         <div css={contentsContainerStyle}>
           <div css={textContainerStyle}>
             <h1
@@ -83,4 +89,10 @@ const ArticleADBanner = ({
   )
 }
 
-export default ArticleADBanner
+ArticleADBanner.defaultProps = {
+  desc: '',
+  CTAText: '바로가기',
+  CTALink: '#',
+  bgImage: '',
+  bgColor: ChartColor.isedolPink,
+}
