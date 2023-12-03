@@ -147,14 +147,16 @@ const Navbar = () => {
     e: React.MouseEvent<HTMLSpanElement, MouseEvent>,
   ) => {
     const target = e.target as HTMLSpanElement
-    if (target.dataset.page === 'null') return
+    const realTarget = target.dataset.page
+      ? target
+      : (target.parentElement as HTMLButtonElement)
+
+    if (!realTarget || realTarget?.dataset.page === 'null') return
 
     setIsSubNavActive(true)
   }
 
-  const inactiveSubNavigation = (
-    e: React.MouseEvent<HTMLSpanElement, MouseEvent>,
-  ) => {
+  const inactiveSubNavigation = () => {
     if (isSubNavActiveByClick) return
     setIsSubNavActive(false)
   }
@@ -173,9 +175,9 @@ const Navbar = () => {
     const target = e.target as HTMLSpanElement
     const realTarget = target.dataset.page
       ? target
-      : (target.parentElement as HTMLParagraphElement)
+      : (target.parentElement as HTMLButtonElement)
 
-    if (realTarget.dataset.page === 'null') {
+    if (!realTarget || realTarget?.dataset.page === 'null') {
       setIsSubNavActive(false)
       return
     }
@@ -183,8 +185,6 @@ const Navbar = () => {
     setIsSubNavActive(true)
     setIsSubNavActiveByClick(false)
     setSubNav(realTarget.dataset.page as string)
-
-    console.log('setSubNavigation', realTarget.dataset.page)
   }
 
   return (
@@ -229,7 +229,8 @@ const Navbar = () => {
           onMouseLeave={inactiveSubNavigation}
         >
           <div>
-            <p
+            <button
+              type="button"
               css={GNBBottomNavigationLink}
               onClick={toggleActiveSubNavigationWithClick}
               onMouseEnter={setSubNavigation}
@@ -238,15 +239,16 @@ const Navbar = () => {
               <span
                 css={[
                   GNBActiveSubNavController,
-                  isSubNavActive && subNav == 'profile'
+                  isSubNavActive && subNav === 'profile'
                     ? GNBActiveSubNavBorder
                     : null,
                 ]}
               >
                 프로필
               </span>
-            </p>
-            <p
+            </button>
+            <button
+              type="button"
               css={GNBBottomNavigationLink}
               onClick={toggleActiveSubNavigationWithClick}
               onMouseEnter={setSubNavigation}
@@ -255,15 +257,16 @@ const Navbar = () => {
               <span
                 css={[
                   GNBActiveSubNavController,
-                  isSubNavActive && subNav == 'album'
+                  isSubNavActive && subNav === 'album'
                     ? GNBActiveSubNavBorder
                     : null,
                 ]}
               >
                 음반
               </span>
-            </p>
-            <p
+            </button>
+            <button
+              type="button"
               css={GNBBottomNavigationLink}
               onClick={toggleActiveSubNavigationWithClick}
               onMouseEnter={setSubNavigation}
@@ -272,14 +275,14 @@ const Navbar = () => {
               <span
                 css={[
                   GNBActiveSubNavController,
-                  isSubNavActive && subNav == 'news'
+                  isSubNavActive && subNav === 'news'
                     ? GNBActiveSubNavBorder
                     : null,
                 ]}
               >
                 소식
               </span>
-            </p>
+            </button>
           </div>
         </div>
         <div
@@ -293,32 +296,33 @@ const Navbar = () => {
           onMouseLeave={inactiveSubNavigation}
         >
           <div>
-            <p
+            <button
+              type="button"
               css={GNBBottomNavigationLink}
-              onClick={toggleActiveSubNavigationWithClick}
               onMouseEnter={setSubNavigation}
               data-page="memberProfile"
             >
               <span
                 css={[
                   GNBActiveSubNavController,
-                  isSubNavActive && subNav == 'memberProfile'
+                  isSubNavActive && subNav === 'memberProfile'
                     ? GNBActiveSubNavBorder
                     : null,
                 ]}
               >
                 멤버 프로필
               </span>
-            </p>
-            <p
+            </button>
+            <Link
+              href="/bangon"
               css={GNBBottomNavigationLink}
-              onClick={toggleActiveSubNavigationWithClick}
               onMouseEnter={setSubNavigation}
               data-page="null"
             >
               <span>뱅온정보</span>
-            </p>
-            <p
+            </Link>
+            <button
+              type="button"
               css={GNBBottomNavigationLink}
               onClick={toggleActiveSubNavigationWithClick}
               onMouseEnter={setSubNavigation}
@@ -327,14 +331,14 @@ const Navbar = () => {
               <span
                 css={[
                   GNBActiveSubNavController,
-                  isSubNavActive && subNav == 'entryGuide'
+                  isSubNavActive && subNav === 'entryGuide'
                     ? GNBActiveSubNavBorder
                     : null,
                 ]}
               >
                 유입가이드
               </span>
-            </p>
+            </button>
           </div>
           <Image
             css={GNBUserProfileIcon}
