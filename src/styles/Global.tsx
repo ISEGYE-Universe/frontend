@@ -33,6 +33,7 @@ const resetStyle = css`
     padding: 0;
     border: none;
     background: none;
+    cursor: pointer;
   }
 
   a {
