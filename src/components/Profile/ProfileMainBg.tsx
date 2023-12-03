@@ -7,7 +7,7 @@ import ProfileMainMemberSection from './ProfileMainMemberSection'
 const bgImageStyle = css`
   transition: opacity 0.15s ease-in-out;
   width: 100%;
-  height: calc(100% - 120px);
+  height: 100%;
   position: absolute;
   object-fit: cover;
 `
@@ -16,7 +16,7 @@ const bgImageStyle = css`
  * @멤버소개 메인 페이지 뒷배경
  * @author 민타이
  */
-const ProfileMainBg = () => {
+export const ProfileMainBg = () => {
   const { switchHoverMember } = ProfileStore()
 
   // 멤버 별 hover 이미지 스타일
@@ -102,7 +102,7 @@ const ProfileMainBg = () => {
       <div
         css={css`
           width: 100%;
-          height: calc(100% - 120px);
+          height: 100%;
           position: absolute;
           overflow-y: hidden;
           // 마우스 오버 섹션이 소개글 박스에 가리는 문제
@@ -177,4 +177,3 @@ const ProfileMainBg = () => {
     </>
   )
 }
-export default ProfileMainBg
