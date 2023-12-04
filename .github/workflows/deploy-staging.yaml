@@ -1,0 +1,12 @@
+name: Deploy Frontend to Staging
+on:
+  workflow_dispatch:
+  workflow_call:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Report deployment to staging deployment api
+        run: |
+          curl --location 'https://${{ secrets.STAGING_DEPLOYMENT_API }}?key=${{ secrets.STAGING_DEPLOYMENT_API_KEY }}' \
+            --header 'Content-Type: application/json'
