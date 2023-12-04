@@ -80,7 +80,7 @@ export const WeeklyAward = ({
         minutes < 10 ? `0${minutes}` : minutes
       }:${seconds < 10 ? `0${seconds}` : seconds} 남음`,
     )
-  }, [])
+  }, [endDate])
 
   return (
     <div css={[weeklyAwardContainer, flexCol]}>
