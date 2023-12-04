@@ -1,4 +1,4 @@
-import HRLine from '@/components/Chart/HRLine'
+import { HRLine } from '@/components/Chart/HRLine'
 import {
   CaptionMdBold,
   CaptionMdLight,
