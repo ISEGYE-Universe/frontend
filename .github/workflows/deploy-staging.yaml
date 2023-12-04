@@ -2,6 +2,9 @@ name: Deploy Frontend to Staging
 on:
   workflow_dispatch:
   workflow_call:
+  push:
+    branches:
+      - develop
 jobs:
   deploy:
     runs-on: ubuntu-latest
