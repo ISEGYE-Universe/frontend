@@ -31,7 +31,6 @@ const MemberProfileCoverSong = ({
   const youtubeLink = socialMedia?.youtube.url || ''
   return (
     <section css={memberProfileCoverSongMain}>
-      {/* signature */}
       <Image
         css={memberSignatureImg}
         src={signatureImg}
