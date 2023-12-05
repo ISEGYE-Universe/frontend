@@ -1,21 +1,23 @@
-import AlbumNewsCard from '@/components/Chart/AlbumNewsCard'
-import ArticleADBanner from '@/components/Chart/ArticleADBanner'
+import { AlbumNewsCard } from '@/components/Chart/AlbumNewsCard'
+import { ArticleADBanner } from '@/components/Chart/ArticleADBanner'
 import TempLayout from '@/components/TempLayout/TempLayout'
 import { css } from '@emotion/react'
 import chartData from '@/data/chart.json'
-import Title from '@/components/Chart/Title'
-import TimeBaseSubTitle from '@/components/Chart/TimeBaseSubTitle'
-import Top100Chart from '@/components/Chart/Top100Chart'
-import HRLine from '@/components/Chart/HRLine'
-import ChartMusicCard from '@/components/Chart/ChartMusicCard'
-import SubTitle from '@/components/Chart/SubTitle'
-import WeeklyAward from '@/components/Chart/WeeklyAward'
-import MelonInfo from '@/components/Chart/MelonInfo'
+import { Title } from '@/components/Chart/Title'
+import { TimeBaseSubTitle } from '@/components/Chart/TimeBaseSubTitle'
+import { Top100Section } from '@/components/Chart/Top100Section'
+import { HRLine } from '@/components/Chart/HRLine'
+import { ChartMusicCard } from '@/components/Chart/ChartMusicCard'
+import { SubTitle } from '@/components/Chart/SubTitle'
+import { WeeklyAward } from '@/components/Chart/WeeklyAward'
+import { MelonInfo } from '@/components/Chart/MelonInfo'
+import { HallOfFame } from '@/components/Chart/HallOfFame'
+import { HistoryCarousel } from '@/components/Chart/HistoryCarousel'
 
 const articleStyle = css`
   width: 1060px;
   margin: 0 auto;
-  padding: 44px 0 141px 0;
+  padding: 44px 0 106px 0;
 `
 
 const chartSectionContainerStyle = css`
@@ -73,7 +75,6 @@ const Chart = () => {
           desc="시상수 TOP 10 달성시 실물 상패가 수여되고 MMA 메인페이지에 소개됩니다."
           CTAText="참여하러 가기"
           bgImage={chartData.image.adBanner}
-          bgColor="#EA4476"
         />
         {/* 차트정보 */}
         <div css={chartSectionContainerStyle}>
@@ -129,8 +130,8 @@ const Chart = () => {
                 <Title>발매 관련 소식</Title>
               </div>
               <ul css={albumNewsContainer}>
-                {chartData.albumNewsList.map((e, i) => (
-                  <AlbumNewsCard key={`album-news-${i}`} title={e.title} />
+                {chartData.albumNewsList.map((e) => (
+                  <AlbumNewsCard key={`album-news-${e.id}`} title={e.title} />
                 ))}
               </ul>
             </section>
@@ -142,7 +143,7 @@ const Chart = () => {
                 <Title mb="10px">현재 타이틀곡의 멜론 TOP 100 순위는?</Title>
                 <TimeBaseSubTitle time="23:00" />
               </div>
-              <Top100Chart />
+              <Top100Section />
             </section>
 
             <div>
@@ -169,13 +170,28 @@ const Chart = () => {
               </section>
             </div>
 
+            <HRLine />
+
             {/* 최근 명예의 전당 */}
-            <section />
+            <section>
+              <Title mb="20px">최근 명예의 전당</Title>
+              {/* 명예의 전당 본문 */}
+              <HallOfFame
+                musicTitle="이세계 페스티벌"
+                artist="이세계아이돌"
+                releasedAt={new Date('2023-10-05 12:00')}
+              />
+            </section>
           </div>
         </div>
 
-        <HRLine margin="40px 0 60px 0" />
+        <HRLine margin="38px 0 30px 0" />
         {/* 역대기록 */}
+        <section>
+          <Title mb="20px">역대 기록 한눈에 보기</Title>
+          {/* 캐러셀 구역 */}
+          <HistoryCarousel />
+        </section>
       </article>
     </TempLayout>
   )

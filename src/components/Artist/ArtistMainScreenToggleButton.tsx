@@ -45,7 +45,8 @@ export const ArtistMainScreenToggleButton = ({
   onClick,
 }: ArtistMainScreenToggleButtonProps) => {
   return (
-    <button // REQUIRE button default style set to false in global css
+    <button
+      type="button"
       css={{
         display: 'flex',
         flexDirection: 'row-reverse',
@@ -53,7 +54,7 @@ export const ArtistMainScreenToggleButton = ({
       }}
       onClick={() => onClick(id)}
     >
-      <div // later using ISD profile common component
+      <div
         css={{
           position: 'relative',
           width: 50,
