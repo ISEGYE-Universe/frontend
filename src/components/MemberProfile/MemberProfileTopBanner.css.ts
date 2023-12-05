@@ -4,6 +4,7 @@ import {
   CaptionMdBold,
   LineHeight,
   TextSmLight,
+  TextSmRegular,
   TitleSmBold,
 } from '@/styles/Font'
 
@@ -81,7 +82,7 @@ export const groupNameText = [
     margin-bottom: 16px;
   `,
 ]
-export const birthDateText = [TextSmLight, LineHeight, textWhite]
+export const birthDateText = [TextSmRegular, LineHeight, textWhite]
 export const socialMediaContainer = [
   flexCol,
   css`
