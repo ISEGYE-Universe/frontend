@@ -32,18 +32,17 @@ const SubNavLink = css`
   cursor: pointer;
 `
 
-const SubNav = (props: IProps) => {
-  if (props.page == 'null') return <></>
-  if (!(props.page in SubNavData))
-    throw new Error(`${props.page} is invalid page name`)
+const SubNav = ({ page }: IProps) => {
+  if (page === 'null') return null
+  if (!(page in SubNavData)) throw new Error(`${page} is invalid page name`)
 
   const subNavData: ISubNavData = SubNavData
-  const data = subNavData[props.page]
+  const data = subNavData[page]
 
   return (
     <div css={SubNavContainer}>
       {data.map((x) => (
-        <Link css={SubNavLink} href={x.link}>
+        <Link css={SubNavLink} href={x.link} key={x.link}>
           {x.text}
         </Link>
       ))}

@@ -2,14 +2,19 @@ import Link from 'next/link'
 import { TitleMdRegular, TextSmRegular } from '@/styles/Font'
 import { YouTubeIcon, CafeIcon } from './svg'
 
-interface props {
+interface BannerDescriptionProps {
   title: string
   desc: string
   youtube: string
   cafe: string
 }
 
-const BannerDescription = ({ title, desc, youtube, cafe }: props) => {
+const BannerDescription = ({
+  title,
+  desc,
+  youtube,
+  cafe,
+}: BannerDescriptionProps) => {
   return (
     <div
       css={{
