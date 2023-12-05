@@ -16,6 +16,7 @@ const resetStyle = css`
     padding: 0;
   }
 
+  p,
   h1,
   h2,
   h3,
@@ -30,13 +31,20 @@ const resetStyle = css`
   }
 
   button {
+    margin: 0;
     padding: 0;
     border: none;
     background: none;
+    cursor: pointer;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
   }
 
   a {
     text-decoration: none;
+    color: inherit;
   }
 `
 

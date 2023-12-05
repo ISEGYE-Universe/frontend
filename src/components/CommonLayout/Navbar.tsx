@@ -178,6 +178,7 @@ const Navbar = () => {
       : (target.parentElement as HTMLButtonElement)
 
     if (!realTarget || realTarget?.dataset.page === 'null') {
+      setIsSubNavActiveByClick(false)
       setIsSubNavActive(false)
       return
     }
@@ -299,6 +300,7 @@ const Navbar = () => {
             <button
               type="button"
               css={GNBBottomNavigationLink}
+              onClick={toggleActiveSubNavigationWithClick}
               onMouseEnter={setSubNavigation}
               data-page="memberProfile"
             >
