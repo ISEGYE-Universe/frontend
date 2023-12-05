@@ -1,12 +1,11 @@
-import { css } from '@emotion/react'
 import { MainTitleLight, TextMdRegular } from '@/styles/Font'
 
-interface props {
+interface BannerTitleProps {
   title: string
   desc: string
 }
 
-const BannerTitle = ({ title, desc }: props) => {
+const BannerTitle = ({ title, desc }: BannerTitleProps) => {
   return (
     <div
       css={{

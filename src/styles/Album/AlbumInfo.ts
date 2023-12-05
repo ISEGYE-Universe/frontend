@@ -9,7 +9,7 @@ const DivWithMargin = css`
   width: 1633px;
   height: 662px;
   margin-left: 287px;
-  margin-top: 152px;
+  margin-top: 60px;
 `
 const albumTitleSize = css`
   width: 600px;
@@ -59,6 +59,7 @@ const btnDiv = css`
   display: inline-flex;
   align-items: flex-start;
   gap: 12px;
+  margin-top: 12px;
 `
 const btnSize = css`
   width: 45px;

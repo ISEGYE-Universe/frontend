@@ -1,4 +1,4 @@
-import { ChartColor } from '@/styles/ChartColor'
+import ChartColor from '@/styles/ChartColor'
 import { LineHeight, TextMdRegular } from '@/styles/Font'
 import { css } from '@emotion/react'
 
@@ -12,12 +12,10 @@ const albumCardContainer = css`
   background: ${ChartColor.bgGrey};
   border: 1px solid ${ChartColor.borderGrey};
 `
-const AlbumNewsCard = ({ title }: AlbumNewsCardProps) => {
+export const AlbumNewsCard = ({ title }: AlbumNewsCardProps) => {
   return (
     <li css={albumCardContainer}>
       <h3 css={[TextMdRegular, LineHeight]}>{title}</h3>
     </li>
   )
 }
-
-export default AlbumNewsCard

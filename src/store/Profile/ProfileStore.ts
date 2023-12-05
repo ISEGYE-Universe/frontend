@@ -10,7 +10,7 @@ interface ProfileState {
 const ProfileStore = create<ProfileState>((set) => ({
   hoverDefault: true,
   setHoverDefault: (newState) => {
-    set((state) => ({ hoverDefault: newState }))
+    set(() => ({ hoverDefault: newState }))
   },
   switchHoverMember: new Array(6).fill(false),
   setSwitchHoverMember: (memberIndex, hover) => {

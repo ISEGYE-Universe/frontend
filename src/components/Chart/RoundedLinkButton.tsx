@@ -1,5 +1,5 @@
-import { ChartColor } from '@/styles/ChartColor'
-import { CaptionMdBold, CaptionMdLight, LineHeight } from '@/styles/Font'
+import ChartColor from '@/styles/ChartColor'
+import { CaptionMdBold, LineHeight } from '@/styles/Font'
 import { Interpolation, Theme, css } from '@emotion/react'
 import Link from 'next/link'
 
@@ -23,7 +23,7 @@ interface RoundedLinkButtonProps {
  * @param shadow boolean
  * @author 민타이
  */
-const RoundedLinkButton = ({
+export const RoundedLinkButton = ({
   href,
   width,
   bgColor,
@@ -57,5 +57,3 @@ const RoundedLinkButton = ({
     </Link>
   )
 }
-
-export default RoundedLinkButton

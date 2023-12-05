@@ -35,6 +35,7 @@ const resetStyle = css`
     padding: 0;
     border: none;
     background: none;
+    cursor: pointer;
 
     /* inherit font & color from ancestor */
     color: inherit;

@@ -1,6 +1,6 @@
 import ChartStore from '@/store/Chart/ChartStore'
-import { ChartColor } from '@/styles/ChartColor'
-import { TextMdBold } from '@/styles/Font'
+import ChartColor from '@/styles/ChartColor'
+import { TextSmBold } from '@/styles/Font'
 import { css } from '@emotion/react'
 
 const chartSwitchContainer = css`
@@ -12,7 +12,7 @@ const chartSwitchContainer = css`
   margin: 0 auto;
 `
 
-const Top100ChartSwitch = () => {
+export const Top100ChartSwitch = () => {
   const { currentTop100ChartType, setCurrentTop100ChartType } = ChartStore()
 
   const chartSwitchButtonStyle = [
@@ -24,12 +24,13 @@ const Top100ChartSwitch = () => {
       color: ${ChartColor.textWhite};
       cursor: pointer;
     `,
-    TextMdBold,
+    TextSmBold,
   ]
 
   return (
     <div css={chartSwitchContainer}>
       <button
+        type="button"
         css={[
           chartSwitchButtonStyle,
           {
@@ -47,6 +48,7 @@ const Top100ChartSwitch = () => {
         일간
       </button>
       <button
+        type="button"
         css={[
           chartSwitchButtonStyle,
           {
@@ -66,5 +68,3 @@ const Top100ChartSwitch = () => {
     </div>
   )
 }
-
-export default Top100ChartSwitch

@@ -1,13 +1,7 @@
-import ProfileMemberDetail from '@/components/Profile/ProfileMemberDetail'
-import TempLayout from '@/components/TempLayout/TempLayout'
+import { ProfileMemberDetail } from '@/components/Profile/ProfileMemberDetail'
 import profileData from '@/data/profile.json'
 
-const JingBurgerProfileDetail = () => {
-  return (
-    <TempLayout>
-      <ProfileMemberDetail data={profileData.lilpaIntroduction} />
-    </TempLayout>
-  )
+const ProfileDetail = () => {
+  return <ProfileMemberDetail data={profileData.lilpaIntroduction} />
 }
-
-export default JingBurgerProfileDetail
+export default ProfileDetail

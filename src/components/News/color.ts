@@ -1,6 +1,6 @@
 // later move on common store
 
-export const color = {
+const color = {
   ElementBackgroundGrey: '#C4C4C4',
   NewsHeaderButtonWhite: '#FAFAFA',
   NewsHeaderButtonText: '#151515',
@@ -11,3 +11,5 @@ export const color = {
   GoseguSky: '#85B6FF',
   VIichanGreen: '#AFF4C6',
 }
+
+export default color
