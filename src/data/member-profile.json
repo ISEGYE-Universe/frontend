@@ -4,12 +4,12 @@
     "twIcon": "/images/icon/icon-tw-white.png"
   },
   "ine": {
-    "topBannerImage": "/images/member-profile/jururu/top-banner.png",
-    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
-    "coverPlayIcon": "/images/member-profile/jururu/icon-play.svg",
-    "signatureImg": "/images/member-profile/jururu/signature.svg",
+    "topBannerImage": "/images/member-profile/ine/top-banner.png",
+    "calendarBgImage": "/images/member-profile/ine/bg-calendar.png",
+    "coverPlayIcon": "/images/member-profile/ine/icon-play.svg",
+    "signatureImg": "/images/member-profile/ine/signature.svg",
     "memberInformation": {
-      "profileImage": "/images/member-profile/jururu/profile.png",
+      "profileImage": "/images/member-profile/ine/profile.png",
       "krName": "아이네",
       "enName": "INE",
       "groupName": "이세계아이돌",
@@ -36,12 +36,12 @@
     ]
   },
   "jingburger": {
-    "topBannerImage": "/images/member-profile/jururu/top-banner.png",
-    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
-    "coverPlayIcon": "/images/member-profile/jururu/icon-play.svg",
-    "signatureImg": "/images/member-profile/jururu/signature.svg",
+    "topBannerImage": "/images/member-profile/jingburger/top-banner.png",
+    "calendarBgImage": "/images/member-profile/jingburger/bg-calendar.png",
+    "coverPlayIcon": "/images/member-profile/jingburger/icon-play.svg",
+    "signatureImg": "/images/member-profile/jingburger/signature.svg",
     "memberInformation": {
-      "profileImage": "/images/member-profile/jururu/profile.png",
+      "profileImage": "/images/member-profile/jingburger/profile.png",
       "krName": "징버거",
       "enName": "JINGBURGER",
       "groupName": "이세계아이돌",
@@ -68,12 +68,12 @@
     ]
   },
   "lilpa": {
-    "topBannerImage": "/images/member-profile/jururu/top-banner.png",
-    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
-    "coverPlayIcon": "/images/member-profile/jururu/icon-play.svg",
-    "signatureImg": "/images/member-profile/jururu/signature.svg",
+    "topBannerImage": "/images/member-profile/lilpa/top-banner.png",
+    "calendarBgImage": "/images/member-profile/lilpa/bg-calendar.png",
+    "coverPlayIcon": "/images/member-profile/lilpa/icon-play.svg",
+    "signatureImg": "/images/member-profile/lilpa/signature.svg",
     "memberInformation": {
-      "profileImage": "/images/member-profile/jururu/profile.png",
+      "profileImage": "/images/member-profile/lilpa/profile.png",
       "krName": "릴파",
       "enName": "LILPA",
       "groupName": "이세계아이돌",
@@ -160,12 +160,12 @@
     ]
   },
   "gosegu": {
-    "topBannerImage": "/images/member-profile/jururu/top-banner.png",
-    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
-    "coverPlayIcon": "/images/member-profile/jururu/icon-play.svg",
-    "signatureImg": "/images/member-profile/jururu/signature.svg",
+    "topBannerImage": "/images/member-profile/gosegu/top-banner.png",
+    "calendarBgImage": "/images/member-profile/gosegu/bg-calendar.png",
+    "coverPlayIcon": "/images/member-profile/gosegu/icon-play.svg",
+    "signatureImg": "/images/member-profile/gosegu/signature.svg",
     "memberInformation": {
-      "profileImage": "/images/member-profile/jururu/profile.png",
+      "profileImage": "/images/member-profile/gosegu/profile.png",
       "krName": "고세구",
       "enName": "GOSEGU",
       "groupName": "이세계아이돌",
@@ -192,12 +192,12 @@
     ]
   },
   "viichan": {
-    "topBannerImage": "/images/member-profile/jururu/top-banner.png",
-    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
-    "coverPlayIcon": "/images/member-profile/jururu/icon-play.svg",
-    "signatureImg": "/images/member-profile/jururu/signature.svg",
+    "topBannerImage": "/images/member-profile/viichan/top-banner.png",
+    "calendarBgImage": "/images/member-profile/viichan/bg-calendar.png",
+    "coverPlayIcon": "/images/member-profile/viichan/icon-play.svg",
+    "signatureImg": "/images/member-profile/viichan/signature.svg",
     "memberInformation": {
-      "profileImage": "/images/member-profile/jururu/profile.png",
+      "profileImage": "/images/member-profile/viichan/profile.png",
       "krName": "비챤",
       "enName": "VIICHAN",
       "groupName": "이세계아이돌",
