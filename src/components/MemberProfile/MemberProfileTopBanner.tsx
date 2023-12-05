@@ -1,103 +1,26 @@
-import { css } from '@emotion/react'
 import memberProfileData from '@/data/member-profile.json'
 import Image from 'next/image'
-import { MemberProfileColor } from '@/styles/MemberProfileColor'
-import {
-  CaptionMdBold,
-  LineHeight,
-  TextSmLight,
-  TitleSmBold,
-} from '@/styles/Font'
+
 import Link from 'next/link'
+import {
+  birthDateText,
+  flexCol,
+  groupNameText,
+  layoutContainer,
+  memberInformationContainer,
+  memberInformationProfileContainer,
+  memberNameText,
+  profileImageStyle,
+  socialMediaContainer,
+  socialMediaIconStyle,
+  socialMediaLinkStyle,
+  socialMediaTextStyle,
+  topBannerContainer,
+} from './MemberProfileTopBanner.css'
 
 interface MemberProfileTopBannerProp {
   memberName: IsedolMember
 }
-
-const flexRow = css`
-  display: flex;
-  flex-direction: row;
-`
-const flexCol = css`
-  display: flex;
-  flex-direction: column;
-`
-const justifySpaceBetween = css`
-  justify-content: space-between;
-`
-const alignCenter = css`
-  align-items: center;
-`
-const alignFlexEnd = css`
-  align-items: flex-end;
-`
-const textWhite = css`
-  color: ${MemberProfileColor.textWhite};
-`
-const layoutContainer = [
-  flexRow,
-  alignFlexEnd,
-  css`
-    max-width: 1300px;
-    height: 100%;
-    margin: 0 auto;
-    position: relative;
-  `,
-]
-const memberInformationContainer = [
-  justifySpaceBetween,
-  flexRow,
-  alignCenter,
-  css`
-    width: 100%;
-  `,
-]
-const memberInformationProfileContainer = [
-  flexRow,
-  alignCenter,
-  css`
-    gap: 20px;
-  `,
-]
-const profileImageStyle = css`
-  border-radius: 80px;
-`
-const memberNameText = [
-  TitleSmBold,
-  textWhite,
-  LineHeight,
-  css`
-    margin-bottom: 8px;
-  `,
-]
-const groupNameText = [
-  TextSmLight,
-  LineHeight,
-  textWhite,
-  css`
-    margin-bottom: 16px;
-  `,
-]
-const birthDateText = [TextSmLight, LineHeight, textWhite]
-const socialMediaContainer = [
-  flexCol,
-  css`
-    min-width: 152px;
-    min-height: 80px;
-    padding: 14px 20px;
-    border-radius: 20px;
-    background: rgba(37, 37, 37, 0.3);
-    margin-right: 68px;
-    gap: 12px;
-  `,
-]
-const socialMediaIconStyle = css`
-  margin-right: 8px;
-  // anchor 태그와 크기 맞춰주기 위함
-  vertical-align: bottom;
-`
-const socialMediaLinkStyle = [flexRow, alignCenter]
-const socialMediaTextStyle = [textWhite, LineHeight, CaptionMdBold]
 
 const MemberProfileTopBanner = (prop: MemberProfileTopBannerProp) => {
   const { memberName } = prop
@@ -111,16 +34,8 @@ const MemberProfileTopBanner = (prop: MemberProfileTopBannerProp) => {
   const twInfo = socialMedia?.twitter
   const ytInfo = socialMedia?.youtube
 
-  const topBannerContainer = css`
-    background: url('${topBannerImage}');
-    height: 388px;
-    background-repeat: no-repeat;
-    background-position: center top;
-    margin-bottom: 32px;
-  `
-
   return (
-    <section css={topBannerContainer}>
+    <section css={topBannerContainer(topBannerImage)}>
       <div css={layoutContainer}>
         {/* 멤버 기본 정보 영역 */}
         <div css={memberInformationContainer}>
