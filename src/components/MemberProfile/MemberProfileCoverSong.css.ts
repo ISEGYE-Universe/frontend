@@ -25,6 +25,7 @@ const alignCenter = css`
 
 export const memberProfileCoverSongMain = [
   flexCol,
+  LineHeight,
   css`
     width: 770px;
     height: 460px;
@@ -47,7 +48,6 @@ export const memberProfileCoverSongTitleBox = [
 ]
 export const memberProfileCoverSongTitleText = [
   TitleSmBold,
-  LineHeight,
   css`
     color: ${MemberProfileColor.coverTitleTextBlack};
   `,
@@ -55,12 +55,12 @@ export const memberProfileCoverSongTitleText = [
 export const memberProfileCoverSongSubTitleBox = [
   flexRow,
   justifySpaceBetween,
-  CaptionMdRegular,
-  LineHeight,
   css`
     color: ${MemberProfileColor.coverSubTitleTextGrey};
   `,
 ]
+export const memberProfileCoverSongSubTitleBoxDesc = CaptionMdRegular
+export const memberProfileCoverSongSubTitleBoxMore = CaptionMdLight
 export const memberProfileCoverSongListBox = [
   flexCol,
   css`
@@ -111,7 +111,6 @@ export const memberProfileCoverSongListItemTitleBox = [
 ]
 export const memberProfileCoverSongListItemIndexText = [
   CaptionMdLight,
-  LineHeight,
   css`
     color: ${MemberProfileColor.jururuPink};
     margin-right: 20px;
@@ -119,21 +118,17 @@ export const memberProfileCoverSongListItemIndexText = [
 ]
 export const memberProfileCoverSongListItemTitleText = [
   TextMdBold,
-  LineHeight,
   css`
     color: ${MemberProfileColor.coverTitleTextBlack};
   `,
 ]
 export const memberProfileCoverSongListItemDateText = [
   TextSmLight,
-  LineHeight,
   css`
     color: ${MemberProfileColor.coverDateTextGrey};
   `,
 ]
 export const memberProfileCoverSongListItemPlayIcon = [
-  TextSmLight,
-  LineHeight,
   css`
     color: ${MemberProfileColor.coverDateTextGrey};
     opacity: 0.5;

@@ -14,6 +14,8 @@ import {
   memberProfileCoverSongTitleText,
   memberProfileCoverSongListItemImage,
   memberProfileCoverSongListItemPlayIcon,
+  memberProfileCoverSongSubTitleBoxDesc,
+  memberProfileCoverSongSubTitleBoxMore,
 } from './MemberProfileCoverSong.css'
 
 interface MemberProfileCoverSongProps {
@@ -30,10 +32,14 @@ const MemberProfileCoverSong = ({
       <div css={memberProfileCoverSongTitleBox}>
         <h2 css={memberProfileCoverSongTitleText}>{enName}&apos;s Cover</h2>
         <div css={memberProfileCoverSongSubTitleBox}>
-          <p>
+          <p css={memberProfileCoverSongSubTitleBoxDesc}>
             {groupName} {krName}의 커버곡을 감상해보세요.
           </p>
-          <Link href={youtubeLink} target="_blank">
+          <Link
+            href={youtubeLink}
+            css={memberProfileCoverSongSubTitleBoxMore}
+            target="_blank"
+          >
             More
           </Link>
         </div>
