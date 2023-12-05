@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { css } from '@emotion/react'
 
 import { TextSmRegular } from '@/styles/Font'
-import { color } from './color'
+import color from './color'
 
 type NewsHeaderButtonProps = {
   iconSrc: string // later change to NodeRequire
