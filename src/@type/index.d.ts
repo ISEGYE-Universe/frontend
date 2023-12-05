@@ -1,3 +1,11 @@
+type IsedolMember =
+  | 'ine'
+  | 'jingburger'
+  | 'lilpa'
+  | 'jururu'
+  | 'gosegu'
+  | 'viichan'
+
 declare namespace Profile {
   interface IntroductionDescription {
     title: string
