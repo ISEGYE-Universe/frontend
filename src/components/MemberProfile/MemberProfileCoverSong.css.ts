@@ -27,6 +27,7 @@ export const memberProfileCoverSongMain = [
   flexCol,
   LineHeight,
   css`
+    position: relative;
     width: 770px;
     height: 460px;
     border-radius: 40px;
@@ -35,7 +36,15 @@ export const memberProfileCoverSongMain = [
     padding: 20px 16px 20px 32px;
   `,
 ]
-
+export const memberSignatureImg = css`
+  position: absolute;
+  right: 44px;
+  bottom: 35px;
+  width: auto;
+  height: auto;
+  pointer-events: none;
+  z-index: 0;
+`
 export const memberProfileCoverSongTitleBox = [
   flexCol,
   css`
@@ -67,6 +76,7 @@ export const memberProfileCoverSongListBox = [
     gap: 6px;
     overflow-y: auto;
     padding-right: 16px;
+    z-index: 1;
   `,
   css`
     &::-webkit-scrollbar {

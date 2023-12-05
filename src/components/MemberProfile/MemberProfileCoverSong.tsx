@@ -16,6 +16,7 @@ import {
   memberProfileCoverSongListItemPlayIcon,
   memberProfileCoverSongSubTitleBoxDesc,
   memberProfileCoverSongSubTitleBoxMore,
+  memberSignatureImg,
 } from './MemberProfileCoverSong.css'
 
 interface MemberProfileCoverSongProps {
@@ -26,10 +27,18 @@ const MemberProfileCoverSong = ({
 }: MemberProfileCoverSongProps) => {
   const { enName, groupName, krName, socialMedia } =
     memberProfileData[memberName]?.memberInformation || {}
-  const coverPlayIcon = memberProfileData[memberName]?.coverPlayIcon
+  const { coverPlayIcon, signatureImg } = memberProfileData[memberName] || {}
   const youtubeLink = socialMedia?.youtube.url || ''
   return (
     <section css={memberProfileCoverSongMain}>
+      {/* signature */}
+      <Image
+        css={memberSignatureImg}
+        src={signatureImg}
+        width={1}
+        height={1}
+        alt={`${memberName} signature`}
+      />
       <div css={memberProfileCoverSongTitleBox}>
         <h2 css={memberProfileCoverSongTitleText}>{enName}&apos;s Cover</h2>
         <div css={memberProfileCoverSongSubTitleBox}>
