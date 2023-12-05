@@ -35,7 +35,7 @@ const MemberProfile = () => {
     if (typeof memberName === 'string' && !whiteList.includes(memberName)) {
       router.push('/404')
     }
-  }, [memberName])
+  }, [memberName, router])
 
   return (
     <article>
