@@ -26,6 +26,7 @@ const MemberProfileCoverSong = ({
 }: MemberProfileCoverSongProps) => {
   const { enName, groupName, krName, socialMedia } =
     memberProfileData[memberName]?.memberInformation || {}
+  const coverPlayIcon = memberProfileData[memberName]?.coverPlayIcon
   const youtubeLink = socialMedia?.youtube.url || ''
   return (
     <section css={memberProfileCoverSongMain}>
@@ -71,7 +72,7 @@ const MemberProfileCoverSong = ({
               </div>
 
               <Image
-                src="/images/icon/icon-play.svg"
+                src={coverPlayIcon}
                 className="play-icon"
                 width={32}
                 height={32}

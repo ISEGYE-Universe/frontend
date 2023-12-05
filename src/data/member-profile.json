@@ -6,6 +6,7 @@
   "ine": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
     "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
+    "coverPlayIcon": "/images/member-profile/jururu/icon-play.svg",
     "memberInformation": {
       "profileImage": "/images/member-profile/jururu/profile.png",
       "krName": "아이네",
@@ -36,6 +37,7 @@
   "jingburger": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
     "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
+    "coverPlayIcon": "/images/member-profile/jururu/icon-play.svg",
     "memberInformation": {
       "profileImage": "/images/member-profile/jururu/profile.png",
       "krName": "징버거",
@@ -66,6 +68,7 @@
   "lilpa": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
     "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
+    "coverPlayIcon": "/images/member-profile/jururu/icon-play.svg",
     "memberInformation": {
       "profileImage": "/images/member-profile/jururu/profile.png",
       "krName": "릴파",
@@ -96,6 +99,7 @@
   "jururu": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
     "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
+    "coverPlayIcon": "/images/member-profile/jururu/icon-play.svg",
     "memberInformation": {
       "profileImage": "/images/member-profile/jururu/profile.png",
       "krName": "주르르",
@@ -154,6 +158,7 @@
   "gosegu": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
     "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
+    "coverPlayIcon": "/images/member-profile/jururu/icon-play.svg",
     "memberInformation": {
       "profileImage": "/images/member-profile/jururu/profile.png",
       "krName": "고세구",
@@ -184,6 +189,7 @@
   "viichan": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
     "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
+    "coverPlayIcon": "/images/member-profile/jururu/icon-play.svg",
     "memberInformation": {
       "profileImage": "/images/member-profile/jururu/profile.png",
       "krName": "비챤",
