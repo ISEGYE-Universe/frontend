@@ -31,7 +31,7 @@ const MemberProfileTopBanner = (prop: MemberProfileTopBannerProp) => {
 
   const { profileImage, krName, enName, groupName, birthDate, socialMedia } =
     memberProfileData[memberName]?.memberInformation || {}
-  const twInfo = socialMedia?.twitter
+  const twInfo = socialMedia?.twitch
   const ytInfo = socialMedia?.youtube
 
   return (
@@ -58,10 +58,14 @@ const MemberProfileTopBanner = (prop: MemberProfileTopBannerProp) => {
           {/* 트위치 유튜브 링크 영역 */}
           <div css={socialMediaContainer}>
             {twInfo && (
-              <Link href={twInfo.url} css={socialMediaLinkStyle}>
+              <Link
+                href={twInfo.url}
+                css={socialMediaLinkStyle}
+                target="_blank"
+              >
                 <Image
                   src={twIcon}
-                  alt="twitter icon"
+                  alt="twitch icon"
                   css={socialMediaIconStyle}
                   width={22}
                   height={24}
