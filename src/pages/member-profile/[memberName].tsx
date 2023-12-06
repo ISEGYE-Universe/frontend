@@ -4,10 +4,10 @@ import MemberProfileTopBanner from '@/components/MemberProfile/MemberProfileTopB
 import MemberProfileWakscord from '@/components/MemberProfile/MemberProfileWakscord'
 import MemberProfileYoutube from '@/components/MemberProfile/MemberProfileYoutube'
 import { css } from '@emotion/react'
-import { useRouter } from 'next/router'
-import { useEffect } from 'react'
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
+import { ParsedUrlQuery } from 'querystring'
 
-const whiteList = ['ine', 'jingburger', 'lilpa', 'jururu', 'gosegu', 'viichan']
+const memberList = ['ine', 'jingburger', 'lilpa', 'jururu', 'gosegu', 'viichan']
 
 const articleLayoutContainer = css`
   max-width: 1300px;
@@ -26,17 +26,30 @@ const splittedContainer = css`
   margin-bottom: 60px;
 `
 
-const MemberProfile = () => {
-  const router = useRouter()
-  const { memberName } = router.query
+export const getStaticPaths: GetStaticPaths = () => {
+  return {
+    paths: memberList.map((member) => {
+      return { params: { memberName: member } }
+    }),
+    fallback: false,
+  }
+}
 
-  // 예외 404 처리
-  useEffect(() => {
-    if (typeof memberName === 'string' && !whiteList.includes(memberName)) {
-      router.push('/404')
-    }
-  }, [memberName, router])
+interface MemberNameParams extends ParsedUrlQuery {
+  memberName: string
+}
+export const getStaticProps: GetStaticProps = (context) => {
+  const { memberName } = context.params as MemberNameParams
+  return {
+    props: {
+      memberName,
+    },
+  }
+}
 
+const MemberProfile = ({
+  memberName,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <article>
       {/* 배너 영역 */}
