@@ -15,9 +15,9 @@ const MemberProfileYoutube = () => {
   return (
     <section css={mainContainer}>
       {/* 제목 */}
-      <div css={titleContainer}></div>
+      <div css={titleContainer}>title</div>
       {/* 영상 */}
-      <ul css={youtubeContainer}></ul>
+      <ul css={youtubeContainer}>youtubeContainer</ul>
     </section>
   )
 }
