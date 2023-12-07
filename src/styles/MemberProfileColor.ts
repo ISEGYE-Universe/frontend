@@ -7,4 +7,5 @@ export const MemberProfileColor = {
   coverDateTextGrey: '#787878',
   jururuPink: '#FF008C',
   jururuPinkTransparent: '#FF008C1A',
+  textWhite: '#fafafa',
 }
