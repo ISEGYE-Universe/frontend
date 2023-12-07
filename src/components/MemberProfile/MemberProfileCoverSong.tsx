@@ -29,7 +29,7 @@ const MemberProfileCoverSong = ({
     memberProfileData[memberName]?.memberInformation || {}
   const { coverPlayIcon, signatureImg, personalColor, personalColorAlpha } =
     memberProfileData[memberName] || {}
-  const youtubeLink = socialMedia?.youtube.url || ''
+  const youtubeSongLink = socialMedia?.youtube.songPlayListUrl || ''
   return (
     <section css={memberProfileCoverSongMain}>
       <Image
@@ -46,7 +46,7 @@ const MemberProfileCoverSong = ({
             {groupName} {krName}의 커버곡을 감상해보세요.
           </p>
           <Link
-            href={youtubeLink}
+            href={youtubeSongLink}
             css={memberProfileCoverSongSubTitleBoxMore}
             target="_blank"
           >

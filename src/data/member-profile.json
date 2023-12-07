@@ -23,7 +23,8 @@
         },
         "youtube": {
           "name": "주르르 JURURU",
-          "url": "https://www.youtube.com/@JU_RURU"
+          "url": "https://www.youtube.com/@JU_RURU",
+          "songPlayListUrl": ""
         }
       }
     },
@@ -32,7 +33,7 @@
         "id": "1",
         "title": "와스레모노 忘れ物",
         "thumbUrl": "https://i.ytimg.com/vi/YpCpF_CD2pM/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAZxHELJ2Mvl48ojg5ZEHJd2zZDwA",
-        "uploadDate": "2023.11.5",
+        "uploadDate": "2023.11.05",
         "link": "https://www.youtube.com/watch?v=YpCpF_CD2pM&list=PLJWTWXJ7iqXctxVu1Fd3ZkF-WWD8kOzMb&index=1&pp=iAQB8AUB"
       }
     ]
@@ -57,17 +58,18 @@
         },
         "youtube": {
           "name": "주르르 JURURU",
-          "url": "https://www.youtube.com/@JU_RURU"
+          "url": "https://www.youtube.com/@JU_RURU",
+          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLio0a5EPF6j099Af5uBaK6V25RtTvK4kq"
         }
       }
     },
     "recentCover": [
       {
         "id": "1",
-        "title": "Darling(달링)",
-        "thumbUrl": "https://i.ytimg.com/vi/7sFIjj5BW3M/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAqY5LvWf9qzNIIIsuZ3sPttIHTAg",
+        "title": "And July (feat. Rusuk)",
+        "thumbUrl": "https://i.ytimg.com/vi/VE4sUxm2N7k/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDo9NoVJ1ru6L7_bgmeX0G3K0SG9g",
         "uploadDate": "2023.08.13",
-        "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
+        "link": "https://www.youtube.com/watch?v=VE4sUxm2N7k&list=PLio0a5EPF6j099Af5uBaK6V25RtTvK4kq&index=1&pp=iAQB8AUB"
       }
     ]
   },
@@ -91,17 +93,18 @@
         },
         "youtube": {
           "name": "주르르 JURURU",
-          "url": "https://www.youtube.com/@JU_RURU"
+          "url": "https://www.youtube.com/@JU_RURU",
+          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLLPGQs-RNQXnFl55WissjQylZbInOK81P"
         }
       }
     },
     "recentCover": [
       {
         "id": "1",
-        "title": "Darling(달링)",
-        "thumbUrl": "https://i.ytimg.com/vi/7sFIjj5BW3M/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAqY5LvWf9qzNIIIsuZ3sPttIHTAg",
-        "uploadDate": "2023.08.13",
-        "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
+        "title": "U (millennium parade) 용과 주근깨 공주 OST",
+        "thumbUrl": "https://i.ytimg.com/vi/eEPmx_JZCkY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDrd3YkzKtEIjaJpos-3AdE-LVcXg",
+        "uploadDate": "2023.12.03",
+        "link": "https://www.youtube.com/watch?v=eEPmx_JZCkY&list=PLLPGQs-RNQXnFl55WissjQylZbInOK81P&index=1&pp=iAQB8AUB"
       }
     ]
   },
@@ -125,11 +128,19 @@
         },
         "youtube": {
           "name": "주르르 JURURU",
-          "url": "https://www.youtube.com/@JU_RURU"
+          "url": "https://www.youtube.com/@JU_RURU",
+          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS"
         }
       }
     },
     "recentCover": [
+      {
+        "id": "6",
+        "title": "튜링 러브 (With. 고세구)",
+        "thumbUrl": "https://i.ytimg.com/vi/c4Fw8oRP-e8/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDjeDgGmL0aG4XvQWfbvcPYLmFoBw",
+        "uploadDate": "2023.12.03",
+        "link": "https://www.youtube.com/watch?v=c4Fw8oRP-e8&list=PLZNwpHxpI4EjDSv3v_HY7udxDEqj4C7PL&index=22&pp=iAQB8AUB"
+      },
       {
         "id": "1",
         "title": "Darling(달링)",
@@ -187,17 +198,18 @@
         },
         "youtube": {
           "name": "주르르 JURURU",
-          "url": "https://www.youtube.com/@JU_RURU"
+          "url": "https://www.youtube.com/@JU_RURU",
+          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLZNwpHxpI4EjDSv3v_HY7udxDEqj4C7PL"
         }
       }
     },
     "recentCover": [
       {
         "id": "1",
-        "title": "Darling(달링)",
-        "thumbUrl": "https://i.ytimg.com/vi/7sFIjj5BW3M/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAqY5LvWf9qzNIIIsuZ3sPttIHTAg",
-        "uploadDate": "2023.08.13",
-        "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
+        "title": "튜링 러브 (With. 주르르)",
+        "thumbUrl": "https://i.ytimg.com/vi/c4Fw8oRP-e8/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDjeDgGmL0aG4XvQWfbvcPYLmFoBw",
+        "uploadDate": "2023.12.03",
+        "link": "https://www.youtube.com/watch?v=c4Fw8oRP-e8&list=PLZNwpHxpI4EjDSv3v_HY7udxDEqj4C7PL&index=22&pp=iAQB8AUB"
       }
     ]
   },
@@ -221,17 +233,18 @@
         },
         "youtube": {
           "name": "주르르 JURURU",
-          "url": "https://www.youtube.com/@JU_RURU"
+          "url": "https://www.youtube.com/@JU_RURU",
+          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLhaJuLneKo5FdYnMZ1Jc5BaV7y26KvmD1"
         }
       }
     },
     "recentCover": [
       {
         "id": "1",
-        "title": "Darling(달링)",
-        "thumbUrl": "https://i.ytimg.com/vi/7sFIjj5BW3M/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAqY5LvWf9qzNIIIsuZ3sPttIHTAg",
-        "uploadDate": "2023.08.13",
-        "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
+        "title": "수룡음",
+        "thumbUrl": "https://i.ytimg.com/vi/epHCbFL36uU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA46xNhKdhESpD6tWBn0WyjKO9gdA",
+        "uploadDate": "2023.09.02",
+        "link": "https://www.youtube.com/watch?v=epHCbFL36uU&list=PLhaJuLneKo5FdYnMZ1Jc5BaV7y26KvmD1&index=1&pp=iAQB8AUB"
       }
     ]
   }
