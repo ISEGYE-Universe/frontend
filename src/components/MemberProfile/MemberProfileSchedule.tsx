@@ -1,5 +1,6 @@
 import { css } from '@emotion/react'
 import memberProfileData from '@/data/member-profile.json'
+import { MemberProfileCalendar } from './MemberProfileCalendar'
 
 interface MemberProfileTopBannerProp {
   memberName: IsedolMember
@@ -17,16 +18,17 @@ const overlay = css`
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
 `
-const calendarContentContainer = css`
-  position: relative;
-`
 
-const MemberProfileSchedule = ({ memberName }: MemberProfileTopBannerProp) => {
+export const MemberProfileSchedule = ({
+  memberName,
+}: MemberProfileTopBannerProp) => {
   const calendarMainContainer = css`
     position: relative;
-    height: 800px;
+    // 6주까지 있는 달이 있기 때문에 800px -> 882px
+    height: 882px;
     background: url('${memberProfileData[memberName]?.calendarBgImage}');
     background-repeat: no-repeat;
+    // background-size: cover;
     z-index: 1;
   `
 
@@ -39,10 +41,8 @@ const MemberProfileSchedule = ({ memberName }: MemberProfileTopBannerProp) => {
         {/* 오버레이 */}
         <div css={overlay} />
         {/* 달력 본문 */}
-        <div css={calendarContentContainer} />
+        <MemberProfileCalendar />
       </div>
     </section>
   )
 }
-
-export default MemberProfileSchedule

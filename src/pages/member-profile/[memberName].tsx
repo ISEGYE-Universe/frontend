@@ -1,5 +1,5 @@
 import MemberProfileCoverSong from '@/components/MemberProfile/MemberProfileCoverSong'
-import MemberProfileSchedule from '@/components/MemberProfile/MemberProfileSchedule'
+import { MemberProfileSchedule } from '@/components/MemberProfile/MemberProfileSchedule'
 import MemberProfileTopBanner from '@/components/MemberProfile/MemberProfileTopBanner'
 import MemberProfileWakscord from '@/components/MemberProfile/MemberProfileWakscord'
 import MemberProfileYoutube from '@/components/MemberProfile/MemberProfileYoutube'
