@@ -14,6 +14,7 @@ export const topBannerContainer = (topBannerImage: string) => {
     height: 360px;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     margin-bottom: 60px;
   `
 }
