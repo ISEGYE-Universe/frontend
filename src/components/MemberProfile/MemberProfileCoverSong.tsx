@@ -27,7 +27,8 @@ const MemberProfileCoverSong = ({
 }: MemberProfileCoverSongProps) => {
   const { enName, groupName, krName, socialMedia } =
     memberProfileData[memberName]?.memberInformation || {}
-  const { coverPlayIcon, signatureImg } = memberProfileData[memberName] || {}
+  const { coverPlayIcon, signatureImg, personalColor, personalColorAlpha } =
+    memberProfileData[memberName] || {}
   const youtubeLink = socialMedia?.youtube.url || ''
   return (
     <section css={memberProfileCoverSongMain}>
@@ -38,7 +39,7 @@ const MemberProfileCoverSong = ({
         height={1}
         alt={`${memberName} signature`}
       />
-      <div css={memberProfileCoverSongTitleBox}>
+      <div css={memberProfileCoverSongTitleBox(personalColor)}>
         <h2 css={memberProfileCoverSongTitleText}>{enName}&apos;s Cover</h2>
         <div css={memberProfileCoverSongSubTitleBox}>
           <p css={memberProfileCoverSongSubTitleBoxDesc}>
@@ -58,11 +59,15 @@ const MemberProfileCoverSong = ({
           <li key={cover.id}>
             <Link
               key={cover.id}
-              css={memberProfileCoverSongListItem}
+              css={memberProfileCoverSongListItem(personalColorAlpha)}
               href={cover.link}
               target="_blank"
             >
-              <span css={memberProfileCoverSongListItemIndexText}>{i + 1}</span>
+              <span
+                css={memberProfileCoverSongListItemIndexText(personalColor)}
+              >
+                {i + 1}
+              </span>
               <Image
                 css={memberProfileCoverSongListItemImage}
                 src={cover.thumbUrl}

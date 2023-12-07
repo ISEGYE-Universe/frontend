@@ -45,16 +45,19 @@ export const memberSignatureImg = css`
   pointer-events: none;
   z-index: 0;
 `
-export const memberProfileCoverSongTitleBox = [
-  flexCol,
-  css`
-    gap: 6px;
-    border-bottom: 2px solid ${MemberProfileColor.jururuPink};
-    padding-bottom: 8px;
-    margin-right: 24px;
-    margin-bottom: 10px;
-  `,
-]
+export const memberProfileCoverSongTitleBox = (color: string) => {
+  return [
+    flexCol,
+    css`
+      gap: 6px;
+      border-bottom: 2px solid;
+      border-color: ${color};
+      padding-bottom: 8px;
+      margin-right: 24px;
+      margin-bottom: 10px;
+    `,
+  ]
+}
 export const memberProfileCoverSongTitleText = [
   TitleSmBold,
   css`
@@ -89,21 +92,23 @@ export const memberProfileCoverSongListBox = [
     }
   `,
 ]
-export const memberProfileCoverSongListItem = [
-  flexRow,
-  alignCenter,
-  css`
-    padding: 6px 24px 6px 14px;
-    border-radius: 12px;
-    transition: background-color 0.2s ease;
-    &:hover {
-      background-color: ${MemberProfileColor.jururuPinkTransparent};
-    }
-    &:hover .play-icon {
-      opacity: 1;
-    }
-  `,
-]
+export const memberProfileCoverSongListItem = (color: string) => {
+  return [
+    flexRow,
+    alignCenter,
+    css`
+      padding: 6px 24px 6px 14px;
+      border-radius: 12px;
+      transition: background-color 0.2s ease;
+      &:hover {
+        background-color: ${color};
+      }
+      &:hover .play-icon {
+        opacity: 1;
+      }
+    `,
+  ]
+}
 export const memberProfileCoverSongListItemImage = [
   css`
     margin-right: 16px;
@@ -119,13 +124,15 @@ export const memberProfileCoverSongListItemTitleBox = [
     margin-right: auto;
   `,
 ]
-export const memberProfileCoverSongListItemIndexText = [
-  CaptionMdLight,
-  css`
-    color: ${MemberProfileColor.jururuPink};
-    margin-right: 20px;
-  `,
-]
+export const memberProfileCoverSongListItemIndexText = (color: string) => {
+  return [
+    CaptionMdLight,
+    css`
+      color: ${color};
+      margin-right: 20px;
+    `,
+  ]
+}
 export const memberProfileCoverSongListItemTitleText = [
   TextMdBold,
   css`

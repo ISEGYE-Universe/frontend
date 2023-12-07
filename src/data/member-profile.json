@@ -8,6 +8,8 @@
     "calendarBgImage": "/images/member-profile/ine/bg-calendar.png",
     "coverPlayIcon": "/images/member-profile/ine/icon-play.svg",
     "signatureImg": "/images/member-profile/ine/signature.svg",
+    "personalColor": "#8A2BE2",
+    "personalColorAlpha": "#8A2BE21A",
     "memberInformation": {
       "profileImage": "/images/member-profile/ine/profile.png",
       "krName": "아이네",
@@ -28,10 +30,10 @@
     "recentCover": [
       {
         "id": "1",
-        "title": "Darling(달링)",
-        "thumbUrl": "https://i.ytimg.com/vi/7sFIjj5BW3M/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAqY5LvWf9qzNIIIsuZ3sPttIHTAg",
-        "uploadDate": "2023.08.13",
-        "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
+        "title": "와스레모노 忘れ物",
+        "thumbUrl": "https://i.ytimg.com/vi/YpCpF_CD2pM/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAZxHELJ2Mvl48ojg5ZEHJd2zZDwA",
+        "uploadDate": "2023.11.5",
+        "link": "https://www.youtube.com/watch?v=YpCpF_CD2pM&list=PLJWTWXJ7iqXctxVu1Fd3ZkF-WWD8kOzMb&index=1&pp=iAQB8AUB"
       }
     ]
   },
@@ -40,6 +42,8 @@
     "calendarBgImage": "/images/member-profile/jingburger/bg-calendar.png",
     "coverPlayIcon": "/images/member-profile/jingburger/icon-play.svg",
     "signatureImg": "/images/member-profile/jingburger/signature.svg",
+    "personalColor": "#F0A957",
+    "personalColorAlpha": "#F0A9571A",
     "memberInformation": {
       "profileImage": "/images/member-profile/jingburger/profile.png",
       "krName": "징버거",
@@ -72,6 +76,8 @@
     "calendarBgImage": "/images/member-profile/lilpa/bg-calendar.png",
     "coverPlayIcon": "/images/member-profile/lilpa/icon-play.svg",
     "signatureImg": "/images/member-profile/lilpa/signature.svg",
+    "personalColor": "#443965",
+    "personalColorAlpha": "#4439651a",
     "memberInformation": {
       "profileImage": "/images/member-profile/lilpa/profile.png",
       "krName": "릴파",
@@ -104,6 +110,8 @@
     "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
     "coverPlayIcon": "/images/member-profile/jururu/icon-play.svg",
     "signatureImg": "/images/member-profile/jururu/signature.svg",
+    "personalColor": "#ff008c",
+    "personalColorAlpha": "#ff008c1a",
     "memberInformation": {
       "profileImage": "/images/member-profile/jururu/profile.png",
       "krName": "주르르",
@@ -164,6 +172,8 @@
     "calendarBgImage": "/images/member-profile/gosegu/bg-calendar.png",
     "coverPlayIcon": "/images/member-profile/gosegu/icon-play.svg",
     "signatureImg": "/images/member-profile/gosegu/signature.svg",
+    "personalColor": "#467EC6",
+    "personalColorAlpha": "#467EC61a",
     "memberInformation": {
       "profileImage": "/images/member-profile/gosegu/profile.png",
       "krName": "고세구",
@@ -196,6 +206,8 @@
     "calendarBgImage": "/images/member-profile/viichan/bg-calendar.png",
     "coverPlayIcon": "/images/member-profile/viichan/icon-play.svg",
     "signatureImg": "/images/member-profile/viichan/signature.svg",
+    "personalColor": "#95C100",
+    "personalColorAlpha": "#95C1001A",
     "memberInformation": {
       "profileImage": "/images/member-profile/viichan/profile.png",
       "krName": "비챤",
