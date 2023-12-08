@@ -1,5 +1,5 @@
 import Calendar from 'react-calendar'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { NavigationLabelArgs } from 'react-calendar/dist/cjs/shared/types'
 import Image from 'next/image'
 import {
@@ -14,9 +14,9 @@ const addZero = (num: number) => {
   return num < 10 ? `0${num}` : num
 }
 
-// Date 객체 -> yyyy-mm으로 변경 해주는 함수
+// Date 객체 -> yyyy년 mm월으로 변경 해주는 함수
 const formatYearMonth = (date: Date) => {
-  return `${date.getFullYear()}-${addZero(date.getMonth() + 1)}`
+  return `${date.getFullYear()}년 ${addZero(date.getMonth() + 1)}월`
 }
 
 // navigation label 스타일링을 위한 ReactNode를 반환
@@ -29,15 +29,12 @@ const navigationLabelNode = (prop: NavigationLabelArgs) => {
     </>
   )
 }
+
 export const MemberProfileCalendar = () => {
   const [value] = useState<Date>(new Date())
   const [currentMonth, setCurrentMonth] = useState<string>(
     formatYearMonth(value),
   )
-
-  useEffect(() => {
-    console.log(currentMonth)
-  }, [currentMonth])
 
   return (
     <div css={calendarContentContainer}>
@@ -47,7 +44,7 @@ export const MemberProfileCalendar = () => {
         // year click event 제거
         minDetail="month"
         maxDetail="month"
-        css={calendarStyle}
+        css={calendarStyle(currentMonth)}
         value={value}
         calendarType="gregory"
         // navigation 연, 월 표시 Label 커스텀
