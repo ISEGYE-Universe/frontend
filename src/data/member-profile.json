@@ -20,7 +20,7 @@
         },
         "youtube": {
           "name": "아이네 INE",
-          "url": "https://www.youtube.com/@JU_RURU"
+          "url": "https://www.youtube.com/@INE_"
         }
       }
     },
@@ -33,7 +33,14 @@
         "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
       }
     ],
-    "recentYoutubeVideo": []
+    "recentYoutubeVideo": [
+      {
+        "id": "1",
+        "title": "이런 젠장",
+        "thumbUrl": "https://i.ytimg.com/vi/hEJ9iMTKQog/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDsn0vQRqnz_svGSZr7nnHDg_4LaQ",
+        "link": "https://www.youtube.com/watch?v=hEJ9iMTKQog"
+      }
+    ]
   },
   "jingburger": {
     "topBannerImage": "/images/member-profile/jingburger/top-banner.png",
@@ -64,7 +71,14 @@
         "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
       }
     ],
-    "recentYoutubeVideo": []
+    "recentYoutubeVideo": [
+      {
+        "id": "1",
+        "title": "그치만 당신 약하지 않습니까 ㅋ",
+        "thumbUrl": "https://i.ytimg.com/vi/uOHSsWShxMs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCeTbWX1PWQrOMNdPC9q44igIE6ZA",
+        "link": "https://www.youtube.com/watch?v=uOHSsWShxMs"
+      }
+    ]
   },
   "lilpa": {
     "topBannerImage": "/images/member-profile/lilpa/top-banner.png",
@@ -95,7 +109,14 @@
         "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
       }
     ],
-    "recentYoutubeVideo": []
+    "recentYoutubeVideo": [
+      {
+        "id": "1",
+        "title": "에일리언니 집에 놀러갔습니다!! - [어절TV]",
+        "thumbUrl": "https://i.ytimg.com/vi/yMzMbv5X9Zw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAi3rSMQfq7dGUr0PyC_nVN03OqlQ",
+        "link": "https://www.youtube.com/watch?v=yMzMbv5X9Zw"
+      }
+    ]
   },
   "jururu": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
@@ -210,7 +231,14 @@
         "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
       }
     ],
-    "recentYoutubeVideo": []
+    "recentYoutubeVideo": [
+      {
+        "id": "1",
+        "title": "주르르 부수기 [현실합방 2화]",
+        "thumbUrl": "https://i.ytimg.com/vi/di6AYWSAroc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC8W58K4k0ybyGdjqyEhg3Sr3nx_A",
+        "link": "https://www.youtube.com/watch?v=di6AYWSAroc"
+      }
+    ]
   },
   "viichan": {
     "topBannerImage": "/images/member-profile/viichan/top-banner.png",
@@ -241,6 +269,13 @@
         "link": "https://www.youtube.com/watch?v=7sFIjj5BW3M&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=2&pp=iAQB8AUB"
       }
     ],
-    "recentYoutubeVideo": []
+    "recentYoutubeVideo": [
+      {
+        "id": "1",
+        "title": "언니 일루와~!!!!",
+        "thumbUrl": "https://i.ytimg.com/vi/PxFjvbdJ_7Q/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBTq4xq0SCZVRFWxVXwmtnMNVfwmA",
+        "link": "https://www.youtube.com/watch?v=PxFjvbdJ_7Q"
+      }
+    ]
   }
 }
