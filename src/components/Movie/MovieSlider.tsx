@@ -32,8 +32,8 @@ const MovieSlider = ({ movieList }: MovieSliderProrps) => {
     [emblaApi],
   )
 
-  const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
-    setCurrent(emblaApi.selectedScrollSnap())
+  const onSelect = useCallback((embla: EmblaCarouselType) => {
+    setCurrent(embla.selectedScrollSnap())
   }, [])
 
   useEffect(() => {
@@ -47,15 +47,25 @@ const MovieSlider = ({ movieList }: MovieSliderProrps) => {
     <div>
       <div css={SliderDiv} ref={emblaRef}>
         <div css={Flex}>
-          {movieList.map((list: MovieInfoType, idx: number) => (
-            <MovieContainer link={list.src} key={idx} />
+          {movieList.map((list: MovieInfoType) => (
+            <MovieContainer link={list.src} key={list.title} />
           ))}
         </div>
       </div>
-      <button css={LeftButton} onClick={scrollPrev}>
+      <button
+        type="button"
+        aria-label="left-arrow"
+        css={LeftButton}
+        onClick={scrollPrev}
+      >
         <LeftArrow />
       </button>
-      <button css={RightButton} onClick={scrollNext}>
+      <button
+        type="button"
+        aria-label="right-arrow"
+        css={RightButton}
+        onClick={scrollNext}
+      >
         <RightArrow />
       </button>
       <MovieTitle title={movieList[current].title} />
@@ -66,8 +76,10 @@ const MovieSlider = ({ movieList }: MovieSliderProrps) => {
         `}
       >
         {movieList.map((_, idx: number) => (
-          <div
-            key={idx}
+          <button
+            type="button"
+            aria-label={`movie-dot-button-${idx + 1}`}
+            key={_.title}
             onClick={() => scrollTo(idx)}
             css={css`
               ${current === idx ? CurrentDot : Dot}

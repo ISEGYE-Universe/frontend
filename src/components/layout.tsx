@@ -8,7 +8,7 @@ const layoutGlobalCSS = css`
   top: 120px;
 `
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Navbar />
@@ -17,3 +17,5 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     </>
   )
 }
+
+export default Layout

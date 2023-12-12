@@ -1,4 +1,5 @@
-import { color } from './color'
+import Link from 'next/link'
+import color from './color'
 
 type NewsThumnailProps = {
   children: JSX.Element
@@ -18,7 +19,7 @@ export const NewsWeeklyEventBanner = ({
         flex: '1 0 auto',
       }}
     >
-      {children}
+      <Link href={href}>{children}</Link>
     </div>
   )
 }

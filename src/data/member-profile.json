@@ -5,21 +5,21 @@
     "twIcon": "/images/icon/icon-tw-white.png"
   },
   "ine": {
-    "topBannerImage": "/images/member-profile/jururu/top-banner.png",
-    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
+    "topBannerImage": "/images/member-profile/ine/top-banner.png",
+    "calendarBgImage": "/images/member-profile/ine/bg-calendar.png",
     "memberInformation": {
-      "profileImage": "/images/member-profile/jururu/profile.png",
+      "profileImage": "/images/member-profile/ine/profile.png",
       "krName": "아이네",
       "enName": "INE",
       "groupName": "이세계아이돌",
       "birthDate": "1994",
       "socialMedia": {
-        "twitter": {
-          "name": "주르르 JURURU",
-          "url": "https://www.twitch.tv/cotton__123"
+        "twitch": {
+          "name": "아이네_",
+          "url": "https://www.twitch.tv/vo_ine"
         },
         "youtube": {
-          "name": "주르르 JURURU",
+          "name": "아이네 INE",
           "url": "https://www.youtube.com/@JU_RURU"
         }
       }
@@ -36,22 +36,22 @@
     "recentYoutubeVideo": []
   },
   "jingburger": {
-    "topBannerImage": "/images/member-profile/jururu/top-banner.png",
-    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
+    "topBannerImage": "/images/member-profile/jingburger/top-banner.png",
+    "calendarBgImage": "/images/member-profile/jingburger/bg-calendar.png",
     "memberInformation": {
-      "profileImage": "/images/member-profile/jururu/profile.png",
+      "profileImage": "/images/member-profile/jingburger/profile.png",
       "krName": "징버거",
       "enName": "JINGBURGER",
       "groupName": "이세계아이돌",
       "birthDate": "1995 . 10 . 08",
       "socialMedia": {
-        "twitter": {
-          "name": "주르르 JURURU",
-          "url": "https://www.twitch.tv/cotton__123"
+        "twitch": {
+          "name": "징버거",
+          "url": "https://www.twitch.tv/jingburger"
         },
         "youtube": {
-          "name": "주르르 JURURU",
-          "url": "https://www.youtube.com/@JU_RURU"
+          "name": "징버거 JINGBURGER",
+          "url": "https://www.youtube.com/@jingburger"
         }
       }
     },
@@ -67,22 +67,22 @@
     "recentYoutubeVideo": []
   },
   "lilpa": {
-    "topBannerImage": "/images/member-profile/jururu/top-banner.png",
-    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
+    "topBannerImage": "/images/member-profile/lilpa/top-banner.png",
+    "calendarBgImage": "/images/member-profile/lilpa/bg-calendar.png",
     "memberInformation": {
-      "profileImage": "/images/member-profile/jururu/profile.png",
+      "profileImage": "/images/member-profile/lilpa/profile.png",
       "krName": "릴파",
       "enName": "LILPA",
       "groupName": "이세계아이돌",
       "birthDate": "1996 . 03 . 09",
       "socialMedia": {
-        "twitter": {
-          "name": "주르르 JURURU",
-          "url": "https://www.twitch.tv/cotton__123"
+        "twitch": {
+          "name": "릴파_",
+          "url": "https://www.twitch.tv/lilpaaaaaa"
         },
         "youtube": {
-          "name": "주르르 JURURU",
-          "url": "https://www.youtube.com/@JU_RURU"
+          "name": "릴파 lilpa",
+          "url": "https://www.youtube.com/@lilpa"
         }
       }
     },
@@ -107,8 +107,8 @@
       "groupName": "이세계아이돌",
       "birthDate": "1997 . 06 . 10",
       "socialMedia": {
-        "twitter": {
-          "name": "주르르 JURURU",
+        "twitch": {
+          "name": "주르르",
           "url": "https://www.twitch.tv/cotton__123"
         },
         "youtube": {
@@ -182,22 +182,22 @@
     ]
   },
   "gosegu": {
-    "topBannerImage": "/images/member-profile/jururu/top-banner.png",
-    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
+    "topBannerImage": "/images/member-profile/gosegu/top-banner.png",
+    "calendarBgImage": "/images/member-profile/gosegu/bg-calendar.png",
     "memberInformation": {
-      "profileImage": "/images/member-profile/jururu/profile.png",
+      "profileImage": "/images/member-profile/gosegu/profile.png",
       "krName": "고세구",
       "enName": "GOSEGU",
       "groupName": "이세계아이돌",
       "birthDate": "1998",
       "socialMedia": {
-        "twitter": {
-          "name": "주르르 JURURU",
-          "url": "https://www.twitch.tv/cotton__123"
+        "twitch": {
+          "name": "고세구___",
+          "url": "https://www.twitch.tv/gosegugosegu"
         },
         "youtube": {
-          "name": "주르르 JURURU",
-          "url": "https://www.youtube.com/@JU_RURU"
+          "name": "고세구 GOSEGU",
+          "url": "https://www.youtube.com/@gosegu"
         }
       }
     },
@@ -213,22 +213,22 @@
     "recentYoutubeVideo": []
   },
   "viichan": {
-    "topBannerImage": "/images/member-profile/jururu/top-banner.png",
-    "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
+    "topBannerImage": "/images/member-profile/viichan/top-banner.png",
+    "calendarBgImage": "/images/member-profile/viichan/bg-calendar.png",
     "memberInformation": {
-      "profileImage": "/images/member-profile/jururu/profile.png",
+      "profileImage": "/images/member-profile/viichan/profile.png",
       "krName": "비챤",
       "enName": "VIICHAN",
       "groupName": "이세계아이돌",
       "birthDate": "2000 . 01 . 16",
       "socialMedia": {
-        "twitter": {
-          "name": "주르르 JURURU",
-          "url": "https://www.twitch.tv/cotton__123"
+        "twitch": {
+          "name": "비챤_",
+          "url": "https://www.twitch.tv/viichan6"
         },
         "youtube": {
-          "name": "주르르 JURURU",
-          "url": "https://www.youtube.com/@JU_RURU"
+          "name": "비챤 VIichan",
+          "url": "https://www.youtube.com/@viichan116"
         }
       }
     },
