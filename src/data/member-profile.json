@@ -23,7 +23,8 @@
         },
         "youtube": {
           "name": "아이네 INE",
-          "url": "https://www.youtube.com/@JU_RURU"
+          "url": "https://www.youtube.com/@INE_",
+          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLJWTWXJ7iqXctxVu1Fd3ZkF-WWD8kOzMb"
         }
       }
     },
@@ -57,7 +58,8 @@
         },
         "youtube": {
           "name": "징버거 JINGBURGER",
-          "url": "https://www.youtube.com/@jingburger"
+          "url": "https://www.youtube.com/@jingburger",
+          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLio0a5EPF6j099Af5uBaK6V25RtTvK4kq"
         }
       }
     },
@@ -91,7 +93,8 @@
         },
         "youtube": {
           "name": "릴파 lilpa",
-          "url": "https://www.youtube.com/@lilpa"
+          "url": "https://www.youtube.com/@lilpa",
+          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLLPGQs-RNQXnFl55WissjQylZbInOK81P"
         }
       }
     },
@@ -195,7 +198,8 @@
         },
         "youtube": {
           "name": "고세구 GOSEGU",
-          "url": "https://www.youtube.com/@gosegu"
+          "url": "https://www.youtube.com/@gosegu",
+          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLZNwpHxpI4EjDSv3v_HY7udxDEqj4C7PL"
         }
       }
     },
@@ -229,7 +233,8 @@
         },
         "youtube": {
           "name": "비챤 VIichan",
-          "url": "https://www.youtube.com/@viichan116"
+          "url": "https://www.youtube.com/@viichan116",
+          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLhaJuLneKo5FdYnMZ1Jc5BaV7y26KvmD1"
         }
       }
     },
