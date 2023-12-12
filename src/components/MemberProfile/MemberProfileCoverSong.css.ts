@@ -40,7 +40,7 @@ export const memberSignatureImg = css`
   position: absolute;
   right: 44px;
   bottom: 35px;
-  width: auto;
+  width: 210px;
   height: auto;
   pointer-events: none;
   z-index: 0;
