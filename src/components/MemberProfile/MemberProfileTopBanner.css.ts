@@ -11,10 +11,11 @@ import {
 export const topBannerContainer = (topBannerImage: string) => {
   return css`
     background: url('${topBannerImage}');
-    height: 388px;
+    height: 360px;
     background-repeat: no-repeat;
-    background-position: center top;
-    margin-bottom: 32px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 60px;
   `
 }
 
@@ -54,6 +55,7 @@ export const memberInformationContainer = [
   alignCenter,
   css`
     width: 100%;
+    margin-bottom: -28px;
   `,
 ]
 export const memberInformationProfileContainer = [
