@@ -7,7 +7,14 @@ import { css } from '@emotion/react'
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { ParsedUrlQuery } from 'querystring'
 
-const memberList = ['ine', 'jingburger', 'lilpa', 'jururu', 'gosegu', 'viichan']
+export const memberList = [
+  'ine',
+  'jingburger',
+  'lilpa',
+  'jururu',
+  'gosegu',
+  'viichan',
+]
 
 const articleLayoutContainer = css`
   max-width: 1300px;

@@ -21,7 +21,7 @@
       { "title": "소속사", "desc": "WAK ENTERTAINMENT" }
     ]
   },
-  "ineIntroduction": {
+  "ine": {
     "mainTitle": "아이네(INE)",
     "description": [
       { "title": "출생", "desc": "1994년" },
@@ -43,7 +43,7 @@
       { "id": 3, "url": "/images/profile/member-gallery/ine3.jpg" }
     ]
   },
-  "jingburgerIntroduction": {
+  "jingburger": {
     "mainTitle": "징버거(JINGBURGER)",
     "description": [
       { "title": "출생", "desc": "1995년 10월 08일" },
@@ -65,7 +65,7 @@
       { "id": 3, "url": "/images/profile/member-gallery/jingburger3.jpg" }
     ]
   },
-  "lilpaIntroduction": {
+  "lilpa": {
     "mainTitle": "릴파(LILPA)",
     "description": [
       { "title": "출생", "desc": "1996년 03월 09일" },
@@ -87,7 +87,7 @@
       { "id": 3, "url": "/images/profile/member-gallery/lilpa3.jpg" }
     ]
   },
-  "jururuIntroduction": {
+  "jururu": {
     "mainTitle": "주르르(JURURU)",
     "description": [
       { "title": "출생", "desc": "1997년 06월 10일" },
@@ -109,7 +109,7 @@
       { "id": 3, "url": "/images/profile/member-gallery/jururu3.jpg" }
     ]
   },
-  "goseguIntroduction": {
+  "gosegu": {
     "mainTitle": "고세구(GOSEGU)",
     "description": [
       { "title": "출생", "desc": "1998년" },
@@ -131,7 +131,7 @@
       { "id": 3, "url": "/images/profile/member-gallery/gosegu3.jpg" }
     ]
   },
-  "viichanIntroduction": {
+  "viichan": {
     "mainTitle": "비챤(VIICHAN)",
     "description": [
       { "title": "출생", "desc": "2000년 01월 16일" },
