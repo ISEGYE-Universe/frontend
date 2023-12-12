@@ -17,14 +17,13 @@
       "groupName": "이세계아이돌",
       "birthDate": "1994",
       "socialMedia": {
-        "twitter": {
-          "name": "주르르 JURURU",
-          "url": "https://www.twitch.tv/cotton__123"
+        "twitch": {
+          "name": "아이네_",
+          "url": "https://www.twitch.tv/vo_ine"
         },
         "youtube": {
-          "name": "주르르 JURURU",
-          "url": "https://www.youtube.com/@JU_RURU",
-          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLJWTWXJ7iqXctxVu1Fd3ZkF-WWD8kOzMb"
+          "name": "아이네 INE",
+          "url": "https://www.youtube.com/@JU_RURU"
         }
       }
     },
@@ -52,14 +51,13 @@
       "groupName": "이세계아이돌",
       "birthDate": "1995 . 10 . 08",
       "socialMedia": {
-        "twitter": {
-          "name": "주르르 JURURU",
-          "url": "https://www.twitch.tv/cotton__123"
+        "twitch": {
+          "name": "징버거",
+          "url": "https://www.twitch.tv/jingburger"
         },
         "youtube": {
-          "name": "주르르 JURURU",
-          "url": "https://www.youtube.com/@JU_RURU",
-          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLio0a5EPF6j099Af5uBaK6V25RtTvK4kq"
+          "name": "징버거 JINGBURGER",
+          "url": "https://www.youtube.com/@jingburger"
         }
       }
     },
@@ -87,14 +85,13 @@
       "groupName": "이세계아이돌",
       "birthDate": "1996 . 03 . 09",
       "socialMedia": {
-        "twitter": {
-          "name": "주르르 JURURU",
-          "url": "https://www.twitch.tv/cotton__123"
+        "twitch": {
+          "name": "릴파_",
+          "url": "https://www.twitch.tv/lilpaaaaaa"
         },
         "youtube": {
-          "name": "주르르 JURURU",
-          "url": "https://www.youtube.com/@JU_RURU",
-          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLLPGQs-RNQXnFl55WissjQylZbInOK81P"
+          "name": "릴파 lilpa",
+          "url": "https://www.youtube.com/@lilpa"
         }
       }
     },
@@ -122,8 +119,8 @@
       "groupName": "이세계아이돌",
       "birthDate": "1997 . 06 . 10",
       "socialMedia": {
-        "twitter": {
-          "name": "주르르 JURURU",
+        "twitch": {
+          "name": "주르르",
           "url": "https://www.twitch.tv/cotton__123"
         },
         "youtube": {
@@ -192,14 +189,13 @@
       "groupName": "이세계아이돌",
       "birthDate": "1998",
       "socialMedia": {
-        "twitter": {
-          "name": "주르르 JURURU",
-          "url": "https://www.twitch.tv/cotton__123"
+        "twitch": {
+          "name": "고세구___",
+          "url": "https://www.twitch.tv/gosegugosegu"
         },
         "youtube": {
-          "name": "주르르 JURURU",
-          "url": "https://www.youtube.com/@JU_RURU",
-          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLZNwpHxpI4EjDSv3v_HY7udxDEqj4C7PL"
+          "name": "고세구 GOSEGU",
+          "url": "https://www.youtube.com/@gosegu"
         }
       }
     },
@@ -227,14 +223,13 @@
       "groupName": "이세계아이돌",
       "birthDate": "2000 . 01 . 16",
       "socialMedia": {
-        "twitter": {
-          "name": "주르르 JURURU",
-          "url": "https://www.twitch.tv/cotton__123"
+        "twitch": {
+          "name": "비챤_",
+          "url": "https://www.twitch.tv/viichan6"
         },
         "youtube": {
-          "name": "주르르 JURURU",
-          "url": "https://www.youtube.com/@JU_RURU",
-          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLhaJuLneKo5FdYnMZ1Jc5BaV7y26KvmD1"
+          "name": "비챤 VIichan",
+          "url": "https://www.youtube.com/@viichan116"
         }
       }
     },
