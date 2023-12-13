@@ -41,7 +41,7 @@ export const MemberProfileSchedule = ({
         {/* 오버레이 */}
         <div css={overlay} />
         {/* 달력 본문 */}
-        <MemberProfileCalendar />
+        <MemberProfileCalendar memberName={memberName} />
       </div>
     </section>
   )

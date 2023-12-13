@@ -7,15 +7,6 @@ import {
   streamListContentListItemTitleText,
 } from './MemberProfileCalendarStreamList.css'
 
-export const calendarMockData = [
-  { date: '2023-12-01', title: '잔잔뱅' },
-  { date: '2023-12-03', title: '잔잔뱅' },
-  { date: '2023-12-08', title: '짧뱅' },
-  { date: '2023-12-10', title: '버추얼르르 뱅온즈' },
-  { date: '2023-12-12', title: '버추얼르르 뱅온즈' },
-  { date: '2023-12-15', title: '잔잔뱅' },
-]
-
 const parseDateString = (date: string) => {
   const dateObj = new Date(date)
   return {
@@ -25,7 +16,11 @@ const parseDateString = (date: string) => {
   }
 }
 
-export const MemberProfileCalendarStreamList = () => {
+export const MemberProfileCalendarStreamList = ({
+  data,
+}: {
+  data: MemberProfile.MemberSchedule[]
+}) => {
   return (
     <div css={streamListContainer}>
       <button type="button">
@@ -37,7 +32,7 @@ export const MemberProfileCalendarStreamList = () => {
         />
       </button>
       <ul css={streamListContentList}>
-        {calendarMockData.map((el) => (
+        {data.map((el) => (
           <li css={streamListContentListItem} key={el.date}>
             <span css={streamListContentListItemDateText}>
               {parseDateString(el.date).day}

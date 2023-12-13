@@ -2,6 +2,7 @@ import Calendar from 'react-calendar'
 import { useState } from 'react'
 import { NavigationLabelArgs } from 'react-calendar/dist/cjs/shared/types'
 import Image from 'next/image'
+import memberProfileData from '@/data/member-profile.json'
 import {
   calendarContentContainer,
   calendarNavigationMonth,
@@ -25,8 +26,15 @@ const navigationLabelNode = (prop: NavigationLabelArgs) => {
   )
 }
 
-export const MemberProfileCalendar = () => {
+export const MemberProfileCalendar = ({
+  memberName,
+}: {
+  memberName: IsedolMember
+}) => {
   const [todayDate] = useState<Date>(new Date())
+  const calendarData = memberProfileData[memberName].schedule
+  // date만 추출한 List
+  const dateList = Object.values(calendarData).map((el) => el.date)
 
   return (
     <div css={calendarContentContainer}>
@@ -36,7 +44,7 @@ export const MemberProfileCalendar = () => {
         // year click event 제거
         minDetail="month"
         maxDetail="month"
-        css={calendarStyle}
+        css={calendarStyle(dateList)}
         value={todayDate}
         calendarType="gregory"
         // navigation 연, 월 표시 Label 커스텀
@@ -71,7 +79,7 @@ export const MemberProfileCalendar = () => {
           }).format(date)
         }
       />
-      <MemberProfileCalendarStreamList />
+      <MemberProfileCalendarStreamList data={calendarData} />
     </div>
   )
 }
