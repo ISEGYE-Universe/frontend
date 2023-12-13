@@ -28,7 +28,7 @@
       { "title": "신체", "desc": "158cm Ι B형" },
       {
         "title": "팬덤명",
-        "desc": "둘기단"
+        "desc": "둘기"
       },
       { "title": "데뷔", "desc": "2021년 이세계아이돌 싱글1집 RE : WIND" }
     ],
@@ -38,7 +38,7 @@
       "twLink": "https://www.twitch.tv/vo_ine"
     },
     "galleryImageURL": [
-      { "id": 1, "url": "/images/profile/member-gallery/ine1.png" },
+      { "id": 1, "url": "/images/profile/member-gallery/ine1.jpg" },
       { "id": 2, "url": "/images/profile/member-gallery/ine2.jpg" },
       { "id": 3, "url": "/images/profile/member-gallery/ine3.jpg" }
     ]
@@ -84,7 +84,7 @@
     "galleryImageURL": [
       { "id": 1, "url": "/images/profile/member-gallery/lilpa1.jpg" },
       { "id": 2, "url": "/images/profile/member-gallery/lilpa2.jpg" },
-      { "id": 3, "url": "/images/profile/member-gallery/lilpa3.png" }
+      { "id": 3, "url": "/images/profile/member-gallery/lilpa3.jpg" }
     ]
   },
   "jururuIntroduction": {

@@ -10,7 +10,7 @@ import Link from 'next/link'
 
 const GNBContainerStyle = css`
   position: absolute;
-  z-index: 1;
+  z-index: 10;
   top: 0;
 
   width: 100%;
