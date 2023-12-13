@@ -6,4 +6,10 @@ export const MemberProfileColor = {
   scheduleTextBlue: '#2400ff',
   scheduleTextGrey: '#c7c7c7',
   scheduleTextWhite: '#fafafa',
+  titleTextGrey: '#8D8D8D',
+  youtubeTitleTextGrey: '#252525',
+  coverTitleTextBlack: '#252525',
+  coverSubTitleTextGrey: '#8d8d8d',
+  coverDateTextGrey: '#787878',
+  textWhite: '#fafafa',
 }
