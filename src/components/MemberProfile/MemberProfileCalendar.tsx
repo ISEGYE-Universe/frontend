@@ -14,11 +14,6 @@ const addZero = (num: number) => {
   return num < 10 ? `0${num}` : num
 }
 
-// Date 객체 -> yyyy년 mm월으로 변경 해주는 함수
-const formatYearMonth = (date: Date) => {
-  return `${date.getFullYear()}년 ${addZero(date.getMonth() + 1)}월`
-}
-
 // navigation label 스타일링을 위한 ReactNode를 반환
 const navigationLabelNode = (prop: NavigationLabelArgs) => {
   const { date } = prop
@@ -31,10 +26,7 @@ const navigationLabelNode = (prop: NavigationLabelArgs) => {
 }
 
 export const MemberProfileCalendar = () => {
-  const [value] = useState<Date>(new Date())
-  const [currentMonth, setCurrentMonth] = useState<string>(
-    formatYearMonth(value),
-  )
+  const [todayDate] = useState<Date>(new Date())
 
   return (
     <div css={calendarContentContainer}>
@@ -44,8 +36,8 @@ export const MemberProfileCalendar = () => {
         // year click event 제거
         minDetail="month"
         maxDetail="month"
-        css={calendarStyle(currentMonth)}
-        value={value}
+        css={calendarStyle}
+        value={todayDate}
         calendarType="gregory"
         // navigation 연, 월 표시 Label 커스텀
         navigationLabel={(prop) => {
@@ -78,11 +70,6 @@ export const MemberProfileCalendar = () => {
             day: 'numeric',
           }).format(date)
         }
-        onActiveStartDateChange={({ activeStartDate }) => {
-          if (activeStartDate) {
-            setCurrentMonth(formatYearMonth(activeStartDate))
-          }
-        }}
       />
       <MemberProfileCalendarStreamList />
     </div>
