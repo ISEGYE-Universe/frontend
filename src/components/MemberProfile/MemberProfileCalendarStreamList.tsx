@@ -42,7 +42,6 @@ export const MemberProfileCalendarStreamList = ({
   )
   const [prevBtnDisabled, setPrevBtnDisabled] = useState<boolean>(true)
   const [nextBtnDisabled, setNextBtnDisabled] = useState<boolean>(true)
-  // const [selectedIndex, setSelectedIndex] = useState(0)
   const scrollPrev = useCallback(
     () => emblaApi && emblaApi.scrollPrev(),
     [emblaApi],
@@ -53,7 +52,6 @@ export const MemberProfileCalendarStreamList = ({
   )
 
   const onSelect = useCallback((emblaApiProp: EmblaCarouselType) => {
-    // setSelectedIndex(emblaApiProp.selectedScrollSnap())
     setPrevBtnDisabled(!emblaApiProp.canScrollPrev())
     setNextBtnDisabled(!emblaApiProp.canScrollNext())
   }, [])
@@ -67,32 +65,6 @@ export const MemberProfileCalendarStreamList = ({
 
   return (
     <div css={streamListContainer}>
-      {/* <button type="button">
-        <Image
-          src="/images/icon/member-profile/keyboard-arrow-up.svg"
-          alt="up icon"
-          width={16}
-          height={10}
-        />
-      </button>
-      <ul css={streamListContentList}>
-        {data.map((el) => (
-          <li css={streamListContentListItem} key={el.date}>
-            <span css={streamListContentListItemDateText}>
-              {parseDateString(el.date).day}
-            </span>
-            <span css={streamListContentListItemTitleText}>{el.title}</span>
-          </li>
-        ))}
-      </ul>
-      <button type="button">
-        <Image
-          src="/images/icon/member-profile/keyboard-arrow-down.svg"
-          alt="down icon"
-          width={16}
-          height={10}
-        />
-      </button> */}
       <button
         type="button"
         css={streamListButton(prevBtnDisabled)}
