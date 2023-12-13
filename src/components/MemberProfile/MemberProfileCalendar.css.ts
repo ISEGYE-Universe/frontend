@@ -91,6 +91,21 @@ export const calendarStyle = (currentMonth: string) => {
           .react-calendar__month-view__days__day--neighboringMonth {
             visibility: hidden;
           }
+          // 현재 날짜
+          .react-calendar__tile--active {
+            abbr {
+              position: relative;
+              &::after {
+                position: absolute;
+                content: '';
+                width: 100%;
+                bottom: -8px;
+                left: 0;
+                height: 2px;
+                background-color: ${MemberProfileColor.scheduleTextWhite};
+              }
+            }
+          }
         }
       }
     `,
