@@ -1,6 +1,7 @@
 {
   "commonImage": {
     "ytIcon": "/images/icon/icon-yt-white.png",
+    "ytIconBlack": "/images/icon/icon-yt-black.svg",
     "twIcon": "/images/icon/icon-tw-white.png"
   },
   "ine": {
@@ -35,6 +36,14 @@
         "thumbUrl": "https://i.ytimg.com/vi/YpCpF_CD2pM/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAZxHELJ2Mvl48ojg5ZEHJd2zZDwA",
         "uploadDate": "2023.11.05",
         "link": "https://www.youtube.com/watch?v=YpCpF_CD2pM&list=PLJWTWXJ7iqXctxVu1Fd3ZkF-WWD8kOzMb&index=1&pp=iAQB8AUB"
+      }
+    ],
+    "recentYoutubeVideo": [
+      {
+        "id": "1",
+        "title": "이런 젠장",
+        "thumbUrl": "https://i.ytimg.com/vi/hEJ9iMTKQog/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDsn0vQRqnz_svGSZr7nnHDg_4LaQ",
+        "link": "https://www.youtube.com/watch?v=hEJ9iMTKQog"
       }
     ]
   },
@@ -71,6 +80,14 @@
         "uploadDate": "2023.08.13",
         "link": "https://www.youtube.com/watch?v=VE4sUxm2N7k&list=PLio0a5EPF6j099Af5uBaK6V25RtTvK4kq&index=1&pp=iAQB8AUB"
       }
+    ],
+    "recentYoutubeVideo": [
+      {
+        "id": "1",
+        "title": "그치만 당신 약하지 않습니까 ㅋ",
+        "thumbUrl": "https://i.ytimg.com/vi/uOHSsWShxMs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCeTbWX1PWQrOMNdPC9q44igIE6ZA",
+        "link": "https://www.youtube.com/watch?v=uOHSsWShxMs"
+      }
     ]
   },
   "lilpa": {
@@ -105,6 +122,14 @@
         "thumbUrl": "https://i.ytimg.com/vi/eEPmx_JZCkY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDrd3YkzKtEIjaJpos-3AdE-LVcXg",
         "uploadDate": "2023.12.03",
         "link": "https://www.youtube.com/watch?v=eEPmx_JZCkY&list=PLLPGQs-RNQXnFl55WissjQylZbInOK81P&index=1&pp=iAQB8AUB"
+      }
+    ],
+    "recentYoutubeVideo": [
+      {
+        "id": "1",
+        "title": "에일리언니 집에 놀러갔습니다!! - [어절TV]",
+        "thumbUrl": "https://i.ytimg.com/vi/yMzMbv5X9Zw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAi3rSMQfq7dGUr0PyC_nVN03OqlQ",
+        "link": "https://www.youtube.com/watch?v=yMzMbv5X9Zw"
       }
     ]
   },
@@ -176,6 +201,32 @@
         "uploadDate": "2023.01.15",
         "link": "https://www.youtube.com/watch?v=-pczFfMtWrc&list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS&index=8&pp=iAQB8AUB"
       }
+    ],
+    "recentYoutubeVideo": [
+      {
+        "id": "1",
+        "title": "목소리만 듣고 맞추라고…?",
+        "thumbUrl": "https://i.ytimg.com/vi/zr2ICpRKN2w/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDqXIQbjrr2wubTaZRCS5lQ5jsjHA",
+        "link": "https://www.youtube.com/watch?v=zr2ICpRKN2w"
+      },
+      {
+        "id": "2",
+        "title": "르르땅... 함께 하기로 했잖아...",
+        "thumbUrl": "https://i.ytimg.com/vi/PcCt5xT6Cjo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBpRqggxguSXDaZ8DbwQElwyac6JQ",
+        "link": "https://www.youtube.com/watch?v=PcCt5xT6Cjo"
+      },
+      {
+        "id": "3",
+        "title": "유부남 인터뷰중 아내 등장..ㄷㄷ",
+        "thumbUrl": "https://i.ytimg.com/vi/BHfHeYin-tE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDEKmTqYlIfO81Ao3e3641IC77HMg",
+        "link": "https://www.youtube.com/watch?v=BHfHeYin-tE"
+      },
+      {
+        "id": "4",
+        "title": "누나 아기는 어떻게 생겨요?",
+        "thumbUrl": "https://i.ytimg.com/vi/OiHsWgfj1ZY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB1NTHAK7w29RTn22bO3OYlPoNOiQ",
+        "link": "https://www.youtube.com/watch?v=OiHsWgfj1ZY"
+      }
     ]
   },
   "gosegu": {
@@ -211,6 +262,14 @@
         "uploadDate": "2023.12.03",
         "link": "https://www.youtube.com/watch?v=c4Fw8oRP-e8&list=PLZNwpHxpI4EjDSv3v_HY7udxDEqj4C7PL&index=22&pp=iAQB8AUB"
       }
+    ],
+    "recentYoutubeVideo": [
+      {
+        "id": "1",
+        "title": "주르르 부수기 [현실합방 2화]",
+        "thumbUrl": "https://i.ytimg.com/vi/di6AYWSAroc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC8W58K4k0ybyGdjqyEhg3Sr3nx_A",
+        "link": "https://www.youtube.com/watch?v=di6AYWSAroc"
+      }
     ]
   },
   "viichan": {
@@ -245,6 +304,14 @@
         "thumbUrl": "https://i.ytimg.com/vi/epHCbFL36uU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA46xNhKdhESpD6tWBn0WyjKO9gdA",
         "uploadDate": "2023.09.02",
         "link": "https://www.youtube.com/watch?v=epHCbFL36uU&list=PLhaJuLneKo5FdYnMZ1Jc5BaV7y26KvmD1&index=1&pp=iAQB8AUB"
+      }
+    ],
+    "recentYoutubeVideo": [
+      {
+        "id": "1",
+        "title": "언니 일루와~!!!!",
+        "thumbUrl": "https://i.ytimg.com/vi/PxFjvbdJ_7Q/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBTq4xq0SCZVRFWxVXwmtnMNVfwmA",
+        "link": "https://www.youtube.com/watch?v=PxFjvbdJ_7Q"
       }
     ]
   }

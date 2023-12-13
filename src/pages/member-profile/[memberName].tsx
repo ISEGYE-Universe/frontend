@@ -61,7 +61,7 @@ const MemberProfile = ({
           <MemberProfileWakscord />
         </div>
         {/* 유튜브 */}
-        <MemberProfileYoutube />
+        <MemberProfileYoutube memberName={memberName as IsedolMember} />
       </div>
       {/* 스케줄 */}
       <div css={[articleLayoutContainer, fullWidthContainer]}>
