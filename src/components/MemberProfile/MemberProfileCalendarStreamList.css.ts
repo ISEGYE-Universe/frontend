@@ -5,25 +5,36 @@ import { css } from '@emotion/react'
 export const streamListContainer = css`
   display: flex;
   flex-direction: column;
-  // align-items: center;
+  align-items: center;
   gap: 20px;
-
   position: absolute;
   top: 210.39px;
-  min-width: 240px;
 `
-
-export const streamListContentList = [
+export const streamListCarousel = [
   TitleSmRegular,
   LineHeight,
   css`
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    height: 320px;
+    overflow: hidden;
+    .embla__container {
+      display: flex;
+      flex-direction: column;
+      height: 320px;
+      gap: 16px;
+      .embla__slide {
+        flex: 0 0 40px;
+      }
+    }
   `,
 ]
-
+export const streamListButton = (disabled: boolean) => {
+  return css`
+    ${disabled &&
+    `
+    pointer-events: none;
+    opacity: 0.5;
+    `}
+  `
+}
 export const streamListContentListItem = css`
   display: flex;
   align-items: center;
