@@ -57,7 +57,7 @@ const MemberProfile = ({
       <div css={articleLayoutContainer}>
         {/* 커버곡 & 왁스코드 */}
         <div css={splittedContainer}>
-          <MemberProfileCoverSong />
+          <MemberProfileCoverSong memberName={memberName as IsedolMember} />
           <MemberProfileWakscord />
         </div>
         {/* 유튜브 */}
