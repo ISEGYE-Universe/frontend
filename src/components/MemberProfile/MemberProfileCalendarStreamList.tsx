@@ -1,7 +1,5 @@
 import Image from 'next/image'
-import useEmblaCarousel from 'embla-carousel-react'
 import { useCallback, useEffect, useState } from 'react'
-import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
 import { EmblaCarouselType } from 'embla-carousel'
 import {
   streamListButton,
@@ -21,25 +19,19 @@ const parseDateString = (date: string) => {
   }
 }
 
+type EmblaViewportRefType = <ViewportElement extends HTMLElement>(
+  instance: ViewportElement | null,
+) => void
+
 export const MemberProfileCalendarStreamList = ({
   data,
+  emblaRef,
+  emblaApi,
 }: {
   data: MemberProfile.MemberSchedule[]
+  emblaRef: EmblaViewportRefType
+  emblaApi: EmblaCarouselType | undefined
 }) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    {
-      // 중간 index부터 시작
-      startIndex: 0,
-      // scroll trailing space 제거
-      containScroll: 'trimSnaps',
-      axis: 'y',
-      slidesToScroll: 3,
-      // 스크롤의 양이 많을 때 snap되지 않고 자유롭게 움직이게 하기 위함
-      skipSnaps: true,
-      align: 'start',
-    },
-    [WheelGesturesPlugin()],
-  )
   const [prevBtnDisabled, setPrevBtnDisabled] = useState<boolean>(true)
   const [nextBtnDisabled, setNextBtnDisabled] = useState<boolean>(true)
   const scrollPrev = useCallback(

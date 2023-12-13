@@ -87,6 +87,7 @@ export const calendarStyle = (dateList: string[]) => {
               })}'] {
                 color: ${MemberProfileColor.scheduleTextWhite};
                 font-weight: 700;
+                cursor: pointer;
               }  
             `
             })}

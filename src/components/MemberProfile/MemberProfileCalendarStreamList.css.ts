@@ -2,6 +2,8 @@ import { LineHeight, TitleSmRegular } from '@/styles/Font'
 import { MemberProfileColor } from '@/styles/MemberProfileColor'
 import { css } from '@emotion/react'
 
+const itemsPerView = 7
+
 export const streamListContainer = css`
   display: flex;
   flex-direction: column;
@@ -18,7 +20,7 @@ export const streamListCarousel = [
     .embla__container {
       display: flex;
       flex-direction: column;
-      height: 320px;
+      height: ${54 * itemsPerView}px;
       gap: 16px;
       .embla__slide {
         flex: 0 0 40px;
