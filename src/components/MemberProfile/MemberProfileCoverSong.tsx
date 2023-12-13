@@ -22,7 +22,7 @@ import {
 interface MemberProfileCoverSongProps {
   memberName: IsedolMember
 }
-const MemberProfileCoverSong = ({
+export const MemberProfileCoverSong = ({
   memberName,
 }: MemberProfileCoverSongProps) => {
   const { enName, groupName, krName, socialMedia } =
@@ -99,5 +99,3 @@ const MemberProfileCoverSong = ({
     </section>
   )
 }
-
-export default MemberProfileCoverSong
