@@ -28,7 +28,7 @@ export const MemberProfileSchedule = ({
     height: 882px;
     background: url('${memberProfileData[memberName]?.calendarBgImage}');
     background-repeat: no-repeat;
-    // background-size: cover;
+    background-size: cover;
     z-index: 1;
   `
 
