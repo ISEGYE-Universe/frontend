@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { Dispatch, SetStateAction } from 'react'
 
 import { css } from '@emotion/react'
-import { TextMdRegular, CaptionMdRegular } from '@/styles/Font'
+import { TextMdBold, CaptionMdBold } from '@/styles/Font'
 
 const TOGGLE_MAP = {
   Ine: {
@@ -49,8 +49,31 @@ export const ArtistMainScreenToggleButton = ({
       type="button"
       css={{
         display: 'flex',
-        gap: 20,
+        backgroundColor: '#ffffff',
+        width: 286,
+        height: 70,
+        borderLeft: '4px solid',
+        borderColor: isHighlighted
+          ? TOGGLE_MAP[id as keyof typeof TOGGLE_MAP].color
+          : '#C7C7C7',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingLeft: 24,
+        paddingRight: 11,
+        boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.15)',
       }}
+      // css={css`
+      //   display: flex;
+      //   width: 286px;
+      //   height: 70px;
+      //   border-left: 4px solid;
+      //   border-color: #c7c7c7;
+      //   justify-content: space-between;
+      //   align-items: center;
+      //   padding-left: 24px;
+      //   padding-right: 11px;
+      //   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+      // `}
       onClick={() => onClick(id)}
     >
       <div
@@ -58,12 +81,11 @@ export const ArtistMainScreenToggleButton = ({
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'flex-start',
-          gap: 10,
         }}
       >
         <span
           css={[
-            TextMdRegular,
+            TextMdBold,
             css`
               color: ${isHighlighted ? '#151515' : '#909090'};
             `,
@@ -73,7 +95,7 @@ export const ArtistMainScreenToggleButton = ({
         </span>
         <span
           css={[
-            CaptionMdRegular,
+            CaptionMdBold,
             css`
               color: ${isHighlighted
                 ? TOGGLE_MAP[id as keyof typeof TOGGLE_MAP].color
@@ -87,8 +109,8 @@ export const ArtistMainScreenToggleButton = ({
       <div
         css={{
           position: 'relative',
-          width: 50,
-          height: 50,
+          width: 40,
+          height: 40,
           borderRadius: 75,
           border: '1px solid',
           borderColor: isHighlighted
