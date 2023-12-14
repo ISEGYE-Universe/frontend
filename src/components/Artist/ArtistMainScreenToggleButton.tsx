@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { Dispatch, SetStateAction } from 'react'
 
 import { css } from '@emotion/react'
-import { TitleSmRegular, TextMdRegular } from '@/styles/Font'
+import { TextMdRegular, CaptionMdRegular } from '@/styles/Font'
 
 const TOGGLE_MAP = {
   Ine: {
@@ -49,11 +49,41 @@ export const ArtistMainScreenToggleButton = ({
       type="button"
       css={{
         display: 'flex',
-        flexDirection: 'row-reverse',
         gap: 20,
       }}
       onClick={() => onClick(id)}
     >
+      <div
+        css={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'flex-start',
+          gap: 10,
+        }}
+      >
+        <span
+          css={[
+            TextMdRegular,
+            css`
+              color: ${isHighlighted ? '#151515' : '#909090'};
+            `,
+          ]}
+        >
+          {twitchNickname}
+        </span>
+        <span
+          css={[
+            CaptionMdRegular,
+            css`
+              color: ${isHighlighted
+                ? TOGGLE_MAP[id as keyof typeof TOGGLE_MAP].color
+                : '#909090'};
+            `,
+          ]}
+        >
+          {id}
+        </span>
+      </div>
       <div
         css={{
           position: 'relative',
@@ -72,39 +102,6 @@ export const ArtistMainScreenToggleButton = ({
           alt="Icon"
           fill
         />
-      </div>
-      <div
-        css={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'flex-end',
-          gap: 10,
-        }}
-      >
-        <span
-          css={[
-            TitleSmRegular,
-            css`
-              line-height: 1;
-              color: ${isHighlighted ? '#151515' : '#909090'};
-            `,
-          ]}
-        >
-          {twitchNickname}
-        </span>
-        <span
-          css={[
-            TextMdRegular,
-            css`
-              line-height: 1;
-              color: ${isHighlighted
-                ? TOGGLE_MAP[id as keyof typeof TOGGLE_MAP].color
-                : '#909090'};
-            `,
-          ]}
-        >
-          {id}
-        </span>
       </div>
     </button>
   )
