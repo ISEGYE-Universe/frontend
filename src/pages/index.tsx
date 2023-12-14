@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { Artist } from '@/components/Artist/Artist'
 import Banner from '@/components/Banner/Banner'
 import { News } from '@/components/News/News'
-// import Movie from '@/components/Movie/Movie'
+import Movie from '@/components/Movie/Movie'
 
 const Home = () => {
   return (
@@ -17,7 +17,7 @@ const Home = () => {
         <Banner />
         <News />
         <Artist />
-        {/* <Movie /> */}
+        <Movie />
       </main>
     </>
   )
