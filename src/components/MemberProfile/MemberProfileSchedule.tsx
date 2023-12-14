@@ -1,43 +1,41 @@
-import { css } from '@emotion/react'
 import memberProfileData from '@/data/member-profile.json'
+import { articleLayoutContainer } from '@/pages/member-profile/memberProfile.css'
 import { MemberProfileCalendar } from './MemberProfileCalendar'
+import { MemberProfileTitle } from './MemberProfileTitle'
+import {
+  calendarMainContainer,
+  mainContainer,
+  overlay,
+} from './MemberProfileSchedule.css'
 
 interface MemberProfileTopBannerProp {
   memberName: IsedolMember
 }
 
-const mainContainer = css`
-  margin-bottom: 100px;
-`
-const titleContainer = css`
-  height: 200px;
-`
-const overlay = css`
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  position: absolute;
-`
-
 export const MemberProfileSchedule = ({
   memberName,
 }: MemberProfileTopBannerProp) => {
-  const calendarMainContainer = css`
-    position: relative;
-    // 6주까지 있는 달이 있기 때문에 800px -> 882px
-    height: 882px;
-    background: url('${memberProfileData[memberName]?.calendarBgImage}');
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
-  `
+  const memberInformation =
+    memberProfileData[memberName]?.memberInformation || {}
+  const memberYoutubeInfo = memberInformation?.socialMedia?.youtube
 
   return (
     <section css={mainContainer}>
       {/* 제목 */}
-      <div css={titleContainer} />
+      <div css={articleLayoutContainer}>
+        <MemberProfileTitle
+          title="Schedule"
+          subTitle={`${memberInformation.groupName} ${memberInformation.krName}의 방송활동을 확인해보세요.`}
+          ytLink={memberYoutubeInfo?.archiveUrl}
+          ytName={memberYoutubeInfo?.archiveName}
+        />
+      </div>
       {/* 달력 */}
-      <div css={calendarMainContainer}>
+      <div
+        css={calendarMainContainer(
+          memberProfileData[memberName]?.calendarBgImage,
+        )}
+      >
         {/* 오버레이 */}
         <div css={overlay} />
         {/* 달력 본문 */}

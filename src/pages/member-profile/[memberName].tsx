@@ -3,28 +3,15 @@ import { MemberProfileSchedule } from '@/components/MemberProfile/MemberProfileS
 import { MemberProfileTopBanner } from '@/components/MemberProfile/MemberProfileTopBanner'
 import { MemberProfileWakscord } from '@/components/MemberProfile/MemberProfileWakscord'
 import { MemberProfileYoutube } from '@/components/MemberProfile/MemberProfileYoutube'
-import { css } from '@emotion/react'
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { ParsedUrlQuery } from 'querystring'
+import {
+  articleLayoutContainer,
+  fullWidthContainer,
+  splittedContainer,
+} from './memberProfile.css'
 
 const memberList = ['ine', 'jingburger', 'lilpa', 'jururu', 'gosegu', 'viichan']
-
-const articleLayoutContainer = css`
-  max-width: 1300px;
-  margin: 0 auto;
-`
-
-const fullWidthContainer = css`
-  max-width: 1920px;
-`
-
-const splittedContainer = css`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 90px;
-  margin-bottom: 60px;
-`
 
 export const getStaticPaths: GetStaticPaths = () => {
   return {
@@ -64,7 +51,7 @@ const MemberProfile = ({
         <MemberProfileYoutube memberName={memberName as IsedolMember} />
       </div>
       {/* 스케줄 */}
-      <div css={[articleLayoutContainer, fullWidthContainer]}>
+      <div css={fullWidthContainer}>
         <MemberProfileSchedule memberName={memberName as IsedolMember} />
       </div>
     </article>
