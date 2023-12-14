@@ -35,34 +35,16 @@ export const ArtistMainScreen = ({
   highlightedMember,
 }: ArtistMainScreenProps) => {
   return (
-    <div css={{ position: 'relative' }}>
-      <div
+    <div>
+      <Image
         css={{
-          position: 'absolute',
-          width: 400,
-          height: 400,
-          backgroundColor:
-            SCREEN_MAP[highlightedMember as keyof typeof SCREEN_MAP].color,
           borderRadius: 20,
         }}
+        src={SCREEN_MAP[highlightedMember as keyof typeof SCREEN_MAP].imgSrc}
+        alt="main screen image"
+        width={934}
+        height={520}
       />
-      <div
-        css={{
-          position: 'absolute',
-          marginTop: 20,
-          marginLeft: 20,
-        }}
-      >
-        <Image
-          css={{
-            borderRadius: 20,
-          }}
-          src={SCREEN_MAP[highlightedMember as keyof typeof SCREEN_MAP].imgSrc}
-          alt="main screen image"
-          width={900}
-          height={500}
-        />
-      </div>
     </div>
   )
 }
