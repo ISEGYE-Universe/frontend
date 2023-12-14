@@ -1,4 +1,3 @@
-import { NewsHeader } from './NewsHeader'
 import { NewsThumnailList } from './NewsThumnailList'
 import { NewsWeeklyEventBannerList } from './NewsWeeklyEventBannerList'
 
@@ -15,7 +14,6 @@ export const News = () => {
           overflow: 'hidden',
         }}
       >
-        <NewsHeader />
         <NewsThumnailList />
         <NewsWeeklyEventBannerList />
       </div>
