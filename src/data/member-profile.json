@@ -25,7 +25,9 @@
         "youtube": {
           "name": "아이네 INE",
           "url": "https://www.youtube.com/@INE_",
-          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLJWTWXJ7iqXctxVu1Fd3ZkF-WWD8kOzMb"
+          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLJWTWXJ7iqXctxVu1Fd3ZkF-WWD8kOzMb",
+          "archiveName": "아이네 다시보기",
+          "archiveUrl": "https://www.youtube.com/@INE_dasibogi"
         }
       }
     },
@@ -38,7 +40,7 @@
         "link": "https://www.youtube.com/watch?v=YpCpF_CD2pM&list=PLJWTWXJ7iqXctxVu1Fd3ZkF-WWD8kOzMb&index=1&pp=iAQB8AUB"
       }
     ],
-    "schedule": [{ "date": "2023-12-01", "title": "아뱅온" }],
+    "schedule": [{ "date": "2023-12-01", "title": "아뱅온", "link": "#" }],
     "recentYoutubeVideo": [
       {
         "id": "1",
@@ -69,7 +71,9 @@
         "youtube": {
           "name": "징버거 JINGBURGER",
           "url": "https://www.youtube.com/@jingburger",
-          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLio0a5EPF6j099Af5uBaK6V25RtTvK4kq"
+          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLio0a5EPF6j099Af5uBaK6V25RtTvK4kq",
+          "archiveName": "징버거 다시보기",
+          "archiveUrl": "https://www.youtube.com/@jingburger_dasibogi"
         }
       }
     },
@@ -82,7 +86,7 @@
         "link": "https://www.youtube.com/watch?v=VE4sUxm2N7k&list=PLio0a5EPF6j099Af5uBaK6V25RtTvK4kq&index=1&pp=iAQB8AUB"
       }
     ],
-    "schedule": [{ "date": "2023-12-01", "title": "징뱅온" }],
+    "schedule": [{ "date": "2023-12-01", "title": "징뱅온", "link": "#" }],
     "recentYoutubeVideo": [
       {
         "id": "1",
@@ -113,7 +117,9 @@
         "youtube": {
           "name": "릴파 lilpa",
           "url": "https://www.youtube.com/@lilpa",
-          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLLPGQs-RNQXnFl55WissjQylZbInOK81P"
+          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLLPGQs-RNQXnFl55WissjQylZbInOK81P",
+          "archiveName": "릴파 다시보기",
+          "archiveUrl": "https://www.youtube.com/@lilpa_vod"
         }
       }
     },
@@ -126,7 +132,7 @@
         "link": "https://www.youtube.com/watch?v=eEPmx_JZCkY&list=PLLPGQs-RNQXnFl55WissjQylZbInOK81P&index=1&pp=iAQB8AUB"
       }
     ],
-    "schedule": [{ "date": "2023-12-03", "title": "리라리라~~" }],
+    "schedule": [{ "date": "2023-12-03", "title": "리라리라~~", "link": "#" }],
     "recentYoutubeVideo": [
       {
         "id": "1",
@@ -157,7 +163,9 @@
         "youtube": {
           "name": "주르르 JURURU",
           "url": "https://www.youtube.com/@JU_RURU",
-          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS"
+          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLqE7uvTHaH31Wl8lCe3SYslZvoCnTD-JS",
+          "archiveName": "주르르 다시보기",
+          "archiveUrl": "https://www.youtube.com/@JURURU_dasibogi"
         }
       }
     },
@@ -206,14 +214,14 @@
       }
     ],
     "schedule": [
-      { "date": "2023-12-01", "title": "잔잔뱅" },
-      { "date": "2023-12-03", "title": "잔잔뱅" },
-      { "date": "2023-12-08", "title": "짧뱅" },
-      { "date": "2023-12-10", "title": "버추얼르르 뱅온즈" },
-      { "date": "2023-12-12", "title": "버추얼르르 뱅온즈" },
-      { "date": "2023-12-15", "title": "잔잔뱅" },
-      { "date": "2023-12-16", "title": "잔잔뱅" },
-      { "date": "2023-12-18", "title": "잔잔뱅" },
+      { "date": "2023-12-01", "title": "잔잔뱅", "link": "#" },
+      { "date": "2023-12-03", "title": "잔잔뱅", "link": "#" },
+      { "date": "2023-12-08", "title": "짧뱅", "link": "#" },
+      { "date": "2023-12-10", "title": "버추얼르르 뱅온즈", "link": "#" },
+      { "date": "2023-12-12", "title": "버추얼르르 뱅온즈", "link": "#" },
+      { "date": "2023-12-15", "title": "잔잔뱅", "link": "#" },
+      { "date": "2023-12-16", "title": "잔잔뱅", "link": "#" },
+      { "date": "2023-12-18", "title": "잔잔뱅", "link": "#" },
       { "date": "2023-12-19", "title": "잔잔뱅" }
     ],
     "recentYoutubeVideo": [
@@ -264,7 +272,9 @@
         "youtube": {
           "name": "고세구 GOSEGU",
           "url": "https://www.youtube.com/@gosegu",
-          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLZNwpHxpI4EjDSv3v_HY7udxDEqj4C7PL"
+          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLZNwpHxpI4EjDSv3v_HY7udxDEqj4C7PL",
+          "archiveName": "고세구 다시보기",
+          "archiveUrl": "https://www.youtube.com/@gosegureplay"
         }
       }
     },
@@ -277,7 +287,7 @@
         "link": "https://www.youtube.com/watch?v=c4Fw8oRP-e8&list=PLZNwpHxpI4EjDSv3v_HY7udxDEqj4C7PL&index=22&pp=iAQB8AUB"
       }
     ],
-    "schedule": [{ "date": "2023-12-08", "title": "고뱅온" }],
+    "schedule": [{ "date": "2023-12-08", "title": "고뱅온", "link": "#" }],
     "recentYoutubeVideo": [
       {
         "id": "1",
@@ -308,7 +318,9 @@
         "youtube": {
           "name": "비챤 VIichan",
           "url": "https://www.youtube.com/@viichan116",
-          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLhaJuLneKo5FdYnMZ1Jc5BaV7y26KvmD1"
+          "songPlayListUrl": "https://www.youtube.com/playlist?list=PLhaJuLneKo5FdYnMZ1Jc5BaV7y26KvmD1",
+          "archiveName": "비챤의 다시보기",
+          "archiveUrl": "https://www.youtube.com/@viichan_archive"
         }
       }
     },
@@ -321,7 +333,7 @@
         "link": "https://www.youtube.com/watch?v=epHCbFL36uU&list=PLhaJuLneKo5FdYnMZ1Jc5BaV7y26KvmD1&index=1&pp=iAQB8AUB"
       }
     ],
-    "schedule": [{ "date": "2023-12-10", "title": "챤하챤하!!" }],
+    "schedule": [{ "date": "2023-12-10", "title": "챤하챤하!!", "link": "#" }],
     "recentYoutubeVideo": [
       {
         "id": "1",

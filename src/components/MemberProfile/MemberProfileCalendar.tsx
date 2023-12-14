@@ -54,7 +54,6 @@ export const MemberProfileCalendar = ({
       // scroll trailing space 제거
       containScroll: 'trimSnaps',
       axis: 'y',
-      slidesToScroll: 1,
       // 스크롤의 양이 많을 때 snap되지 않고 자유롭게 움직이게 하기 위함
       skipSnaps: true,
       align: 'center',
@@ -132,6 +131,7 @@ export const MemberProfileCalendar = ({
         }}
       />
       <MemberProfileCalendarStreamList
+        memberName={memberName as IsedolMember}
         data={calendarData}
         emblaRef={emblaRef}
         emblaApi={emblaApi}

@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import { useCallback, useEffect, useState } from 'react'
 import { EmblaCarouselType } from 'embla-carousel'
+import Link from 'next/link'
+import memberProfileData from '@/data/member-profile.json'
 import {
   streamListButton,
   streamListCarousel,
@@ -23,15 +25,24 @@ type EmblaViewportRefType = <ViewportElement extends HTMLElement>(
   instance: ViewportElement | null,
 ) => void
 
-export const MemberProfileCalendarStreamList = ({
-  data,
-  emblaRef,
-  emblaApi,
-}: {
+interface MemberProfileCalendarStreamListType {
+  memberName: IsedolMember
   data: MemberProfile.MemberSchedule[]
   emblaRef: EmblaViewportRefType
   emblaApi: EmblaCarouselType | undefined
-}) => {
+}
+
+export const MemberProfileCalendarStreamList = ({
+  memberName,
+  data,
+  emblaRef,
+  emblaApi,
+}: MemberProfileCalendarStreamListType) => {
+  // 다시보기 링크
+  const archiveUrl =
+    memberProfileData[memberName]?.memberInformation?.socialMedia.youtube
+      .archiveUrl
+
   const [prevBtnDisabled, setPrevBtnDisabled] = useState<boolean>(true)
   const [nextBtnDisabled, setNextBtnDisabled] = useState<boolean>(true)
   const scrollPrev = useCallback(
@@ -72,15 +83,17 @@ export const MemberProfileCalendarStreamList = ({
       <div className="embla" css={streamListCarousel} ref={emblaRef}>
         <ul className="embla__container">
           {data.map((el) => (
-            <li
-              css={streamListContentListItem}
-              className="embla__slide"
-              key={el.date}
-            >
-              <span css={streamListContentListItemDateText}>
-                {parseDateString(el.date).day}
-              </span>
-              <span css={streamListContentListItemTitleText}>{el.title}</span>
+            <li className="embla__slide" key={el.date}>
+              <Link
+                css={streamListContentListItem}
+                href={el.link || archiveUrl}
+                target="_blank"
+              >
+                <span css={streamListContentListItemDateText}>
+                  {parseDateString(el.date).day}
+                </span>
+                <span css={streamListContentListItemTitleText}>{el.title}</span>
+              </Link>
             </li>
           ))}
         </ul>

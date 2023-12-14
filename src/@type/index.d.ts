@@ -31,5 +31,6 @@ declare namespace MemberProfile {
   interface MemberSchedule {
     date: string
     title: string
+    link?: string
   }
 }
