@@ -5,7 +5,7 @@ import { ArtistMainScreenToggleButtonList } from './ArtistMainScreenToggleButton
 export const Artist = () => {
   const [highlightedMember, setHighlightedMember] = useState('Ine')
   return (
-    <div>
+    <section>
       <span>TITLE</span>
       <div
         css={{
@@ -21,6 +21,6 @@ export const Artist = () => {
           highlightedMember={highlightedMember}
         />
       </div>
-    </div>
+    </section>
   )
 }
