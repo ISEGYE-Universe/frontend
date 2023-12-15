@@ -26,3 +26,11 @@ declare namespace Profile {
 declare namespace Chart {
   type Top100ChartType = 'daily' | 'weekly'
 }
+
+declare namespace MemberProfile {
+  interface MemberSchedule {
+    date: string
+    title: string
+    link?: string
+  }
+}

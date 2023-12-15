@@ -22,7 +22,7 @@ interface MemberProfileTopBannerProp {
   memberName: IsedolMember
 }
 
-const MemberProfileTopBanner = (prop: MemberProfileTopBannerProp) => {
+export const MemberProfileTopBanner = (prop: MemberProfileTopBannerProp) => {
   const { memberName } = prop
 
   const { twIcon, ytIcon } = memberProfileData.commonImage
@@ -95,5 +95,3 @@ const MemberProfileTopBanner = (prop: MemberProfileTopBannerProp) => {
     </section>
   )
 }
-
-export default MemberProfileTopBanner

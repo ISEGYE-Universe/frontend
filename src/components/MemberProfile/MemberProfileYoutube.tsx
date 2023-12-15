@@ -27,7 +27,11 @@ const youtubeListItemText = [
   LineHeight,
 ]
 
-const MemberProfileYoutube = ({ memberName }: { memberName: IsedolMember }) => {
+export const MemberProfileYoutube = ({
+  memberName,
+}: {
+  memberName: IsedolMember
+}) => {
   const memberInformation =
     memberProfileData[memberName]?.memberInformation || {}
   const recentYoutubeVideo = memberProfileData[memberName]?.recentYoutubeVideo
@@ -60,5 +64,3 @@ const MemberProfileYoutube = ({ memberName }: { memberName: IsedolMember }) => {
     </section>
   )
 }
-
-export default MemberProfileYoutube

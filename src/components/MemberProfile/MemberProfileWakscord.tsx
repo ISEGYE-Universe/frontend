@@ -8,8 +8,6 @@ const mainContainer = css`
   background: ${MemberProfileColor.wakscordBackgroundGrey};
 `
 
-const MemberProfileWakscord = () => {
+export const MemberProfileWakscord = () => {
   return <section css={mainContainer} />
 }
-
-export default MemberProfileWakscord
