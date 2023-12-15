@@ -12,6 +12,7 @@ export const Artist = () => {
           display: 'flex',
           justifyContent: 'space-between',
           width: 1300, // temporary
+          gap: 80,
         }}
       >
         <ArtistMainScreen highlightedMember={highlightedMember} />

@@ -20,7 +20,7 @@ const DUMMY_ISD_TWITCH_INFO_LIST = [
   },
   {
     id: 'Gosegu',
-    twitchNickname: '고세구___ (gosegu...',
+    twitchNickname: '고세구___ (gosegugosegu)',
   },
   {
     id: 'VIichan',
@@ -42,8 +42,7 @@ export const ArtistMainScreenToggleButtonList = ({
       css={{
         display: 'flex',
         flexDirection: 'column',
-        gap: 24,
-        marginTop: 20,
+        gap: 20,
       }}
     >
       {DUMMY_ISD_TWITCH_INFO_LIST.map((isedol) => (

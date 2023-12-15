@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { Dispatch, SetStateAction } from 'react'
 
 import { css } from '@emotion/react'
-import { TitleSmRegular, TextMdRegular } from '@/styles/Font'
+import { TextMdBold, CaptionMdBold } from '@/styles/Font'
 
 const TOGGLE_MAP = {
   Ine: {
@@ -49,16 +49,68 @@ export const ArtistMainScreenToggleButton = ({
       type="button"
       css={{
         display: 'flex',
-        flexDirection: 'row-reverse',
-        gap: 20,
+        backgroundColor: '#ffffff',
+        width: 286,
+        height: 70,
+        borderLeft: '4px solid',
+        borderColor: isHighlighted
+          ? TOGGLE_MAP[id as keyof typeof TOGGLE_MAP].color
+          : '#C7C7C7',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingLeft: 24,
+        paddingRight: 11,
+        boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.15)',
       }}
+      // css={css`
+      //   display: flex;
+      //   width: 286px;
+      //   height: 70px;
+      //   border-left: 4px solid;
+      //   border-color: #c7c7c7;
+      //   justify-content: space-between;
+      //   align-items: center;
+      //   padding-left: 24px;
+      //   padding-right: 11px;
+      //   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+      // `}
       onClick={() => onClick(id)}
     >
       <div
         css={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'flex-start',
+        }}
+      >
+        <span
+          css={[
+            TextMdBold,
+            css`
+              color: ${isHighlighted ? '#151515' : '#909090'};
+            `,
+          ]}
+        >
+          {twitchNickname}
+        </span>
+        <span
+          css={[
+            CaptionMdBold,
+            css`
+              color: ${isHighlighted
+                ? TOGGLE_MAP[id as keyof typeof TOGGLE_MAP].color
+                : '#909090'};
+            `,
+          ]}
+        >
+          {id}
+        </span>
+      </div>
+      <div
+        css={{
           position: 'relative',
-          width: 50,
-          height: 50,
+          width: 40,
+          height: 40,
           borderRadius: 75,
           border: '1px solid',
           borderColor: isHighlighted
@@ -72,39 +124,6 @@ export const ArtistMainScreenToggleButton = ({
           alt="Icon"
           fill
         />
-      </div>
-      <div
-        css={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'flex-end',
-          gap: 10,
-        }}
-      >
-        <span
-          css={[
-            TitleSmRegular,
-            css`
-              line-height: 1;
-              color: ${isHighlighted ? '#151515' : '#909090'};
-            `,
-          ]}
-        >
-          {twitchNickname}
-        </span>
-        <span
-          css={[
-            TextMdRegular,
-            css`
-              line-height: 1;
-              color: ${isHighlighted
-                ? TOGGLE_MAP[id as keyof typeof TOGGLE_MAP].color
-                : '#909090'};
-            `,
-          ]}
-        >
-          {id}
-        </span>
       </div>
     </button>
   )
