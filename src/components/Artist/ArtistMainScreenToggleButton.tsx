@@ -4,32 +4,7 @@ import { Dispatch, SetStateAction } from 'react'
 import { css } from '@emotion/react'
 import { TextMdBold, CaptionMdBold } from '@/styles/Font'
 
-const TOGGLE_MAP = {
-  Ine: {
-    imgSrc: 'images/main-artist/맴버프로필=INE.png',
-    color: '#8A2BE2',
-  },
-  Jingburger: {
-    imgSrc: 'images/main-artist/맴버프로필=JINGBURGER.png',
-    color: '#F0A957',
-  },
-  Lilpa: {
-    imgSrc: 'images/main-artist/맴버프로필=LILPA.png',
-    color: '#443965',
-  },
-  Jururu: {
-    imgSrc: 'images/main-artist/맴버프로필=JURURU.png',
-    color: '#FF008C',
-  },
-  Gosegu: {
-    imgSrc: 'images/main-artist/맴버프로필=GOSEGU.png',
-    color: '#467EC6',
-  },
-  VIichan: {
-    imgSrc: 'images/main-artist/맴버프로필=VIICHAN.png',
-    color: '#95C100',
-  },
-}
+import buttonIcon from '@/data/main-artist/button-icon.json'
 
 type ArtistMainScreenToggleButtonProps = {
   id: string
@@ -54,7 +29,7 @@ export const ArtistMainScreenToggleButton = ({
         height: 70,
         borderLeft: '4px solid',
         borderColor: isHighlighted
-          ? TOGGLE_MAP[id as keyof typeof TOGGLE_MAP].color
+          ? buttonIcon[id as keyof typeof buttonIcon].color
           : '#C7C7C7',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -86,7 +61,7 @@ export const ArtistMainScreenToggleButton = ({
             CaptionMdBold,
             css`
               color: ${isHighlighted
-                ? TOGGLE_MAP[id as keyof typeof TOGGLE_MAP].color
+                ? buttonIcon[id as keyof typeof buttonIcon].color
                 : '#909090'};
             `,
           ]}
@@ -102,13 +77,13 @@ export const ArtistMainScreenToggleButton = ({
           borderRadius: 75,
           border: '1px solid',
           borderColor: isHighlighted
-            ? TOGGLE_MAP[id as keyof typeof TOGGLE_MAP].color
+            ? buttonIcon[id as keyof typeof buttonIcon].color
             : 'white',
         }}
       >
         <Image
           css={{ filter: isHighlighted ? 'grayscale(0)' : 'grayscale(1)' }}
-          src={TOGGLE_MAP[id as keyof typeof TOGGLE_MAP].imgSrc}
+          src={buttonIcon[id as keyof typeof buttonIcon].imgSrc}
           alt="Icon"
           fill
         />
