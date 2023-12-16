@@ -1,6 +1,7 @@
 import MovieSlider from './MovieSlider'
 import { MovieListType } from './type/types'
 import { MovieContainer } from './style/Movie.Style'
+import MainTitle from '../MainTitle'
 
 /** 임시 데이터 */
 const MovieList: MovieListType = [
@@ -37,6 +38,7 @@ const MovieList: MovieListType = [
 const Movie = () => {
   return (
     <section css={MovieContainer}>
+      <MainTitle width="80" title="MOVIE" />
       <MovieSlider movieList={MovieList} />
     </section>
   )

@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { ArtistMainScreen } from './ArtistMainScreen'
 import { ArtistMainScreenToggleButtonList } from './ArtistMainScreenToggleButtonList'
+import MainTitle from '../MainTitle'
 
 export const Artist = () => {
   const [highlightedMember, setHighlightedMember] = useState('Ine')
   return (
     <section>
-      <span>TITLE</span>
+      <MainTitle width="80" title="ARTIST" />
       <div
         css={{
           display: 'flex',
