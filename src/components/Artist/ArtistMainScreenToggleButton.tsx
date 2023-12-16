@@ -62,18 +62,6 @@ export const ArtistMainScreenToggleButton = ({
         paddingRight: 11,
         boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.15)',
       }}
-      // css={css`
-      //   display: flex;
-      //   width: 286px;
-      //   height: 70px;
-      //   border-left: 4px solid;
-      //   border-color: #c7c7c7;
-      //   justify-content: space-between;
-      //   align-items: center;
-      //   padding-left: 24px;
-      //   padding-right: 11px;
-      //   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
-      // `}
       onClick={() => onClick(id)}
     >
       <div

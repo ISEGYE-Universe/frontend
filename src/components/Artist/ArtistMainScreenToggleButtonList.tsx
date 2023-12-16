@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from 'react'
 import { ArtistMainScreenToggleButton } from './ArtistMainScreenToggleButton'
 
-const DUMMY_ISD_TWITCH_INFO_LIST = [
+const ISD_TWITCH_INFO_LIST = [
   {
     id: 'Ine',
     twitchNickname: '아이네_ (vo_ine)',
@@ -45,7 +45,7 @@ export const ArtistMainScreenToggleButtonList = ({
         gap: 20,
       }}
     >
-      {DUMMY_ISD_TWITCH_INFO_LIST.map((isedol) => (
+      {ISD_TWITCH_INFO_LIST.map((isedol) => (
         <ArtistMainScreenToggleButton
           key={isedol.id}
           id={isedol.id}
