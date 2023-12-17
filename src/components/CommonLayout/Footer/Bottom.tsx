@@ -70,8 +70,8 @@ export const InfoSection = () => {
       </button>
       <span css={[TeamStyle, CaptionMdBold, FontWhite]}>ISEGYE Universe</span>
       <p css={[CopyStyle, CaptionMdBold, FontWhite]}>
-        Copyright&copy;2024.ISEGYE Universe | WAK Entertainment All Rights
-        Reseved.
+        Copyright &copy; 2024. ISEGYE Universe | WAK Entertainment All Rights
+        Reserved.
       </p>
       <CreatorModal />
     </section>
