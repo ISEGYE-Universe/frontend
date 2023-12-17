@@ -1,5 +1,5 @@
 import memberProfileData from '@/data/member-profile.json'
-import { articleLayoutContainer } from '@/pages/member-profile/memberProfile.css'
+import { articleLayoutContainer } from '@/pages/member-profile/MemberProfile.css'
 import { MemberProfileCalendar } from './MemberProfileCalendar'
 import { MemberProfileTitle } from './MemberProfileTitle'
 import {
