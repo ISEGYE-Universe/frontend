@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import {
   mainContainer,
   messageContainer,
@@ -11,13 +12,15 @@ import {
 const MemberProfileWakscord = () => {
   return (
     <section css={mainContainer}>
-      <Image
-        css={wakscordLogo}
-        src="/images/member-profile/logo-wakscord.png"
-        width={40}
-        height={40}
-        alt="wakscord logo"
-      />
+      <Link href="https://wakscord.xyz/" target="_blank">
+        <Image
+          css={wakscordLogo}
+          src="/images/member-profile/logo-wakscord.png"
+          width={40}
+          height={40}
+          alt="wakscord logo"
+        />
+      </Link>
 
       <div css={messageContainer}>
         {/* S: 메시지 리스트 영역 */}
