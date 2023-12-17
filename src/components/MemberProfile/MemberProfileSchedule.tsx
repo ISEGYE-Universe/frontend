@@ -1,5 +1,4 @@
 import memberProfileData from '@/data/member-profile.json'
-import { articleLayoutContainer } from '@/pages/member-profile/MemberProfile.css'
 import { MemberProfileCalendar } from './MemberProfileCalendar'
 import { MemberProfileTitle } from './MemberProfileTitle'
 import {
@@ -7,6 +6,7 @@ import {
   mainContainer,
   overlay,
 } from './MemberProfileSchedule.css'
+import { articleLayoutContainer } from './MemberProfile.css'
 
 interface MemberProfileTopBannerProp {
   memberName: IsedolMember

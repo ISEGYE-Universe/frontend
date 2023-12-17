@@ -1,3 +1,8 @@
+import {
+  articleLayoutContainer,
+  fullWidthContainer,
+  splittedContainer,
+} from '@/components/MemberProfile/MemberProfile.css'
 import { MemberProfileCoverSong } from '@/components/MemberProfile/MemberProfileCoverSong'
 import { MemberProfileSchedule } from '@/components/MemberProfile/MemberProfileSchedule'
 import { MemberProfileTopBanner } from '@/components/MemberProfile/MemberProfileTopBanner'
@@ -5,11 +10,6 @@ import { MemberProfileWakscord } from '@/components/MemberProfile/MemberProfileW
 import { MemberProfileYoutube } from '@/components/MemberProfile/MemberProfileYoutube'
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { ParsedUrlQuery } from 'querystring'
-import {
-  articleLayoutContainer,
-  fullWidthContainer,
-  splittedContainer,
-} from './memberProfile.css'
 
 const memberList = ['ine', 'jingburger', 'lilpa', 'jururu', 'gosegu', 'viichan']
 
