@@ -6,6 +6,8 @@ import { Location, InfoSection } from './Footer/Bottom'
 
 const footerContainer = css`
   width: 100%;
+  position: relative;
+  top: 120px;
   height: 380px;
 `
 const ftCon25 = css`
