@@ -1,11 +1,11 @@
-import { NewsHeader } from './NewsHeader'
 import { NewsThumnailList } from './NewsThumnailList'
 import { NewsWeeklyEventBannerList } from './NewsWeeklyEventBannerList'
+import MainTitle from '../MainTitle'
 
 export const News = () => {
   return (
     <section>
-      <span>TITLE</span>
+      <MainTitle width="200" title="ISEGYE IDOL NEWS" />
       <div
         css={{
           display: 'flex',
@@ -15,7 +15,6 @@ export const News = () => {
           overflow: 'hidden',
         }}
       >
-        <NewsHeader />
         <NewsThumnailList />
         <NewsWeeklyEventBannerList />
       </div>

@@ -1,4 +1,4 @@
-import { ChartColor } from '@/styles/ChartColor'
+import ChartColor from '@/styles/ChartColor'
 import {
   CaptionMdLight,
   LineHeight,
@@ -17,6 +17,7 @@ interface ChartMusicCardProps {
 }
 
 const mainContainer = css`
+  height: 90px;
   gap: 20px;
   padding: 10px;
   border-radius: 14px;
@@ -58,13 +59,27 @@ const chartThumb = css`
   border-radius: 10px;
 `
 
-const ChartMusicCard = ({
+export const ChartMusicCard = ({
   title,
   position,
   change,
   artist,
   thumb,
 }: ChartMusicCardProps) => {
+  // 등락 아이콘, 색상 정의부
+  let upDownIcon = ''
+  let upDownColor = ''
+  if (change > 0) {
+    upDownIcon = '/images/icon/chart-up-icon.svg'
+    upDownColor = ChartColor.isedolPink
+  } else if (change < 0) {
+    upDownIcon = '/images/icon/chart-down-icon.svg'
+    upDownColor = ChartColor.textBlue
+  } else {
+    upDownIcon = '/images/icon/chart-zero-icon.svg'
+    upDownColor = ChartColor.textGrey
+  }
+
   return (
     <li css={[mainContainer, flexRowContainer, flexAlignCenter]}>
       <Image
@@ -90,13 +105,7 @@ const ChartMusicCard = ({
             ]}
           >
             <Image
-              src={
-                change > 0
-                  ? '/images/icon/chart-up-icon.svg'
-                  : change < 0
-                  ? '/images/icon/chart-down-icon.svg'
-                  : '/images/icon/chart-zero-icon.svg'
-              }
+              src={upDownIcon}
               alt="chart change icon"
               width={0}
               height={0}
@@ -108,11 +117,7 @@ const ChartMusicCard = ({
                 changeFontStyle,
                 LineHeight,
                 css`
-                  color: ${change > 0
-                    ? ChartColor.isedolPink
-                    : change < 0
-                    ? ChartColor.textBlue
-                    : ChartColor.textGrey};
+                  color: ${upDownColor};
                 `,
               ]}
             >
@@ -131,5 +136,3 @@ const ChartMusicCard = ({
     </li>
   )
 }
-
-export default ChartMusicCard

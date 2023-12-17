@@ -8,6 +8,7 @@ const Banner = () => {
     <section
       css={{
         height: '960px',
+        width: '100%',
         display: 'flex',
         justifyContent: 'center',
         position: 'relative',

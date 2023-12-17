@@ -27,8 +27,8 @@
       { "title": "출생", "desc": "1994년" },
       { "title": "신체", "desc": "158cm Ι B형" },
       {
-        "title": "소속사",
-        "desc": "PARABLE ENTERTAINMENT, WAK ENTERTAINMENT"
+        "title": "팬덤명",
+        "desc": "둘기"
       },
       { "title": "데뷔", "desc": "2021년 이세계아이돌 싱글1집 RE : WIND" }
     ],
@@ -38,9 +38,9 @@
       "twLink": "https://www.twitch.tv/vo_ine"
     },
     "galleryImageURL": [
-      "/images/profile/member-gallery/ine1.png",
-      "/images/profile/member-gallery/ine2.png",
-      "/images/profile/member-gallery/ine3.png"
+      { "id": 1, "url": "/images/profile/member-gallery/ine1.jpg" },
+      { "id": 2, "url": "/images/profile/member-gallery/ine2.jpg" },
+      { "id": 3, "url": "/images/profile/member-gallery/ine3.jpg" }
     ]
   },
   "jingburgerIntroduction": {
@@ -49,8 +49,8 @@
       { "title": "출생", "desc": "1995년 10월 08일" },
       { "title": "신체", "desc": "161.9cm Ι B형" },
       {
-        "title": "소속사",
-        "desc": "PARABLE ENTERTAINMENT, WAK ENTERTAINMENT"
+        "title": "팬덤명",
+        "desc": "똥강아지"
       },
       { "title": "데뷔", "desc": "2021년 이세계아이돌 싱글1집 RE : WIND" }
     ],
@@ -60,9 +60,9 @@
       "twLink": "https://www.twitch.tv/jingburger"
     },
     "galleryImageURL": [
-      "/images/profile/member-gallery/jingburger1.png",
-      "/images/profile/member-gallery/jingburger2.png",
-      "/images/profile/member-gallery/jingburger3.png"
+      { "id": 1, "url": "/images/profile/member-gallery/jingburger1.jpg" },
+      { "id": 2, "url": "/images/profile/member-gallery/jingburger2.jpg" },
+      { "id": 3, "url": "/images/profile/member-gallery/jingburger3.jpg" }
     ]
   },
   "lilpaIntroduction": {
@@ -71,8 +71,8 @@
       { "title": "출생", "desc": "1996년 03월 09일" },
       { "title": "신체", "desc": "164cm Ι O형" },
       {
-        "title": "소속사",
-        "desc": "PARABLE ENTERTAINMENT, WAK ENTERTAINMENT"
+        "title": "팬덤명",
+        "desc": "박쥐단"
       },
       { "title": "데뷔", "desc": "2021년 이세계아이돌 싱글1집 RE : WIND" }
     ],
@@ -82,9 +82,9 @@
       "twLink": "https://www.twitch.tv/lilpaaaaaa"
     },
     "galleryImageURL": [
-      "/images/profile/member-gallery/lilpa1.png",
-      "/images/profile/member-gallery/lilpa2.png",
-      "/images/profile/member-gallery/lilpa3.png"
+      { "id": 1, "url": "/images/profile/member-gallery/lilpa1.jpg" },
+      { "id": 2, "url": "/images/profile/member-gallery/lilpa2.jpg" },
+      { "id": 3, "url": "/images/profile/member-gallery/lilpa3.jpg" }
     ]
   },
   "jururuIntroduction": {
@@ -93,8 +93,8 @@
       { "title": "출생", "desc": "1997년 06월 10일" },
       { "title": "신체", "desc": "161.9cm Ι O형" },
       {
-        "title": "소속사",
-        "desc": "PARABLE ENTERTAINMENT, WAK ENTERTAINMENT"
+        "title": "팬덤명",
+        "desc": "주폭도"
       },
       { "title": "데뷔", "desc": "2021년 이세계아이돌 싱글1집 RE : WIND" }
     ],
@@ -104,9 +104,9 @@
       "twLink": "https://www.twitch.tv/cotton__123"
     },
     "galleryImageURL": [
-      "/images/profile/member-gallery/jururu1.png",
-      "/images/profile/member-gallery/jururu2.png",
-      "/images/profile/member-gallery/jururu3.png"
+      { "id": 1, "url": "/images/profile/member-gallery/jururu1.jpg" },
+      { "id": 2, "url": "/images/profile/member-gallery/jururu2.jpg" },
+      { "id": 3, "url": "/images/profile/member-gallery/jururu3.jpg" }
     ]
   },
   "goseguIntroduction": {
@@ -115,8 +115,8 @@
       { "title": "출생", "desc": "1998년" },
       { "title": "신체", "desc": "300m Ι B형" },
       {
-        "title": "소속사",
-        "desc": "PARABLE ENTERTAINMENT, WAK ENTERTAINMENT"
+        "title": "팬덤명",
+        "desc": "세균단"
       },
       { "title": "데뷔", "desc": "2021년 이세계아이돌 싱글1집 RE : WIND" }
     ],
@@ -126,9 +126,9 @@
       "twLink": "https://www.twitch.tv/gosegugosegu"
     },
     "galleryImageURL": [
-      "/images/profile/member-gallery/gosegu1.png",
-      "/images/profile/member-gallery/gosegu2.png",
-      "/images/profile/member-gallery/gosegu3.png"
+      { "id": 1, "url": "/images/profile/member-gallery/gosegu1.jpg" },
+      { "id": 2, "url": "/images/profile/member-gallery/gosegu2.jpg" },
+      { "id": 3, "url": "/images/profile/member-gallery/gosegu3.jpg" }
     ]
   },
   "viichanIntroduction": {
@@ -137,8 +137,8 @@
       { "title": "출생", "desc": "2000년 01월 16일" },
       { "title": "신체", "desc": "160cm Ι B형" },
       {
-        "title": "소속사",
-        "desc": "PARABLE ENTERTAINMENT, WAK ENTERTAINMENT"
+        "title": "팬덤명",
+        "desc": "라니"
       },
       { "title": "데뷔", "desc": "2021년 이세계아이돌 싱글1집 RE : WIND" }
     ],
@@ -148,8 +148,9 @@
       "twLink": "https://www.twitch.tv/viichan6"
     },
     "galleryImageURL": [
-      "/images/profile/member-gallery/viichan1.jpg",
-      "/images/profile/member-gallery/viichan2.jpg"
+      { "id": 1, "url": "/images/profile/member-gallery/viichan1.jpg" },
+      { "id": 2, "url": "/images/profile/member-gallery/viichan2.jpg" },
+      { "id": 3, "url": "/images/profile/member-gallery/viichan3.jpg" }
     ]
   }
 }

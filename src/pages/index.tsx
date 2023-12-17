@@ -1,11 +1,10 @@
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
 import { Artist } from '@/components/Artist/Artist'
 import Banner from '@/components/Banner/Banner'
 import { News } from '@/components/News/News'
 import Movie from '@/components/Movie/Movie'
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Head>
@@ -14,7 +13,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main
+        css={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          section: {
+            marginBottom: '140px',
+          },
+        }}
+      >
         <Banner />
         <News />
         <Artist />
@@ -23,3 +31,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Home

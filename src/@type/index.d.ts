@@ -17,7 +17,20 @@ declare namespace Profile {
     igLink: string
     twLink: string
   }
+
+  interface GalleryImage {
+    id: number
+    url: string
+  }
 }
 declare namespace Chart {
   type Top100ChartType = 'daily' | 'weekly'
+}
+
+declare namespace MemberProfile {
+  interface MemberSchedule {
+    date: string
+    title: string
+    link?: string
+  }
 }

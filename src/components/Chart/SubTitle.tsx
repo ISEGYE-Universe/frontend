@@ -1,4 +1,4 @@
-import { ChartColor } from '@/styles/ChartColor'
+import ChartColor from '@/styles/ChartColor'
 import { LineHeight, TextMdLight } from '@/styles/Font'
 import { css } from '@emotion/react'
 
@@ -8,7 +8,7 @@ interface SubTitleProps {
   color?: string
 }
 
-const SubTitle = ({ children, mb, color }: SubTitleProps) => {
+export const SubTitle = ({ children, mb, color }: SubTitleProps) => {
   return (
     <h2
       css={[
@@ -24,5 +24,3 @@ const SubTitle = ({ children, mb, color }: SubTitleProps) => {
     </h2>
   )
 }
-
-export default SubTitle

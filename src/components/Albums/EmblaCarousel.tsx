@@ -3,16 +3,17 @@
  * Heo0
  * EmblaCarousel Library
  */
-import { ReactNode, useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react'
 import ClassNames from 'embla-carousel-class-names'
 import { css } from '@emotion/react'
 import { DotButton } from './EmblaCarouselArrowsDots'
+import { AlbumInfoLayout } from './AlbumInfo'
 
 type PropType = {
-  slides: ReactNode[]
+  data: string[]
+  defaultIndex: number
   options?: EmblaOptionsType
-  default: number
 }
 
 //* css
@@ -39,6 +40,7 @@ const emblaDotDiv = css`
   position: absolute;
   left: 0;
   right: 0;
+  bottom: -55px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,8 +52,7 @@ const albums = css`
   position: relative;
 `
 
-export const EmblaCarousel = (props: PropType) => {
-  const { options, slides } = props //* props options and slides
+export const EmblaCarousel = ({ options, data, defaultIndex }: PropType) => {
   const [emblaRef, embla] = useEmblaCarousel(options, [ClassNames()])
   //* zustand로 변환 필요
   const [selectedIndex, setSelectedindex] = useState(1) //* Showing Index
@@ -75,28 +76,28 @@ export const EmblaCarousel = (props: PropType) => {
     embla.on('select', onSelect)
     //* 23.10.21
     //* sub-menu에서 index 받아온 값으로 default scroll
-    ScrollTo(props.default)
-  }, [embla, setScrollSnaps, onSelect])
+    ScrollTo(defaultIndex)
+  }, [embla, setScrollSnaps, onSelect, defaultIndex, ScrollTo])
 
   return (
     <div className="embla" css={emblaCSS}>
       <div className="embla__viewport" ref={emblaRef} css={viewport}>
         <div className="embla__container" css={container}>
-          {slides.map((slide, index) => (
+          {data.map((title) => (
             <div
-              key={index}
+              key={title}
               css={albums}
               className="embla__slide embla__class-names"
             >
-              {slide}
+              <AlbumInfoLayout ident={title} />
             </div>
           ))}
         </div>
       </div>
       <div className="embla__dots" css={emblaDotDiv}>
-        {scrollSnaps.map((_, index) => (
+        {scrollSnaps.map((value, index) => (
           <DotButton
-            key={index}
+            key={value}
             onClick={() => ScrollTo(index)}
             className={'embla__dot'.concat(
               index === selectedIndex ? ' embla__dot--selected' : '',
@@ -107,5 +108,3 @@ export const EmblaCarousel = (props: PropType) => {
     </div>
   )
 }
-
-export default EmblaCarousel

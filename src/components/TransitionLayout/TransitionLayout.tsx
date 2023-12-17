@@ -7,7 +7,10 @@ interface TransitionLayoutProps {
   duration?: number
 }
 
-const TransitionLayout = ({ children, duration }: TransitionLayoutProps) => {
+export const TransitionLayout = ({
+  children,
+  duration,
+}: TransitionLayoutProps) => {
   const router = useRouter()
 
   return (
@@ -42,5 +45,3 @@ const TransitionLayout = ({ children, duration }: TransitionLayoutProps) => {
     </AnimatePresence>
   )
 }
-
-export default TransitionLayout

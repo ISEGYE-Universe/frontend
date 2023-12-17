@@ -1,42 +1,42 @@
-import MemberProfileCoverSong from '@/components/MemberProfile/MemberProfileCoverSong'
-import MemberProfileSchedule from '@/components/MemberProfile/MemberProfileSchedule'
-import MemberProfileTopBanner from '@/components/MemberProfile/MemberProfileTopBanner'
-import MemberProfileWakscord from '@/components/MemberProfile/MemberProfileWakscord'
-import MemberProfileYoutube from '@/components/MemberProfile/MemberProfileYoutube'
-import { css } from '@emotion/react'
-import { useRouter } from 'next/router'
-import { useEffect } from 'react'
+import { MemberProfileCoverSong } from '@/components/MemberProfile/MemberProfileCoverSong'
+import { MemberProfileSchedule } from '@/components/MemberProfile/MemberProfileSchedule'
+import { MemberProfileTopBanner } from '@/components/MemberProfile/MemberProfileTopBanner'
+import { MemberProfileWakscord } from '@/components/MemberProfile/MemberProfileWakscord'
+import { MemberProfileYoutube } from '@/components/MemberProfile/MemberProfileYoutube'
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
+import { ParsedUrlQuery } from 'querystring'
+import {
+  articleLayoutContainer,
+  fullWidthContainer,
+  splittedContainer,
+} from './memberProfile.css'
 
-const whiteList = ['ine', 'jingburger', 'lilpa', 'jururu', 'gosegu', 'viichan']
+const memberList = ['ine', 'jingburger', 'lilpa', 'jururu', 'gosegu', 'viichan']
 
-const articleLayoutContainer = css`
-  max-width: 1300px;
-  margin: 0 auto;
-`
+export const getStaticPaths: GetStaticPaths = () => {
+  return {
+    paths: memberList.map((member) => {
+      return { params: { memberName: member } }
+    }),
+    fallback: false,
+  }
+}
 
-const fullWidthContainer = css`
-  max-width: 1920px;
-`
+interface MemberNameParams extends ParsedUrlQuery {
+  memberName: string
+}
+export const getStaticProps: GetStaticProps = (context) => {
+  const { memberName } = context.params as MemberNameParams
+  return {
+    props: {
+      memberName,
+    },
+  }
+}
 
-const splittedContainer = css`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 90px;
-  margin-bottom: 60px;
-`
-
-const MemberProfile = () => {
-  const router = useRouter()
-  const { memberName } = router.query
-
-  // 예외 404 처리
-  useEffect(() => {
-    if (typeof memberName === 'string' && !whiteList.includes(memberName)) {
-      router.push('/404')
-    }
-  }, [memberName])
-
+const MemberProfile = ({
+  memberName,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <article>
       {/* 배너 영역 */}
@@ -44,14 +44,14 @@ const MemberProfile = () => {
       <div css={articleLayoutContainer}>
         {/* 커버곡 & 왁스코드 */}
         <div css={splittedContainer}>
-          <MemberProfileCoverSong />
+          <MemberProfileCoverSong memberName={memberName as IsedolMember} />
           <MemberProfileWakscord />
         </div>
         {/* 유튜브 */}
-        <MemberProfileYoutube />
+        <MemberProfileYoutube memberName={memberName as IsedolMember} />
       </div>
       {/* 스케줄 */}
-      <div css={[articleLayoutContainer, fullWidthContainer]}>
+      <div css={fullWidthContainer}>
         <MemberProfileSchedule memberName={memberName as IsedolMember} />
       </div>
     </article>

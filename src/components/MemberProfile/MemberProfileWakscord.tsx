@@ -9,7 +9,7 @@ import {
   wakscordLogo,
 } from './MemberProfileWakscord.css'
 
-const MemberProfileWakscord = () => {
+export const MemberProfileWakscord = () => {
   return (
     <section css={mainContainer}>
       <Link href="https://wakscord.xyz/" target="_blank">
@@ -39,5 +39,3 @@ const MemberProfileWakscord = () => {
     </section>
   )
 }
-
-export default MemberProfileWakscord
