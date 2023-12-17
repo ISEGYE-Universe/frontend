@@ -12,7 +12,7 @@ export const Artist = () => {
         css={{
           display: 'flex',
           justifyContent: 'space-between',
-          width: 1300, // temporary
+          width: 1300,
           gap: 80,
         }}
       >
