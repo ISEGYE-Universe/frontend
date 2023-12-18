@@ -55,10 +55,10 @@ export const calendarStyle = (dateList: string[]) => {
               text-decoration: none;
             }
             &.react-calendar__month-view__weekdays__weekday--weekend {
-              abbr[aria-label='토요일'] {
+              abbr[aria-label='Saturday'] {
                 color: ${MemberProfileColor.scheduleTextBlue};
               }
-              abbr[aria-label='일요일'] {
+              abbr[aria-label='Sunday'] {
                 color: ${MemberProfileColor.scheduleTextRed};
               }
             }
@@ -77,20 +77,11 @@ export const calendarStyle = (dateList: string[]) => {
             color: ${MemberProfileColor.scheduleTextGrey};
             cursor: default;
 
-            // 스트리밍 진행된 날짜 하이라이트
-            ${dateList.map((date) => {
-              return `
-              abbr[aria-label='${new Date(date).toLocaleDateString('ko-KR', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              })}'] {
-                color: ${MemberProfileColor.scheduleTextWhite};
-                font-weight: 700;
-                cursor: pointer;
-              }  
-            `
-            })}
+            &.highlight {
+              color: ${MemberProfileColor.scheduleTextWhite};
+              font-weight: 700;
+              cursor: pointer;
+            }
           }
           .react-calendar__month-view__days__day--neighboringMonth {
             visibility: hidden;

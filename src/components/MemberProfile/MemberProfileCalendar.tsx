@@ -81,8 +81,6 @@ export const MemberProfileCalendar = ({
   return (
     <div css={calendarContentContainer}>
       <Calendar
-        // hydration error 해결
-        locale="kr"
         // year click event 제거
         minDetail="month"
         maxDetail="month"
@@ -128,6 +126,16 @@ export const MemberProfileCalendar = ({
           if (index !== -1) {
             scrollToHandler(index)
           }
+        }}
+        // 특정 날짜 강조 클래스
+        tileClassName={({ date }) => {
+          const index = calendarData.findIndex(
+            (el) => el.date === dateToStringDate(date),
+          )
+          if (index !== -1) {
+            return 'highlight'
+          }
+          return ''
         }}
       />
       <MemberProfileCalendarStreamList
