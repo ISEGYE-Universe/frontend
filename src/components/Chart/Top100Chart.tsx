@@ -8,9 +8,11 @@ import {
   LineElement,
   Tooltip,
   Filler,
+  registerables,
 } from 'chart.js'
 import { Chart } from 'react-chartjs-2'
 
+ChartJS.register(...registerables)
 ChartJS.register(
   CategoryScale,
   LinearScale,
