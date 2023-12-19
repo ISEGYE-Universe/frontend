@@ -10,6 +10,9 @@ const left = css`
 const right = css`
   right: 40px;
 `
+export const relative = css`
+  position: relative;
+`
 export const Flex = css`
   display: flex;
 `

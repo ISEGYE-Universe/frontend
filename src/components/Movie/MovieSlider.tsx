@@ -13,6 +13,7 @@ import {
   Flex,
   LeftButton,
   RightButton,
+  relative,
 } from './style/Movie.Style'
 
 const MovieSlider = ({ movieList }: MovieSliderProrps) => {
@@ -44,7 +45,7 @@ const MovieSlider = ({ movieList }: MovieSliderProrps) => {
   }, [emblaApi, onSelect])
 
   return (
-    <div>
+    <div css={relative}>
       <div css={SliderDiv} ref={emblaRef}>
         <div css={Flex}>
           {movieList.map((list: MovieInfoType) => (
