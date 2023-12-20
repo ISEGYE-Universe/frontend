@@ -1,9 +1,5 @@
 name: Check code with eslint
 on:
-  push:
-    branches-ignore:
-      - develop
-      - production
   pull_request:
     branches:
       - develop
