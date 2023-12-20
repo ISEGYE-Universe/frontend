@@ -1,0 +1,24 @@
+name: Check code with eslint
+on:
+  pull_request:
+    branches:
+      - develop
+      - production
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          check-latest: true
+      - name: Linting
+        run: |
+          yarn install --frozen-lockfile
+          yarn lint-diff
+        env:
+          CI: true
+          BASE: ${{ github.base_ref }}
+          HEAD: ${{ github.head_ref }}
