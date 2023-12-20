@@ -11,6 +11,7 @@ import {
   registerables,
 } from 'chart.js'
 import { Chart } from 'react-chartjs-2'
+import ChartDataLabels from 'chartjs-plugin-datalabels'
 
 ChartJS.register(...registerables)
 ChartJS.register(
@@ -24,26 +25,47 @@ ChartJS.register(
 
 const fontFamily = 'Noto Sans CJK KR'
 
+const mockdata = [
+  { time: '15', rank: 27 },
+  { time: '16', rank: 24 },
+  { time: '17', rank: 26 },
+  { time: '18', rank: 16 },
+  { time: '19', rank: 19 },
+  { time: '20', rank: 20 },
+  { time: '21', rank: 21 },
+  { time: '22', rank: 25 },
+  { time: '23', rank: 18 },
+]
+
 export const Top100Chart = () => {
   return (
     <Chart
       type="line"
+      plugins={[ChartDataLabels]}
       width="500px"
       height="300px"
       css={css`
         padding-top: 17px;
       `}
       data={{
-        labels: ['15', '16', '17', '18', '19', '20', '21', '22', '23'],
+        labels: mockdata.map((el) => el.time),
         datasets: [
           {
-            data: [27, 24, 26, 16, 19, 20, 21, 25, 18],
+            data: mockdata.map((el) => el.rank),
             fill: 'start',
             backgroundColor: ChartColor.chartBgIsedolPink,
             borderColor: ChartColor.isedolPink,
             borderWidth: 1,
             pointBackgroundColor: ChartColor.isedolPink,
             pointBorderColor: ChartColor.isedolPink,
+            datalabels: {
+              display: (ctx) => {
+                if (ctx.dataIndex === ctx.dataset.data.length - 1) {
+                  return true
+                }
+                return false
+              },
+            },
           },
         ],
       }}
@@ -95,7 +117,6 @@ export const Top100Chart = () => {
         // 툴팁 스타일
         plugins: {
           tooltip: {
-            // enabled: false,
             position: 'average',
             // style
             backgroundColor: ChartColor.isedolPink,
@@ -114,11 +135,6 @@ export const Top100Chart = () => {
             titleAlign: 'center',
             titleMarginBottom: 0,
             callbacks: {
-              // beforeTitle: (context) => {
-              //   console.log(context)
-
-              //   return '현재 순위'
-              // },
               title: (context) => {
                 // 툴팁 정보 안넘어오는 경우 제외
                 if (context.length !== 0) {
@@ -139,6 +155,38 @@ export const Top100Chart = () => {
                 return false
               }
               return true
+            },
+          },
+          legend: { display: false },
+          datalabels: {
+            align: 'left',
+            backgroundColor: ChartColor.isedolPink,
+            color: ChartColor.textWhite,
+            labels: {
+              title: {
+                font: { family: fontFamily, size: 12 },
+                formatter: () => {
+                  return `    `
+                },
+                textAlign: 'center',
+                anchor: 'center',
+                rotation: 45,
+                offset: 10,
+              },
+              value: {
+                borderRadius: 10,
+                font: { family: fontFamily, size: 14, lineHeight: 1.5 },
+                formatter: (value) => {
+                  return `현재 순위\n${value}위!`
+                },
+                textAlign: 'center',
+                padding: {
+                  left: 10,
+                  right: 10,
+                },
+                anchor: 'center',
+                offset: 15,
+              },
             },
           },
         },
