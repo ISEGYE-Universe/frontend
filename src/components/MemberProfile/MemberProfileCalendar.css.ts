@@ -9,7 +9,7 @@ export const calendarContentContainer = css`
   padding: 144px 62.5px 170px 8.5px;
 `
 
-export const calendarStyle = (dateList: string[]) => {
+export const calendarStyle = () => {
   return [
     TitleSmRegular,
     LineHeight,
