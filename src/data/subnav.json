@@ -1,108 +1,108 @@
 {
-    "profile": [
-        {
-            "text": "아이네",
-            "link": "/profile/ine"
-        },
-        {
-            "text": "징버거",
-            "link": "/profile/jingburger"
-        },
-        {
-            "text": "릴파",
-            "link": "/profile/lilpa"
-        },
-        {
-            "text": "주르르",
-            "link": "/profile/jururu"
-        },
-        {
-            "text": "고세구",
-            "link": "/profile/gosegu"
-        },
-        {
-            "text": "비챤",
-            "link": "/profile/viichan"
-        }
-    ],
-    "album": [
-        {
-            "text": "RE : WIND",
-            "link": "/album/rewind"
-        },
-        {
-            "text": "겨울봄",
-            "link": "/album/winter-spring"
-        },
-        {
-            "text": "LOCKDOWN",
-            "link": "/album/lockdown"
-        },
-        {
-            "text": "Another World",
-            "link": "/album/another-world"
-        },
-        {
-            "text": "Kidding",
-            "link": "/album/kidding"
-        },
-        {
-            "text": "4집",
-            "link": "/album/4th_tbd"
-        }
-    ],
-    "news": [
-        {
-            "text": "공식 활동",
-            "link": "/news/official"
-        },
-        {
-            "text": "멤버 소식",
-            "link": "/news/member"
-        }
-    ],
-    "memberProfile": [
-        {
-            "text": "아이네",
-            "link": "/member-profile/ine"
-        },
-        {
-            "text": "징버거",
-            "link": "/member-profile/jingburger"
-        },
-        {
-            "text": "릴파",
-            "link": "/member-profile/lilpa"
-        },
-        {
-            "text": "주르르",
-            "link": "/member-profile/jururu"
-        },
-        {
-            "text": "고세구",
-            "link": "/member-profile/gosegu"
-        },
-        {
-            "text": "비챤",
-            "link": "/member-profile/viichan"
-        }
-    ],
-    "entryGuide": [
-        {
-            "text": "이세돌 결성 과정",
-            "link": "/entry-guide/isedol-formation"
-        },
-        {
-            "text": "생방송 입문 가이드",
-            "link": "/entry-guide/live-guide"
-        },
-        {
-            "text": "입문 추천 동영상",
-            "link": "/entry-guide/recommended-video"
-        },
-        {
-            "text": "왁물원 이용 가이드",
-            "link": "/entry-guide/cafe-guide"
-        }
-    ]
+  "profile": [
+    {
+      "text": "아이네",
+      "link": "/profile/ine"
+    },
+    {
+      "text": "징버거",
+      "link": "/profile/jingburger"
+    },
+    {
+      "text": "릴파",
+      "link": "/profile/lilpa"
+    },
+    {
+      "text": "주르르",
+      "link": "/profile/jururu"
+    },
+    {
+      "text": "고세구",
+      "link": "/profile/gosegu"
+    },
+    {
+      "text": "비챤",
+      "link": "/profile/viichan"
+    }
+  ],
+  "album": [
+    {
+      "text": "RE : WIND",
+      "link": "/album/rewind"
+    },
+    {
+      "text": "겨울봄",
+      "link": "/album/winter-spring"
+    },
+    {
+      "text": "LOCKDOWN",
+      "link": "/album/lockdown"
+    },
+    {
+      "text": "Another World",
+      "link": "/album/another-world"
+    },
+    {
+      "text": "Kidding",
+      "link": "/album/kidding"
+    },
+    {
+      "text": "4집",
+      "link": "/album/4th_tbd"
+    }
+  ],
+  "news": [
+    {
+      "text": "공식 활동",
+      "link": "/news/official"
+    },
+    {
+      "text": "멤버 소식",
+      "link": "/news/member"
+    }
+  ],
+  "memberProfile": [
+    {
+      "text": "아이네",
+      "link": "/member-profile/ine"
+    },
+    {
+      "text": "징버거",
+      "link": "/member-profile/jingburger"
+    },
+    {
+      "text": "릴파",
+      "link": "/member-profile/lilpa"
+    },
+    {
+      "text": "주르르",
+      "link": "/member-profile/jururu"
+    },
+    {
+      "text": "고세구",
+      "link": "/member-profile/gosegu"
+    },
+    {
+      "text": "비챤",
+      "link": "/member-profile/viichan"
+    }
+  ],
+  "entryGuide": [
+    {
+      "text": "이세돌 결성 과정",
+      "link": "/entry-guide/isedol-formation"
+    },
+    {
+      "text": "생방송 입문 가이드",
+      "link": "/entry-guide/live-guide"
+    },
+    {
+      "text": "입문 추천 동영상",
+      "link": "/entry-guide/recommended-video"
+    },
+    {
+      "text": "왁물원 이용 가이드",
+      "link": "/entry-guide/cafe-guide"
+    }
+  ]
 }
