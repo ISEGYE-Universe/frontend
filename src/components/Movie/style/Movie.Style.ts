@@ -1,8 +1,11 @@
 import { css } from '@emotion/react'
 
-const moviePosition = css`
+const arrow = css`
+  opacity: 0;
   position: absolute;
   top: 335px;
+  display: block;
+  transition: opacity 0.2s ease;
 `
 const left = css`
   left: 40px;
@@ -37,11 +40,11 @@ export const Dot = css`
   transition: all 0.3s;
 `
 export const LeftButton = css`
-  ${moviePosition}
+  ${arrow}
   ${left}
 `
 export const RightButton = css`
-  ${moviePosition}
+  ${arrow}
   ${right}
 `
 export const DotContainer = css`
@@ -53,6 +56,12 @@ export const SliderDiv = css`
   height: 720px;
   border-radius: 20px;
   margin-bottom: 10px;
+  &:hover button {
+    opacity: 0.5;
+  }
+  &:hover button:hover {
+    opacity: 1;
+  }
 `
 export const SubTitle = css`
   margin-bottom: 20px;

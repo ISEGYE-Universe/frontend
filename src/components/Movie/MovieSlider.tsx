@@ -45,50 +45,54 @@ const MovieSlider = ({ movieList }: MovieSliderProrps) => {
   }, [emblaApi, onSelect])
 
   return (
-    <div css={relative}>
-      <div css={SliderDiv} ref={emblaRef}>
-        <div css={Flex}>
-          {movieList.map((list: MovieInfoType) => (
-            <MovieContainer link={list.src} key={list.title} />
+    <>
+      <div css={relative}>
+        <div css={SliderDiv} ref={emblaRef}>
+          <div css={Flex}>
+            {movieList.map((list: MovieInfoType) => (
+              <MovieContainer link={list.src} key={list.title} />
+            ))}
+          </div>
+          <button
+            type="button"
+            aria-label="left-arrow"
+            css={LeftButton}
+            className="button"
+            onClick={scrollPrev}
+          >
+            <LeftArrow />
+          </button>
+          <button
+            type="button"
+            aria-label="right-arrow"
+            css={RightButton}
+            className="button"
+            onClick={scrollNext}
+          >
+            <RightArrow />
+          </button>
+        </div>
+        <MovieTitle title={movieList[current].title} />
+        <div
+          css={css`
+            ${Flex}
+            ${DotContainer}
+          `}
+        >
+          {movieList.map((_, idx: number) => (
+            <button
+              type="button"
+              aria-label={`movie-dot-button-${idx + 1}`}
+              key={_.title}
+              onClick={() => scrollTo(idx)}
+              css={css`
+                ${current === idx ? CurrentDot : Dot}
+              `}
+            />
           ))}
         </div>
       </div>
-      <button
-        type="button"
-        aria-label="left-arrow"
-        css={LeftButton}
-        onClick={scrollPrev}
-      >
-        <LeftArrow />
-      </button>
-      <button
-        type="button"
-        aria-label="right-arrow"
-        css={RightButton}
-        onClick={scrollNext}
-      >
-        <RightArrow />
-      </button>
-      <MovieTitle title={movieList[current].title} />
-      <div
-        css={css`
-          ${Flex}
-          ${DotContainer}
-        `}
-      >
-        {movieList.map((_, idx: number) => (
-          <button
-            type="button"
-            aria-label={`movie-dot-button-${idx + 1}`}
-            key={_.title}
-            onClick={() => scrollTo(idx)}
-            css={css`
-              ${current === idx ? CurrentDot : Dot}
-            `}
-          />
-        ))}
-      </div>
-    </div>
+    </>
   )
 }
 
