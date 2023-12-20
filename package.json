@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint-diff": "eslint --ignore-pattern '!.config.js' --no-error-on-unmatched-pattern $(git diff --name-only --diff-filter=duxb origin/$BASE origin/$HEAD | grep -E '\\.((j|t)sx?)$' | xargs)"
+    "lint-diff": "eslint --ignore-pattern 'next.config.js' --no-error-on-unmatched-pattern $(git diff --name-only --diff-filter=duxb origin/$BASE origin/$HEAD | grep -E '\\.((j|t)sx?)$' | xargs)"
   },
   "dependencies": {
     "@emotion/babel-plugin": "^11.10.6",
