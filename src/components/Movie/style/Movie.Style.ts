@@ -26,12 +26,14 @@ export const CurrentDot = css`
   width: 20px;
   height: 10px;
   border-radius: 5px;
+  transition: all 0.3s;
 `
 export const Dot = css`
   background-color: #d1d1d1;
   width: 10px;
   height: 10px;
   border-radius: 5px;
+  transition: all 0.3s;
 `
 export const LeftButton = css`
   ${moviePosition}
