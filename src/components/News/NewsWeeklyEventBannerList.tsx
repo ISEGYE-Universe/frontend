@@ -1,32 +1,8 @@
-import { NewsWeeklyEventBanner } from './NewsWeeklyEventBanner'
+import Image from 'next/image'
 
-const DUMMY_EVENT_BANNER_LIST = [
-  {
-    id: 1,
-    href: '/',
-    dummyString: 'Event Banner Inner 1',
-  },
-  {
-    id: 2,
-    href: '/',
-    dummyString: 'Event Banner Inner 2',
-  },
-  {
-    id: 3,
-    href: '/',
-    dummyString: 'Event Banner Inner 3',
-  },
-  {
-    id: 4,
-    href: '/',
-    dummyString: 'Event Banner Inner 4',
-  },
-  {
-    id: 5,
-    href: '/',
-    dummyString: 'Event Banner Inner 5',
-  },
-]
+import weeklyBanner from '@/data/main-news/weekly-event-banner.json'
+
+import { NewsWeeklyEventBanner } from './NewsWeeklyEventBanner'
 
 export const NewsWeeklyEventBannerList = () => {
   return (
@@ -36,9 +12,14 @@ export const NewsWeeklyEventBannerList = () => {
         gap: 10,
       }}
     >
-      {DUMMY_EVENT_BANNER_LIST.map((eventBanner) => (
+      {weeklyBanner.map((eventBanner) => (
         <NewsWeeklyEventBanner key={eventBanner.id} href={eventBanner.href}>
-          <span>{eventBanner.dummyString}</span>
+          <Image
+            src={eventBanner.ImageSrc}
+            alt="Weekly Event Banner"
+            width={252}
+            height={380}
+          />
         </NewsWeeklyEventBanner>
       ))}
     </div>

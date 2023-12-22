@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "href": "/",
+    "ImageSrc": "images/main-news/weekly-event-1.png"
+  },
+  {
+    "id": 2,
+    "href": "/",
+    "ImageSrc": "images/main-news/weekly-event-2.png"
+  },
+  {
+    "id": 3,
+    "href": "/",
+    "ImageSrc": "images/main-news/weekly-event-3.png"
+  },
+  {
+    "id": 4,
+    "href": "/",
+    "ImageSrc": "images/main-news/weekly-event-4.png"
+  },
+  {
+    "id": 5,
+    "href": "/",
+    "ImageSrc": "images/main-news/weekly-event-5.png"
+  }
+]
