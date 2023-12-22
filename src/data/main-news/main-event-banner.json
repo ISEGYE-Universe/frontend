@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "ImageSrc": "images/main-news/main-event-1.png"
+  },
+  {
+    "id": 2,
+    "ImageSrc": "images/main-news/main-event-2.png"
+  },
+  {
+    "id": 3,
+    "ImageSrc": "images/main-news/main-event-3.png"
+  }
+]

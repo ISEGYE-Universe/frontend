@@ -5,20 +5,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import { useCallback } from 'react'
 import { NewsThumnail } from './NewsThumnail'
 
-const DUMMY_THUMNAIL_LIST = [
-  {
-    id: 1,
-    ImageSrc: 'images/main-news/main-event-1.png',
-  },
-  {
-    id: 2,
-    ImageSrc: 'images/main-news/main-event-2.png',
-  },
-  {
-    id: 3,
-    ImageSrc: 'images/main-news/main-event-3.png',
-  },
-]
+import mainBanner from '@/data/main-news/main-event-banner.json'
 
 export const NewsThumnailList = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, startIndex: 1 })
@@ -96,7 +83,7 @@ export const NewsThumnailList = () => {
             display: 'flex',
           }}
         >
-          {DUMMY_THUMNAIL_LIST.map((thumnail) => (
+          {mainBanner.map((thumnail) => (
             <NewsThumnail key={thumnail.id}>
               <Image
                 src={thumnail.ImageSrc}
@@ -106,7 +93,7 @@ export const NewsThumnailList = () => {
               />
             </NewsThumnail>
           ))}
-          {DUMMY_THUMNAIL_LIST.map((thumnail) => (
+          {mainBanner.map((thumnail) => (
             <NewsThumnail key={thumnail.id * 2}>
               <Image
                 src={thumnail.ImageSrc}
