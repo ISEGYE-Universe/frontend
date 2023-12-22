@@ -29,6 +29,30 @@ const dummyData = [
     desc: '2,109,700 Streams',
     date: new Date('2023-08-18'),
   },
+  {
+    id: 4,
+    thumbnail: '/images/chart/history-lockdown.jpg',
+    category: '멜론 명예의 전당',
+    title: 'LOCKDOWN',
+    desc: '1,156,500 Streams',
+    date: new Date('2023-06-22'),
+  },
+  {
+    id: 5,
+    thumbnail: '/images/chart/history-another-world.jpg',
+    category: '멜론 명예의 전당',
+    title: 'Another World',
+    desc: '1,335,900 Streams',
+    date: new Date('2023-07-21'),
+  },
+  {
+    id: 6,
+    thumbnail: '/images/chart/history-kidding.jpg',
+    category: '멜론 명예의 전당',
+    title: 'KIDDING',
+    desc: '2,109,700 Streams',
+    date: new Date('2023-08-18'),
+  },
 ]
 
 const emblaCss = css`
@@ -115,8 +139,7 @@ export const HistoryCarousel = () => {
     <div css={{ position: 'relative' }}>
       <div className="embla" css={emblaCss} ref={emblaRef}>
         <div className="embla__container">
-          {/* loop 발동을 위해 리스트 2배로 복사 */}
-          {[...dummyData, ...dummyData].map((data) => (
+          {[...dummyData].map((data) => (
             <div className="embla__slide" key={`history-${data.id}`}>
               <HistoryCard
                 thumbnail={data.thumbnail}
