@@ -52,8 +52,8 @@ export const top100ChartContainer = css`
   }
 `
 
-export const tooltipContainer = (isTooltipOpen: boolean) => css`
-  opacity: ${isTooltipOpen ? 0.3 : 1};
+export const tooltipContainer = (annotationOpen: boolean) => css`
+  opacity: ${annotationOpen ? 0.3 : 1};
   background-color: ${ChartColor.isedolPink};
   text-align: center;
   pointer-events: none;

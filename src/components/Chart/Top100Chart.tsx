@@ -69,11 +69,21 @@ const Top100ChartImpl = ({
   const [lastGlyphPoint, setLastGlyphPoint] = useState<Point>({ x: 0, y: 0 })
   const [lastGlyphPointLoaded, setLastGlyphPointLoaded] =
     useState<boolean>(false)
-  const [isTooltipOpen, setIsTooltipOpen] = useState<boolean>(false)
+  const [annotationOpen, setAnnotationOpen] = useState<boolean>(false)
+  const [isPointerOut, setIsPointerOut] = useState<boolean>(false)
 
   return (
     <div css={top100ChartContainer}>
       <XYChart
+        onPointerOut={() => {
+          setIsPointerOut(true)
+          setAnnotationOpen(false)
+        }}
+        onPointerMove={() => {
+          if (isPointerOut) {
+            setIsPointerOut(false)
+          }
+        }}
         margin={margin || { top: 10, right: 0, bottom: 20, left: 0 }}
         width={graphWidth}
         height={graphHeight}
@@ -132,7 +142,10 @@ const Top100ChartImpl = ({
               // size={5}
               renderGlyph={(datum) => {
                 // 마지막 glyph의 좌표 저장
-                if (datum.key === `${data.length - 1}`) {
+                if (
+                  datum.key === `${data.length - 1}` &&
+                  !lastGlyphPointLoaded
+                ) {
                   setLastGlyphPoint({ x: datum.x, y: datum.y })
                   setLastGlyphPointLoaded(true)
                 }
@@ -155,9 +168,11 @@ const Top100ChartImpl = ({
                   tooltipData !== undefined &&
                   tooltipData.nearestDatum &&
                   // 가장 최근 데이터의 tooltip은 표시하지 않음
-                  tooltipData.nearestDatum?.index < data.length - 1
+                  tooltipData.nearestDatum?.index < data.length - 1 &&
+                  !isPointerOut
                 ) {
-                  setIsTooltipOpen(true)
+                  setAnnotationOpen(true)
+
                   return (
                     <div
                       css={tooltipContainer(false)}
@@ -177,7 +192,7 @@ const Top100ChartImpl = ({
                     </div>
                   )
                 }
-                setIsTooltipOpen(false)
+                setAnnotationOpen(false)
                 return null
               }}
               snapTooltipToDatumX
@@ -188,7 +203,7 @@ const Top100ChartImpl = ({
             {lastGlyphPointLoaded && (
               <Annotation x={lastGlyphPoint.x - 15} y={lastGlyphPoint.y + 20}>
                 <HtmlLabel>
-                  <div css={tooltipContainer(isTooltipOpen)}>
+                  <div css={tooltipContainer(annotationOpen)}>
                     <p css={tooltipTimeText}>현재 순위</p>
                     <p css={tooltipRankText}>{data[data.length - 1].rank}위!</p>
                   </div>
