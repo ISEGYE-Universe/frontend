@@ -8,15 +8,15 @@ import { NewsThumnail } from './NewsThumnail'
 const DUMMY_THUMNAIL_LIST = [
   {
     id: 1,
-    dummyString: 'Thumnail Inner 1',
+    ImageSrc: 'images/main-news/main-event-1.png',
   },
   {
     id: 2,
-    dummyString: 'Thumnail Inner 2',
+    ImageSrc: 'images/main-news/main-event-2.png',
   },
   {
     id: 3,
-    dummyString: 'Thumnail Inner 3',
+    ImageSrc: 'images/main-news/main-event-3.png',
   },
 ]
 
@@ -98,12 +98,22 @@ export const NewsThumnailList = () => {
         >
           {DUMMY_THUMNAIL_LIST.map((thumnail) => (
             <NewsThumnail key={thumnail.id}>
-              <span>{thumnail.dummyString}</span>
+              <Image
+                src={thumnail.ImageSrc}
+                alt="Main Event Banner"
+                width={500}
+                height={500}
+              />
             </NewsThumnail>
           ))}
           {DUMMY_THUMNAIL_LIST.map((thumnail) => (
             <NewsThumnail key={thumnail.id * 2}>
-              <span>{thumnail.dummyString}</span>
+              <Image
+                src={thumnail.ImageSrc}
+                alt="Main Event Banner"
+                width={500}
+                height={500}
+              />
             </NewsThumnail>
           ))}
         </div>
