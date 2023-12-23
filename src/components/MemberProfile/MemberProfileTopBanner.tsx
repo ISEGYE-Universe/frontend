@@ -18,13 +18,11 @@ import {
   topBannerContainer,
 } from './MemberProfileTopBanner.css'
 
-interface MemberProfileTopBannerProp {
+export const MemberProfileTopBanner = ({
+  memberName,
+}: {
   memberName: IsedolMember
-}
-
-export const MemberProfileTopBanner = (prop: MemberProfileTopBannerProp) => {
-  const { memberName } = prop
-
+}) => {
   const { twIcon, ytIcon } = memberProfileData.commonImage
   const topBannerImage = memberProfileData[memberName]?.topBannerImage
   // Cannot destructure property as it is undefined 오류 방지를 위해 빈 객체 할당

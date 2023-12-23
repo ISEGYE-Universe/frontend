@@ -4,6 +4,7 @@ import {
   splittedContainer,
 } from '@/components/MemberProfile/MemberProfile.css'
 import { MemberProfileCoverSong } from '@/components/MemberProfile/MemberProfileCoverSong'
+import { MemberProfilePlayerWidget } from '@/components/MemberProfile/MemberProfilePlayerWidget'
 import { MemberProfileSchedule } from '@/components/MemberProfile/MemberProfileSchedule'
 import { MemberProfileTopBanner } from '@/components/MemberProfile/MemberProfileTopBanner'
 import { MemberProfileWakscord } from '@/components/MemberProfile/MemberProfileWakscord'
@@ -54,6 +55,8 @@ const MemberProfile = ({
       <div css={fullWidthContainer}>
         <MemberProfileSchedule memberName={memberName as IsedolMember} />
       </div>
+      {/* 음악 플레이어 위젯 */}
+      <MemberProfilePlayerWidget memberName={memberName as IsedolMember} />
     </article>
   )
 }
