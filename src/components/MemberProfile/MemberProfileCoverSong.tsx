@@ -1,6 +1,10 @@
 import memberProfileData from '@/data/member-profile.json'
 import Link from 'next/link'
 import Image from 'next/image'
+import { MouseEvent, useEffect } from 'react'
+import YouTube, { YouTubePlayer, YouTubeProps } from 'react-youtube'
+import MemberProfileStore from '@/store/MemberProfile/MemberProfileStore'
+import { parseIdFromYoutubeURL } from '@/utils/Youtube'
 import {
   memberProfileCoverSongListBox,
   memberProfileCoverSongListItem,
@@ -17,7 +21,10 @@ import {
   memberProfileCoverSongSubTitleBoxDesc,
   memberProfileCoverSongSubTitleBoxMore,
   memberSignatureImg,
+  youtubeEmbedContainer,
 } from './MemberProfileCoverSong.css'
+
+let localYouTubeVideoPlayer: YouTubePlayer = null
 
 export const MemberProfileCoverSong = ({
   memberName,
@@ -28,7 +35,66 @@ export const MemberProfileCoverSong = ({
     memberProfileData[memberName]?.memberInformation || {}
   const { coverPlayIcon, signatureImg, personalColor, personalColorAlpha } =
     memberProfileData[memberName] || {}
+  const recentCoverList = memberProfileData[memberName]?.recentCover
   const youtubeSongLink = socialMedia?.youtube.songPlayListUrl || ''
+
+  // 재생 여부
+  const {
+    isPlaying,
+    setIsPlaying,
+    currentYoutubeId,
+    youTubePlayerReady,
+    setYouTubePlayerReady,
+    setCurrentYoutubeId,
+    setYoutubeVideoPlayer,
+  } = MemberProfileStore()
+
+  // youtube player ready handler
+  const handleOnReady: YouTubeProps['onReady'] = (event) => {
+    // set global youtube player
+    setYoutubeVideoPlayer(event.target)
+    // set local youtube player - handleOnReady에서는 localYoutubePlayer로만 재생 가능
+    localYouTubeVideoPlayer = event.target
+
+    // youtube player가 준비된 후 안전한 접근을 위해 1000ms 기다림
+    setTimeout(() => {
+      setYouTubePlayerReady(true)
+    }, 1000)
+  }
+
+  // 재생버튼 click handler
+  const handleClickPlay = (
+    e: MouseEvent<HTMLButtonElement>,
+    youtubeId: string | undefined,
+  ) => {
+    // anchor태그 내에 존재하기 때문에 anchor 클릭 이벤트 발생 방지
+    e.preventDefault()
+
+    // 다른 곡의 재생버튼 클릭한 경우
+    if (youtubeId !== currentYoutubeId) {
+      setCurrentYoutubeId(youtubeId ?? '')
+      localYouTubeVideoPlayer.loadVideoById(youtubeId, 0)
+      // 로드 완료가 안될 수 있으므로 기다린 후에 재생
+      setTimeout(() => {
+        localYouTubeVideoPlayer.playVideo()
+        setIsPlaying(true)
+      }, 100)
+    }
+    // 동일한 곡의 재생버튼 클릭한 경우
+    else if (isPlaying) {
+      localYouTubeVideoPlayer.pauseVideo()
+      setIsPlaying(false)
+    } else {
+      localYouTubeVideoPlayer.playVideo()
+      setIsPlaying(true)
+    }
+  }
+
+  // 멤버 전환 시 default 곡 지정
+  useEffect(() => {
+    setCurrentYoutubeId(parseIdFromYoutubeURL(recentCoverList[0].link) ?? '')
+  }, [recentCoverList])
+
   return (
     <section css={memberProfileCoverSongMain}>
       <Image
@@ -54,7 +120,7 @@ export const MemberProfileCoverSong = ({
         </div>
       </div>
       <ul css={memberProfileCoverSongListBox}>
-        {memberProfileData[memberName]?.recentCover.map((cover, i) => (
+        {recentCoverList.map((cover, i) => (
           <li key={cover.id}>
             <Link
               key={cover.id}
@@ -83,18 +149,34 @@ export const MemberProfileCoverSong = ({
                 </p>
               </div>
 
-              <Image
-                src={coverPlayIcon}
-                className="play-icon"
-                width={32}
-                height={32}
-                alt={`${cover.title} play icon`}
-                css={memberProfileCoverSongListItemPlayIcon}
-              />
+              <button
+                type="button"
+                onClick={(e) => {
+                  handleClickPlay(e, parseIdFromYoutubeURL(cover.link))
+                }}
+              >
+                <Image
+                  src={coverPlayIcon}
+                  className="play-icon"
+                  width={32}
+                  height={32}
+                  alt={`${cover.title} play icon`}
+                  css={memberProfileCoverSongListItemPlayIcon(
+                    youTubePlayerReady,
+                  )}
+                />
+              </button>
             </Link>
           </li>
         ))}
       </ul>
+
+      <YouTube
+        key={memberName}
+        css={youtubeEmbedContainer}
+        videoId={currentYoutubeId}
+        onReady={handleOnReady}
+      />
     </section>
   )
 }

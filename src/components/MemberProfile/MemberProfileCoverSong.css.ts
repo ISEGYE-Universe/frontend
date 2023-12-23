@@ -103,9 +103,6 @@ export const memberProfileCoverSongListItem = (color: string) => {
       &:hover {
         background-color: ${color};
       }
-      &:hover .play-icon {
-        opacity: 1;
-      }
     `,
   ]
 }
@@ -145,10 +142,27 @@ export const memberProfileCoverSongListItemDateText = [
     color: ${MemberProfileColor.coverDateTextGrey};
   `,
 ]
-export const memberProfileCoverSongListItemPlayIcon = [
+
+export const memberProfileCoverSongListItemPlayButton = (
+  isReady: boolean,
+) => css`
+  ${isReady ? '' : `pointer-events: none;`}
+`
+export const memberProfileCoverSongListItemPlayIcon = (isReady: boolean) => [
   css`
     color: ${MemberProfileColor.coverDateTextGrey};
-    opacity: 0.5;
+    opacity: ${isReady ? 0.5 : 0.1};
     transition: opacity 0.2s ease;
+    ${isReady ? '' : `pointer-events: none;`}
+
+    &:hover {
+      opacity: 1;
+    }
   `,
 ]
+
+export const youtubeEmbedContainer = css`
+  display: none;
+  // opacity: 0.7;
+  // position: absolute;
+`

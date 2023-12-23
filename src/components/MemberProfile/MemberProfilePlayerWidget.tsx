@@ -10,14 +10,20 @@ export const MemberProfilePlayerWidget = ({
 }) => {
   const { personalColor } = memberProfileData[memberName] || {}
 
-  const { isPlaying, setIsPlaying } = MemberProfileStore()
+  const { isPlaying, setIsPlaying, youTubePlayerReady, youTubeVideoPlayer } =
+    MemberProfileStore()
 
   return (
     <button
       type="button"
-      css={widgetContainer(personalColor)}
+      css={widgetContainer(personalColor, youTubePlayerReady)}
       aria-label="player-widget"
       onClick={() => {
+        if (isPlaying) {
+          youTubeVideoPlayer.pauseVideo()
+        } else {
+          youTubeVideoPlayer.playVideo()
+        }
         setIsPlaying(!isPlaying)
       }}
     >
