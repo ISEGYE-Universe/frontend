@@ -73,13 +73,16 @@ const Top100ChartImpl = ({
   data,
 }: Top100ChartImplProps) => {
   const [minY, maxY] = data ? getYMinAndMax(data) : [0, 0]
+  // 최근 데이터 annotation 관련 staet
   const [lastGlyphPoint, setLastGlyphPoint] = useState<Point>({ x: 0, y: 0 })
   const [lastGlyphPointLoaded, setLastGlyphPointLoaded] =
     useState<boolean>(false)
+
+  // tooltip, annotation open 여부
   const [annotationOpen, setAnnotationOpen] = useState<boolean>(true)
   const [openTooltip, setOpenTooltip] = useState<boolean>(false)
 
-  // tooltip
+  // tooltip ref, DOM 관련 state
   const containerOuterRef = useRef<HTMLDivElement>(null)
   const [circleDOMList, setCircleDOMList] = useState<Element[]>(
     new Array(data.length),
