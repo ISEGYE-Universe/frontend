@@ -142,7 +142,7 @@ const Top100ChartImpl = ({
       }
       return null
     },
-    [circleDOMList, showTooltip],
+    [circleDOMList, data.length, lastGlyphPointLoaded, showTooltip],
   )
 
   const handleMouseOut = useCallback(() => {
