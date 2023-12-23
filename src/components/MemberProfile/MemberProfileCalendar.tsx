@@ -76,6 +76,15 @@ export const MemberProfileCalendar = ({
     }
   }
 
+  // 강조 표시
+  const triggerScheduleAnimation = (index: number) => {
+    const targetRef = emblaApi?.slideNodes()[index]
+    targetRef?.classList.add('focused')
+    setTimeout(() => {
+      targetRef?.classList.remove('focused')
+    }, 500)
+  }
+
   return (
     <div css={calendarContentContainer}>
       <Calendar
@@ -123,6 +132,7 @@ export const MemberProfileCalendar = ({
           )
           if (index !== -1) {
             scrollToHandler(index)
+            triggerScheduleAnimation(index)
           }
         }}
         // 특정 날짜 강조 클래스
