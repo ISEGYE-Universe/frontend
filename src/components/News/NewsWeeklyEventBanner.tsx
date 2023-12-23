@@ -13,6 +13,7 @@ export const NewsWeeklyEventBanner = ({
   return (
     <div
       css={{
+        width: 252,
         height: 380,
         borderRadius: 10,
         backgroundColor: color.ElementBackgroundGrey,

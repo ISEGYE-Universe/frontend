@@ -1,24 +1,13 @@
 import Image from 'next/image'
 
-import useEmblaCarousel from 'embla-carousel-react'
-
 import { useCallback } from 'react'
-import { NewsThumnail } from './NewsThumnail'
 
-const DUMMY_THUMNAIL_LIST = [
-  {
-    id: 1,
-    dummyString: 'Thumnail Inner 1',
-  },
-  {
-    id: 2,
-    dummyString: 'Thumnail Inner 2',
-  },
-  {
-    id: 3,
-    dummyString: 'Thumnail Inner 3',
-  },
-]
+import useEmblaCarousel from 'embla-carousel-react'
+import mainBanner from '@/data/main-news/main-event-banner.json'
+
+import { RightArrow, LeftArrow } from '@/components/Movie/svg'
+
+import { NewsThumnail } from './NewsThumnail'
 
 export const NewsThumnailList = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, startIndex: 1 })
@@ -52,23 +41,21 @@ export const NewsThumnailList = () => {
       >
         <button
           type="button"
+          aria-label="left-arrow"
           css={{
             width: 50,
             height: 50,
             backgroundColor: '#252525',
             borderRadius: 50,
+            justifyContent: 'flex-end',
           }}
           onClick={scrollPrev}
         >
-          <Image
-            src="images/icon/banner-button-left-arrow.svg"
-            alt="left-arrow"
-            width={14}
-            height={24}
-          />
+          <LeftArrow />
         </button>
         <button
           type="button"
+          aria-label="right-arrow"
           css={{
             width: 50,
             height: 50,
@@ -77,12 +64,7 @@ export const NewsThumnailList = () => {
           }}
           onClick={scrollNext}
         >
-          <Image
-            src="images/icon/banner-button-right-arrow.svg"
-            alt="right-arrow"
-            width={14}
-            height={24}
-          />
+          <RightArrow />
         </button>
       </div>
       <div
@@ -96,14 +78,24 @@ export const NewsThumnailList = () => {
             display: 'flex',
           }}
         >
-          {DUMMY_THUMNAIL_LIST.map((thumnail) => (
+          {mainBanner.map((thumnail) => (
             <NewsThumnail key={thumnail.id}>
-              <span>{thumnail.dummyString}</span>
+              <Image
+                src={thumnail.ImageSrc}
+                alt="Main Event Banner"
+                width={500}
+                height={500}
+              />
             </NewsThumnail>
           ))}
-          {DUMMY_THUMNAIL_LIST.map((thumnail) => (
+          {mainBanner.map((thumnail) => (
             <NewsThumnail key={thumnail.id * 2}>
-              <span>{thumnail.dummyString}</span>
+              <Image
+                src={thumnail.ImageSrc}
+                alt="Main Event Banner"
+                width={500}
+                height={500}
+              />
             </NewsThumnail>
           ))}
         </div>
