@@ -16,6 +16,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { useTooltip, useTooltipInPortal } from '@visx/tooltip'
 import {
   tooltipContainer,
+  tooltipOuterContainer,
   tooltipRankText,
   tooltipTimeText,
   top100ChartContainer,
@@ -26,14 +27,18 @@ export interface MelonTop100Datum {
   rank: number
 }
 
+// hour formatter
+const formatHour = (d: string) => {
+  return new Date(d).toLocaleTimeString('ko-KR', {
+    hour12: false,
+    hour: '2-digit',
+    minute: '2-digit',
+  })
+}
+
 // visx accessors
 const accessors = {
-  xAccessor: (d: MelonTop100Datum) =>
-    new Date(d.date).toLocaleTimeString('ko-KR', {
-      hour12: false,
-      hour: '2-digit',
-      minute: '2-digit',
-    }),
+  xAccessor: (d: MelonTop100Datum) => formatHour(d.date),
   yAccessor: (d: MelonTop100Datum) => d.rank,
   colorAccessor: () => ChartColor.isedolPink,
 }
@@ -71,8 +76,8 @@ const Top100ChartImpl = ({
   const [lastGlyphPoint, setLastGlyphPoint] = useState<Point>({ x: 0, y: 0 })
   const [lastGlyphPointLoaded, setLastGlyphPointLoaded] =
     useState<boolean>(false)
-  const [annotationOpen, setAnnotationOpen] = useState<boolean>(false)
-  const [isPointerOut, setIsPointerOut] = useState<boolean>(false)
+  const [annotationOpen, setAnnotationOpen] = useState<boolean>(true)
+  const [openTooltip, setOpenTooltip] = useState<boolean>(false)
 
   // tooltip
   const containerOuterRef = useRef<HTMLDivElement>(null)
@@ -126,10 +131,12 @@ const Top100ChartImpl = ({
           cy = currentGlyph.cy
         }
         if (cx && cy) {
+          setAnnotationOpen(false)
+          setOpenTooltip(true)
           showTooltip({
-            tooltipLeft: cx.baseVal.value - 50,
-            tooltipTop: cy.baseVal.value - 25,
-            tooltipData: event.datum.rank,
+            tooltipLeft: cx.baseVal.value - 75,
+            tooltipTop: cy.baseVal.value - 33,
+            tooltipData: event.datum,
           })
         }
       }
@@ -137,6 +144,15 @@ const Top100ChartImpl = ({
     },
     [circleDOMList, showTooltip],
   )
+
+  const handleMouseOut = useCallback(() => {
+    setOpenTooltip(false)
+    // timeout for transition
+    setTimeout(() => {
+      hideTooltip()
+    }, 500)
+    setAnnotationOpen(true)
+  }, [hideTooltip])
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -218,7 +234,7 @@ const Top100ChartImpl = ({
                   yAccessor={accessors.yAccessor}
                   colorAccessor={accessors.colorAccessor}
                   onPointerMove={handleMouseOver}
-                  onPointerOut={hideTooltip}
+                  onPointerOut={handleMouseOut}
                   renderGlyph={(datum) => {
                     return (
                       <circle
@@ -231,59 +247,27 @@ const Top100ChartImpl = ({
                     )
                   }}
                 />
-                {tooltipOpen && tooltipData && (
+                {tooltipOpen && (
                   <TooltipInPortal
-                    key={Math.random()}
+                    key={`tooltip-${tooltipOpen ? 1 : 0}`}
                     top={tooltipTop}
                     left={tooltipLeft}
+                    css={tooltipOuterContainer(openTooltip)}
+                    unstyled
                   >
-                    {tooltipData as string}
+                    <div css={tooltipContainer(true)}>
+                      <p css={tooltipTimeText}>
+                        {tooltipData &&
+                          formatHour((tooltipData as MelonTop100Datum).date)}
+                      </p>
+                      <p css={tooltipRankText}>
+                        {tooltipData && (tooltipData as MelonTop100Datum).rank}
+                        위
+                      </p>
+                    </div>
                   </TooltipInPortal>
                 )}
-                {/* <Tooltip<MelonTop100Datum>
-                offsetTop={-23}
-                offsetLeft={-63}
-                renderTooltip={({ tooltipData }) => {
-                  if (
-                    tooltipData !== undefined &&
-                    tooltipData.nearestDatum &&
-                    // 가장 최근 데이터의 tooltip은 표시하지 않음
-                    tooltipData.nearestDatum?.index < data.length - 1 &&
-                    !isPointerOut
-                  ) {
-                    setAnnotationOpen(true)
 
-                    return (
-                      <div
-                        css={tooltipContainer(false)}
-                        key={tooltipData.nearestDatum?.key}
-                      >
-                        <p css={tooltipTimeText}>
-                          {tooltipData.nearestDatum?.datum
-                            ? accessors.xAccessor(
-                                tooltipData.nearestDatum.datum,
-                              )
-                            : null}
-                        </p>
-                        <p css={tooltipRankText}>
-                          {tooltipData.nearestDatum?.datum
-                            ? accessors.yAccessor(
-                                tooltipData.nearestDatum.datum,
-                              )
-                            : null}
-                          위
-                        </p>
-                      </div>
-                    )
-                  }
-                  setAnnotationOpen(false)
-                  return null
-                }}
-                snapTooltipToDatumX
-                snapTooltipToDatumY
-                unstyled
-                applyPositionStyle
-              /> */}
                 {lastGlyphPointLoaded && (
                   <Annotation
                     x={lastGlyphPoint.x - 15}

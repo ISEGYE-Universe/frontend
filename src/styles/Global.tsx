@@ -46,11 +46,6 @@ const resetStyle = css`
     text-decoration: none;
     color: inherit;
   }
-
-  // visx 차트의 tooltip이 portal에 존재하여 global css에 정의
-  .visx-tooltip {
-    pointer-events: none;
-  }
 `
 
 const GlobalStyle = () => <Global styles={[fontStyle, resetStyle]} />
