@@ -12,7 +12,11 @@ import {
 export const MemberProfileWakscord = () => {
   return (
     <section css={mainContainer}>
-      <Link href="https://wakscord.xyz/" target="_blank">
+      <Link
+        href="https://wakscord.xyz/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Image
           css={wakscordLogo}
           src="/images/member-profile/logo-wakscord.png"

@@ -61,7 +61,12 @@ export const MemberProfileTitle = ({
     <div css={titleContainer}>
       <h1 css={titleText}>{title}</h1>
       <h3 css={subTitleText}>{subTitle}</h3>
-      <Link css={ytLinkAnchor} href={ytLink || ''} target="_blank">
+      <Link
+        css={ytLinkAnchor}
+        href={ytLink || ''}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Image src={ytIconBlack} alt="youtube Icon" width={22} height={16} />
         <span css={ytLinkText}>{ytName}</span>
       </Link>

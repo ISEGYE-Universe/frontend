@@ -49,7 +49,12 @@ export const MemberProfileYoutube = ({
       <ul css={youtubeContainer}>
         {recentYoutubeVideo?.map((v) => (
           <li key={v.id}>
-            <Link css={youtubeListItem} href={v.link} target="_blank">
+            <Link
+              css={youtubeListItem}
+              href={v.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Image
                 src={v.thumbUrl}
                 width={310}
