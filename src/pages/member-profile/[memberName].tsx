@@ -1,6 +1,7 @@
 import {
   articleLayoutContainer,
   fullWidthContainer,
+  playerRail,
   splittedContainer,
 } from '@/components/MemberProfile/MemberProfile.css'
 import { MemberProfileCoverSong } from '@/components/MemberProfile/MemberProfileCoverSong'
@@ -47,6 +48,13 @@ const MemberProfile = ({
         <div css={splittedContainer}>
           <MemberProfileCoverSong memberName={memberName as IsedolMember} />
           <MemberProfileWakscord />
+          {/* 음악 플레이어 레일 */}
+          <div css={playerRail}>
+            {/* 음악 플레이어 위젯 */}
+            <MemberProfilePlayerWidget
+              memberName={memberName as IsedolMember}
+            />
+          </div>
         </div>
         {/* 유튜브 */}
         <MemberProfileYoutube memberName={memberName as IsedolMember} />
@@ -55,8 +63,6 @@ const MemberProfile = ({
       <div css={fullWidthContainer}>
         <MemberProfileSchedule memberName={memberName as IsedolMember} />
       </div>
-      {/* 음악 플레이어 위젯 */}
-      <MemberProfilePlayerWidget memberName={memberName as IsedolMember} />
     </article>
   )
 }
