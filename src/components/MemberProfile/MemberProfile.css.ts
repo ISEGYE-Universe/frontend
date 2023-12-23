@@ -7,6 +7,7 @@ export const articleLayoutContainer = css`
 
 export const fullWidthContainer = css`
   max-width: 1920px;
+  margin: 0 auto;
 `
 
 export const splittedContainer = css`

@@ -17,6 +17,7 @@ import {
   socialMediaTextStyle,
   topBannerContainer,
 } from './MemberProfileTopBanner.css'
+import { fullWidthContainer } from './MemberProfile.css'
 
 interface MemberProfileTopBannerProp {
   memberName: IsedolMember
@@ -35,7 +36,7 @@ export const MemberProfileTopBanner = (prop: MemberProfileTopBannerProp) => {
   const ytInfo = socialMedia?.youtube
 
   return (
-    <section css={topBannerContainer(topBannerImage)}>
+    <section css={[fullWidthContainer, topBannerContainer(topBannerImage)]}>
       <div css={layoutContainer}>
         {/* 멤버 기본 정보 영역 */}
         <div css={memberInformationContainer}>
