@@ -88,6 +88,7 @@ export const MemberProfileCalendar = ({
   return (
     <div css={calendarContentContainer}>
       <Calendar
+        locale="en"
         // year click event 제거
         minDetail="month"
         maxDetail="month"
