@@ -174,7 +174,7 @@ const Top100ChartImpl = ({
     return () => {
       clearTimeout(timeoutId)
     }
-  }, [])
+  }, [data])
 
   return (
     <TooltipProvider>
