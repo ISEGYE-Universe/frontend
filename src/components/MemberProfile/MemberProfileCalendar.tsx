@@ -43,8 +43,6 @@ export const MemberProfileCalendar = ({
 }) => {
   const [todayDate] = useState<Date>(new Date())
   const calendarData = memberProfileData[memberName].schedule
-  // date만 추출한 List
-  const dateList = Object.values(calendarData).map((el) => el.date)
 
   // 캐러셀
   const [emblaRef, emblaApi] = useEmblaCarousel(
@@ -78,13 +76,22 @@ export const MemberProfileCalendar = ({
     }
   }
 
+  // 강조 표시
+  const triggerScheduleAnimation = (index: number) => {
+    const targetRef = emblaApi?.slideNodes()[index]
+    targetRef?.classList.add('focused')
+    setTimeout(() => {
+      targetRef?.classList.remove('focused')
+    }, 500)
+  }
+
   return (
     <div css={calendarContentContainer}>
       <Calendar
         // year click event 제거
         minDetail="month"
         maxDetail="month"
-        css={calendarStyle(dateList)}
+        css={calendarStyle}
         value={todayDate}
         calendarType="gregory"
         // navigation 연, 월 표시 Label 커스텀
@@ -125,6 +132,7 @@ export const MemberProfileCalendar = ({
           )
           if (index !== -1) {
             scrollToHandler(index)
+            triggerScheduleAnimation(index)
           }
         }}
         // 특정 날짜 강조 클래스
