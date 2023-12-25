@@ -73,7 +73,7 @@ const Top100ChartImpl = ({
   data,
 }: Top100ChartImplProps) => {
   const [minY, maxY] = getYMinAndMax(data)
-  // 최근 데이터 annotation 관련 staet
+  // 최근 데이터 annotation 관련 state
   const [lastGlyphPoint, setLastGlyphPoint] = useState<Point>({ x: 0, y: 0 })
   const [lastGlyphPointLoaded, setLastGlyphPointLoaded] =
     useState<boolean>(false)
@@ -170,7 +170,7 @@ const Top100ChartImpl = ({
       })
 
       setLastGlyphPointLoaded(true)
-    }, 100)
+    }, 1)
 
     return () => {
       clearTimeout(timeoutId)
