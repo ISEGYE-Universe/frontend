@@ -19,12 +19,11 @@ import {
   memberSignatureImg,
 } from './MemberProfileCoverSong.css'
 
-interface MemberProfileCoverSongProps {
-  memberName: IsedolMember
-}
 export const MemberProfileCoverSong = ({
   memberName,
-}: MemberProfileCoverSongProps) => {
+}: {
+  memberName: IsedolMember
+}) => {
   const { enName, groupName, krName, socialMedia } =
     memberProfileData[memberName]?.memberInformation || {}
   const { coverPlayIcon, signatureImg, personalColor, personalColorAlpha } =

@@ -8,13 +8,11 @@ import {
 } from './MemberProfileSchedule.css'
 import { articleLayoutContainer } from './MemberProfile.css'
 
-interface MemberProfileTopBannerProp {
-  memberName: IsedolMember
-}
-
 export const MemberProfileSchedule = ({
   memberName,
-}: MemberProfileTopBannerProp) => {
+}: {
+  memberName: IsedolMember
+}) => {
   const memberInformation =
     memberProfileData[memberName]?.memberInformation || {}
   const memberYoutubeInfo = memberInformation?.socialMedia?.youtube
