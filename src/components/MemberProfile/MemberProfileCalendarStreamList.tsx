@@ -88,6 +88,7 @@ export const MemberProfileCalendarStreamList = ({
                 css={streamListContentListItem}
                 href={el.link || archiveUrl}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <span css={streamListContentListItemDateText}>
                   {parseDateString(el.date).day}

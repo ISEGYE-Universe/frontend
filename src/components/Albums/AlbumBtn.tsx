@@ -38,7 +38,12 @@ type JSONType = {
 export const SpotButton = ({ player, width, height, album }: PropType) => {
   const json: JSONType = BtnLink
   return (
-    <Link css={AlbumBtnSize} href={json[album].Spotify} target="_blank">
+    <Link
+      css={AlbumBtnSize}
+      href={json[album].Spotify}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <Image
         src={`/images/album/btnImg/${player}_black.png`}
         alt={`${player} Black Img`}
@@ -60,7 +65,12 @@ export const SpotButton = ({ player, width, height, album }: PropType) => {
 export const GOButton = ({ player, width, height, album }: PropType) => {
   const json: JSONType = BtnLink
   return (
-    <Link css={AlbumBtnSize} href={json[album].Gaon} target="_blank">
+    <Link
+      css={AlbumBtnSize}
+      href={json[album].Gaon}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <Image
         src={`/images/album/btnImg/${player}_black.png`}
         alt={`${player} Black Img`}
@@ -82,7 +92,12 @@ export const GOButton = ({ player, width, height, album }: PropType) => {
 export const YTButton = ({ player, width, height, album }: PropType) => {
   const json: JSONType = BtnLink
   return (
-    <Link css={AlbumBtnSize} href={json[album].Youtube} target="_blank">
+    <Link
+      css={AlbumBtnSize}
+      href={json[album].Youtube}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <Image
         src={`/images/album/btnImg/${player}_black.png`}
         alt={`${player} Black Img`}
@@ -104,7 +119,12 @@ export const YTButton = ({ player, width, height, album }: PropType) => {
 export const VBButton = ({ player, width, height, album }: PropType) => {
   const json: JSONType = BtnLink
   return (
-    <Link css={AlbumBtnSize} href={json[album].Vibe} target="_blank">
+    <Link
+      css={AlbumBtnSize}
+      href={json[album].Vibe}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <Image
         src={`/images/album/btnImg/${player}_black.png`}
         alt={`${player} Black Img`}
@@ -126,7 +146,12 @@ export const VBButton = ({ player, width, height, album }: PropType) => {
 export const MLButton = ({ player, width, height, album }: PropType) => {
   const json: JSONType = BtnLink
   return (
-    <Link css={AlbumBtnSize} href={json[album].Melon} target="_blank">
+    <Link
+      css={AlbumBtnSize}
+      href={json[album].Melon}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <Image
         src={`/images/album/btnImg/${player}_black.png`}
         alt={`${player} Black Img`}
@@ -148,7 +173,12 @@ export const MLButton = ({ player, width, height, album }: PropType) => {
 export const GNButton = ({ player, width, height, album }: PropType) => {
   const json: JSONType = BtnLink
   return (
-    <Link css={AlbumBtnSize} href={json[album].Genie} target="_blank">
+    <Link
+      css={AlbumBtnSize}
+      href={json[album].Genie}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <Image
         src={`/images/album/btnImg/${player}_black.png`}
         alt={`${player} Black Img`}
@@ -170,7 +200,12 @@ export const GNButton = ({ player, width, height, album }: PropType) => {
 export const BGButton = ({ player, width, height, album }: PropType) => {
   const json: JSONType = BtnLink
   return (
-    <Link css={AlbumBtnSize} href={json[album].Bugs} target="_blank">
+    <Link
+      css={AlbumBtnSize}
+      href={json[album].Bugs}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <Image
         src={`/images/album/btnImg/${player}_black.png`}
         alt={`${player} Black Img`}

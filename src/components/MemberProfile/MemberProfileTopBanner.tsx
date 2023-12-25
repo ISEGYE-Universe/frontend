@@ -62,6 +62,7 @@ export const MemberProfileTopBanner = (prop: MemberProfileTopBannerProp) => {
                 href={twInfo.url}
                 css={socialMediaLinkStyle}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <Image
                   src={twIcon}
@@ -78,6 +79,7 @@ export const MemberProfileTopBanner = (prop: MemberProfileTopBannerProp) => {
                 href={ytInfo.url}
                 css={socialMediaLinkStyle}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <Image
                   src={ytIcon}
