@@ -72,7 +72,7 @@ const Top100ChartImpl = ({
   margin,
   data,
 }: Top100ChartImplProps) => {
-  const [minY, maxY] = data ? getYMinAndMax(data) : [0, 0]
+  const [minY, maxY] = getYMinAndMax(data)
   // 최근 데이터 annotation 관련 staet
   const [lastGlyphPoint, setLastGlyphPoint] = useState<Point>({ x: 0, y: 0 })
   const [lastGlyphPointLoaded, setLastGlyphPointLoaded] =
@@ -157,6 +157,7 @@ const Top100ChartImpl = ({
     setAnnotationOpen(true)
   }, [hideTooltip])
 
+  // 가장 최근 데이터의 좌표를 가져와서 state에 저장
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       const currentGlyph = containerOuterRef.current?.querySelector(
@@ -195,99 +196,89 @@ const Top100ChartImpl = ({
               base: 2,
             }}
           >
-            {data ? (
-              <>
-                <Grid
-                  numTicks={20}
-                  rows={false}
-                  lineStyle={{ backgroundColor: ChartColor.chartBorderGrey }}
-                />
-                <Grid
-                  numTicks={6}
-                  columns={false}
-                  lineStyle={{ backgroundColor: ChartColor.chartBorderGrey }}
-                />
-                <Axis
-                  orientation="bottom"
-                  hideAxisLine
-                  axisClassName="axis-line"
-                  // ex) 13:00 -> 13
-                  tickFormat={(d: string) => {
-                    return d.slice(0, 2)
-                  }}
-                  tickClassName="axis-tick"
-                />
-                <AnimatedAreaSeries
-                  data={data}
-                  dataKey="top100LineGraph"
-                  fill="rgba(234, 68, 118, 0.15)"
-                  lineProps={{
-                    stroke: ChartColor.isedolPink,
-                    strokeWidth: 1,
-                  }}
-                  xAccessor={accessors.xAccessor}
-                  yAccessor={accessors.yAccessor}
-                />
+            <Grid
+              numTicks={20}
+              rows={false}
+              lineStyle={{ backgroundColor: ChartColor.chartBorderGrey }}
+            />
+            <Grid
+              numTicks={6}
+              columns={false}
+              lineStyle={{ backgroundColor: ChartColor.chartBorderGrey }}
+            />
+            <Axis
+              orientation="bottom"
+              hideAxisLine
+              axisClassName="axis-line"
+              // ex) 13:00 -> 13
+              tickFormat={(d: string) => {
+                return d.slice(0, 2)
+              }}
+              tickClassName="axis-tick"
+            />
+            <AnimatedAreaSeries
+              data={data}
+              dataKey="top100LineGraph"
+              fill="rgba(234, 68, 118, 0.15)"
+              lineProps={{
+                stroke: ChartColor.isedolPink,
+                strokeWidth: 1,
+              }}
+              xAccessor={accessors.xAccessor}
+              yAccessor={accessors.yAccessor}
+            />
 
-                {/* Glyph */}
-                <GlyphSeries
-                  dataKey="top100Glyph"
-                  data={data}
-                  xAccessor={accessors.xAccessor}
-                  yAccessor={accessors.yAccessor}
-                  colorAccessor={accessors.colorAccessor}
-                  onPointerMove={handleMouseOver}
-                  onPointerOut={handleMouseOut}
-                  renderGlyph={(datum) => {
-                    return (
-                      <circle
-                        className={`visx-glyph glyph-${datum.key}`}
-                        cx={datum.x}
-                        cy={datum.y}
-                        r={3}
-                        fill={ChartColor.isedolPink}
-                      />
-                    )
-                  }}
-                />
-                {tooltipOpen && (
-                  <TooltipInPortal
-                    key={`tooltip-${tooltipOpen ? 1 : 0}`}
-                    top={tooltipTop}
-                    left={tooltipLeft}
-                    css={tooltipOuterContainer(openTooltip)}
-                    unstyled
-                  >
-                    <div css={tooltipContainer(true)}>
-                      <p css={tooltipTimeText}>
-                        {tooltipData &&
-                          formatHour((tooltipData as MelonTop100Datum).date)}
-                      </p>
-                      <p css={tooltipRankText}>
-                        {tooltipData && (tooltipData as MelonTop100Datum).rank}
-                        위
-                      </p>
-                    </div>
-                  </TooltipInPortal>
-                )}
+            {/* Glyph */}
+            <GlyphSeries
+              dataKey="top100Glyph"
+              data={data}
+              xAccessor={accessors.xAccessor}
+              yAccessor={accessors.yAccessor}
+              colorAccessor={accessors.colorAccessor}
+              onPointerMove={handleMouseOver}
+              onPointerOut={handleMouseOut}
+              renderGlyph={(datum) => {
+                return (
+                  <circle
+                    className={`visx-glyph glyph-${datum.key}`}
+                    cx={datum.x}
+                    cy={datum.y}
+                    r={3}
+                    fill={ChartColor.isedolPink}
+                  />
+                )
+              }}
+            />
+            {tooltipOpen && (
+              <TooltipInPortal
+                key={`tooltip-${tooltipOpen ? 1 : 0}`}
+                top={tooltipTop}
+                left={tooltipLeft}
+                css={tooltipOuterContainer(openTooltip)}
+                unstyled
+              >
+                <div css={tooltipContainer(true)}>
+                  <p css={tooltipTimeText}>
+                    {tooltipData &&
+                      formatHour((tooltipData as MelonTop100Datum).date)}
+                  </p>
+                  <p css={tooltipRankText}>
+                    {tooltipData && (tooltipData as MelonTop100Datum).rank}위
+                  </p>
+                </div>
+              </TooltipInPortal>
+            )}
 
-                {lastGlyphPointLoaded && (
-                  <Annotation
-                    x={lastGlyphPoint.x - 15}
-                    y={lastGlyphPoint.y + 20}
-                  >
-                    <HtmlLabel>
-                      <div css={tooltipContainer(annotationOpen)}>
-                        <p css={tooltipTimeText}>현재 순위</p>
-                        <p css={tooltipRankText}>
-                          {data[data.length - 1].rank}위!
-                        </p>
-                      </div>
-                    </HtmlLabel>
-                  </Annotation>
-                )}
-              </>
-            ) : null}
+            {lastGlyphPointLoaded && (
+              <Annotation x={lastGlyphPoint.x - 15} y={lastGlyphPoint.y + 20}>
+                <HtmlLabel>
+                  <div css={tooltipContainer(annotationOpen)}>
+                    <p css={tooltipTimeText}>현재 순위</p>
+                    <p css={tooltipRankText}>{data[data.length - 1].rank}위!</p>
+                  </div>
+                </HtmlLabel>
+              </Annotation>
+            )}
           </XYChart>
         </div>
       </div>
