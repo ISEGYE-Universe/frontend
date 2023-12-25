@@ -57,18 +57,18 @@ export const tooltipOuterContainer = (openTooltip: boolean) => css`
   background: none;
   pointer-events: none;
   opacity: ${openTooltip ? 1 : 0};
-  transition: opacity 0.2s ease;
+  transition: opacity 0.3s ease;
 `
 
 export const tooltipContainer = (annotationOpen: boolean) => css`
-  opacity: ${annotationOpen ? 1 : 0.3};
+  opacity: ${annotationOpen ? 1 : 0};
   background-color: ${ChartColor.isedolPink};
   text-align: center;
   pointer-events: none;
   padding: 8px 12px;
   border-radius: 8px;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
-  transition: all 0.2s ease;
+  transition: opacity 0.3s ease;
   &::after {
     background-color: ${ChartColor.isedolPink};
     content: '';

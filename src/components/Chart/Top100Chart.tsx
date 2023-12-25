@@ -73,10 +73,6 @@ const Top100ChartImpl = ({
   data,
 }: Top100ChartImplProps) => {
   const [minY, maxY] = getYMinAndMax(data)
-  // 최근 데이터 annotation 관련 state
-  const [lastGlyphPoint, setLastGlyphPoint] = useState<Point>({ x: 0, y: 0 })
-  const [lastGlyphPointLoaded, setLastGlyphPointLoaded] =
-    useState<boolean>(false)
 
   // tooltip, annotation open 여부
   const [annotationOpen, setAnnotationOpen] = useState<boolean>(true)
@@ -84,9 +80,7 @@ const Top100ChartImpl = ({
 
   // tooltip ref, DOM 관련 state
   const containerOuterRef = useRef<HTMLDivElement>(null)
-  const [circleDOMList, setCircleDOMList] = useState<Element[]>(
-    new Array(data.length),
-  )
+  const [glyphCoordList, setGlyphCoordList] = useState<Point[]>([])
 
   const {
     tooltipData,
@@ -104,48 +98,27 @@ const Top100ChartImpl = ({
 
   const handleMouseOver = useCallback(
     (event: EventHandlerParams<MelonTop100Datum>) => {
-      const isLastGlyph = event.index === data.length - 1
-      if (isLastGlyph && lastGlyphPointLoaded) {
-        return null
-      }
-
-      const parentDOM = containerOuterRef.current
-      let cx: SVGAnimatedLength
-      let cy: SVGAnimatedLength
-      if (parentDOM) {
-        if (!circleDOMList[event.index]) {
-          // cache miss, store value
-          const currentGlyph = parentDOM?.querySelector(
-            `.glyph-${event.index}`,
-          ) as SVGCircleElement
-          setCircleDOMList([
-            ...circleDOMList.slice(0, event.index),
-            currentGlyph,
-            ...circleDOMList.slice(event.index + 1),
-          ])
-
-          cx = currentGlyph.cx
-          cy = currentGlyph.cy
-        } else {
+      if (glyphCoordList.length !== 0) {
+        const isLastGlyph = event.index === data.length - 1
+        if (!isLastGlyph) {
           // get DOM from cache
-          const currentGlyph = circleDOMList[event.index] as SVGCircleElement
+          const currentGlyphCoord = glyphCoordList[event.index]
 
-          cx = currentGlyph.cx
-          cy = currentGlyph.cy
-        }
-        if (cx && cy) {
-          setAnnotationOpen(false)
-          setOpenTooltip(true)
-          showTooltip({
-            tooltipLeft: cx.baseVal.value - 75,
-            tooltipTop: cy.baseVal.value - 33,
-            tooltipData: event.datum,
-          })
+          const cx = currentGlyphCoord.x
+          const cy = currentGlyphCoord.y
+          if (cx && cy) {
+            setAnnotationOpen(false)
+            setOpenTooltip(true)
+            showTooltip({
+              tooltipLeft: cx - 75,
+              tooltipTop: cy - 33,
+              tooltipData: event.datum,
+            })
+          }
         }
       }
-      return null
     },
-    [circleDOMList, data.length, lastGlyphPointLoaded, showTooltip],
+    [glyphCoordList, data, showTooltip],
   )
 
   const handleMouseOut = useCallback(() => {
@@ -153,23 +126,25 @@ const Top100ChartImpl = ({
     // timeout for transition
     setTimeout(() => {
       hideTooltip()
-    }, 500)
+    }, 300)
     setAnnotationOpen(true)
   }, [hideTooltip])
 
   // 가장 최근 데이터의 좌표를 가져와서 state에 저장
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      const currentGlyph = containerOuterRef.current?.querySelector(
-        `.glyph-${data.length - 1}`,
-      ) as SVGCircleElement
+      const glyphDOMList: NodeListOf<SVGCircleElement> | undefined =
+        containerOuterRef.current?.querySelectorAll(`.visx-glyph`)
 
-      setLastGlyphPoint({
-        x: currentGlyph.cx.baseVal.value,
-        y: currentGlyph.cy.baseVal.value,
+      const resultList: Point[] = []
+
+      glyphDOMList?.forEach((el) => {
+        resultList.push({
+          x: el.cx.baseVal.value,
+          y: el.cy.baseVal.value,
+        })
       })
-
-      setLastGlyphPointLoaded(true)
+      setGlyphCoordList(resultList)
     }, 1)
 
     return () => {
@@ -269,8 +244,11 @@ const Top100ChartImpl = ({
               </TooltipInPortal>
             )}
 
-            {lastGlyphPointLoaded && (
-              <Annotation x={lastGlyphPoint.x - 15} y={lastGlyphPoint.y + 20}>
+            {glyphCoordList.length && (
+              <Annotation
+                x={glyphCoordList[data.length - 1].x - 15}
+                y={glyphCoordList[data.length - 1].y + 20}
+              >
                 <HtmlLabel>
                   <div css={tooltipContainer(annotationOpen)}>
                     <p css={tooltipTimeText}>현재 순위</p>
