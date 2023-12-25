@@ -115,9 +115,20 @@ export const HistoryCarousel = () => {
     <div css={{ position: 'relative' }}>
       <div className="embla" css={emblaCss} ref={emblaRef}>
         <div className="embla__container">
-          {/* loop 발동을 위해 리스트 2배로 복사 */}
-          {[...dummyData, ...dummyData].map((data) => (
+          {/* loop를 하기 위한 최소 원소 개수를 채우기 위한 workaround */}
+          {dummyData.map((data) => (
             <div className="embla__slide" key={`history-${data.id}`}>
+              <HistoryCard
+                thumbnail={data.thumbnail}
+                category={data.category}
+                title={data.title}
+                desc={data.desc}
+                date={data.date}
+              />
+            </div>
+          ))}
+          {dummyData.map((data) => (
+            <div className="embla__slide" key={`history-${data.id * 2}`}>
               <HistoryCard
                 thumbnail={data.thumbnail}
                 category={data.category}
