@@ -58,7 +58,9 @@ export const CreatorModal = () => {
   const { modalDefault, setState } = ModalStore()
 
   const modalStyle = css`
-    display: ${modalDefault ? 'block' : 'none'};
+    opacity: ${modalDefault ? 1 : 0};
+    display: flex;
+    flex-direction: column;
     border-radius: 20px;
     background: #fafafa;
     box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.2);
@@ -69,6 +71,7 @@ export const CreatorModal = () => {
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 99;
+    transition: opacity 0.3s ease-out;
   `
   const LayerStyle = css`
     display: ${modalDefault ? 'block' : 'none'};
@@ -79,6 +82,8 @@ export const CreatorModal = () => {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    background-color: black;
+    opacity: 0.5;
   `
 
   const preventScroll = () => {
