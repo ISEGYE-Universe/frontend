@@ -1,4 +1,9 @@
-import { TitleMdBold, TitleSmLight } from '@/styles/Font'
+import {
+  LineHeight,
+  TitleMdBold,
+  TitleSmLight,
+  TitleSmRegular,
+} from '@/styles/Font'
 import { css } from '@emotion/react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -73,6 +78,7 @@ export const ProfileIntroductionBox = ({
           <span
             css={[
               TitleMdBold,
+              LineHeight,
               css`
                 letter-spacing: -1.08px;
               `,
@@ -157,13 +163,10 @@ export const ProfileIntroductionBox = ({
               {description.map((d) => (
                 <li key={`intro-desc-${d.title}`}>
                   <div
-                    css={[
-                      TitleSmLight,
-                      css`
-                        display: flex;
-                        gap: 35px;
-                      `,
-                    ]}
+                    css={css`
+                      display: flex;
+                      gap: 35px;
+                    `}
                   >
                     <div
                       css={css`
@@ -173,11 +176,16 @@ export const ProfileIntroductionBox = ({
                       `}
                     >
                       {d.title.split('').map((char) => (
-                        <span key={`title-${char}`}>{char}</span>
+                        <span
+                          key={`title-${char}`}
+                          css={[TitleSmLight, LineHeight]}
+                        >
+                          {char}
+                        </span>
                       ))}
                     </div>
                     <div>
-                      <span>{d.desc}</span>
+                      <span css={[TitleSmRegular, LineHeight]}>{d.desc}</span>
                     </div>
                   </div>
                 </li>
