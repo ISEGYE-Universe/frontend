@@ -1,10 +1,12 @@
 import { ProfileIntroductionBox } from '@/components/Profile/ProfileIntroductionBox'
 import { css } from '@emotion/react'
-import { useState } from 'react'
+import { useCallback, useEffect } from 'react'
 import profileData from '@/data/profile.json'
 import { TransitionLayout } from '@/components/TransitionLayout/TransitionLayout'
 import Image from 'next/image'
 import Link from 'next/link'
+import useEmblaCarousel from 'embla-carousel-react'
+import ClassNames from 'embla-carousel-class-names'
 
 interface MemberIntroduction {
   mainTitle: string
@@ -22,7 +24,6 @@ const slideImageStyle = css`
   height: 100%;
   object-fit: cover;
   position: absolute;
-  transition: opacity 0.3s ease;
 `
 
 const iconStyle = css`
@@ -31,9 +32,36 @@ const iconStyle = css`
   padding: 10px 20px;
 `
 
+const emblaCss = css`
+  &.embla {
+    position: relative;
+    overflow: hidden;
+
+    .embla__container {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      .embla__slide {
+        flex: 0 0 auto;
+        top: 0;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.3s;
+        position: absolute;
+        transform: none !important;
+        &.is-snapped {
+          opacity: 1;
+        }
+      }
+    }
+  }
+`
+
+const fullHeight = css`
+  height: 100%;
+`
+
 export const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
-  const [pageIndex, setPageIndex] = useState<number>(0)
-  const galleryLen = data.galleryImageURL.length
   const navButtonStyle = css`
     position: absolute;
     width: 26px;
@@ -41,7 +69,43 @@ export const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
     top: 44%;
     transform: translateY(-50%);
     cursor: pointer;
+
+    &: hover;
   `
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    {
+      containScroll: false,
+      loop: true,
+      watchResize: (embla) => {
+        embla.rootNode().classList.remove('embla--is-ready')
+        return true
+      },
+    },
+    [
+      ClassNames({
+        snapped: 'is-snapped',
+      }),
+    ],
+  )
+
+  const scrollPrev = useCallback(
+    () => emblaApi && emblaApi.scrollPrev(),
+    [emblaApi],
+  )
+  const scrollNext = useCallback(
+    () => emblaApi && emblaApi.scrollNext(),
+    [emblaApi],
+  )
+
+  useEffect(() => {
+    if (!emblaApi) return
+
+    // 기본 슬라이딩 스타일 제거
+    const engine = emblaApi.internalEngine()
+    engine.translate.toggleActive(false)
+    engine.translate.clear()
+  }, [emblaApi])
 
   return (
     <TransitionLayout duration={0.5}>
@@ -51,39 +115,51 @@ export const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
           height: calc(100vh - 120px);
         `}
       >
-        {/* 이미지 슬라이더 */}
-        {data.galleryImageURL.map((img, i) => (
-          <Image
-            src={img.url}
-            alt={`gallery-${i + 1}`}
-            key={`gallery-${img.id}`}
-            width={0}
-            height={0}
-            css={[
-              slideImageStyle,
-              css`
-                opacity: ${pageIndex === i ? 1 : 0};
-              `,
-            ]}
-          />
-        ))}
-
-        {/* background */}
-        <Link href="/profile">
-          <Image
-            src={profileData.image.memberGalleryBg}
-            alt="Member Gallery Background"
-            width={0}
-            height={0}
-            css={css`
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              position: absolute;
-              opacity: 0.9;
-            `}
-          />
-        </Link>
+        <div className="embla" css={[emblaCss, fullHeight]} ref={emblaRef}>
+          <div className="embla__container" css={fullHeight}>
+            {/* 이미지 슬라이더 */}
+            {data.galleryImageURL.map((img, i) => (
+              <div
+                className="embla__slide"
+                css={[
+                  fullHeight,
+                  css`
+                    // 정확히 동일한 위치에 존재하면 하나의 슬라이드로 인식되어 추가한 workaround
+                    left: -${i / 10}px;
+                    width: calc(100% + ${i / 10}px);
+                  `,
+                ]}
+                key={`history-${img.id}`}
+              >
+                <Image
+                  src={img.url}
+                  alt={`gallery-${i + 1}`}
+                  width={0}
+                  height={0}
+                  css={[slideImageStyle]}
+                  priority
+                />
+              </div>
+            ))}
+          </div>
+          {/* background */}
+          <Link href="/profile">
+            <Image
+              src={profileData.image.memberGalleryBg}
+              alt="Member Gallery Background"
+              width={0}
+              height={0}
+              css={css`
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                opacity: 0.9;
+              `}
+            />
+          </Link>
+        </div>
 
         {/* 좌우 버튼 */}
         <button
@@ -94,13 +170,7 @@ export const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
               left: 130px;
             `,
           ]}
-          onClick={() => {
-            if (pageIndex === 0) {
-              setPageIndex(galleryLen - 1)
-            } else {
-              setPageIndex(pageIndex - 1)
-            }
-          }}
+          onClick={scrollPrev}
         >
           <Image
             src="/images/icon/left-chevron.svg"
@@ -118,13 +188,7 @@ export const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
               right: 130px;
             `,
           ]}
-          onClick={() => {
-            if (pageIndex === galleryLen - 1) {
-              setPageIndex(0)
-            } else {
-              setPageIndex(pageIndex + 1)
-            }
-          }}
+          onClick={scrollNext}
         >
           <Image
             src="/images/icon/right-chevron.svg"
