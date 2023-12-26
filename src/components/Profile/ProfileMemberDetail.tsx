@@ -1,5 +1,4 @@
 import { ProfileIntroductionBox } from '@/components/Profile/ProfileIntroductionBox'
-import { css } from '@emotion/react'
 import { useCallback, useEffect } from 'react'
 import profileData from '@/data/profile.json'
 import { TransitionLayout } from '@/components/TransitionLayout/TransitionLayout'
@@ -13,13 +12,13 @@ import {
   emblaStyle,
   fullHeight,
   memberGalleryBackground,
-  navButtonIconStyle,
   navButtonNextStyle,
   navButtonPrevStyle,
   navButtonStyle,
   outerContainer,
   slideImageStyle,
 } from './ProfileMemberDetail.css'
+import { LeftChevronIcon, RightChevronIcon } from './ChevronIcon'
 
 interface MemberIntroduction {
   mainTitle: string
@@ -35,12 +34,7 @@ interface ProfileMemberDetailProps {
 export const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
-      containScroll: false,
       loop: true,
-      watchResize: (embla) => {
-        embla.rootNode().classList.remove('embla--is-ready')
-        return true
-      },
     },
     [
       ClassNames({
@@ -110,27 +104,17 @@ export const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
           type="button"
           css={[navButtonStyle, navButtonPrevStyle]}
           onClick={scrollPrev}
+          aria-label="left-chevron"
         >
-          <Image
-            src="/images/icon/left-chevron.svg"
-            width={0}
-            height={0}
-            css={navButtonIconStyle}
-            alt="left arrow icon"
-          />
+          <LeftChevronIcon />
         </button>
         <button
           type="button"
           css={[navButtonStyle, navButtonNextStyle]}
           onClick={scrollNext}
+          aria-label="right-chevron"
         >
-          <Image
-            src="/images/icon/right-chevron.svg"
-            width={26}
-            height={46}
-            css={navButtonIconStyle}
-            alt="right arrow icon"
-          />
+          <RightChevronIcon />
         </button>
 
         {/* 소개 */}
