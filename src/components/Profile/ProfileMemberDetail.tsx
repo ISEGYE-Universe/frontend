@@ -7,6 +7,19 @@ import Image from 'next/image'
 import Link from 'next/link'
 import useEmblaCarousel from 'embla-carousel-react'
 import ClassNames from 'embla-carousel-class-names'
+import {
+  emblaContainerStyle,
+  emblaSlideStyle,
+  emblaStyle,
+  fullHeight,
+  memberGalleryBackground,
+  navButtonIconStyle,
+  navButtonNextStyle,
+  navButtonPrevStyle,
+  navButtonStyle,
+  outerContainer,
+  slideImageStyle,
+} from './ProfileMemberDetail.css'
 
 interface MemberIntroduction {
   mainTitle: string
@@ -19,60 +32,7 @@ interface ProfileMemberDetailProps {
   data: MemberIntroduction
 }
 
-const slideImageStyle = css`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-`
-
-const iconStyle = css`
-  width: auto;
-  height: auto;
-  padding: 10px 20px;
-`
-
-const emblaCss = css`
-  &.embla {
-    position: relative;
-    overflow: hidden;
-
-    .embla__container {
-      display: flex;
-      width: 100%;
-      height: 100%;
-      .embla__slide {
-        flex: 0 0 auto;
-        top: 0;
-        height: 100%;
-        opacity: 0;
-        transition: opacity 0.3s;
-        position: absolute;
-        transform: none !important;
-        &.is-snapped {
-          opacity: 1;
-        }
-      }
-    }
-  }
-`
-
-const fullHeight = css`
-  height: 100%;
-`
-
 export const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
-  const navButtonStyle = css`
-    position: absolute;
-    width: 26px;
-    height: 46px;
-    top: 44%;
-    transform: translateY(-50%);
-    cursor: pointer;
-
-    &: hover;
-  `
-
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       containScroll: false,
@@ -109,26 +69,17 @@ export const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
 
   return (
     <TransitionLayout duration={0.5}>
-      <div
-        css={css`
-          width: 100%;
-          height: calc(100vh - 120px);
-        `}
-      >
-        <div className="embla" css={[emblaCss, fullHeight]} ref={emblaRef}>
-          <div className="embla__container" css={fullHeight}>
+      <div css={outerContainer}>
+        <div className="embla" css={[emblaStyle, fullHeight]} ref={emblaRef}>
+          <div
+            className="embla__container"
+            css={[emblaContainerStyle, fullHeight]}
+          >
             {/* 이미지 슬라이더 */}
             {data.galleryImageURL.map((img, i) => (
               <div
                 className="embla__slide"
-                css={[
-                  fullHeight,
-                  css`
-                    // 정확히 동일한 위치에 존재하면 하나의 슬라이드로 인식되어 추가한 workaround
-                    left: -${i / 10}px;
-                    width: calc(100% + ${i / 10}px);
-                  `,
-                ]}
+                css={[emblaSlideStyle(i), fullHeight]}
                 key={`history-${img.id}`}
               >
                 <Image
@@ -149,14 +100,7 @@ export const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
               alt="Member Gallery Background"
               width={0}
               height={0}
-              css={css`
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                position: absolute;
-                top: 0;
-                opacity: 0.9;
-              `}
+              css={memberGalleryBackground}
             />
           </Link>
         </div>
@@ -164,37 +108,27 @@ export const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
         {/* 좌우 버튼 */}
         <button
           type="button"
-          css={[
-            navButtonStyle,
-            css`
-              left: 130px;
-            `,
-          ]}
+          css={[navButtonStyle, navButtonPrevStyle]}
           onClick={scrollPrev}
         >
           <Image
             src="/images/icon/left-chevron.svg"
             width={0}
             height={0}
-            css={iconStyle}
+            css={navButtonIconStyle}
             alt="left arrow icon"
           />
         </button>
         <button
           type="button"
-          css={[
-            navButtonStyle,
-            css`
-              right: 130px;
-            `,
-          ]}
+          css={[navButtonStyle, navButtonNextStyle]}
           onClick={scrollNext}
         >
           <Image
             src="/images/icon/right-chevron.svg"
             width={26}
             height={46}
-            css={iconStyle}
+            css={navButtonIconStyle}
             alt="right arrow icon"
           />
         </button>
