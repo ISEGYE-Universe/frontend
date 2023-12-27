@@ -172,21 +172,23 @@ const GNBBottomNavigationArea = css`
 //     padding-right: 32px;
 //   }
 // `
-const GNBBottomNavigationLink = css`
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  ${TextMdBold}
-  color: #151515;
-  cursor: pointer;
-  padding: 0px 32px;
-  &:hover > span {
-    border-image: linear-gradient(90deg, #f03c6b 0%, #fbaa9f 100%) 1;
-  }
-`
+const GNBBottomNavigationLink = [
+  TextMdBold,
+  css`
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #151515;
+    cursor: pointer;
+    padding: 0px 32px;
+    &:hover > span {
+      border-image: linear-gradient(90deg, #f03c6b 0%, #fbaa9f 100%) 1;
+    }
+  `,
+]
 
 // const GNBActiveSubNavController = css`
 //   height: 46px;
