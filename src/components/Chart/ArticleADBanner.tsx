@@ -1,10 +1,5 @@
 import ChartColor from '@/styles/ChartColor'
-import {
-  LineHeight,
-  TextSmRegular,
-  TitleMdBold,
-  TitleSmRegular,
-} from '@/styles/Font'
+import { TextSmRegular, TitleMdBold, TitleSmRegular } from '@/styles/Font'
 import { css } from '@emotion/react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -64,7 +59,7 @@ export const ArticleADBanner: React.FC<ArticleADBannerProps> = ({
             <h1
               css={[
                 TitleMdBold,
-                LineHeight,
+
                 css`
                   margin-bottom: 8px;
                 `,
@@ -72,10 +67,10 @@ export const ArticleADBanner: React.FC<ArticleADBannerProps> = ({
             >
               {title}
             </h1>
-            <h2 css={[TextSmRegular, LineHeight]}>{desc}</h2>
+            <h2 css={[TextSmRegular]}>{desc}</h2>
           </div>
           <div css={CTAContainerStyle}>
-            <span css={[TitleSmRegular, LineHeight]}>{CTAText}</span>
+            <span css={[TitleSmRegular]}>{CTAText}</span>
             <Image
               src="/images/icon/ad-right-chevron.svg"
               alt="right icon"

@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import memberProfileData from '@/data/member-profile.json'
 import Link from 'next/link'
 import Image from 'next/image'
-import { CaptionMdRegular, LineHeight } from '@/styles/Font'
+import { CaptionMdRegular } from '@/styles/Font'
 import { MemberProfileColor } from '@/styles/MemberProfileColor'
 import { MemberProfileTitle } from './MemberProfileTitle'
 
@@ -24,7 +24,6 @@ const youtubeListItemText = [
     color: ${MemberProfileColor.youtubeTitleTextGrey};
   `,
   CaptionMdRegular,
-  LineHeight,
 ]
 
 export const MemberProfileYoutube = ({

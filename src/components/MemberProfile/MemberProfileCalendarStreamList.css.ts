@@ -1,4 +1,4 @@
-import { LineHeight, TitleSmRegular } from '@/styles/Font'
+import { TitleSmRegular } from '@/styles/Font'
 import { MemberProfileColor } from '@/styles/MemberProfileColor'
 import { css } from '@emotion/react'
 
@@ -14,7 +14,7 @@ export const streamListContainer = css`
 `
 export const streamListCarousel = [
   TitleSmRegular,
-  LineHeight,
+
   css`
     overflow: hidden;
     .embla__container {

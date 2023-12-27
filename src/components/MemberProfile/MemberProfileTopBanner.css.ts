@@ -2,7 +2,6 @@ import { css } from '@emotion/react'
 import { MemberProfileColor } from '@/styles/MemberProfileColor'
 import {
   CaptionMdBold,
-  LineHeight,
   TextSmLight,
   TextSmRegular,
   TitleSmBold,
@@ -71,20 +70,20 @@ export const profileImageStyle = css`
 export const memberNameText = [
   TitleSmBold,
   textWhite,
-  LineHeight,
+
   css`
     margin-bottom: 8px;
   `,
 ]
 export const groupNameText = [
   TextSmLight,
-  LineHeight,
+
   textWhite,
   css`
     margin-bottom: 16px;
   `,
 ]
-export const birthDateText = [TextSmRegular, LineHeight, textWhite]
+export const birthDateText = [TextSmRegular, textWhite]
 export const socialMediaContainer = [
   flexCol,
   css`
@@ -103,4 +102,4 @@ export const socialMediaIconStyle = css`
   vertical-align: bottom;
 `
 export const socialMediaLinkStyle = [flexRow, alignCenter]
-export const socialMediaTextStyle = [textWhite, LineHeight, CaptionMdBold]
+export const socialMediaTextStyle = [textWhite, CaptionMdBold]

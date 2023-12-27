@@ -1,4 +1,4 @@
-import { LineHeight, TextMdRegular } from '@/styles/Font'
+import { TextMdRegular } from '@/styles/Font'
 import { MemberProfileColor } from '@/styles/MemberProfileColor'
 import { css } from '@emotion/react'
 
@@ -39,7 +39,7 @@ export const refreshIconButton = css`
 `
 export const refreshIconText = [
   TextMdRegular,
-  LineHeight,
+
   css`
     color: ${MemberProfileColor.wakscordTextGrey};
   `,

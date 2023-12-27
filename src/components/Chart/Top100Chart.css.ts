@@ -1,5 +1,5 @@
 import ChartColor from '@/styles/ChartColor'
-import { CaptionMdLight, LineHeight, TextSmBold } from '@/styles/Font'
+import { CaptionMdLight, TextSmBold } from '@/styles/Font'
 import { css } from '@emotion/react'
 
 const fontFamily = 'Noto Sans CJK KR'
@@ -83,7 +83,7 @@ export const tooltipContainer = (annotationOpen: boolean) => css`
 
 export const tooltipTimeText = [
   CaptionMdLight,
-  LineHeight,
+
   css`
     color: rgba(255, 255, 255, 0.5);
   `,
@@ -91,7 +91,6 @@ export const tooltipTimeText = [
 
 export const tooltipRankText = [
   TextSmBold,
-  LineHeight,
 
   css`
     color: ${ChartColor.textWhite};

@@ -1,4 +1,4 @@
-import { LineHeight, TitleSmRegular } from '@/styles/Font'
+import { TitleSmRegular } from '@/styles/Font'
 import { MemberProfileColor } from '@/styles/MemberProfileColor'
 import { css } from '@emotion/react'
 
@@ -11,7 +11,7 @@ export const calendarContentContainer = css`
 
 export const calendarStyle = [
   TitleSmRegular,
-  LineHeight,
+
   css`
     display: flex;
     flex-direction: column;
