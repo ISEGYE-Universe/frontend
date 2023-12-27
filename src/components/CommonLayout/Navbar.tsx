@@ -175,7 +175,7 @@ const GNBBottomNavigationArea = css`
 const GNBBottomNavigationLink = css`
   position: relative;
   z-index: 2;
-  height: 100%
+  height: 100%;
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
@@ -183,7 +183,7 @@ const GNBBottomNavigationLink = css`
   color: #151515;
   cursor: pointer;
   padding: 0px 32px;
-  &:hover > span{
+  &:hover > span {
     border-image: linear-gradient(90deg, #f03c6b 0%, #fbaa9f 100%) 1;
   }
 `
