@@ -61,30 +61,30 @@
       "link": "/news/member"
     }
   ],
-  "memberProfile": [
+  "activity": [
     {
       "text": "아이네",
-      "link": "/member-profile/ine"
+      "link": "/activity/ine"
     },
     {
       "text": "징버거",
-      "link": "/member-profile/jingburger"
+      "link": "/activity/jingburger"
     },
     {
       "text": "릴파",
-      "link": "/member-profile/lilpa"
+      "link": "/activity/lilpa"
     },
     {
       "text": "주르르",
-      "link": "/member-profile/jururu"
+      "link": "/activity/jururu"
     },
     {
       "text": "고세구",
-      "link": "/member-profile/gosegu"
+      "link": "/activity/gosegu"
     },
     {
       "text": "비챤",
-      "link": "/member-profile/viichan"
+      "link": "/activity/viichan"
     }
   ],
   "entryGuide": [
