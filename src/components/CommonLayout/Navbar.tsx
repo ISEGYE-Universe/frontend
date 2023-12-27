@@ -7,6 +7,7 @@ import { TextMdBold } from '@/styles/Font'
 import SubNav from '@/components/CommonLayout/Navbar/SubNav'
 
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 // const GNBContainerStyle = css`
 //   position: absolute;
@@ -20,7 +21,7 @@ import Image from 'next/image'
 // `
 const GNBContainerStyle = css`
   position: absolute;
-  z-index: 1;
+  z-index: 99;
   top: 0;
   width: 100%;
   height: 100px;
@@ -155,6 +156,23 @@ const GNBBottomNavigationArea = css`
 //     padding-right: 32px;
 //   }
 // `
+// const GNBBottomNavigationLink = css`
+//   position: relative;
+//   z-index: 2;
+//   height: 100%
+//   display: inline-flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   ${TextMdBold}
+//   color: #151515;
+//   cursor: pointer;
+//   &:not(:first-child) {
+//     padding-left: 32px;
+//   }
+//   &:not(:last-child) {
+//     padding-right: 32px;
+//   }
+// `
 const GNBBottomNavigationLink = css`
   position: relative;
   z-index: 2;
@@ -165,11 +183,9 @@ const GNBBottomNavigationLink = css`
   ${TextMdBold}
   color: #151515;
   cursor: pointer;
-  &:not(:first-child) {
-    padding-left: 32px;
-  }
-  &:not(:last-child) {
-    padding-right: 32px;
+  padding: 0px 32px;
+  &:hover > span{
+    border-image: linear-gradient(90deg, #f03c6b 0%, #fbaa9f 100%) 1;
   }
 `
 
@@ -193,9 +209,6 @@ const GNBActiveSubNavController = css`
   border-width: 0 0 1px 0;
   border-style: solid;
   border-color: transparent;
-  &:hover {
-    border-image: linear-gradient(90deg, #f03c6b 0%, #fbaa9f 100%) 1;
-  }
 `
 // const GNBActiveSubNavBorder = css`
 //   border-image: linear-gradient(90deg, #f03c6b 0%, #fbaa9f 100%) 1;
@@ -208,7 +221,6 @@ const GNBActiveSubNavController = css`
 const GNBBottomNavigationActive = css`
   width: 100%;
   height: 50px;
-  dislpay: none;
   border-top: 1px solid #d9d9d9;
 `
 
@@ -220,6 +232,11 @@ const GNBUserProfileIcon = css`
 `
 const NavHeight = css`
   height: 100%;
+`
+const Showing = css`
+  & > span {
+    border-image: linear-gradient(90deg, #f03c6b 0%, #fbaa9f 100%) 1;
+  }
 `
 
 const Navbar = () => {
@@ -268,6 +285,7 @@ const Navbar = () => {
       : (target.parentElement as HTMLButtonElement)
 
     if (!realTarget || realTarget?.dataset.page === 'null') {
+      setSubNav('null')
       setIsSubNavActiveByClick(false)
       setIsSubNavActive(false)
       return
@@ -277,6 +295,7 @@ const Navbar = () => {
     setIsSubNavActiveByClick(false)
     setSubNav(realTarget.dataset.page as string)
   }
+  const route = useRouter()
 
   return (
     // <header
@@ -371,7 +390,11 @@ const Navbar = () => {
             </button> */}
             <Link
               href="/profile"
-              css={GNBBottomNavigationLink}
+              css={[
+                GNBBottomNavigationLink,
+                route.asPath.split('/')[1] === 'profile' ? Showing : null,
+                subNav === 'profile' ? Showing : null,
+              ]}
               onMouseEnter={setSubNavigation}
               data-page="profile"
             >
@@ -397,7 +420,11 @@ const Navbar = () => {
             </button> */}
             <Link
               href={{ pathname: '/albums/detail', query: { default: 0 } }}
-              css={GNBBottomNavigationLink}
+              css={[
+                GNBBottomNavigationLink,
+                route.asPath.split('/')[1] === 'albums' ? Showing : null,
+                subNav === 'album' ? Showing : null,
+              ]}
               onMouseEnter={setSubNavigation}
               data-page="album"
             >
@@ -423,7 +450,11 @@ const Navbar = () => {
             </button> */}
             <Link
               href="/chart"
-              css={GNBBottomNavigationLink}
+              css={[
+                GNBBottomNavigationLink,
+                route.asPath.split('/')[1] === 'chart' ? Showing : null,
+                subNav === 'chart' ? Showing : null,
+              ]}
               onMouseEnter={setSubNavigation}
               data-page="null"
             >
@@ -431,7 +462,7 @@ const Navbar = () => {
             </Link>
           </div>
         </div>
-        <div
+        {/* <div
           css={[
             GNBBottomNavigationArea,
             css`
@@ -440,8 +471,17 @@ const Navbar = () => {
           ]}
           onMouseEnter={activeSubNavigation}
           onMouseLeave={inactiveSubNavigation}
+        > */}
+        <div
+          css={[
+            GNBBottomNavigationArea,
+            css`
+              justify-content: flex-start;
+            `,
+          ]}
+          onMouseEnter={activeSubNavigation}
         >
-          <div>
+          <div css={NavHeight}>
             {/* <button
               type="button"
               css={GNBBottomNavigationLink}
@@ -462,7 +502,11 @@ const Navbar = () => {
             </button> */}
             <Link
               href="/chart"
-              css={GNBBottomNavigationLink}
+              css={[
+                GNBBottomNavigationLink,
+                route.asPath.split('/')[1] === 'memberProfile' ? Showing : null,
+                subNav === 'memberProfile' ? Showing : null,
+              ]}
               onMouseEnter={setSubNavigation}
               data-page="memberProfile"
             >
@@ -470,11 +514,15 @@ const Navbar = () => {
             </Link>
             <Link
               href="/bangon"
-              css={GNBBottomNavigationLink}
+              css={[
+                GNBBottomNavigationLink,
+                route.asPath.split('/')[1] === 'bangon' ? Showing : null,
+                subNav === 'bangon' ? Showing : null,
+              ]}
               onMouseEnter={setSubNavigation}
               data-page="null"
             >
-              <span>뱅온정보</span>
+              <span css={GNBActiveSubNavController}>뱅온정보</span>
             </Link>
             {/* <button
               type="button"
@@ -496,7 +544,11 @@ const Navbar = () => {
             </button> */}
             <Link
               href="/chart"
-              css={GNBBottomNavigationLink}
+              css={[
+                GNBBottomNavigationLink,
+                route.asPath.split('/')[1] === 'entryGuide' ? Showing : null,
+                subNav === 'entryGuid' ? Showing : null,
+              ]}
               onMouseEnter={setSubNavigation}
               data-page="entryGuide"
             >
