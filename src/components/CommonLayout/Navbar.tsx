@@ -1,20 +1,29 @@
 import { useState } from 'react'
-
+import Link from 'next/link'
 import { css } from '@emotion/react'
-import { TitleSmRegular } from '@/styles/Font'
+// import { TitleSmRegular } from '@/styles/Font'
+import { TextMdBold } from '@/styles/Font'
 
 import SubNav from '@/components/CommonLayout/Navbar/SubNav'
 
 import Image from 'next/image'
-import Link from 'next/link'
 
+// const GNBContainerStyle = css`
+//   position: absolute;
+//   z-index: 10;
+//   top: 0;
+
+//   width: 100%;
+//   height: 120px;
+//   background-color: #fdfdfd;
+//   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+// `
 const GNBContainerStyle = css`
   position: absolute;
-  z-index: 10;
+  z-index: 1;
   top: 0;
-
   width: 100%;
-  height: 120px;
+  height: 100px;
   background-color: #fdfdfd;
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
 `
@@ -24,46 +33,76 @@ const GNBContainerStyle = css`
  * @author Ayaan_
  * @since 2023-11-12
  */
+// const GNBTopGradient = css`
+//   width: 100%;
+//   height: 60px;
+//   gap: 32px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background: linear-gradient(90deg, #f03c6b 0%, #fbaa9f 100%);
+// `
 const GNBTopGradient = css`
   width: 100%;
-  height: 60px;
-  gap: 32px;
+  height: 50px;
+  gap: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(90deg, #f03c6b 0%, #fbaa9f 100%);
 `
 
+// const GNBTopIsedolText = css`
+//   position: relative;
+//   z-index: 2;
+
+//   ${TitleSmRegular}
+//   ${TextMdBold}
+//   color: #fdfdfd;
+// `
 const GNBTopIsedolText = css`
   position: relative;
-  z-index: 2;
-
-  ${TitleSmRegular}
+  ${TextMdBold}
   color: #fdfdfd;
 `
 
+// const GNBTopIsedolTextGap = css`
+//   width: 785px;
+//   height: 2px;
+//   background: #fdfdfd;
+// `
 const GNBTopIsedolTextGap = css`
-  width: 785px;
+  width: 1059px;
   height: 2px;
   background: #fdfdfd;
 `
 
+// const GNBTopIsedolLogoWarp = css`
+//   position: absolute;
+//   z-index: 1;
+//   top: 0;
+
+//   width: 100%;
+//   height: 120px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// `
 const GNBTopIsedolLogoWarp = css`
   position: absolute;
-  z-index: 1;
   top: 0;
-
   width: 100%;
-  height: 120px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
+  pointer-events: none;
 `
 
-const GNBTopIsedolLogo = css`
-  width: 120px;
-  height: 100px;
-`
+// const GNBTopIsedolLogo = css`
+//   width: 120px;
+//   height: 100px;
+// `
 
 /**
  * GNB 하단 Navigation 부분
@@ -71,63 +110,110 @@ const GNBTopIsedolLogo = css`
  * @since 2023-11-12
  */
 
+// const GNBBottomNavigation = css`
+//   width: 100%;
+//   height: 60px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// `
 const GNBBottomNavigation = css`
   width: 100%;
-  height: 60px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 `
 
+// const GNBBottomNavigationArea = css`
+//   width: calc(50% - 115px);
+
+//   display: inline-flex;
+//   align-items: center;
+// `
 const GNBBottomNavigationArea = css`
   width: calc(50% - 115px);
-
+  height: 100%;
   display: inline-flex;
   align-items: center;
 `
 
+// const GNBBottomNavigationLink = css`
+//   position: relative;
+//   z-index: 2;
+
+//   display: inline-flex;
+//   flex-direction: column;
+//   justify-content: center;
+
+//   ${TitleSmRegular}
+//   color: #151515;
+
+//   cursor: pointer;
+
+//   &:not(:first-child) {
+//     padding-left: 32px;
+//   }
+
+//   &:not(:last-child) {
+//     padding-right: 32px;
+//   }
+// `
 const GNBBottomNavigationLink = css`
   position: relative;
   z-index: 2;
-
+  height: 100%
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
-
-  ${TitleSmRegular}
+  ${TextMdBold}
   color: #151515;
-
   cursor: pointer;
-
   &:not(:first-child) {
     padding-left: 32px;
   }
-
   &:not(:last-child) {
     padding-right: 32px;
   }
 `
 
-const GNBActiveSubNavController = css`
-  height: 46px;
+// const GNBActiveSubNavController = css`
+//   height: 46px;
 
+//   display: inline-flex;
+//   flex-direction: column;
+//   justify-content: center;
+
+//   border-width: 0 0 1px 0;
+//   border-style: solid;
+
+//   border-color: transparent;
+// `
+const GNBActiveSubNavController = css`
+  height: 100%;
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
-
   border-width: 0 0 1px 0;
   border-style: solid;
-
   border-color: transparent;
+  &:hover {
+    border-image: linear-gradient(90deg, #f03c6b 0%, #fbaa9f 100%) 1;
+  }
 `
+// const GNBActiveSubNavBorder = css`
+//   border-image: linear-gradient(90deg, #f03c6b 0%, #fbaa9f 100%) 1;
+// `
 
-const GNBActiveSubNavBorder = css`
-  border-image: linear-gradient(90deg, #f03c6b 0%, #fbaa9f 100%) 1;
-`
-
+// const GNBBottomNavigationActive = css`
+//   width: 100%;
+//   height: 50px;
+// `
 const GNBBottomNavigationActive = css`
   width: 100%;
-  height: 80px;
+  height: 50px;
+  dislpay: none;
+  border-top: 1px solid #d9d9d9;
 `
 
 const GNBUserProfileIcon = css`
@@ -135,6 +221,9 @@ const GNBUserProfileIcon = css`
   z-index: 2;
 
   margin-left: 150px;
+`
+const NavHeight = css`
+  height: 100%;
 `
 
 const Navbar = () => {
@@ -156,18 +245,22 @@ const Navbar = () => {
     setIsSubNavActive(true)
   }
 
+  // const inactiveSubNavigation = () => {
+  //   if (isSubNavActiveByClick) return
+  //   setIsSubNavActive(false)
+  // }
   const inactiveSubNavigation = () => {
     if (isSubNavActiveByClick) return
     setIsSubNavActive(false)
   }
 
-  const toggleActiveSubNavigationWithClick = (
-    e: React.MouseEvent<HTMLSpanElement, MouseEvent>,
-  ) => {
-    setIsSubNavActiveByClick(!isSubNavActiveByClick)
+  // const toggleActiveSubNavigationWithClick = (
+  //   e: React.MouseEvent<HTMLSpanElement, MouseEvent>,
+  // ) => {
+  //   setIsSubNavActiveByClick(!isSubNavActiveByClick)
 
-    activeSubNavigation(e)
-  }
+  //   activeSubNavigation(e)
+  // }
 
   const setSubNavigation = (
     e: React.MouseEvent<HTMLSpanElement, MouseEvent>,
@@ -189,22 +282,35 @@ const Navbar = () => {
   }
 
   return (
+    // <header
+    //   // css={[
+    //   //   GNBContainerStyle,
+    //   //   isSubNavActive ? css`
+    //   //         height: 200px;
+    //   //       `
+    //   //     : css`
+    //   //         height: 120px;
+    //   //       `,
+    //   // ]}
+    //   css={GNBContainerStyle}
+    // >
     <header
-      css={[
-        GNBContainerStyle,
-        isSubNavActive
-          ? css`
-              height: 200px;
-            `
-          : css`
-              height: 120px;
-            `,
-      ]}
+      // css={[
+      //   GNBContainerStyle,
+      //   isSubNavActive ? css`
+      //         height: 200px;
+      //       `
+      //     : css`
+      //         height: 120px;
+      //       `,
+      // ]}
+      css={GNBContainerStyle}
+      onMouseLeave={inactiveSubNavigation}
     >
       <div css={GNBTopIsedolLogoWarp}>
         <Link href="/">
           <Image
-            css={GNBTopIsedolLogo}
+            // css={GNBTopIsedolLogo}
             src="/images/logo/isedol.png"
             width={96}
             height={80}
@@ -212,14 +318,14 @@ const Navbar = () => {
           />
         </Link>
       </div>
-      <div css={GNBTopGradient}>
+      <div css={GNBTopGradient} onMouseEnter={inactiveSubNavigation}>
         <span css={GNBTopIsedolText}>차원을 넘어</span>
         <div css={GNBTopIsedolTextGap} />
         <span css={GNBTopIsedolText}>이세계아이돌</span>
       </div>
 
       <nav css={GNBBottomNavigation}>
-        <div
+        {/* <div
           css={[
             GNBBottomNavigationArea,
             css`
@@ -228,9 +334,18 @@ const Navbar = () => {
           ]}
           onMouseEnter={activeSubNavigation}
           onMouseLeave={inactiveSubNavigation}
+        > */}
+        <div
+          css={[
+            GNBBottomNavigationArea,
+            css`
+              justify-content: flex-end;
+            `,
+          ]}
+          onMouseEnter={activeSubNavigation}
         >
-          <div>
-            <button
+          <div css={NavHeight}>
+            {/* <button
               type="button"
               css={GNBBottomNavigationLink}
               onClick={toggleActiveSubNavigationWithClick}
@@ -247,8 +362,16 @@ const Navbar = () => {
               >
                 프로필
               </span>
-            </button>
-            <button
+            </button> */}
+            <Link
+              href="/profile"
+              css={GNBBottomNavigationLink}
+              onMouseEnter={setSubNavigation}
+              data-page="profile"
+            >
+              <span css={GNBActiveSubNavController}>프로필</span>
+            </Link>
+            {/* <button
               type="button"
               css={GNBBottomNavigationLink}
               onClick={toggleActiveSubNavigationWithClick}
@@ -265,8 +388,16 @@ const Navbar = () => {
               >
                 음반
               </span>
-            </button>
-            <button
+            </button> */}
+            <Link
+              href={{ pathname: '/albums/detail', query: { default: 0 } }}
+              css={GNBBottomNavigationLink}
+              onMouseEnter={setSubNavigation}
+              data-page="album"
+            >
+              <span css={GNBActiveSubNavController}>음반</span>
+            </Link>
+            {/* <button
               type="button"
               css={GNBBottomNavigationLink}
               onClick={toggleActiveSubNavigationWithClick}
@@ -283,7 +414,15 @@ const Navbar = () => {
               >
                 소식
               </span>
-            </button>
+            </button> */}
+            <Link
+              href="/chart"
+              css={GNBBottomNavigationLink}
+              onMouseEnter={setSubNavigation}
+              data-page="null"
+            >
+              <span css={GNBActiveSubNavController}>차트</span>
+            </Link>
           </div>
         </div>
         <div
@@ -297,7 +436,7 @@ const Navbar = () => {
           onMouseLeave={inactiveSubNavigation}
         >
           <div>
-            <button
+            {/* <button
               type="button"
               css={GNBBottomNavigationLink}
               onClick={toggleActiveSubNavigationWithClick}
@@ -314,7 +453,15 @@ const Navbar = () => {
               >
                 멤버 프로필
               </span>
-            </button>
+            </button> */}
+            <Link
+              href="/chart"
+              css={GNBBottomNavigationLink}
+              onMouseEnter={setSubNavigation}
+              data-page="memberProfile"
+            >
+              <span css={GNBActiveSubNavController}>활동</span>
+            </Link>
             <Link
               href="/bangon"
               css={GNBBottomNavigationLink}
@@ -323,7 +470,7 @@ const Navbar = () => {
             >
               <span>뱅온정보</span>
             </Link>
-            <button
+            {/* <button
               type="button"
               css={GNBBottomNavigationLink}
               onClick={toggleActiveSubNavigationWithClick}
@@ -340,7 +487,15 @@ const Navbar = () => {
               >
                 유입가이드
               </span>
-            </button>
+            </button> */}
+            <Link
+              href="/chart"
+              css={GNBBottomNavigationLink}
+              onMouseEnter={setSubNavigation}
+              data-page="entryGuide"
+            >
+              <span css={GNBActiveSubNavController}>유입가이드</span>
+            </Link>
           </div>
           <Image
             css={GNBUserProfileIcon}
@@ -358,10 +513,10 @@ const Navbar = () => {
           GNBBottomNavigationActive,
           isSubNavActive
             ? css`
-                opacity: 1;
+                display: block;
               `
             : css`
-                opacity: 0;
+                display: none;
               `,
         ]}
       >
