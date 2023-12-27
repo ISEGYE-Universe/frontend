@@ -24,7 +24,6 @@ const GNBContainerStyle = css`
   z-index: 99;
   top: 0;
   width: 100%;
-  height: 100px;
   background-color: #fdfdfd;
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
 `
@@ -91,9 +90,9 @@ const GNBTopIsedolTextGap = css`
 // `
 const GNBTopIsedolLogoWarp = css`
   position: absolute;
-  top: 50%;
+  top: 10px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
 `
 
 // const GNBTopIsedolLogo = css`
@@ -501,14 +500,14 @@ const Navbar = () => {
               </span>
             </button> */}
             <Link
-              href="/chart"
+              href="/activity/ine"
               css={[
                 GNBBottomNavigationLink,
-                route.asPath.split('/')[1] === 'memberProfile' ? Showing : null,
-                subNav === 'memberProfile' ? Showing : null,
+                route.asPath.split('/')[1] === 'activity' ? Showing : null,
+                subNav === 'activity' ? Showing : null,
               ]}
               onMouseEnter={setSubNavigation}
-              data-page="memberProfile"
+              data-page="activity"
             >
               <span css={GNBActiveSubNavController}>활동</span>
             </Link>
