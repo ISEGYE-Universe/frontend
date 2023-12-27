@@ -90,13 +90,9 @@ const GNBTopIsedolTextGap = css`
 // `
 const GNBTopIsedolLogoWarp = css`
   position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `
 
 // const GNBTopIsedolLogo = css`
@@ -252,6 +248,7 @@ const Navbar = () => {
   const inactiveSubNavigation = () => {
     if (isSubNavActiveByClick) return
     setIsSubNavActive(false)
+    setSubNav('null')
   }
 
   // const toggleActiveSubNavigationWithClick = (
@@ -275,7 +272,7 @@ const Navbar = () => {
       setIsSubNavActive(false)
       return
     }
-
+    setSubNav('null')
     setIsSubNavActive(true)
     setIsSubNavActiveByClick(false)
     setSubNav(realTarget.dataset.page as string)
@@ -307,7 +304,7 @@ const Navbar = () => {
       css={GNBContainerStyle}
       onMouseLeave={inactiveSubNavigation}
     >
-      <div css={GNBTopIsedolLogoWarp}>
+      {/* <div css={GNBTopIsedolLogoWarp}>
         <Link href="/">
           <Image
             // css={GNBTopIsedolLogo}
@@ -317,7 +314,16 @@ const Navbar = () => {
             alt="이세계아이돌 로고"
           />
         </Link>
-      </div>
+      </div> */}
+      <Link href="/" css={GNBTopIsedolLogoWarp}>
+        <Image
+          // css={GNBTopIsedolLogo}
+          src="/images/logo/isedol.png"
+          width={96}
+          height={80}
+          alt="이세계아이돌 로고"
+        />
+      </Link>
       <div css={GNBTopGradient} onMouseEnter={inactiveSubNavigation}>
         <span css={GNBTopIsedolText}>차원을 넘어</span>
         <div css={GNBTopIsedolTextGap} />
