@@ -71,7 +71,9 @@ export const CreatorModal = () => {
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 99;
-    transition: opacity 0.3s ease-out;
+    visibility: ${modalDefault ? 'visible' : 'hidden'};
+    // opacity 트랜지션을 위한 visibility 트랜지션 딜레이 부여
+    transition: opacity 0.3s ease-out ${!modalDefault && ', visibility 0s 0.3s'};
   `
   const LayerStyle = css`
     display: ${modalDefault ? 'block' : 'none'};
