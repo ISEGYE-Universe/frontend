@@ -1,10 +1,5 @@
 import ChartColor from '@/styles/ChartColor'
-import {
-  CaptionMdLight,
-  LineHeight,
-  TextMdBold,
-  TextMdRegular,
-} from '@/styles/Font'
+import { CaptionMdLight, TextMdBold, TextMdRegular } from '@/styles/Font'
 import { css } from '@emotion/react'
 import Image from 'next/image'
 
@@ -92,9 +87,7 @@ export const ChartMusicCard = ({
       <div css={[flexRowContainer, flexAlignCenter, metadataContainer]}>
         {/* 순위, 등락 */}
         <div css={flexColContainer}>
-          <h3 css={[TextMdRegular, LineHeight, metaDataMarginBottom]}>
-            {position}
-          </h3>
+          <h3 css={[TextMdRegular, metaDataMarginBottom]}>{position}</h3>
           <div
             css={[
               flexRowContainer,
@@ -115,7 +108,7 @@ export const ChartMusicCard = ({
               css={[
                 CaptionMdLight,
                 changeFontStyle,
-                LineHeight,
+
                 css`
                   color: ${upDownColor};
                 `,
@@ -127,10 +120,8 @@ export const ChartMusicCard = ({
         </div>
         {/* 제목, 아티스트 */}
         <div css={[flexColContainer, flexAlignStart]}>
-          <h3 css={[TextMdBold, LineHeight, metaDataMarginBottom]}>{title}</h3>
-          <span css={[CaptionMdLight, artistFontStyle, LineHeight]}>
-            {artist}
-          </span>
+          <h3 css={[TextMdBold, metaDataMarginBottom]}>{title}</h3>
+          <span css={[CaptionMdLight, artistFontStyle]}>{artist}</span>
         </div>
       </div>
     </li>

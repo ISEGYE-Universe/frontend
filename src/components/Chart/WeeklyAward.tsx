@@ -1,7 +1,6 @@
 import ChartColor from '@/styles/ChartColor'
 import {
   CaptionMdLight,
-  LineHeight,
   TextMdLight,
   TextMdRegular,
   TitleSmRegular,
@@ -95,8 +94,8 @@ export const WeeklyAward = ({
         ]}
       >
         {/* 투표, 남은시간 */}
-        <h3 css={[TitleSmRegular, LineHeight]}>투표 {position}위</h3>
-        <div css={[leftTimeStyle, CaptionMdLight, LineHeight]}>
+        <h3 css={[TitleSmRegular]}>투표 {position}위</h3>
+        <div css={[leftTimeStyle, CaptionMdLight]}>
           {/* 남은 시간 계산 로직으로 대체할 예정 */}
           {timeLeftResult}
         </div>
@@ -112,10 +111,8 @@ export const WeeklyAward = ({
           `,
         ]}
       >
-        <span css={[TextMdRegular, LineHeight]}>
-          {voteNum.toLocaleString()}표
-        </span>
-        <span css={[TextMdLight, LineHeight]}>({voteRatio}%)</span>
+        <span css={[TextMdRegular]}>{voteNum.toLocaleString()}표</span>
+        <span css={[TextMdLight]}>({voteRatio}%)</span>
       </div>
       {/* 득표 바 */}
       <div css={voteBarStyle}>

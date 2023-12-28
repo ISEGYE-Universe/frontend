@@ -1,4 +1,4 @@
-import { LineHeight, TextMdRegular, TitleSmRegular } from '@/styles/Font'
+import { TextMdRegular, TitleSmRegular } from '@/styles/Font'
 import { css } from '@emotion/react'
 import ChartColor from '@/styles/ChartColor'
 import { Title } from './Title'
@@ -48,8 +48,8 @@ export const MelonInfo = ({
             `,
           ]}
         >
-          <h3 css={[TextMdRegular, LineHeight]}>일간 감상자</h3>
-          <span css={[TitleSmRegular, LineHeight]}>
+          <h3 css={[TextMdRegular]}>일간 감상자</h3>
+          <span css={[TitleSmRegular]}>
             {/* comma 처리를 위해 toLocaleString() 이용 */}
             {dailyListenerNum.toLocaleString()}명
           </span>
@@ -62,8 +62,8 @@ export const MelonInfo = ({
             `,
           ]}
         >
-          <h3 css={[TextMdRegular, LineHeight]}>일간 차트</h3>
-          <span css={[TitleSmRegular, LineHeight]}>
+          <h3 css={[TextMdRegular]}>일간 차트</h3>
+          <span css={[TitleSmRegular]}>
             {dailyChartPosition.toLocaleString()}위
           </span>
         </div>

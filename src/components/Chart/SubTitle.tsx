@@ -1,5 +1,5 @@
 import ChartColor from '@/styles/ChartColor'
-import { LineHeight, TextMdLight } from '@/styles/Font'
+import { TextMdLight } from '@/styles/Font'
 import { css } from '@emotion/react'
 
 interface SubTitleProps {
@@ -13,7 +13,7 @@ export const SubTitle = ({ children, mb, color }: SubTitleProps) => {
     <h2
       css={[
         TextMdLight,
-        LineHeight,
+
         css`
           ${mb && `margin-bottom: ${mb};`}
           color: ${color || ChartColor.textGrey};

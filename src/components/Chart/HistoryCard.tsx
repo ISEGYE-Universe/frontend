@@ -1,6 +1,5 @@
 import ChartColor from '@/styles/ChartColor'
 import {
-  LineHeight,
   TextMdLight,
   TextSmLight,
   TextSmRegular,
@@ -60,25 +59,12 @@ export const HistoryCard = ({
         alt={`역대 기록 - ${title} 이미지`}
         css={{ marginBottom: '24px', objectFit: 'cover' }}
       />
-      <h3
-        css={[
-          categoryContainer,
-          TextSmRegular,
-          LineHeight,
-          { marginBottom: '10px' },
-        ]}
-      >
+      <h3 css={[categoryContainer, TextSmRegular, { marginBottom: '10px' }]}>
         {category}
       </h3>
-      <h2 css={[TitleSmRegular, LineHeight, { marginBottom: '16px' }]}>
-        {title}
-      </h2>
-      <span css={[TextMdLight, LineHeight, { marginBottom: '8px' }]}>
-        {desc}
-      </span>
-      <span css={[TextSmLight, LineHeight, { color: '#777' }]}>
-        {formattedDate}
-      </span>
+      <h2 css={[TitleSmRegular, { marginBottom: '16px' }]}>{title}</h2>
+      <span css={[TextMdLight, { marginBottom: '8px' }]}>{desc}</span>
+      <span css={[TextSmLight, { color: '#777' }]}>{formattedDate}</span>
     </div>
   )
 }

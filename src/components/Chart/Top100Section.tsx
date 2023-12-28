@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import Image from 'next/image'
 import chartData from '@/data/chart.json'
 import ChartColor from '@/styles/ChartColor'
-import { LineHeight, TextSmLight } from '@/styles/Font'
+import { TextSmLight } from '@/styles/Font'
 import { RoundedLinkButton } from './RoundedLinkButton'
 import { Title } from './Title'
 import { Top100ChartSwitch } from './Top100ChartSwitch'
@@ -129,7 +129,7 @@ export const Top100Section = () => {
             <h4
               css={[
                 TextSmLight,
-                LineHeight,
+
                 css`
                   color: ${ChartColor.textLightGrey};
                 `,

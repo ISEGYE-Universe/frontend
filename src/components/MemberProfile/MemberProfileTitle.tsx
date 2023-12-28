@@ -1,9 +1,4 @@
-import {
-  CaptionMdBold,
-  LineHeight,
-  TextMdRegular,
-  TitleLgRegular,
-} from '@/styles/Font'
+import { CaptionMdBold, TextMdRegular, TitleLgRegular } from '@/styles/Font'
 import { MemberProfileColor } from '@/styles/MemberProfileColor'
 import { css } from '@emotion/react'
 import memberProfileData from '@/data/member-profile.json'
@@ -31,7 +26,6 @@ const titleText = [
     color: ${MemberProfileColor.youtubeTitleTextGrey};
   `,
   TitleLgRegular,
-  LineHeight,
 ]
 const subTitleText = [
   css`
@@ -39,7 +33,6 @@ const subTitleText = [
     margin-bottom: 30.5px;
   `,
   TextMdRegular,
-  LineHeight,
 ]
 const ytLinkAnchor = css`
   color: ${MemberProfileColor.youtubeTitleTextGrey};
@@ -48,7 +41,7 @@ const ytLinkAnchor = css`
   align-items: center;
   gap: 4px;
 `
-const ytLinkText = [css``, CaptionMdBold, LineHeight]
+const ytLinkText = [css``, CaptionMdBold]
 
 export const MemberProfileTitle = ({
   title,
