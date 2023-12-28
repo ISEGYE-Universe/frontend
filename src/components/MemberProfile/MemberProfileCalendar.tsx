@@ -5,6 +5,7 @@ import Image from 'next/image'
 import memberProfileData from '@/data/member-profile.json'
 import useEmblaCarousel from 'embla-carousel-react'
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
+import { addZero } from '@/utils/FormatTime'
 import {
   calendarContentContainer,
   calendarNavigationMonth,
@@ -13,10 +14,6 @@ import {
 import { MemberProfileCalendarStreamList } from './MemberProfileCalendarStreamList'
 
 const itemsPerView = 7
-// 한 자리 수 앞에 leading zero 붙여주는 함수
-const addZero = (num: number) => {
-  return num < 10 ? `0${num}` : num
-}
 
 // Date -> yyyy-mm-dd 포맷으로 변경해주는 함수
 const dateToStringDate = (date: Date) => {
