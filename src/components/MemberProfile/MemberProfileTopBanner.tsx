@@ -17,6 +17,7 @@ import {
   socialMediaTextStyle,
   topBannerContainer,
 } from './MemberProfileTopBanner.css'
+import { fullWidthContainer } from './MemberProfile.css'
 
 export const MemberProfileTopBanner = ({
   memberName,
@@ -33,7 +34,7 @@ export const MemberProfileTopBanner = ({
   const ytInfo = socialMedia?.youtube
 
   return (
-    <section css={topBannerContainer(topBannerImage)}>
+    <section css={[fullWidthContainer, topBannerContainer(topBannerImage)]}>
       <div css={layoutContainer}>
         {/* 멤버 기본 정보 영역 */}
         <div css={memberInformationContainer}>
@@ -60,6 +61,7 @@ export const MemberProfileTopBanner = ({
                 href={twInfo.url}
                 css={socialMediaLinkStyle}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <Image
                   src={twIcon}
@@ -76,6 +78,7 @@ export const MemberProfileTopBanner = ({
                 href={ytInfo.url}
                 css={socialMediaLinkStyle}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <Image
                   src={ytIcon}

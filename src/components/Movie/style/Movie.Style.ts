@@ -1,8 +1,10 @@
 import { css } from '@emotion/react'
 
 const moviePosition = css`
+  opacity: 0;
   position: absolute;
   top: 335px;
+  transition: opacity 0.2s ease;
 `
 const left = css`
   left: 40px;
@@ -24,12 +26,14 @@ export const CurrentDot = css`
   width: 20px;
   height: 10px;
   border-radius: 5px;
+  transition: all 0.3s;
 `
 export const Dot = css`
   background-color: #d1d1d1;
   width: 10px;
   height: 10px;
   border-radius: 5px;
+  transition: all 0.3s;
 `
 export const LeftButton = css`
   ${moviePosition}
@@ -44,10 +48,17 @@ export const DotContainer = css`
   justify-content: center;
 `
 export const SliderDiv = css`
+  position: relative;
   overflow: hidden;
   height: 720px;
   border-radius: 20px;
   margin-bottom: 10px;
+  &:hover button {
+    opacity: 0.5;
+  }
+  &:hover button:hover {
+    opacity: 1;
+  }
 `
 export const SubTitle = css`
   margin-bottom: 20px;

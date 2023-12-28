@@ -2,12 +2,50 @@ import { css } from '@emotion/react'
 import Image from 'next/image'
 import chartData from '@/data/chart.json'
 import ChartColor from '@/styles/ChartColor'
-import { LineHeight, TextSmLight } from '@/styles/Font'
+import { TextSmLight } from '@/styles/Font'
 import { RoundedLinkButton } from './RoundedLinkButton'
 import { Title } from './Title'
 import { Top100ChartSwitch } from './Top100ChartSwitch'
 import { Top100Chart } from './Top100Chart'
 
+const mockData = [
+  {
+    date: '2023-11-24T04:00:00.000Z',
+    rank: 36,
+  },
+  {
+    date: '2023-11-24T05:00:00.000Z',
+    rank: 32,
+  },
+  {
+    date: '2023-11-24T06:00:00.000Z',
+    rank: 32,
+  },
+  {
+    date: '2023-11-24T07:00:00.000Z',
+    rank: 30,
+  },
+  {
+    date: '2023-11-24T08:00:00.000Z',
+    rank: 28,
+  },
+  {
+    date: '2023-11-24T09:00:00.000Z',
+    rank: 30,
+  },
+  {
+    date: '2023-11-24T10:00:00.000Z',
+    rank: 32,
+  },
+  {
+    date: '2023-11-24T11:00:00.000Z',
+    rank: 26,
+  },
+  {
+    date: '2023-11-24T12:00:00.000Z',
+    rank: 26,
+  },
+]
 export const Top100Section = () => {
   return (
     <div
@@ -31,7 +69,7 @@ export const Top100Section = () => {
           `}
         >
           <Top100ChartSwitch />
-          <Top100Chart />
+          <Top100Chart parentHeight={270} parentWidth={500} data={mockData} />
         </div>
       </div>
       {/* 곡 카드 영역 */}
@@ -91,7 +129,7 @@ export const Top100Section = () => {
             <h4
               css={[
                 TextSmLight,
-                LineHeight,
+
                 css`
                   color: ${ChartColor.textLightGrey};
                 `,

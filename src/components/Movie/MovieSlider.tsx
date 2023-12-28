@@ -51,23 +51,23 @@ const MovieSlider = ({ movieList }: MovieSliderProrps) => {
             <MovieContainer link={list.src} key={list.title} />
           ))}
         </div>
+        <button
+          type="button"
+          aria-label="left-arrow"
+          css={LeftButton}
+          onClick={scrollPrev}
+        >
+          <LeftArrow />
+        </button>
+        <button
+          type="button"
+          aria-label="right-arrow"
+          css={RightButton}
+          onClick={scrollNext}
+        >
+          <RightArrow />
+        </button>
       </div>
-      <button
-        type="button"
-        aria-label="left-arrow"
-        css={LeftButton}
-        onClick={scrollPrev}
-      >
-        <LeftArrow />
-      </button>
-      <button
-        type="button"
-        aria-label="right-arrow"
-        css={RightButton}
-        onClick={scrollNext}
-      >
-        <RightArrow />
-      </button>
       <MovieTitle title={movieList[current].title} />
       <div
         css={css`

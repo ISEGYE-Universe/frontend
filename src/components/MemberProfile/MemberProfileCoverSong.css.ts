@@ -1,7 +1,6 @@
 import {
   CaptionMdLight,
   CaptionMdRegular,
-  LineHeight,
   TextMdBold,
   TextSmLight,
   TitleSmBold,
@@ -25,7 +24,7 @@ const alignCenter = css`
 
 export const memberProfileCoverSongMain = [
   flexCol,
-  LineHeight,
+
   css`
     position: relative;
     width: 770px;

@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import memberProfileData from '@/data/member-profile.json'
 import Link from 'next/link'
 import Image from 'next/image'
-import { CaptionMdRegular, LineHeight } from '@/styles/Font'
+import { CaptionMdRegular } from '@/styles/Font'
 import { MemberProfileColor } from '@/styles/MemberProfileColor'
 import { MemberProfileTitle } from './MemberProfileTitle'
 
@@ -24,7 +24,6 @@ const youtubeListItemText = [
     color: ${MemberProfileColor.youtubeTitleTextGrey};
   `,
   CaptionMdRegular,
-  LineHeight,
 ]
 
 export const MemberProfileYoutube = ({
@@ -49,7 +48,12 @@ export const MemberProfileYoutube = ({
       <ul css={youtubeContainer}>
         {recentYoutubeVideo?.map((v) => (
           <li key={v.id}>
-            <Link css={youtubeListItem} href={v.link} target="_blank">
+            <Link
+              css={youtubeListItem}
+              href={v.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Image
                 src={v.thumbUrl}
                 width={310}

@@ -1,6 +1,5 @@
 import ChartColor from '@/styles/ChartColor'
 import {
-  LineHeight,
   TextMdBold,
   TextMdRegular,
   TextSmRegular,
@@ -85,14 +84,12 @@ export const HallOfFame = ({
         <div css={[fullWidth, flexCol, spaceBetween]}>
           <div css={[flexCol, { gap: '10px' }]}>
             {/* metadata */}
-            <h2 css={[TitleSmRegular, LineHeight]}>{musicTitle}</h2>
-            <h3 css={[TextMdBold, LineHeight, { color: ChartColor.textGrey }]}>
-              {artist}
-            </h3>
+            <h2 css={[TitleSmRegular]}>{musicTitle}</h2>
+            <h3 css={[TextMdBold, { color: ChartColor.textGrey }]}>{artist}</h3>
             <span
               css={[
                 TextSmRegular,
-                LineHeight,
+
                 {
                   color: '#b0b0b0',
                   display: 'inline-block',
@@ -105,11 +102,11 @@ export const HallOfFame = ({
           {/* 하이라이트 메시지 list */}
           {/* 텍스트는 백엔드 소통 이후 변경 예정 */}
           <ul css={[flexCol, highlightMessageBox]}>
-            <li css={[TextMdRegular, LineHeight, highlightMessage]}>
+            <li css={[TextMdRegular, highlightMessage]}>
               <span css={[highlightText]}>11시간 50분</span>만에 100만 스트리밍
               달성 성공
             </li>
-            <li css={[TextMdRegular, LineHeight, highlightMessage]}>
+            <li css={[TextMdRegular, highlightMessage]}>
               24시간 <span css={[highlightText]}>1,825,900회</span> 스트리밍
               달성!
             </li>

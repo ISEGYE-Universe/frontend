@@ -1,4 +1,4 @@
-import { LineHeight, TitleSmRegular } from '@/styles/Font'
+import { TitleSmRegular } from '@/styles/Font'
 import { MemberProfileColor } from '@/styles/MemberProfileColor'
 import { css } from '@emotion/react'
 
@@ -14,7 +14,7 @@ export const streamListContainer = css`
 `
 export const streamListCarousel = [
   TitleSmRegular,
-  LineHeight,
+
   css`
     overflow: hidden;
     .embla__container {
@@ -23,7 +23,14 @@ export const streamListCarousel = [
       height: ${54 * itemsPerView}px;
       gap: 16px;
       .embla__slide {
+        width: 400px;
         flex: 0 0 40px;
+        transition: background-color 1.5s ease;
+        border-radius: 8px;
+        &.focused {
+          background-color: #ffffff20;
+          transition: background-color 0.2s ease;
+        }
       }
     }
   `,

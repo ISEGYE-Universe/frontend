@@ -1,5 +1,5 @@
 import ChartColor from '@/styles/ChartColor'
-import { CaptionMdBold, LineHeight } from '@/styles/Font'
+import { CaptionMdBold } from '@/styles/Font'
 import { Interpolation, Theme, css } from '@emotion/react'
 import Link from 'next/link'
 
@@ -48,7 +48,7 @@ export const RoundedLinkButton = ({
             ${shadow && 'box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.50);'}
           `,
           fontStyle || CaptionMdBold,
-          LineHeight,
+
           customCss,
         ]}
       >

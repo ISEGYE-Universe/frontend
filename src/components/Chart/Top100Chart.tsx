@@ -1,148 +1,269 @@
 import ChartColor from '@/styles/ChartColor'
-import { css } from '@emotion/react'
+import { withParentSize } from '@visx/responsive'
+import { WithParentSizeProps } from '@visx/responsive/lib/enhancers/withParentSize'
 import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Tooltip,
-  Filler,
-  registerables,
-} from 'chart.js'
-import { Chart } from 'react-chartjs-2'
+  AnimatedAreaSeries,
+  Axis,
+  EventHandlerParams,
+  GlyphSeries,
+  Grid,
+  Margin,
+  TooltipProvider,
+  XYChart,
+} from '@visx/xychart'
+import { Annotation, HtmlLabel } from '@visx/annotation'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { useTooltip, useTooltipInPortal } from '@visx/tooltip'
+import {
+  tooltipContainer,
+  tooltipOuterContainer,
+  tooltipRankText,
+  tooltipTimeText,
+  top100ChartContainer,
+} from './Top100Chart.css'
 
-ChartJS.register(...registerables)
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Tooltip,
-  Filler,
-)
+export interface MelonTop100Datum {
+  date: string
+  rank: number
+}
 
-const fontFamily = 'Noto Sans CJK KR'
+// hour formatter
+const formatHour = (d: string) => {
+  return new Date(d).toLocaleTimeString('ko-KR', {
+    hour12: false,
+    hour: '2-digit',
+    minute: '2-digit',
+  })
+}
 
-export const Top100Chart = () => {
+// visx accessors
+const accessors = {
+  xAccessor: (d: MelonTop100Datum) => formatHour(d.date),
+  yAccessor: (d: MelonTop100Datum) => d.rank,
+  colorAccessor: () => ChartColor.isedolPink,
+}
+
+// 등수 최소, 최대값 helper function
+const getYMinAndMax = (data: MelonTop100Datum[]) => {
+  const min = data.reduce((prev, cur) => {
+    return prev.rank < cur.rank ? prev : cur
+  }).rank
+  const max = data.reduce((prev, cur) => {
+    return prev.rank >= cur.rank ? prev : cur
+  }).rank
+  return [min, max]
+}
+
+interface Top100ChartImplProps {
+  parentWidth?: number
+  parentHeight?: number
+  margin?: Margin
+  data: MelonTop100Datum[]
+}
+
+interface Point {
+  x: number
+  y: number
+}
+
+const Top100ChartImpl = ({
+  parentWidth: graphWidth,
+  parentHeight: graphHeight,
+  margin,
+  data,
+}: Top100ChartImplProps) => {
+  const [minY, maxY] = getYMinAndMax(data)
+
+  // tooltip, annotation open 여부
+  const [annotationOpen, setAnnotationOpen] = useState<boolean>(true)
+  const [openTooltip, setOpenTooltip] = useState<boolean>(false)
+
+  // tooltip ref, DOM 관련 state
+  const containerOuterRef = useRef<HTMLDivElement>(null)
+  const [glyphCoordList, setGlyphCoordList] = useState<Point[]>([])
+
+  const {
+    tooltipData,
+    tooltipLeft,
+    tooltipTop,
+    tooltipOpen,
+    showTooltip,
+    hideTooltip,
+  } = useTooltip()
+
+  const { containerRef, TooltipInPortal } = useTooltipInPortal({
+    detectBounds: true,
+    scroll: true,
+  })
+
+  const handleMouseOver = useCallback(
+    (event: EventHandlerParams<MelonTop100Datum>) => {
+      if (glyphCoordList.length !== 0) {
+        const isLastGlyph = event.index === data.length - 1
+        if (!isLastGlyph) {
+          // get DOM from cache
+          const currentGlyphCoord = glyphCoordList[event.index]
+
+          const cx = currentGlyphCoord.x
+          const cy = currentGlyphCoord.y
+          if (cx && cy) {
+            setAnnotationOpen(false)
+            setOpenTooltip(true)
+            showTooltip({
+              tooltipLeft: cx - 75,
+              tooltipTop: cy - 33,
+              tooltipData: event.datum,
+            })
+          }
+        }
+      }
+    },
+    [glyphCoordList, data, showTooltip],
+  )
+
+  const handleMouseOut = useCallback(() => {
+    setOpenTooltip(false)
+    // timeout for transition
+    setTimeout(() => {
+      hideTooltip()
+    }, 300)
+    setAnnotationOpen(true)
+  }, [hideTooltip])
+
+  // 가장 최근 데이터의 좌표를 가져와서 state에 저장
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      const glyphDOMList: NodeListOf<SVGCircleElement> | undefined =
+        containerOuterRef.current?.querySelectorAll(`.visx-glyph`)
+
+      const resultList: Point[] = []
+
+      glyphDOMList?.forEach((el) => {
+        resultList.push({
+          x: el.cx.baseVal.value,
+          y: el.cy.baseVal.value,
+        })
+      })
+      setGlyphCoordList(resultList)
+    }, 1)
+
+    return () => {
+      clearTimeout(timeoutId)
+    }
+  }, [data])
+
   return (
-    <Chart
-      type="line"
-      width="500px"
-      height="300px"
-      css={css`
-        padding-top: 17px;
-      `}
-      data={{
-        labels: ['15', '16', '17', '18', '19', '20', '21', '22', '23'],
-        datasets: [
-          {
-            data: [27, 24, 26, 16, 19, 20, 21, 25, 18],
-            fill: 'start',
-            backgroundColor: ChartColor.chartBgIsedolPink,
-            borderColor: ChartColor.isedolPink,
-            borderWidth: 1,
-            pointBackgroundColor: ChartColor.isedolPink,
-            pointBorderColor: ChartColor.isedolPink,
-          },
-        ],
-      }}
-      options={{
-        // custom width height
-        responsive: false,
-        // 경계선에서 잘리는 문제
-        clip: false,
-        scales: {
-          // x축
-          x: {
-            border: {
-              color: ChartColor.chartBorderGrey,
-            },
-            grid: {
-              display: true,
-              color: ChartColor.chartBorderGrey,
-            },
-            ticks: {
-              color: ChartColor.chartFontGrey,
-              font: {
-                family: fontFamily,
-                weight: '500',
-                size: 12,
-              },
-            },
-          },
-          // y축
-          y: {
-            border: {
-              color: ChartColor.chartBorderGrey,
-            },
-            // y축 숫자
-            ticks: {
-              display: false,
-            },
-            grid: {
-              display: true,
-              color: ChartColor.chartBorderGrey,
-            },
-            // 낮은 숫자가 높기 때문
-            reverse: true,
-            min: 10,
-            max: 30,
-            suggestedMin: 1,
-            suggestedMax: 100,
-          },
-        },
-        // 툴팁 스타일
-        plugins: {
-          tooltip: {
-            // enabled: false,
-            position: 'average',
-            // style
-            backgroundColor: ChartColor.isedolPink,
-            // 폰트
-            titleFont: {
-              family: fontFamily,
-              weight: '400',
-              size: 14,
-            },
-            padding: {
-              top: 8,
-              bottom: 8,
-              left: 9,
-              right: 9,
-            },
-            titleAlign: 'center',
-            titleMarginBottom: 0,
-            callbacks: {
-              // beforeTitle: (context) => {
-              //   console.log(context)
+    <TooltipProvider>
+      <div ref={containerOuterRef}>
+        <div ref={containerRef} css={top100ChartContainer}>
+          <XYChart
+            margin={margin || { top: 10, right: 0, bottom: 20, left: 0 }}
+            width={graphWidth}
+            height={graphHeight}
+            xScale={{
+              type: 'band',
+            }}
+            yScale={{
+              // logarithm 그래프 활용하여 뒤집힌 도메인 바로잡기 (음수의 log는 양수)
+              type: 'log',
+              // y축 도메인 뒤집기 (순위)
+              domain: [maxY + 3, minY - 3],
+              base: 2,
+            }}
+          >
+            <Grid
+              numTicks={20}
+              rows={false}
+              lineStyle={{ backgroundColor: ChartColor.chartBorderGrey }}
+            />
+            <Grid
+              numTicks={6}
+              columns={false}
+              lineStyle={{ backgroundColor: ChartColor.chartBorderGrey }}
+            />
+            <Axis
+              orientation="bottom"
+              hideAxisLine
+              axisClassName="axis-line"
+              // ex) 13:00 -> 13
+              tickFormat={(d: string) => {
+                return d.slice(0, 2)
+              }}
+              tickClassName="axis-tick"
+            />
+            <AnimatedAreaSeries
+              data={data}
+              dataKey="top100LineGraph"
+              fill="rgba(234, 68, 118, 0.15)"
+              lineProps={{
+                stroke: ChartColor.isedolPink,
+                strokeWidth: 1,
+              }}
+              xAccessor={accessors.xAccessor}
+              yAccessor={accessors.yAccessor}
+            />
 
-              //   return '현재 순위'
-              // },
-              title: (context) => {
-                // 툴팁 정보 안넘어오는 경우 제외
-                if (context.length !== 0) {
-                  const { parsed } = context[0]
-                  let result = `${parsed.y}`
-                  result += '위'
-                  return result
-                }
-                return ''
-              },
-              label: () => {
-                return ''
-              },
-            },
-            // 마지막 툴팁 필터링
-            filter: (context) => {
-              if (context.dataIndex === context.dataset.data.length - 1) {
-                return false
-              }
-              return true
-            },
-          },
-        },
-      }}
-    />
+            {/* Glyph */}
+            <GlyphSeries
+              dataKey="top100Glyph"
+              data={data}
+              xAccessor={accessors.xAccessor}
+              yAccessor={accessors.yAccessor}
+              colorAccessor={accessors.colorAccessor}
+              onPointerMove={handleMouseOver}
+              onPointerOut={handleMouseOut}
+              renderGlyph={(datum) => {
+                return (
+                  <circle
+                    className={`visx-glyph glyph-${datum.key}`}
+                    cx={datum.x}
+                    cy={datum.y}
+                    r={3}
+                    fill={ChartColor.isedolPink}
+                  />
+                )
+              }}
+            />
+            {tooltipOpen && (
+              <TooltipInPortal
+                key={`tooltip-${tooltipOpen ? 1 : 0}`}
+                top={tooltipTop}
+                left={tooltipLeft}
+                css={tooltipOuterContainer(openTooltip)}
+                unstyled
+              >
+                <div css={tooltipContainer(true)}>
+                  <p css={tooltipTimeText}>
+                    {tooltipData &&
+                      formatHour((tooltipData as MelonTop100Datum).date)}
+                  </p>
+                  <p css={tooltipRankText}>
+                    {tooltipData && (tooltipData as MelonTop100Datum).rank}위
+                  </p>
+                </div>
+              </TooltipInPortal>
+            )}
+
+            {glyphCoordList.length && (
+              <Annotation
+                x={glyphCoordList[data.length - 1].x - 15}
+                y={glyphCoordList[data.length - 1].y + 20}
+              >
+                <HtmlLabel>
+                  <div css={tooltipContainer(annotationOpen)}>
+                    <p css={tooltipTimeText}>현재 순위</p>
+                    <p css={tooltipRankText}>{data[data.length - 1].rank}위!</p>
+                  </div>
+                </HtmlLabel>
+              </Annotation>
+            )}
+          </XYChart>
+        </div>
+      </div>
+    </TooltipProvider>
   )
 }
+
+export const Top100Chart = withParentSize<
+  WithParentSizeProps & Top100ChartImplProps
+>(Top100ChartImpl)

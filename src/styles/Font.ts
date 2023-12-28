@@ -72,130 +72,151 @@ export const MainTitleLight = css`
   ${fontFamily}
   ${fontWeightMedium}
   ${fontSizeMainTitle}
+  ${lineHeight}
 `
 export const MainTitleRegular = css`
   ${fontFamily}
   ${fontWeightBold}
   ${fontSizeMainTitle}
+  ${lineHeight}
 `
 export const MainTitleBold = css`
   ${fontFamily}
   ${fontWeightBlack}
   ${fontSizeMainTitle}
+  ${lineHeight}
 `
 // title_lg
 export const TitleLgLight = css`
   ${fontFamily}
   ${fontWeightDemiLight}
   ${fontSizeTitleLg}
+  ${lineHeight}
 `
 export const TitleLgRegular = css`
   ${fontFamily}
   ${fontWeightMedium}
   ${fontSizeTitleLg}
+  ${lineHeight}
 `
 export const TitleLgBold = css`
   ${fontFamily}
   ${fontWeightBlack}
   ${fontSizeTitleLg}
+  ${lineHeight}
 `
 // title_md
 export const TitleMdLight = css`
   ${fontFamily}
   ${fontWeightLight}
   ${fontSizeTitleMd}
+  ${lineHeight}
 `
 export const TitleMdRegular = css`
   ${fontFamily}
   ${fontWeightRegular}
   ${fontSizeTitleMd}
+  ${lineHeight}
 `
 export const TitleMdBold = css`
   ${fontFamily}
   ${fontWeightBold}
   ${fontSizeTitleMd}
+  ${lineHeight}
 `
 // title_sm
 export const TitleSmLight = css`
   ${fontFamily}
   ${fontWeightLight}
   ${fontSizeTitleSm}
+  ${lineHeight}
 `
 export const TitleSmRegular = css`
   ${fontFamily}
   ${fontWeightRegular}
   ${fontSizeTitleSm}
+  ${lineHeight}
 `
 export const TitleSmBold = css`
   ${fontFamily}
   ${fontWeightBold}
   ${fontSizeTitleSm}
+  ${lineHeight}
 `
 // text_md
 export const TextMdLight = css`
   ${fontFamily}
   ${fontWeightThin}
   ${fontSizeTextMd}
+  ${lineHeight}
 `
 export const TextMdRegular = css`
   ${fontFamily}
   ${fontWeightDemiLight}
   ${fontSizeTextMd}
+  ${lineHeight}
 `
 export const TextMdBold = css`
   ${fontFamily}
   ${fontWeightRegular}
   ${fontSizeTextMd}
+  ${lineHeight}
 `
 // text_sm
 export const TextSmLight = css`
   ${fontFamily}
   ${fontWeightThin}
   ${fontSizeTextSm}
+  ${lineHeight}
 `
 export const TextSmRegular = css`
   ${fontFamily}
   ${fontWeightDemiLight}
   ${fontSizeTextSm}
+  ${lineHeight}
 `
 export const TextSmBold = css`
   ${fontFamily}
   ${fontWeightRegular}
   ${fontSizeTextSm}
+  ${lineHeight}
 `
 // caption_md
 export const CaptionMdLight = css`
   ${fontFamily}
   ${fontWeightThin}
   ${fontSizeCaptionMd}
+  ${lineHeight}
 `
 export const CaptionMdRegular = css`
   ${fontFamily}
   ${fontWeightRegular}
   ${fontSizeCaptionMd}
+  ${lineHeight}
 `
 export const CaptionMdBold = css`
   ${fontFamily}
   ${fontWeightMedium}
   ${fontSizeCaptionMd}
+  ${lineHeight}
 `
 // caption_sm
 export const CaptionSmLight = css`
   ${fontFamily}
   ${fontWeightLight}
   ${fontSizeCaptionSm}
+  ${lineHeight}
 `
 export const CaptionSmRegular = css`
   ${fontFamily}
   ${fontWeightDemiLight}
   ${fontSizeCaptionSm}
+  ${lineHeight}
 `
 export const CaptionSmBold = css`
   ${fontFamily}
   ${fontWeightRegular}
   ${fontSizeCaptionSm}
-`
-export const LineHeight = css`
   ${lineHeight}
 `
 export const AlignJustify = css`
