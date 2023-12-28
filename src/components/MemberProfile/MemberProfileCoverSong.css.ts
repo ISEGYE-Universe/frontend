@@ -91,20 +91,15 @@ export const memberProfileCoverSongListBox = [
     }
   `,
 ]
-export const memberProfileCoverSongListItem = (color: string) => {
-  return [
-    flexRow,
-    alignCenter,
-    css`
-      padding: 6px 24px 6px 14px;
-      border-radius: 12px;
-      transition: background-color 0.2s ease;
-      &:hover {
-        background-color: ${color};
-      }
-    `,
-  ]
-}
+export const memberProfileCoverSongListItem = [
+  flexRow,
+  alignCenter,
+  css`
+    padding: 6px 24px 6px 14px;
+    border-radius: 12px;
+  `,
+]
+
 export const memberProfileCoverSongListItemImage = [
   css`
     margin-right: 16px;
@@ -144,21 +139,23 @@ export const memberProfileCoverSongListItemDateText = [
 
 export const memberProfileCoverSongListItemPlayButton = (
   isReady: boolean,
+  color: string,
 ) => css`
   ${isReady ? '' : `pointer-events: none;`}
+  width:32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: ${color};
+  opacity: ${isReady ? 0.5 : 0.1};
+  transition: opacity 0.2s ease;
+  &:hover {
+    opacity: 1;
+  }
 `
-export const memberProfileCoverSongListItemPlayIcon = (isReady: boolean) => [
-  css`
-    color: ${MemberProfileColor.coverDateTextGrey};
-    opacity: ${isReady ? 0.5 : 0.1};
-    transition: opacity 0.2s ease;
-    ${isReady ? '' : `pointer-events: none;`}
-
-    &:hover {
-      opacity: 1;
-    }
-  `,
-]
+export const memberProfileCoverSongListItemPlayIcon = css`
+  position: relative;
+  left: 1px;
+`
 
 export const youtubeEmbedContainer = css`
   display: none;

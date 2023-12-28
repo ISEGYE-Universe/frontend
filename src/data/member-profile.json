@@ -7,7 +7,6 @@
   "ine": {
     "topBannerImage": "/images/member-profile/ine/top-banner.png",
     "calendarBgImage": "/images/member-profile/ine/bg-calendar.png",
-    "coverPlayIcon": "/images/member-profile/ine/icon-play.svg",
     "signatureImg": "/images/member-profile/ine/signature.png",
     "personalColor": "#8A2BE2",
     "personalColorAlpha": "#8A2BE21A",
@@ -53,7 +52,6 @@
   "jingburger": {
     "topBannerImage": "/images/member-profile/jingburger/top-banner.png",
     "calendarBgImage": "/images/member-profile/jingburger/bg-calendar.png",
-    "coverPlayIcon": "/images/member-profile/jingburger/icon-play.svg",
     "signatureImg": "/images/member-profile/jingburger/signature.png",
     "personalColor": "#F0A957",
     "personalColorAlpha": "#F0A9571A",
@@ -99,7 +97,6 @@
   "lilpa": {
     "topBannerImage": "/images/member-profile/lilpa/top-banner.png",
     "calendarBgImage": "/images/member-profile/lilpa/bg-calendar.png",
-    "coverPlayIcon": "/images/member-profile/lilpa/icon-play.svg",
     "signatureImg": "/images/member-profile/lilpa/signature.png",
     "personalColor": "#443965",
     "personalColorAlpha": "#4439651a",
@@ -145,7 +142,6 @@
   "jururu": {
     "topBannerImage": "/images/member-profile/jururu/top-banner.png",
     "calendarBgImage": "/images/member-profile/jururu/bg-calendar.png",
-    "coverPlayIcon": "/images/member-profile/jururu/icon-play.svg",
     "signatureImg": "/images/member-profile/jururu/signature.png",
     "personalColor": "#ff008c",
     "personalColorAlpha": "#ff008c1a",
@@ -254,7 +250,6 @@
   "gosegu": {
     "topBannerImage": "/images/member-profile/gosegu/top-banner.png",
     "calendarBgImage": "/images/member-profile/gosegu/bg-calendar.png",
-    "coverPlayIcon": "/images/member-profile/gosegu/icon-play.svg",
     "signatureImg": "/images/member-profile/gosegu/signature.png",
     "personalColor": "#467EC6",
     "personalColorAlpha": "#467EC61a",
@@ -300,7 +295,6 @@
   "viichan": {
     "topBannerImage": "/images/member-profile/viichan/top-banner.png",
     "calendarBgImage": "/images/member-profile/viichan/bg-calendar.png",
-    "coverPlayIcon": "/images/member-profile/viichan/icon-play.svg",
     "signatureImg": "/images/member-profile/viichan/signature.png",
     "personalColor": "#95C100",
     "personalColorAlpha": "#95C1001A",

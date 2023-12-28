@@ -2,6 +2,7 @@ import memberProfileData from '@/data/member-profile.json'
 import MemberProfileStore from '@/store/MemberProfile/MemberProfileStore'
 import { widgetContainer } from './MemberProfilePlayerWidget.css'
 import { WidgetPlayerIcon } from './WidgetPlayerIcon'
+import { defaultVolume } from './MemberProfileCoverSong'
 
 export const MemberProfilePlayerWidget = ({
   memberName,
@@ -23,6 +24,8 @@ export const MemberProfilePlayerWidget = ({
           youTubeVideoPlayer.pauseVideo()
         } else {
           youTubeVideoPlayer.playVideo()
+          // 볼륨 조정
+          youTubeVideoPlayer.setVolume(defaultVolume)
         }
         setIsPlaying(!isPlaying)
       }}

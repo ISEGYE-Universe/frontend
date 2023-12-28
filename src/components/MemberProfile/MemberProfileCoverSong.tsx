@@ -22,9 +22,11 @@ import {
   memberProfileCoverSongSubTitleBoxMore,
   memberSignatureImg,
   youtubeEmbedContainer,
+  memberProfileCoverSongListItemPlayButton,
 } from './MemberProfileCoverSong.css'
 
 let localYouTubeVideoPlayer: YouTubePlayer = null
+export const defaultVolume = 15
 
 export const MemberProfileCoverSong = ({
   memberName,
@@ -33,8 +35,7 @@ export const MemberProfileCoverSong = ({
 }) => {
   const { enName, groupName, krName, socialMedia } =
     memberProfileData[memberName]?.memberInformation || {}
-  const { coverPlayIcon, signatureImg, personalColor, personalColorAlpha } =
-    memberProfileData[memberName] || {}
+  const { signatureImg, personalColor } = memberProfileData[memberName] || {}
   const recentCoverList = memberProfileData[memberName]?.recentCover
   const youtubeSongLink = socialMedia?.youtube.songPlayListUrl || ''
 
@@ -88,12 +89,15 @@ export const MemberProfileCoverSong = ({
       localYouTubeVideoPlayer.playVideo()
       setIsPlaying(true)
     }
+
+    // 볼륨 조정
+    localYouTubeVideoPlayer.setVolume(defaultVolume)
   }
 
   // 멤버 전환 시 default 곡 지정
   useEffect(() => {
     setCurrentYoutubeId(parseIdFromYoutubeURL(recentCoverList[0].link) ?? '')
-  }, [recentCoverList])
+  }, [recentCoverList, setCurrentYoutubeId])
 
   return (
     <section css={memberProfileCoverSongMain}>
@@ -124,7 +128,7 @@ export const MemberProfileCoverSong = ({
           <li key={cover.id}>
             <Link
               key={cover.id}
-              css={memberProfileCoverSongListItem(personalColorAlpha)}
+              css={memberProfileCoverSongListItem}
               href={cover.link}
               target="_blank"
             >
@@ -151,20 +155,31 @@ export const MemberProfileCoverSong = ({
 
               <button
                 type="button"
+                css={memberProfileCoverSongListItemPlayButton(
+                  youTubePlayerReady,
+                  personalColor,
+                )}
                 onClick={(e) => {
                   handleClickPlay(e, parseIdFromYoutubeURL(cover.link))
                 }}
               >
-                <Image
-                  src={coverPlayIcon}
-                  className="play-icon"
-                  width={32}
-                  height={32}
-                  alt={`${cover.title} play icon`}
-                  css={memberProfileCoverSongListItemPlayIcon(
-                    youTubePlayerReady,
-                  )}
-                />
+                {currentYoutubeId === parseIdFromYoutubeURL(cover.link) &&
+                isPlaying ? (
+                  <Image
+                    src="/images/member-profile/icon-pause.svg"
+                    width={10}
+                    height={12}
+                    alt="pause icon"
+                  />
+                ) : (
+                  <Image
+                    src="/images/member-profile/icon-play.svg"
+                    width={10}
+                    height={12}
+                    alt="play icon"
+                    css={memberProfileCoverSongListItemPlayIcon}
+                  />
+                )}
               </button>
             </Link>
           </li>
