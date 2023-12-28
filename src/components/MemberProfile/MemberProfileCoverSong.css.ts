@@ -1,6 +1,7 @@
 import {
   CaptionMdLight,
   CaptionMdRegular,
+  CaptionSmRegular,
   TextMdBold,
   TextSmLight,
   TitleSmBold,
@@ -106,10 +107,10 @@ export const memberProfileCoverSongListItemImage = [
     border-radius: 10px;
   `,
 ]
-export const memberProfileCoverSongListItemTitleBox = [
+export const memberProfileCoverSongListItemTitleBox = (isPlaying: boolean) => [
   flexCol,
   css`
-    gap: 10px;
+    gap: ${isPlaying ? '8px' : '10px'};
     max-width: 444px;
     width: 100%;
     margin-right: auto;
@@ -136,6 +137,29 @@ export const memberProfileCoverSongListItemDateText = [
     color: ${MemberProfileColor.coverDateTextGrey};
   `,
 ]
+// progress bar
+export const memberProfileCoverSongListItemProgressContainer = css`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+`
+export const memberProfileCoverSongListItemProgressTimeText = [
+  CaptionSmRegular,
+  css`
+    display: flex;
+    gap: 4px;
+    color: ${MemberProfileColor.coverProgressTextGrey};
+    margin-right: 2px;
+    text-align: right;
+  `,
+]
+export const memberProfileCoverSongListItemProgressBar = css`
+  width: 100%;
+  height: 5px;
+  background-color: ${MemberProfileColor.coverProgressBackgroundGrey};
+  border-radius: 50px;
+`
 
 export const memberProfileCoverSongListItemPlayButton = (
   isReady: boolean,

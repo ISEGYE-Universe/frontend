@@ -1,10 +1,11 @@
 import memberProfileData from '@/data/member-profile.json'
 import Link from 'next/link'
 import Image from 'next/image'
-import { MouseEvent, useEffect } from 'react'
+import { MouseEvent, useEffect, useState } from 'react'
 import YouTube, { YouTubePlayer, YouTubeProps } from 'react-youtube'
 import MemberProfileStore from '@/store/MemberProfile/MemberProfileStore'
 import { parseIdFromYoutubeURL } from '@/utils/Youtube'
+import { formatSecondToMinutes } from '@/utils/FormatTime'
 import {
   memberProfileCoverSongListBox,
   memberProfileCoverSongListItem,
@@ -23,6 +24,9 @@ import {
   memberSignatureImg,
   youtubeEmbedContainer,
   memberProfileCoverSongListItemPlayButton,
+  memberProfileCoverSongListItemProgressContainer,
+  memberProfileCoverSongListItemProgressTimeText,
+  memberProfileCoverSongListItemProgressBar,
 } from './MemberProfileCoverSong.css'
 
 let localYouTubeVideoPlayer: YouTubePlayer = null
@@ -57,10 +61,10 @@ export const MemberProfileCoverSong = ({
     // set local youtube player - handleOnReady에서는 localYoutubePlayer로만 재생 가능
     localYouTubeVideoPlayer = event.target
 
-    // youtube player가 준비된 후 안전한 접근을 위해 1000ms 기다림
+    // youtube player가 준비된 후 안전한 접근을 위해 기다림
     setTimeout(() => {
       setYouTubePlayerReady(true)
-    }, 1000)
+    }, 500)
   }
 
   // 재생버튼 click handler
@@ -124,66 +128,143 @@ export const MemberProfileCoverSong = ({
         </div>
       </div>
       <ul css={memberProfileCoverSongListBox}>
-        {recentCoverList.map((cover, i) => (
-          <li key={cover.id}>
-            <Link
-              key={cover.id}
-              css={memberProfileCoverSongListItem}
-              href={cover.link}
-              target="_blank"
-            >
-              <span
-                css={memberProfileCoverSongListItemIndexText(personalColor)}
-              >
-                {i + 1}
-              </span>
-              <Image
-                css={memberProfileCoverSongListItemImage}
-                src={cover.thumbUrl}
-                width={108}
-                height={60}
-                alt={`${cover.title} thumnail`}
-              />
-              <div css={memberProfileCoverSongListItemTitleBox}>
-                <p css={memberProfileCoverSongListItemTitleText}>
-                  {cover.title}
-                </p>
-                <p css={memberProfileCoverSongListItemDateText}>
-                  {cover.uploadDate}
-                </p>
-              </div>
+        {recentCoverList.map((cover, i) => {
+          const isCurrentPlaying =
+            currentYoutubeId === parseIdFromYoutubeURL(cover.link) && isPlaying
+          return (
+            <li key={cover.id}>
+              {isCurrentPlaying ? (
+                <div css={memberProfileCoverSongListItem}>
+                  <span
+                    css={memberProfileCoverSongListItemIndexText(personalColor)}
+                  >
+                    {i + 1}
+                  </span>
+                  <Image
+                    css={memberProfileCoverSongListItemImage}
+                    src={cover.thumbUrl}
+                    width={108}
+                    height={60}
+                    alt={`${cover.title} thumnail`}
+                  />
+                  <div
+                    css={memberProfileCoverSongListItemTitleBox(
+                      isCurrentPlaying,
+                    )}
+                  >
+                    <p css={memberProfileCoverSongListItemTitleText}>
+                      {cover.title}
+                    </p>
+                    <div css={memberProfileCoverSongListItemProgressContainer}>
+                      <div css={memberProfileCoverSongListItemProgressTimeText}>
+                        <span>
+                          {formatSecondToMinutes(
+                            localYouTubeVideoPlayer.getCurrentTime(),
+                          )}
+                        </span>
+                        <span>/</span>
+                        <span>
+                          {formatSecondToMinutes(
+                            localYouTubeVideoPlayer.getDuration(),
+                          )}
+                        </span>
+                      </div>
+                      <div css={memberProfileCoverSongListItemProgressBar} />
+                    </div>
+                  </div>
 
-              <button
-                type="button"
-                css={memberProfileCoverSongListItemPlayButton(
-                  youTubePlayerReady,
-                  personalColor,
-                )}
-                onClick={(e) => {
-                  handleClickPlay(e, parseIdFromYoutubeURL(cover.link))
-                }}
-              >
-                {currentYoutubeId === parseIdFromYoutubeURL(cover.link) &&
-                isPlaying ? (
+                  <button
+                    type="button"
+                    css={memberProfileCoverSongListItemPlayButton(
+                      youTubePlayerReady,
+                      personalColor,
+                    )}
+                    onClick={(e) => {
+                      handleClickPlay(e, parseIdFromYoutubeURL(cover.link))
+                    }}
+                  >
+                    {isCurrentPlaying ? (
+                      <Image
+                        src="/images/member-profile/icon-pause.svg"
+                        width={10}
+                        height={12}
+                        alt="pause icon"
+                      />
+                    ) : (
+                      <Image
+                        src="/images/member-profile/icon-play.svg"
+                        width={10}
+                        height={12}
+                        alt="play icon"
+                        css={memberProfileCoverSongListItemPlayIcon}
+                      />
+                    )}
+                  </button>
+                </div>
+              ) : (
+                <Link
+                  css={memberProfileCoverSongListItem}
+                  href={cover.link}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <span
+                    css={memberProfileCoverSongListItemIndexText(personalColor)}
+                  >
+                    {i + 1}
+                  </span>
                   <Image
-                    src="/images/member-profile/icon-pause.svg"
-                    width={10}
-                    height={12}
-                    alt="pause icon"
+                    css={memberProfileCoverSongListItemImage}
+                    src={cover.thumbUrl}
+                    width={108}
+                    height={60}
+                    alt={`${cover.title} thumnail`}
                   />
-                ) : (
-                  <Image
-                    src="/images/member-profile/icon-play.svg"
-                    width={10}
-                    height={12}
-                    alt="play icon"
-                    css={memberProfileCoverSongListItemPlayIcon}
-                  />
-                )}
-              </button>
-            </Link>
-          </li>
-        ))}
+                  <div
+                    css={memberProfileCoverSongListItemTitleBox(
+                      isCurrentPlaying,
+                    )}
+                  >
+                    <p css={memberProfileCoverSongListItemTitleText}>
+                      {cover.title}
+                    </p>
+                    <p css={memberProfileCoverSongListItemDateText}>
+                      {cover.uploadDate}
+                    </p>
+                  </div>
+
+                  <button
+                    type="button"
+                    css={memberProfileCoverSongListItemPlayButton(
+                      youTubePlayerReady,
+                      personalColor,
+                    )}
+                    onClick={(e) => {
+                      handleClickPlay(e, parseIdFromYoutubeURL(cover.link))
+                    }}
+                  >
+                    {isCurrentPlaying ? (
+                      <Image
+                        src="/images/member-profile/icon-pause.svg"
+                        width={10}
+                        height={12}
+                        alt="pause icon"
+                      />
+                    ) : (
+                      <Image
+                        src="/images/member-profile/icon-play.svg"
+                        width={10}
+                        height={12}
+                        alt="play icon"
+                        css={memberProfileCoverSongListItemPlayIcon}
+                      />
+                    )}
+                  </button>
+                </Link>
+              )}
+            </li>
+          )
+        })}
       </ul>
 
       <YouTube
