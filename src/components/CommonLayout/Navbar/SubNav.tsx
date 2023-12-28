@@ -1,5 +1,6 @@
 import { css } from '@emotion/react'
-import { TitleSmLight } from '@/styles/Font'
+// import { TitleSmLight } from '@/styles/Font'
+import { TextMdBold } from '@/styles/Font'
 
 import SubNavData from '@/data/subnav.json'
 
@@ -16,17 +17,31 @@ interface ISubNavData {
   }[]
 }
 
+// const SubNavContainer = css`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   gap: 48px;
+
+//   height: 80px;
+// `
 const SubNavContainer = css`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 48px;
-
-  height: 80px;
+  gap: 60px;
+  height: 49px;
+  background-color: white;
 `
 
+// const SubNavLink = css`
+//   ${TitleSmLight}
+//   color: #151515;
+
+//   cursor: pointer;
+// `
 const SubNavLink = css`
-  ${TitleSmLight}
+  ${TextMdBold}
   color: #151515;
 
   cursor: pointer;

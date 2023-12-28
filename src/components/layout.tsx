@@ -6,7 +6,7 @@ import { Footer } from './CommonLayout/Footer'
 
 const layoutGlobalCSS = css`
   position: relative;
-  top: 120px;
+  top: 100px;
 `
 
 const footerBlackList = ['/albums', '/profile']
