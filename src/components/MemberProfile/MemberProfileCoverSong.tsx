@@ -1,7 +1,7 @@
 import memberProfileData from '@/data/member-profile.json'
 import Link from 'next/link'
 import Image from 'next/image'
-import { MouseEvent, useEffect, useState } from 'react'
+import { MouseEvent, useEffect } from 'react'
 import YouTube, { YouTubePlayer, YouTubeProps } from 'react-youtube'
 import MemberProfileStore from '@/store/MemberProfile/MemberProfileStore'
 import { parseIdFromYoutubeURL } from '@/utils/Youtube'
