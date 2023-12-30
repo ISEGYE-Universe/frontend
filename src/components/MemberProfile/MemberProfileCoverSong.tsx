@@ -24,10 +24,10 @@ import {
   memberSignatureImg,
   youtubeEmbedContainer,
   memberProfileCoverSongListItemPlayButton,
-  memberProfileCoverSongListItemProgressContainer,
-  memberProfileCoverSongListItemProgressTimeText,
-  memberProfileCoverSongListItemProgressBar,
-  memberProfileCoverSongListProgressHighlight,
+  memberProfileCoverSongProgressContainer,
+  memberProfileCoverSongProgressTimeText,
+  memberProfileCoverSongProgressBar,
+  memberProfileCoverSongProgressHighlight,
 } from './MemberProfileCoverSong.css'
 
 let localYouTubeVideoPlayer: YouTubePlayer = null
@@ -148,6 +148,8 @@ export const MemberProfileCoverSong = ({
       // youtube video id 변경
       setCurrentYoutubeId(youtubeId ?? '')
       setPlayingtimeLoaded(false)
+      // 진행시간 초기화
+      setCurrentSongPlayingTime(0)
       // 비디오 load
       localYouTubeVideoPlayer.loadVideoById(youtubeId, 0)
     }
@@ -216,8 +218,8 @@ export const MemberProfileCoverSong = ({
                     <p css={memberProfileCoverSongListItemTitleText}>
                       {cover.title}
                     </p>
-                    <div css={memberProfileCoverSongListItemProgressContainer}>
-                      <div css={memberProfileCoverSongListItemProgressTimeText}>
+                    <div css={memberProfileCoverSongProgressContainer}>
+                      <div css={memberProfileCoverSongProgressTimeText}>
                         <span>
                           {formatSecondToMinutes(currentSongPlayingTime)}
                         </span>
@@ -226,9 +228,10 @@ export const MemberProfileCoverSong = ({
                           {formatSecondToMinutes(currentSongDuration)}
                         </span>
                       </div>
-                      <div css={memberProfileCoverSongListItemProgressBar}>
+                      <div css={memberProfileCoverSongProgressBar}>
+                        <div css={memberProfileCoverSongListBox} />
                         <div
-                          css={memberProfileCoverSongListProgressHighlight(
+                          css={memberProfileCoverSongProgressHighlight(
                             (currentSongPlayingTime / currentSongDuration) *
                               100,
                             personalColor,

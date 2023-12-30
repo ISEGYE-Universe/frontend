@@ -138,13 +138,13 @@ export const memberProfileCoverSongListItemDateText = [
   `,
 ]
 // progress bar
-export const memberProfileCoverSongListItemProgressContainer = css`
+export const memberProfileCoverSongProgressContainer = css`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 2px;
 `
-export const memberProfileCoverSongListItemProgressTimeText = [
+export const memberProfileCoverSongProgressTimeText = [
   CaptionSmRegular,
   css`
     display: flex;
@@ -154,14 +154,14 @@ export const memberProfileCoverSongListItemProgressTimeText = [
     text-align: right;
   `,
 ]
-export const memberProfileCoverSongListItemProgressBar = css`
+export const memberProfileCoverSongProgressBar = css`
   position: relative;
   width: 100%;
   height: 5px;
   background-color: ${MemberProfileColor.coverProgressBackgroundGrey};
   border-radius: 50px;
 `
-export const memberProfileCoverSongListProgressHighlight = (
+export const memberProfileCoverSongProgressHighlight = (
   width: number,
   color: string,
 ) => css`
