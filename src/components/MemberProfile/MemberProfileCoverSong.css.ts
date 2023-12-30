@@ -1,6 +1,7 @@
 import {
   CaptionMdLight,
   CaptionMdRegular,
+  CaptionSmRegular,
   TextMdBold,
   TextSmLight,
   TitleSmBold,
@@ -91,33 +92,25 @@ export const memberProfileCoverSongListBox = [
     }
   `,
 ]
-export const memberProfileCoverSongListItem = (color: string) => {
-  return [
-    flexRow,
-    alignCenter,
-    css`
-      padding: 6px 24px 6px 14px;
-      border-radius: 12px;
-      transition: background-color 0.2s ease;
-      &:hover {
-        background-color: ${color};
-      }
-      &:hover .play-icon {
-        opacity: 1;
-      }
-    `,
-  ]
-}
+export const memberProfileCoverSongListItem = [
+  flexRow,
+  alignCenter,
+  css`
+    padding: 6px 24px 6px 14px;
+    border-radius: 12px;
+  `,
+]
+
 export const memberProfileCoverSongListItemImage = [
   css`
     margin-right: 16px;
     border-radius: 10px;
   `,
 ]
-export const memberProfileCoverSongListItemTitleBox = [
+export const memberProfileCoverSongListItemTitleBox = (isPlaying: boolean) => [
   flexCol,
   css`
-    gap: 10px;
+    gap: ${isPlaying ? '8px' : '10px'};
     max-width: 444px;
     width: 100%;
     margin-right: auto;
@@ -144,10 +137,52 @@ export const memberProfileCoverSongListItemDateText = [
     color: ${MemberProfileColor.coverDateTextGrey};
   `,
 ]
-export const memberProfileCoverSongListItemPlayIcon = [
+// progress bar
+export const memberProfileCoverSongListItemProgressContainer = css`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+`
+export const memberProfileCoverSongListItemProgressTimeText = [
+  CaptionSmRegular,
   css`
-    color: ${MemberProfileColor.coverDateTextGrey};
-    opacity: 0.5;
-    transition: opacity 0.2s ease;
+    display: flex;
+    gap: 4px;
+    color: ${MemberProfileColor.coverProgressTextGrey};
+    margin-right: 2px;
+    text-align: right;
   `,
 ]
+export const memberProfileCoverSongListItemProgressBar = css`
+  width: 100%;
+  height: 5px;
+  background-color: ${MemberProfileColor.coverProgressBackgroundGrey};
+  border-radius: 50px;
+`
+
+export const memberProfileCoverSongListItemPlayButton = (
+  isReady: boolean,
+  color: string,
+) => css`
+  ${isReady ? '' : `pointer-events: none;`}
+  width:32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: ${color};
+  opacity: ${isReady ? 0.5 : 0.1};
+  transition: opacity 0.2s ease;
+  &:hover {
+    opacity: 1;
+  }
+`
+export const memberProfileCoverSongListItemPlayIcon = css`
+  position: relative;
+  left: 1px;
+`
+
+export const youtubeEmbedContainer = css`
+  display: none;
+  // opacity: 0.7;
+  // position: absolute;
+`
