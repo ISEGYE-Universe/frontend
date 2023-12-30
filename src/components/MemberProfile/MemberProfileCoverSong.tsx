@@ -105,6 +105,8 @@ export const MemberProfileCoverSong = ({
         const intervalId = setInterval(() => {
           setCurrentSongPlayingTime(localYouTubeVideoPlayer.getCurrentTime())
         }, 1000)
+        // 볼륨 설정
+        localYouTubeVideoPlayer.setVolume(defaultVolume)
         setCurrentSongIntervalId(intervalId)
         setIsPlayerBuffering(false)
         setIsPlaying(true)
