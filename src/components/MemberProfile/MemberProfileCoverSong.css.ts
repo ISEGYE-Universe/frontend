@@ -107,10 +107,10 @@ export const memberProfileCoverSongListItemImage = [
     border-radius: 10px;
   `,
 ]
-export const memberProfileCoverSongListItemTitleBox = (isPlaying: boolean) => [
+export const memberProfileCoverSongListItemTitleBox = [
   flexCol,
   css`
-    gap: ${isPlaying ? '8px' : '10px'};
+    gap: 10px;
     max-width: 444px;
     width: 100%;
     margin-right: auto;

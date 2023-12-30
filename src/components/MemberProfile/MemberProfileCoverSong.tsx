@@ -260,11 +260,7 @@ export const MemberProfileCoverSong = ({
                   />
                 </Link>
                 {isCurrentPlaying ? (
-                  <div
-                    css={memberProfileCoverSongListItemTitleBox(
-                      isCurrentPlaying,
-                    )}
-                  >
+                  <div css={memberProfileCoverSongListItemTitleBox}>
                     <Link
                       href={cover.link}
                       target="_blank"
@@ -320,11 +316,7 @@ export const MemberProfileCoverSong = ({
                     target="_blank"
                     rel="noreferrer noopener"
                   >
-                    <div
-                      css={memberProfileCoverSongListItemTitleBox(
-                        isCurrentPlaying,
-                      )}
-                    >
+                    <div css={memberProfileCoverSongListItemTitleBox}>
                       <p css={memberProfileCoverSongListItemTitleText}>
                         {cover.title}
                       </p>
