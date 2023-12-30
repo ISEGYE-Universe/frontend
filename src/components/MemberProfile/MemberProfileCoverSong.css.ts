@@ -161,10 +161,28 @@ export const memberProfileCoverSongProgressBar = css`
   background-color: ${MemberProfileColor.coverProgressBackgroundGrey};
   border-radius: 50px;
 `
+export const memberProfileCoverSongProgressBarHover = (
+  hover: boolean,
+  width: number,
+) => css`
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #c7c7c7;
+  width: ${width}px;
+  height: 100%;
+  border-radius: 50px;
+
+  opacity: ${hover ? 1 : 0};
+  transition: opacity 0.2s;
+`
 export const memberProfileCoverSongProgressHighlight = (
   width: number,
   color: string,
 ) => css`
+  position: absolute;
+  left: 0;
+  top: 0;
   background-color: ${color};
   width: ${width}%;
   height: 100%;

@@ -28,6 +28,7 @@ import {
   memberProfileCoverSongProgressTimeText,
   memberProfileCoverSongProgressBar,
   memberProfileCoverSongProgressHighlight,
+  memberProfileCoverSongProgressBarHover,
 } from './MemberProfileCoverSong.css'
 
 let localYouTubeVideoPlayer: YouTubePlayer = null
@@ -56,6 +57,9 @@ export const MemberProfileCoverSong = ({
   // 현재 재생시간 계산을 위한 인터벌 함수 id
   const [currentSongIntervalId, setCurrentSongIntervalId] =
     useState<NodeJS.Timeout>()
+  // 재생시간 scrub bar
+  const [scrubBarHover, setScrubBarHover] = useState<boolean>(false)
+  const [scrubBarWidth, setScrubBarWidth] = useState<number>(0)
 
   // 재생 여부
   const {
@@ -132,7 +136,6 @@ export const MemberProfileCoverSong = ({
         setIsPlayerBuffering(true)
         setPlayingtimeLoaded(false)
     }
-    console.log(status)
   }
 
   // 재생버튼 click handler
@@ -160,6 +163,34 @@ export const MemberProfileCoverSong = ({
     } else {
       // 정지중인 경우 재생
       localYouTubeVideoPlayer.playVideo()
+    }
+  }
+
+  // 재생바 이벤트 핸들러 (MouseMove)
+  const handleProgressBarMouseMove = (e: MouseEvent<HTMLButtonElement>) => {
+    if (e.target instanceof HTMLButtonElement) {
+      setScrubBarWidth(e.clientX - e.target.getBoundingClientRect().left)
+      setScrubBarHover(true)
+    }
+  }
+  // 재생바 이벤트 핸들러 (MouseOut)
+  const handleProgressBarMouseOut = () => {
+    setScrubBarHover(false)
+  }
+  // 재생바 이벤트 핸들러 (클릭)
+  const handleProgressBarClick = (e: MouseEvent<HTMLButtonElement>) => {
+    if (e.target instanceof HTMLButtonElement) {
+      const parent = e.target.parentElement
+      const targetWidth = e.clientX - e.target.getBoundingClientRect().left
+      if (parent && targetWidth !== 0) {
+        // 클릭한 위치의 percentage 계산 후 이동
+        localYouTubeVideoPlayer.seekTo(
+          (targetWidth / parent.offsetWidth) * currentSongDuration,
+          true,
+        )
+      } else {
+        localYouTubeVideoPlayer.seekTo(0, true)
+      }
     }
   }
 
@@ -228,16 +259,37 @@ export const MemberProfileCoverSong = ({
                           {formatSecondToMinutes(currentSongDuration)}
                         </span>
                       </div>
-                      <div css={memberProfileCoverSongProgressBar}>
-                        <div css={memberProfileCoverSongListBox} />
-                        <div
+                      <button
+                        type="button"
+                        css={memberProfileCoverSongProgressBar}
+                        onMouseMove={handleProgressBarMouseMove}
+                        onMouseOut={handleProgressBarMouseOut}
+                        onBlur={handleProgressBarMouseOut}
+                        onClick={handleProgressBarClick}
+                        aria-label="progress bar outer"
+                      >
+                        <button
+                          type="button"
+                          aria-label="progress bar scrub"
+                          onMouseMove={handleProgressBarMouseMove}
+                          onMouseOut={handleProgressBarMouseOut}
+                          onBlur={handleProgressBarMouseOut}
+                          css={memberProfileCoverSongProgressBarHover(
+                            scrubBarHover,
+                            scrubBarWidth,
+                          )}
+                        />
+                        <button
+                          type="button"
+                          aria-label="progress bar current"
+                          onClick={handleProgressBarClick}
                           css={memberProfileCoverSongProgressHighlight(
                             (currentSongPlayingTime / currentSongDuration) *
                               100,
                             personalColor,
                           )}
                         />
-                      </div>
+                      </button>
                     </div>
                   </div>
 
