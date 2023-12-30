@@ -27,6 +27,7 @@ import {
   memberProfileCoverSongListItemProgressContainer,
   memberProfileCoverSongListItemProgressTimeText,
   memberProfileCoverSongListItemProgressBar,
+  memberProfileCoverSongListProgressHighlight,
 } from './MemberProfileCoverSong.css'
 
 let localYouTubeVideoPlayer: YouTubePlayer = null
@@ -225,7 +226,15 @@ export const MemberProfileCoverSong = ({
                           {formatSecondToMinutes(currentSongDuration)}
                         </span>
                       </div>
-                      <div css={memberProfileCoverSongListItemProgressBar} />
+                      <div css={memberProfileCoverSongListItemProgressBar}>
+                        <div
+                          css={memberProfileCoverSongListProgressHighlight(
+                            (currentSongPlayingTime / currentSongDuration) *
+                              100,
+                            personalColor,
+                          )}
+                        />
+                      </div>
                     </div>
                   </div>
 

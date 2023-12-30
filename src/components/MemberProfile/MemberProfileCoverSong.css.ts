@@ -155,9 +155,19 @@ export const memberProfileCoverSongListItemProgressTimeText = [
   `,
 ]
 export const memberProfileCoverSongListItemProgressBar = css`
+  position: relative;
   width: 100%;
   height: 5px;
   background-color: ${MemberProfileColor.coverProgressBackgroundGrey};
+  border-radius: 50px;
+`
+export const memberProfileCoverSongListProgressHighlight = (
+  width: number,
+  color: string,
+) => css`
+  background-color: ${color};
+  width: ${width}%;
+  height: 100%;
   border-radius: 50px;
 `
 
