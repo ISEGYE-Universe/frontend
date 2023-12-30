@@ -116,6 +116,11 @@ export const memberProfileCoverSongListItemTitleBox = (isPlaying: boolean) => [
     margin-right: auto;
   `,
 ]
+export const memberProfileCoverSongListItemTitleBoxAnchor = css`
+  max-width: 444px;
+  width: 100%;
+  margin-right: auto;
+`
 export const memberProfileCoverSongListItemIndexText = (color: string) => {
   return [
     CaptionMdLight,

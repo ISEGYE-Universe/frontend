@@ -29,6 +29,7 @@ import {
   memberProfileCoverSongProgressBar,
   memberProfileCoverSongProgressHighlight,
   memberProfileCoverSongProgressBarHover,
+  memberProfileCoverSongListItemTitleBoxAnchor,
 } from './MemberProfileCoverSong.css'
 
 let localYouTubeVideoPlayer: YouTubePlayer = null
@@ -179,6 +180,8 @@ export const MemberProfileCoverSong = ({
   }
   // 재생바 이벤트 핸들러 (클릭)
   const handleProgressBarClick = (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault()
+
     if (e.target instanceof HTMLButtonElement) {
       const parent = e.target.parentElement
       const targetWidth = e.clientX - e.target.getBoundingClientRect().left
@@ -237,13 +240,17 @@ export const MemberProfileCoverSong = ({
             currentSongPlayingTime !== undefined
           return (
             <li key={cover.id}>
-              {isCurrentPlaying ? (
-                <div css={memberProfileCoverSongListItem}>
-                  <span
-                    css={memberProfileCoverSongListItemIndexText(personalColor)}
-                  >
-                    {i + 1}
-                  </span>
+              <div css={memberProfileCoverSongListItem}>
+                <span
+                  css={memberProfileCoverSongListItemIndexText(personalColor)}
+                >
+                  {i + 1}
+                </span>
+                <Link
+                  href={cover.link}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <Image
                     css={memberProfileCoverSongListItemImage}
                     src={cover.thumbUrl}
@@ -251,14 +258,22 @@ export const MemberProfileCoverSong = ({
                     height={60}
                     alt={`${cover.title} thumnail`}
                   />
+                </Link>
+                {isCurrentPlaying ? (
                   <div
                     css={memberProfileCoverSongListItemTitleBox(
                       isCurrentPlaying,
                     )}
                   >
-                    <p css={memberProfileCoverSongListItemTitleText}>
-                      {cover.title}
-                    </p>
+                    <Link
+                      href={cover.link}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <p css={memberProfileCoverSongListItemTitleText}>
+                        {cover.title}
+                      </p>
+                    </Link>
                     <div css={memberProfileCoverSongProgressContainer}>
                       <div css={memberProfileCoverSongProgressTimeText}>
                         <span>
@@ -298,77 +313,46 @@ export const MemberProfileCoverSong = ({
                       </button>
                     </div>
                   </div>
-
-                  <button
-                    type="button"
-                    css={memberProfileCoverSongListItemPlayButton(
-                      youTubePlayerReady,
-                      personalColor,
-                    )}
-                    onClick={(e) => {
-                      handleClickPlay(e, parseIdFromYoutubeURL(cover.link))
-                    }}
+                ) : (
+                  <Link
+                    href={cover.link}
+                    css={memberProfileCoverSongListItemTitleBoxAnchor}
+                    target="_blank"
+                    rel="noreferrer noopener"
                   >
-                    {isCurrentPlaying && isPlaying && !isPlayerBuffering ? (
-                      <Image
-                        src="/images/member-profile/icon-pause.svg"
-                        width={10}
-                        height={12}
-                        alt="pause icon"
-                      />
-                    ) : (
-                      <Image
-                        src="/images/member-profile/icon-play.svg"
-                        width={10}
-                        height={12}
-                        alt="play icon"
-                        css={memberProfileCoverSongListItemPlayIcon}
-                      />
-                    )}
-                  </button>
-                </div>
-              ) : (
-                <Link
-                  css={memberProfileCoverSongListItem}
-                  href={cover.link}
-                  target="_blank"
-                  rel="noreferrer noopener"
+                    <div
+                      css={memberProfileCoverSongListItemTitleBox(
+                        isCurrentPlaying,
+                      )}
+                    >
+                      <p css={memberProfileCoverSongListItemTitleText}>
+                        {cover.title}
+                      </p>
+                      <p css={memberProfileCoverSongListItemDateText}>
+                        {cover.uploadDate}
+                      </p>
+                    </div>
+                  </Link>
+                )}
+
+                <button
+                  type="button"
+                  css={memberProfileCoverSongListItemPlayButton(
+                    youTubePlayerReady,
+                    personalColor,
+                  )}
+                  onClick={(e) => {
+                    handleClickPlay(e, parseIdFromYoutubeURL(cover.link))
+                  }}
                 >
-                  <span
-                    css={memberProfileCoverSongListItemIndexText(personalColor)}
-                  >
-                    {i + 1}
-                  </span>
-                  <Image
-                    css={memberProfileCoverSongListItemImage}
-                    src={cover.thumbUrl}
-                    width={108}
-                    height={60}
-                    alt={`${cover.title} thumnail`}
-                  />
-                  <div
-                    css={memberProfileCoverSongListItemTitleBox(
-                      isCurrentPlaying,
-                    )}
-                  >
-                    <p css={memberProfileCoverSongListItemTitleText}>
-                      {cover.title}
-                    </p>
-                    <p css={memberProfileCoverSongListItemDateText}>
-                      {cover.uploadDate}
-                    </p>
-                  </div>
-
-                  <button
-                    type="button"
-                    css={memberProfileCoverSongListItemPlayButton(
-                      youTubePlayerReady,
-                      personalColor,
-                    )}
-                    onClick={(e) => {
-                      handleClickPlay(e, parseIdFromYoutubeURL(cover.link))
-                    }}
-                  >
+                  {isCurrentPlaying && isPlaying && !isPlayerBuffering ? (
+                    <Image
+                      src="/images/member-profile/icon-pause.svg"
+                      width={10}
+                      height={12}
+                      alt="pause icon"
+                    />
+                  ) : (
                     <Image
                       src="/images/member-profile/icon-play.svg"
                       width={10}
@@ -376,9 +360,9 @@ export const MemberProfileCoverSong = ({
                       alt="play icon"
                       css={memberProfileCoverSongListItemPlayIcon}
                     />
-                  </button>
-                </Link>
-              )}
+                  )}
+                </button>
+              </div>
             </li>
           )
         })}
