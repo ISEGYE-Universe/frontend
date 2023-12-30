@@ -281,9 +281,6 @@ export const MemberProfileCoverSong = ({
                         <button
                           type="button"
                           aria-label="progress bar scrub"
-                          onMouseMove={handleProgressBarMouseMove}
-                          onMouseOut={handleProgressBarMouseOut}
-                          onBlur={handleProgressBarMouseOut}
                           css={memberProfileCoverSongProgressBarHover(
                             scrubBarHover,
                             scrubBarWidth,
@@ -292,7 +289,6 @@ export const MemberProfileCoverSong = ({
                         <button
                           type="button"
                           aria-label="progress bar current"
-                          onClick={handleProgressBarClick}
                           css={memberProfileCoverSongProgressHighlight(
                             (currentSongPlayingTime / currentSongDuration) *
                               100,
