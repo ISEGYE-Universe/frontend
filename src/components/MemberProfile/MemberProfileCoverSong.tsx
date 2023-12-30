@@ -1,7 +1,7 @@
 import memberProfileData from '@/data/member-profile.json'
 import Link from 'next/link'
 import Image from 'next/image'
-import { MouseEvent, useState } from 'react'
+import { MouseEvent, useEffect, useState } from 'react'
 import YouTube, { YouTubePlayer, YouTubeProps } from 'react-youtube'
 import MemberProfileStore from '@/store/MemberProfile/MemberProfileStore'
 import { parseIdFromYoutubeURL } from '@/utils/Youtube'
@@ -193,6 +193,16 @@ export const MemberProfileCoverSong = ({
       }
     }
   }
+
+  // 멤버 전환 로직
+  useEffect(() => {
+    // 재생 상태 초기화
+    setIsPlaying(false)
+    setPlayingtimeLoaded(false)
+
+    // deafult 곡 지정
+    setCurrentYoutubeId(parseIdFromYoutubeURL(recentCoverList[0].link) ?? '')
+  }, [recentCoverList, setCurrentYoutubeId, setIsPlaying])
 
   return (
     <section css={memberProfileCoverSongMain}>
