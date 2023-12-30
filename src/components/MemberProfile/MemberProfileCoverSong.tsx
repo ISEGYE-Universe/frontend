@@ -331,6 +331,7 @@ export const MemberProfileCoverSong = ({
                   type="button"
                   css={memberProfileCoverSongListItemPlayButton(
                     youTubePlayerReady,
+                    isCurrentPlaying,
                     personalColor,
                   )}
                   onClick={(e) => {

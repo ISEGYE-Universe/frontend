@@ -196,6 +196,7 @@ export const memberProfileCoverSongProgressHighlight = (
 
 export const memberProfileCoverSongListItemPlayButton = (
   isReady: boolean,
+  isCurrentPlaying: boolean,
   color: string,
 ) => css`
   ${isReady ? '' : `pointer-events: none;`}
@@ -204,6 +205,7 @@ export const memberProfileCoverSongListItemPlayButton = (
   border-radius: 50%;
   background-color: ${color};
   opacity: ${isReady ? 0.5 : 0.1};
+  ${isCurrentPlaying && `opacity: 1;`}
   transition: opacity 0.2s ease;
   &:hover {
     opacity: 1;
