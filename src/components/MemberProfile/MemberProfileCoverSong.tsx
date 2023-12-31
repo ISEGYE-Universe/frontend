@@ -71,6 +71,8 @@ export const MemberProfileCoverSong = ({
     setYouTubePlayerReady,
     setCurrentYoutubeId,
     setYoutubeVideoPlayer,
+    currentYoutubeVideoIndex,
+    setCurrentYoutubeVideoIndex,
   } = MemberProfileStore()
 
   // youtube player ready handler
@@ -86,17 +88,34 @@ export const MemberProfileCoverSong = ({
     }, 500)
   }
 
+  // 재생버튼 click handler
+  const handleClickPlay = (youtubeId: string | undefined) => {
+    // 다른 곡의 재생버튼 클릭한 경우
+    if (youtubeId !== currentYoutubeId) {
+      // youtube video id 변경
+      setCurrentYoutubeId(youtubeId ?? '')
+      setPlayingtimeLoaded(false)
+      // 진행시간 초기화
+      setCurrentSongPlayingTime(0)
+      // 비디오 load
+      localYouTubeVideoPlayer.loadVideoById(youtubeId, 0)
+    }
+    // 동일한 곡의 재생버튼 클릭한 경우
+    else if (isPlaying) {
+      // 재생중인 경우 일시정지
+      localYouTubeVideoPlayer.pauseVideo()
+    } else {
+      // 정지중인 경우 재생
+      localYouTubeVideoPlayer.playVideo()
+    }
+  }
+
   // youtube state change
   const handleStateChange: YouTubeProps['onStateChange'] = (event) => {
     const status = event.data
 
     // 재생상태 코드 별 로직
     switch (status) {
-      // 재생 종료
-      case 0: {
-        setIsPlaying(false)
-        break
-      }
       // 재생 중
       case 1: {
         // 전체 재생 시간 설정
@@ -133,39 +152,24 @@ export const MemberProfileCoverSong = ({
         localYouTubeVideoPlayer.playVideo()
         break
       }
+      // 재생 종료
+      case 0: {
+        setIsPlaying(false)
+        // 다음 곡 호출
+        const nextSong =
+          recentCoverList[
+            (currentYoutubeVideoIndex + 1) % recentCoverList.length
+          ]
+        handleClickPlay(parseIdFromYoutubeURL(nextSong.link))
+        // 현재 곡 index 업데이트
+        setCurrentYoutubeVideoIndex(currentYoutubeVideoIndex + 1)
+        break
+      }
       // case: -1
       default:
         clearInterval(currentSongIntervalId)
         setIsPlayerBuffering(true)
         setPlayingtimeLoaded(false)
-    }
-  }
-
-  // 재생버튼 click handler
-  const handleClickPlay = (
-    e: MouseEvent<HTMLButtonElement>,
-    youtubeId: string | undefined,
-  ) => {
-    // anchor태그 내에 존재하기 때문에 anchor 클릭 이벤트 발생 방지
-    e.preventDefault()
-
-    // 다른 곡의 재생버튼 클릭한 경우
-    if (youtubeId !== currentYoutubeId) {
-      // youtube video id 변경
-      setCurrentYoutubeId(youtubeId ?? '')
-      setPlayingtimeLoaded(false)
-      // 진행시간 초기화
-      setCurrentSongPlayingTime(0)
-      // 비디오 load
-      localYouTubeVideoPlayer.loadVideoById(youtubeId, 0)
-    }
-    // 동일한 곡의 재생버튼 클릭한 경우
-    else if (isPlaying) {
-      // 재생중인 경우 일시정지
-      localYouTubeVideoPlayer.pauseVideo()
-    } else {
-      // 정지중인 경우 재생
-      localYouTubeVideoPlayer.playVideo()
     }
   }
 
@@ -336,8 +340,9 @@ export const MemberProfileCoverSong = ({
                     isCurrentPlaying,
                     personalColor,
                   )}
-                  onClick={(e) => {
-                    handleClickPlay(e, parseIdFromYoutubeURL(cover.link))
+                  onClick={() => {
+                    handleClickPlay(parseIdFromYoutubeURL(cover.link))
+                    setCurrentYoutubeVideoIndex(i)
                   }}
                 >
                   {isCurrentPlaying && isPlaying && !isPlayerBuffering ? (

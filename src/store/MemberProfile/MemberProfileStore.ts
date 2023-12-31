@@ -12,6 +12,9 @@ interface MemberProfileState {
   // 현재 재생중인 커버곡
   currentYoutubeId: string
   setCurrentYoutubeId: (newState: string) => void
+  // 재생 중인 커버곡의 array 내 id값
+  currentYoutubeVideoIndex: number
+  setCurrentYoutubeVideoIndex: (newState: number) => void
 }
 
 const MemberProfileStore = create<MemberProfileState>((set) => ({
@@ -30,6 +33,10 @@ const MemberProfileStore = create<MemberProfileState>((set) => ({
   currentYoutubeId: '',
   setCurrentYoutubeId: (newState) => {
     set(() => ({ currentYoutubeId: newState }))
+  },
+  currentYoutubeVideoIndex: 0,
+  setCurrentYoutubeVideoIndex: (newState) => {
+    set(() => ({ currentYoutubeVideoIndex: newState }))
   },
 }))
 
