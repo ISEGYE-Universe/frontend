@@ -1,6 +1,7 @@
 import {
   CaptionMdLight,
   CaptionMdRegular,
+  CaptionSmRegular,
   TextMdBold,
   TextSmLight,
   TitleSmBold,
@@ -91,23 +92,15 @@ export const memberProfileCoverSongListBox = [
     }
   `,
 ]
-export const memberProfileCoverSongListItem = (color: string) => {
-  return [
-    flexRow,
-    alignCenter,
-    css`
-      padding: 6px 24px 6px 14px;
-      border-radius: 12px;
-      transition: background-color 0.2s ease;
-      &:hover {
-        background-color: ${color};
-      }
-      &:hover .play-icon {
-        opacity: 1;
-      }
-    `,
-  ]
-}
+export const memberProfileCoverSongListItem = [
+  flexRow,
+  alignCenter,
+  css`
+    padding: 6px 24px 6px 14px;
+    border-radius: 12px;
+  `,
+]
+
 export const memberProfileCoverSongListItemImage = [
   css`
     margin-right: 16px;
@@ -123,6 +116,11 @@ export const memberProfileCoverSongListItemTitleBox = [
     margin-right: auto;
   `,
 ]
+export const memberProfileCoverSongListItemTitleBoxAnchor = css`
+  max-width: 444px;
+  width: 100%;
+  margin-right: auto;
+`
 export const memberProfileCoverSongListItemIndexText = (color: string) => {
   return [
     CaptionMdLight,
@@ -144,10 +142,82 @@ export const memberProfileCoverSongListItemDateText = [
     color: ${MemberProfileColor.coverDateTextGrey};
   `,
 ]
-export const memberProfileCoverSongListItemPlayIcon = [
+// progress bar
+export const memberProfileCoverSongProgressContainer = css`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+`
+export const memberProfileCoverSongProgressTimeText = [
+  CaptionSmRegular,
   css`
-    color: ${MemberProfileColor.coverDateTextGrey};
-    opacity: 0.5;
-    transition: opacity 0.2s ease;
+    display: flex;
+    gap: 4px;
+    color: ${MemberProfileColor.coverProgressTextGrey};
+    margin-right: 2px;
+    text-align: right;
   `,
 ]
+export const memberProfileCoverSongProgressBar = css`
+  position: relative;
+  width: 100%;
+  height: 5px;
+  background-color: ${MemberProfileColor.coverProgressBackgroundGrey};
+  border-radius: 50px;
+`
+export const memberProfileCoverSongProgressBarHover = (
+  hover: boolean,
+  width: number,
+) => css`
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #c7c7c7;
+  width: ${width}px;
+  height: 100%;
+  border-radius: 50px;
+
+  opacity: ${hover ? 1 : 0};
+  transition: opacity 0.2s;
+`
+export const memberProfileCoverSongProgressHighlight = (
+  width: number,
+  color: string,
+) => css`
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: ${color};
+  width: ${width}%;
+  height: 100%;
+  border-radius: 50px;
+`
+
+export const memberProfileCoverSongListItemPlayButton = (
+  isReady: boolean,
+  isCurrentPlaying: boolean,
+  color: string,
+) => css`
+  ${isReady ? '' : `pointer-events: none;`}
+  width:32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: ${color};
+  opacity: ${isReady ? 0.5 : 0.1};
+  ${isCurrentPlaying && `opacity: 1;`}
+  transition: opacity 0.2s ease;
+  &:hover {
+    opacity: 1;
+  }
+`
+export const memberProfileCoverSongListItemPlayIcon = css`
+  position: relative;
+  left: 1px;
+`
+
+export const youtubeEmbedContainer = css`
+  display: none;
+  // opacity: 0.7;
+  // position: absolute;
+`

@@ -26,7 +26,7 @@ export const streamListCarousel = [
         width: 400px;
         flex: 0 0 40px;
         transition: background-color 1.5s ease;
-        border-radius: 8px;
+        border-radius: 9999px;
         &.focused {
           background-color: #ffffff20;
           transition: background-color 0.2s ease;

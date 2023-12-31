@@ -13,5 +13,7 @@ export const MemberProfileColor = {
   coverTitleTextBlack: '#252525',
   coverSubTitleTextGrey: '#8d8d8d',
   coverDateTextGrey: '#787878',
+  coverProgressTextGrey: '#333131',
+  coverProgressBackgroundGrey: '#E1E1E1',
   textWhite: '#fafafa',
 }

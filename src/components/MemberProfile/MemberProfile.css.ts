@@ -23,5 +23,6 @@ export const playerRail = css`
   position: absolute;
   height: 1500px;
   top: 416px;
-  right: -116px;
+  left: 100%;
+  margin-left: 60px;
 `
