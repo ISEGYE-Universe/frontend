@@ -39,9 +39,9 @@
         "twLink": "https://www.twitch.tv/vo_ine"
       },
       "galleryImageURL": [
-        { "id": 1, "url": "/images/profile/member-gallery/ine1.jpg" },
-        { "id": 2, "url": "/images/profile/member-gallery/ine2.jpg" },
-        { "id": 3, "url": "/images/profile/member-gallery/ine3.jpg" }
+        { "id": 1, "url": "/images/profile/member-gallery/아이네1.jpg" },
+        { "id": 2, "url": "/images/profile/member-gallery/아이네2.jpg" },
+        { "id": 3, "url": "/images/profile/member-gallery/아이네3.jpg" }
       ]
     },
     "jingburger": {
@@ -61,9 +61,9 @@
         "twLink": "https://www.twitch.tv/jingburger"
       },
       "galleryImageURL": [
-        { "id": 1, "url": "/images/profile/member-gallery/jingburger1.jpg" },
-        { "id": 2, "url": "/images/profile/member-gallery/jingburger2.jpg" },
-        { "id": 3, "url": "/images/profile/member-gallery/jingburger3.jpg" }
+        { "id": 1, "url": "/images/profile/member-gallery/징버거1.jpg" },
+        { "id": 2, "url": "/images/profile/member-gallery/징버거2.jpg" },
+        { "id": 3, "url": "/images/profile/member-gallery/징버거3.jpg" }
       ]
     },
     "lilpa": {
@@ -83,9 +83,9 @@
         "twLink": "https://www.twitch.tv/lilpaaaaaa"
       },
       "galleryImageURL": [
-        { "id": 1, "url": "/images/profile/member-gallery/lilpa1.jpg" },
-        { "id": 2, "url": "/images/profile/member-gallery/lilpa2.jpg" },
-        { "id": 3, "url": "/images/profile/member-gallery/lilpa3.jpg" }
+        { "id": 1, "url": "/images/profile/member-gallery/릴파1.jpg" },
+        { "id": 2, "url": "/images/profile/member-gallery/릴파2.jpg" },
+        { "id": 3, "url": "/images/profile/member-gallery/릴파3.jpg" }
       ]
     },
     "jururu": {
@@ -105,9 +105,9 @@
         "twLink": "https://www.twitch.tv/cotton__123"
       },
       "galleryImageURL": [
-        { "id": 1, "url": "/images/profile/member-gallery/jururu1.jpg" },
-        { "id": 2, "url": "/images/profile/member-gallery/jururu2.jpg" },
-        { "id": 3, "url": "/images/profile/member-gallery/jururu3.jpg" }
+        { "id": 1, "url": "/images/profile/member-gallery/주르르1.jpg" },
+        { "id": 2, "url": "/images/profile/member-gallery/주르르2.jpg" },
+        { "id": 3, "url": "/images/profile/member-gallery/주르르3.jpg" }
       ]
     },
     "gosegu": {
@@ -127,9 +127,9 @@
         "twLink": "https://www.twitch.tv/gosegugosegu"
       },
       "galleryImageURL": [
-        { "id": 1, "url": "/images/profile/member-gallery/gosegu1.jpg" },
-        { "id": 2, "url": "/images/profile/member-gallery/gosegu2.jpg" },
-        { "id": 3, "url": "/images/profile/member-gallery/gosegu3.jpg" }
+        { "id": 1, "url": "/images/profile/member-gallery/고세구1.jpg" },
+        { "id": 2, "url": "/images/profile/member-gallery/고세구2.jpg" },
+        { "id": 3, "url": "/images/profile/member-gallery/고세구3.jpg" }
       ]
     },
     "viichan": {
@@ -149,9 +149,9 @@
         "twLink": "https://www.twitch.tv/viichan6"
       },
       "galleryImageURL": [
-        { "id": 1, "url": "/images/profile/member-gallery/viichan1.jpg" },
-        { "id": 2, "url": "/images/profile/member-gallery/viichan2.jpg" },
-        { "id": 3, "url": "/images/profile/member-gallery/viichan3.jpg" }
+        { "id": 1, "url": "/images/profile/member-gallery/비챤1.jpg" },
+        { "id": 2, "url": "/images/profile/member-gallery/비챤2.jpg" },
+        { "id": 3, "url": "/images/profile/member-gallery/비챤3.jpg" }
       ]
     }
   }
