@@ -113,7 +113,7 @@ export const ProfileMainBg = () => {
         <svg
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1920 803"
+          viewBox="0 0 1920 811"
           preserveAspectRatio="xMidYMid slice"
           width="100%"
           height="100%"
@@ -126,50 +126,50 @@ export const ProfileMainBg = () => {
           />
           <ProfileMainMemberSection
             memberIndex={0}
-            x={165}
+            x={150}
             y={160}
             width={145}
-            height={585}
+            height={600}
             url="/profile/jururu"
           />
           <ProfileMainMemberSection
             memberIndex={1}
-            x={415}
+            x={405}
             y={150}
             width={205}
-            height={595}
+            height={610}
             url="/profile/jingburger"
           />
           <ProfileMainMemberSection
             memberIndex={2}
-            x={720}
-            y={170}
+            x={715}
+            y={175}
             width={180}
-            height={570}
+            height={580}
             url="/profile/viichan"
           />
           <ProfileMainMemberSection
             memberIndex={3}
             x={1030}
-            y={195}
+            y={200}
             width={170}
-            height={550}
+            height={560}
             url="/profile/gosegu"
           />
           <ProfileMainMemberSection
             memberIndex={4}
-            x={1310}
-            y={140}
+            x={1320}
+            y={145}
             width={200}
-            height={600}
+            height={610}
             url="/profile/lilpa"
           />
           <ProfileMainMemberSection
             memberIndex={5}
-            x={1615}
-            y={150}
+            x={1635}
+            y={155}
             width={165}
-            height={595}
+            height={605}
             url="/profile/ine"
           />
         </svg>

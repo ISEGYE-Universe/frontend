@@ -48,7 +48,7 @@ export const ProfileMemberDetail = ({ data }: ProfileMemberDetailProps) => {
       <div
         css={css`
           width: 100%;
-          height: calc(100vh - 120px);
+          height: calc(100vh - 100px);
         `}
       >
         {/* 이미지 슬라이더 */}

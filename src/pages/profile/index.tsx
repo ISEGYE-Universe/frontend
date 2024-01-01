@@ -5,7 +5,7 @@ import { css } from '@emotion/react'
 
 const profileContainerStyle = css`
   position: relative;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 100px);
 `
 
 const Profile = () => {
