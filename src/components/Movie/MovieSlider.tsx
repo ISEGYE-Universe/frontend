@@ -15,6 +15,7 @@ import {
   RightButton,
 } from './style/Movie.Style'
 
+
 const MovieSlider = ({ movieList }: MovieSliderProrps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, startIndex: 0 })
   const [current, setCurrent] = useState<number>(0)
