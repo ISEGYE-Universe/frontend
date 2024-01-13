@@ -33,7 +33,10 @@ const MovieSlider = ({ movieList }: MovieSliderProrps) => {
   }, [emblaApi])
 
   const scrollTo = useCallback(
-    (index: number) => emblaApi && emblaApi.scrollTo(index),
+    async (index: number) => {
+      emblaApi && emblaApi.scrollTo(index)
+      if ((await ref.current?.getPlayerState()) === 1) ref.current?.pauseVideo()
+    },
     [emblaApi],
   )
 
