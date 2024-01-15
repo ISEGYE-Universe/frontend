@@ -170,13 +170,13 @@ export const ProfileIntroductionBox = ({
                       `}
                     >
                       {d.title.split('').map((char) => (
-                        <span key={`title-${char}`} css={TitleSmLight}>
+                        <span key={`title-${char}`} css={[TitleSmLight]}>
                           {char}
                         </span>
                       ))}
                     </div>
                     <div>
-                      <span css={TitleSmRegular}>{d.desc}</span>
+                      <span css={[TitleSmRegular]}>{d.desc}</span>
                     </div>
                   </div>
                 </li>
