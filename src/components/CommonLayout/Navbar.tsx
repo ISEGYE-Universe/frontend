@@ -246,18 +246,18 @@ const Navbar = () => {
     useState<boolean>(false)
   const [subNav, setSubNav] = useState<string>('null')
 
-  const activeSubNavigation = (
-    e: React.MouseEvent<HTMLSpanElement, MouseEvent>,
-  ) => {
-    const target = e.target as HTMLSpanElement
-    const realTarget = target.dataset.page
-      ? target
-      : (target.parentElement as HTMLButtonElement)
+  // const activeSubNavigation = (
+  //   e: React.MouseEvent<HTMLSpanElement, MouseEvent>,
+  // ) => {
+  //   const target = e.target as HTMLSpanElement
+  //   const realTarget = target.dataset.page
+  //     ? target
+  //     : (target.parentElement as HTMLButtonElement)
 
-    if (!realTarget || realTarget?.dataset.page === 'null') return
+  //   if (!realTarget || realTarget?.dataset.page === 'null') return
 
-    setIsSubNavActive(true)
-  }
+  //   setIsSubNavActive(true)
+  // }
 
   // const inactiveSubNavigation = () => {
   //   if (isSubNavActiveByClick) return
@@ -368,7 +368,6 @@ const Navbar = () => {
               justify-content: flex-end;
             `,
           ]}
-          onMouseEnter={activeSubNavigation}
         >
           <div css={NavHeight}>
             {/* <button
@@ -420,7 +419,7 @@ const Navbar = () => {
               </span>
             </button> */}
             <Link
-              href={{ pathname: '/albums/detail', query: { default: 0 } }}
+              href="/albums/rewind"
               css={[
                 GNBBottomNavigationLink,
                 route.asPath.split('/')[1] === 'albums' ? Showing : null,
@@ -480,7 +479,6 @@ const Navbar = () => {
               justify-content: flex-start;
             `,
           ]}
-          onMouseEnter={activeSubNavigation}
         >
           <div css={NavHeight}>
             {/* <button

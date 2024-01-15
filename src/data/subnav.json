@@ -28,27 +28,27 @@
   "album": [
     {
       "text": "RE : WIND",
-      "link": "/albums/detail?default=0"
+      "link": "/albums/rewind"
     },
     {
       "text": "겨울봄",
-      "link": "/albums/detail?default=1"
+      "link": "/albums/winter-spring"
     },
     {
       "text": "LOCKDOWN",
-      "link": "/albums/detail?default=2"
+      "link": "/albums/lockdown"
     },
     {
       "text": "Another World",
-      "link": "/albums/detail?default=3"
+      "link": "/albums/another-world"
     },
     {
       "text": "Kidding",
-      "link": "/albums/detail?default=4"
+      "link": "/albums/kidding"
     },
     {
-      "text": "4집",
-      "link": "/albums/detail"
+      "text": "이세계 페스티벌",
+      "link": "/albums/isegye-festival"
     }
   ],
   "news": [

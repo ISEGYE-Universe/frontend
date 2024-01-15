@@ -12,7 +12,7 @@ export const AlbumInfoLayout = ({ ident }: PropType) => {
     <section css={DivFlexBox}>
       <div>
         <Image
-          src={`/images/album/AlbumCover/${ident}.png`}
+          src={`/images/album/AlbumCover/${ident}.jpg`}
           alt="Image Load Fail"
           width={764.8}
           height={600}

@@ -12,7 +12,7 @@ import { AlbumInfoLayout } from './AlbumInfo'
 
 type PropType = {
   data: string[]
-  defaultIndex: number
+  defaultIndex: string
   options?: EmblaOptionsType
 }
 
@@ -68,7 +68,24 @@ export const EmblaCarousel = ({ options, data, defaultIndex }: PropType) => {
     setSelectedindex(embla.selectedScrollSnap())
   }, [embla, setSelectedindex])
 
-  //* 변환 필요?
+  const getDefaultIndex = useCallback(() => {
+    const albumsList = [
+      'rewind',
+      'winter-spring',
+      'lockdown',
+      'another-world',
+      'kidding',
+      'isegye-festival',
+    ]
+    let idx = 0
+    for (let i = 0; i < albumsList.length; i += 1) {
+      if (albumsList[i] === defaultIndex) {
+        idx = i
+      }
+    }
+    return idx
+  }, [defaultIndex])
+
   useEffect(() => {
     if (!embla) return
     onSelect()
@@ -76,8 +93,8 @@ export const EmblaCarousel = ({ options, data, defaultIndex }: PropType) => {
     embla.on('select', onSelect)
     //* 23.10.21
     //* sub-menu에서 index 받아온 값으로 default scroll
-    ScrollTo(defaultIndex)
-  }, [embla, setScrollSnaps, onSelect, defaultIndex, ScrollTo])
+    // ScrollTo(getDefaultIndex())
+  }, [embla, setScrollSnaps, onSelect, defaultIndex, ScrollTo, getDefaultIndex])
 
   return (
     <div className="embla" css={emblaCSS}>

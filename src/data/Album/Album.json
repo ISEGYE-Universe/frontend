@@ -41,12 +41,22 @@
   },
   "KIDDING": {
     "title": "KIDDING",
-    "description": "세번째 디지털 싱글로 매 번 새로운 도전을 하는 이세계 아이돌이 이번에는 KPOP 걸그룹 노래에 도전한다",
+    "description": "세번째 디지털 싱글로 매 번 새로운 도전을 하는 이세계 아이돌이 이번에는 KPOP 걸그룹 노래에 도전한다.",
     "release": "2023.08.18",
     "genre": "댄스",
     "publisher": "(주)리웨이뮤직앤미디어",
     "agency": "J Major",
     "Lyrics": "우왁굳, 9june9, prerrie, 이태훈",
     "composition": "9june9, Perrie, 이태훈"
+  },
+  "ISGFESTA": {
+    "title": "이세계 페스티벌",
+    "description": "이세계아이돌의 첫 오프라인 콘서트인 이세계 페스티벌에서 처음으로 공개한 노래들을 수록했다.",
+    "release": "2023.09.24",
+    "genre": "댄스",
+    "publisher": "YG PLUS",
+    "agency": "주식회사 패러블엔터테인먼트",
+    "Lyrics": "9june9, prerrie, 이태훈",
+    "composition": "9june9, perrie, 이태훈"
   }
 }
