@@ -34,7 +34,8 @@ const MovieSlider = ({ movieList }: MovieSliderProrps) => {
 
   const scrollTo = useCallback(
     async (index: number) => {
-      emblaApi && emblaApi.scrollTo(index)
+      if (emblaApi) emblaApi.scrollTo(index)
+      // 플레이어가 재생 상태면 1
       if ((await ref.current?.getPlayerState()) === 1) ref.current?.pauseVideo()
     },
     [emblaApi],
