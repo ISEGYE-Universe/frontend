@@ -1,5 +1,6 @@
 import { css } from '@emotion/react'
-import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react'
+import { EmblaCarouselType } from 'embla-carousel'
+import useEmblaCarousel from 'embla-carousel-react'
 import { useCallback, useState, useEffect } from 'react'
 import { HistoryCard } from './HistoryCard'
 import { LeftButton, RightButton } from './EmblaHistoryButton'

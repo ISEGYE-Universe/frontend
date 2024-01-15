@@ -1,6 +1,7 @@
 import { useCallback, useState, useEffect } from 'react'
 import { css } from '@emotion/react'
-import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react'
+import { EmblaCarouselType } from 'embla-carousel'
+import useEmblaCarousel from 'embla-carousel-react'
 import MovieContainer from './MovieContainer'
 import MovieTitle from './MovieTitle'
 import { MovieSliderProrps, MovieInfoType } from './type/types'
