@@ -18,10 +18,3 @@ export const splittedContainer = css`
   gap: 90px;
   margin-bottom: 60px;
 `
-
-export const playerRail = css`
-  position: absolute;
-  height: 1500px;
-  top: 416px;
-  right: -116px;
-`
