@@ -1,7 +1,7 @@
-import { useCallback, useState, useEffect } from 'react'
+import { useCallback, useState, useEffect, useRef } from 'react'
 import { css } from '@emotion/react'
 import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react'
-import MovieContainer from './MovieContainer'
+import YouTube, { YouTubeProps, YouTubePlayer } from 'react-youtube'
 import MovieTitle from './MovieTitle'
 import { MovieSliderProrps, MovieInfoType } from './type/types'
 import { RightArrow, LeftArrow } from './svg'
@@ -18,17 +18,26 @@ import {
 const MovieSlider = ({ movieList }: MovieSliderProrps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, startIndex: 0 })
   const [current, setCurrent] = useState<number>(0)
+  const ref = useRef<YouTubePlayer | null>(null)
 
-  const scrollPrev = useCallback(() => {
+  const scrollPrev = useCallback(async () => {
     if (emblaApi) emblaApi.scrollPrev()
+    // 플레이어가 재생 상태면 1
+    if ((await ref.current?.getPlayerState()) === 1) ref.current?.pauseVideo()
   }, [emblaApi])
 
-  const scrollNext = useCallback(() => {
+  const scrollNext = useCallback(async () => {
     if (emblaApi) emblaApi.scrollNext()
+    // 플레이어가 재생 상태면 1
+    if ((await ref.current?.getPlayerState()) === 1) ref.current?.pauseVideo()
   }, [emblaApi])
 
   const scrollTo = useCallback(
-    (index: number) => emblaApi && emblaApi.scrollTo(index),
+    async (index: number) => {
+      if (emblaApi) emblaApi.scrollTo(index)
+      // 플레이어가 재생 상태면 1
+      if ((await ref.current?.getPlayerState()) === 1) ref.current?.pauseVideo()
+    },
     [emblaApi],
   )
 
@@ -43,12 +52,26 @@ const MovieSlider = ({ movieList }: MovieSliderProrps) => {
     emblaApi.on('select', onSelect)
   }, [emblaApi, onSelect])
 
+  const onPlayerPlay: YouTubeProps['onPlay'] = (event) => {
+    ref.current = event.target
+  }
+
+  const opts: YouTubeProps['opts'] = {
+    width: '1280',
+    height: '720',
+  }
+
   return (
     <div>
       <div css={SliderDiv} ref={emblaRef}>
         <div css={Flex}>
           {movieList.map((list: MovieInfoType) => (
-            <MovieContainer link={list.src} key={list.title} />
+            <YouTube
+              videoId={list.src}
+              opts={opts}
+              onPlay={onPlayerPlay}
+              key={list.title}
+            />
           ))}
         </div>
         <button
