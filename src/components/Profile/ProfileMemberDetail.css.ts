@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 
 export const outerContainer = css`
   width: 100%;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 100px);
 `
 export const slideImageStyle = css`
   width: 100%;
