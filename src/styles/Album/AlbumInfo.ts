@@ -62,10 +62,8 @@ const btnDiv = css`
   margin-top: 12px;
 `
 const btnSize = css`
-  width: 45px;
-  height: 45px;
-  border: 2px solid lightgray;
-  border-radius: 50%;
+  width: 50px;
+  height: 50px;
   background-color: transparent;
   cursor: pointer;
 `

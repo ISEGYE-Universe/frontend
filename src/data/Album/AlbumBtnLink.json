@@ -1,7 +1,6 @@
 {
   "REWIND": {
     "Spotify": "https://open.spotify.com/track/0RCqAz9JQJZim0N9WAYvf7",
-    "Gaon": "",
     "Youtube": "https://www.youtube.com/watch?v=fgSXAKsq-Vo",
     "Vibe": "https://vibe.naver.com/track/52008299",
     "Melon": "https://www.melon.com/song/detail.htm?songId=34421197",
@@ -11,7 +10,6 @@
   },
   "WINTERSPRING": {
     "Spotify": "https://open.spotify.com/track/1JUfVQxyt17lszAHbno101",
-    "Gaon": "",
     "Youtube": "https://www.youtube.com/watch?v=JY-gJkMuJ94",
     "Vibe": "https://vibe.naver.com/track/54382485",
     "Melon": "https://www.melon.com/song/detail.htm?songId=34748940",
@@ -21,7 +19,6 @@
   },
   "LOCKDOWN": {
     "Spotify": "https://open.spotify.com/track/6f0DlyudChM3b2olFTsr7d",
-    "Gaon": "",
     "Youtube": "https://www.youtube.com/watch?v=QgMFpuos4Rg",
     "Vibe": "https://vibe.naver.com/track/64987493",
     "Melon": "https://www.melon.com/song/detail.htm?songId=36549241",
@@ -31,7 +28,6 @@
   },
   "ANOTHERWORLD": {
     "Spotify": "https://open.spotify.com/track/0GibYHfyMl3mit5i3mKMdP",
-    "Gaon": "",
     "Youtube": "https://www.youtube.com/watch?v=8KTFf2X-ago",
     "Vibe": "https://vibe.naver.com/track/66073561",
     "Melon": "https://www.melon.com/song/detail.htm?songId=36634860",
@@ -41,12 +37,20 @@
   },
   "KIDDING": {
     "Spotify": "https://open.spotify.com/track/5grkkSqOpUGHfl2KunfdD9",
-    "Gaon": "",
     "Youtube": "https://www.youtube.com/watch?v=rDFUl2mHIW4",
     "Vibe": "https://vibe.naver.com/track/66684599",
     "Melon": "https://www.melon.com/song/detail.htm?songId=36710003",
     "Genie": "https://www.genie.co.kr/detail/songInfo?xgnm=103085764",
     "Bugs": "https://music.bugs.co.kr/album/20585507?wl_ref=list_tr_07_search",
     "Flo": "https://www.music-flo.com/detail/album/416473013/albumtrack"
+  },
+  "ISGFESTA": {
+    "Spotify": "https://open.spotify.com/track/5grkkSqOpUGHfl2KunfdD9",
+    "Youtube": "https://www.youtube.com/watch?v=rDFUl2mHIW4",
+    "Vibe": "https://vibe.naver.com/album/10343279",
+    "Melon": "https://www.melon.com/album/detail.htm?albumId=11332440",
+    "Genie": "https://www.genie.co.kr/detail/albumInfo?axnm=84297728",
+    "Bugs": "https://music.bugs.co.kr/album/4091499?wl_ref=list_ab_03",
+    "Flo": "https://www.music-flo.com/detail/album/417431293/albumtrack"
   }
 }
