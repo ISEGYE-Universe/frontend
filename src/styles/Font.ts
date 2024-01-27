@@ -56,10 +56,6 @@ const fontSizeCaptionMd = css`
   font-size: 12px;
   letter-spacing: -0.36px;
 `
-const fontSizeCaptionSm = css`
-  font-size: 8px;
-  letter-spacing: -0.24px;
-`
 const lineHeight = css`
   line-height: 110%;
 `
@@ -162,6 +158,12 @@ export const TextMdBold = css`
   ${fontSizeTextMd}
   ${lineHeight}
 `
+export const TextMdExtraBold = css`
+  ${fontFamily}
+  ${fontWeightMedium}
+  ${fontSizeTextMd}
+  ${lineHeight}
+`
 // text_sm
 export const TextSmLight = css`
   ${fontFamily}
@@ -178,6 +180,12 @@ export const TextSmRegular = css`
 export const TextSmBold = css`
   ${fontFamily}
   ${fontWeightRegular}
+  ${fontSizeTextSm}
+  ${lineHeight}
+`
+export const TextSmExtraBold = css`
+  ${fontFamily}
+  ${fontWeightMedium}
   ${fontSizeTextSm}
   ${lineHeight}
 `
@@ -198,25 +206,6 @@ export const CaptionMdBold = css`
   ${fontFamily}
   ${fontWeightMedium}
   ${fontSizeCaptionMd}
-  ${lineHeight}
-`
-// caption_sm
-export const CaptionSmLight = css`
-  ${fontFamily}
-  ${fontWeightLight}
-  ${fontSizeCaptionSm}
-  ${lineHeight}
-`
-export const CaptionSmRegular = css`
-  ${fontFamily}
-  ${fontWeightDemiLight}
-  ${fontSizeCaptionSm}
-  ${lineHeight}
-`
-export const CaptionSmBold = css`
-  ${fontFamily}
-  ${fontWeightRegular}
-  ${fontSizeCaptionSm}
   ${lineHeight}
 `
 export const AlignJustify = css`
