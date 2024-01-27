@@ -3,16 +3,15 @@ import {
   CaptionMdBold,
   CaptionMdLight,
   CaptionMdRegular,
-  CaptionSmBold,
-  CaptionSmLight,
-  CaptionSmRegular,
   MainTitleBold,
   MainTitleLight,
   MainTitleRegular,
   TextMdBold,
+  TextMdExtraBold,
   TextMdLight,
   TextMdRegular,
   TextSmBold,
+  TextSmExtraBold,
   TextSmLight,
   TextSmRegular,
   TitleLgBold,
@@ -77,6 +76,8 @@ const index = () => {
       <span css={TextMdRegular}>가나다라마바사 abcdefg</span>
       <br />
       <span css={TextMdBold}>가나다라마바사 abcdefg</span>
+      <br />
+      <span css={TextMdExtraBold}>가나다라마바사 abcdefg</span>
       <HRLine />
       <h1 css={TitleSmRegular}>text_sm</h1>
       <br />
@@ -85,6 +86,8 @@ const index = () => {
       <span css={TextSmRegular}>가나다라마바사 abcdefg</span>
       <br />
       <span css={TextSmBold}>가나다라마바사 abcdefg</span>
+      <br />
+      <span css={TextSmExtraBold}>가나다라마바사 abcdefg</span>
       <HRLine />
       <h1 css={TitleSmRegular}>caption_md</h1>
       <br />
@@ -93,14 +96,6 @@ const index = () => {
       <span css={CaptionMdRegular}>가나다라마바사 abcdefg</span>
       <br />
       <span css={CaptionMdBold}>가나다라마바사 abcdefg</span>
-      <HRLine />
-      <h1 css={TitleSmRegular}>caption_sm</h1>
-      <br />
-      <span css={CaptionSmLight}>가나다라마바사 abcdefg</span>
-      <br />
-      <span css={CaptionSmRegular}>가나다라마바사 abcdefg</span>
-      <br />
-      <span css={CaptionSmBold}>가나다라마바사 abcdefg</span>
       <HRLine />
     </div>
   )
